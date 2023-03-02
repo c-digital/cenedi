@@ -13,9 +13,20 @@
                         <table>
                            <tr>
                               <td>
-                                 <a href="/admin/consultas/crear" class="btn btn-info">
+                                 <!-- <a href="/admin/consultas/crear" class="btn btn-info">
                                     Nueva consulta
-                                 </a>
+                                 </a> -->
+
+                                 <div class="dropdown">
+                                   <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                     Nueva consulta
+                                     <span class="caret"></span>
+                                   </button>
+                                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                     <li><a href="#">Neurologia</a></li>
+                                     <li><a href="#">Diabetes</a></li>
+                                   </ul>
+                                 </div>
                               </td>
                            </tr>
 
