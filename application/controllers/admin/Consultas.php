@@ -123,17 +123,59 @@ class Consultas extends AdminController
         $id_client = $_POST['id_client'];
         $id_staff = $_POST['id_staff'];
         $foto_perfil = $_FILES['foto_perfil']['name'];
-        $anamnesis = json_encode($_POST['anamnesis']);
         $edad = $_POST['edad'];
         $monto = $_POST['monto'];
+        $tipo = $_POST['tipo'];
         $fotos = json_encode($_FILES['fotos']['name']);
+
+        if ($_POST['tipo'] == 'diabetes') {
+            $anamnesis = json_encode([
+                'obesidad' => $_POST['obesidad'],
+                'hta' => $_POST['hta'],
+                'diabetes' => $_POST['diabetes'],
+                'iam' => $_POST['iam'],
+                'acv' => $_POST['acv'],
+                'cancer' => $_POST['cancer'],
+
+                '¿Alguno de sus hijos pesó más de 4kg al nacer?' => $_POST['¿Alguno de sus hijos pesó más de 4kg al nacer?'],
+                '¿Ha enido algún aborto, muerte, fetal, neonatal?' => $_POST['¿Ha enido algún aborto, muerte, fetal, neonatal?'],
+
+                'hta_personal' => $_POST['hta_personal'],
+                'obesidad_personal' => $_POST['obesidad_personal'],
+                'diabetes_personal' => $_POST['diabetes_personal'],
+                'fuma' => $_POST['fuma'],
+                'fuma_frecuencia' => $_POST['fuma_frecuencia'],
+                'bebidas alcoholicas' => $_POST['bebidas alcoholicas'],
+                'bebidas_frecuencia' => $_POST['bebidas_frecuencia'],
+                'Fondo de ojo anual' => $_POST['Fondo de ojo anual'],
+                'ECG anual' => $_POST['ECG anual'],
+                'Educación en diabetes' => $_POST['Educación en diabetes'],
+                'Antecedentes quirurgicos' => $_POST['Antecedentes quirurgicos'],
+                'motivo' => $_POST['motivo'],
+                'pa' => $_POST['pa'],
+                'pulso' => $_POST['pulso'],
+                'peso' => $_POST['peso'],
+                'talla' => $_POST['talla'],
+                'imc' => $_POST['imc'],
+                'pcintura' => $_POST['pcintura'],
+                'Historial de enfermedad actual' => $_POST['Historial de enfermedad actual'],
+                'Examen fisico' => $_POST['Examen fisico'],
+                'Diagnóstico presuntivo' => $_POST['Diagnóstico presuntivo'],
+                'Laboratorios, estudios o exámenes solicitados' => $_POST['Laboratorios, estudios o exámenes solicitados'],
+                'Tratamiento' => $_POST['Tratamiento'],
+            ]);
+        }
+
+        if ($_POST['tipo'] == 'neurologia') {
+            $anamnesis = json_encode([]);
+        }
 
         $this->db->query("
             INSERT INTO
                 tblconsultas
-                (monto, edad, foto_perfil, fotos, id_client, id_staff, fecha, anamnesis)
+                (monto, edad, foto_perfil, fotos, id_client, id_staff, fecha, anamnesis, tipo)
             VALUES
-                ('$monto', '$edad', '$foto_perfil', '$fotos', '$id_client', '$id_staff', NOW(), '$anamnesis');
+                ('$monto', '$edad', '$foto_perfil', '$fotos', '$id_client', '$id_staff', NOW(), '$anamnesis', '$tipo');
         ");
 
         $this->session->set_flashdata('success', 'Consulta almacenada satisfactoriamente');
@@ -199,15 +241,57 @@ class Consultas extends AdminController
         $id_client = $_POST['id_client'];
         $id_staff = $_POST['id_staff'];
         $foto_perfil = ($_FILES['foto_perfil']['name']) ? $_FILES['foto_perfil']['name'] : $consulta->foto_perfil;
-        $anamnesis = json_encode($_POST['anamnesis']);
         $edad = $_POST['edad'];
         $monto = $_POST['monto'];
+        $tipo = $_POST['tipo'];
         $fotos = json_encode($consulta->fotos);
 
         if (isset($array)) {
             $fotos = json_decode($consulta->fotos, true);
             $fotos = array_merge($fotos, $array);
             $fotos = json_encode($fotos);
+        }
+
+        if ($_POST['tipo'] == 'diabetes') {
+            $anamnesis = json_encode([
+                'obesidad' => $_POST['obesidad'],
+                'hta' => $_POST['hta'],
+                'diabetes' => $_POST['diabetes'],
+                'iam' => $_POST['iam'],
+                'acv' => $_POST['acv'],
+                'cancer' => $_POST['cancer'],
+
+                '¿Alguno de sus hijos pesó más de 4kg al nacer?' => $_POST['¿Alguno de sus hijos pesó más de 4kg al nacer?'],
+                '¿Ha enido algún aborto, muerte, fetal, neonatal?' => $_POST['¿Ha enido algún aborto, muerte, fetal, neonatal?'],
+
+                'hta_personal' => $_POST['hta_personal'],
+                'obesidad_personal' => $_POST['obesidad_personal'],
+                'diabetes_personal' => $_POST['diabetes_personal'],
+                'fuma' => $_POST['fuma'],
+                'fuma_frecuencia' => $_POST['fuma_frecuencia'],
+                'bebidas alcoholicas' => $_POST['bebidas alcoholicas'],
+                'bebidas_frecuencia' => $_POST['bebidas_frecuencia'],
+                'Fondo de ojo anual' => $_POST['Fondo de ojo anual'],
+                'ECG anual' => $_POST['ECG anual'],
+                'Educación en diabetes' => $_POST['Educación en diabetes'],
+                'Antecedentes quirurgicos' => $_POST['Antecedentes quirurgicos'],
+                'motivo' => $_POST['motivo'],
+                'pa' => $_POST['pa'],
+                'pulso' => $_POST['pulso'],
+                'peso' => $_POST['peso'],
+                'talla' => $_POST['talla'],
+                'imc' => $_POST['imc'],
+                'pcintura' => $_POST['pcintura'],
+                'Historial de enfermedad actual' => $_POST['Historial de enfermedad actual'],
+                'Examen fisico' => $_POST['Examen fisico'],
+                'Diagnóstico presuntivo' => $_POST['Diagnóstico presuntivo'],
+                'Laboratorios, estudios o exámenes solicitados' => $_POST['Laboratorios, estudios o exámenes solicitados'],
+                'Tratamiento' => $_POST['Tratamiento'],
+            ]);
+        }
+
+        if ($_POST['tipo'] == 'neurologia') {
+            $anamnesis = json_encode([]);
         }
 
         $this->db->query("
@@ -219,7 +303,8 @@ class Consultas extends AdminController
                 anamnesis = '$anamnesis',
                 foto_perfil = '$foto_perfil',
                 fotos = '$fotos',
-                monto = '$monto'
+                monto = '$monto',
+                tipo = '$tipo'
             WHERE
                 id = $id
         ");

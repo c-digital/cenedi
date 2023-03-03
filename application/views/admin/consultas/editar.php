@@ -52,198 +52,274 @@
                <input type="text" class="form-control" name="monto" value="<?php echo $consulta->monto; ?>">
             </div>
 
-            <div class="col-md-12" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid silver">
-               <div class="row">
-                  <div class="col-md-12">
-                     <h4>Anamnesis</h4>
-                  </div>
+            <?php if ($consulta->tipo == 'diabetes'): ?>
 
-                  <div class="col-md-6">
-                     <div class="form-group">
-                        <label for="anamnesis[general]">Información general</label>
-                        <textarea name="anamnesis[general]" cols="30" rows="10" class="form-control"><?php echo $anamnesis->general; ?></textarea>
-                     </div>
-
-                     <div class="row" style="margin-top: 50px">
-                        <div class="col-md-3">
-                           <label for="peso">Peso</label>
-                           <input type="text" class="form-control" name="anamnesis[peso]" value="<?php echo $anamnesis->peso; ?>">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="altura">Altura</label>
-                           <input type="text" class="form-control" name="anamnesis[altura]" value="<?php echo $anamnesis->altura; ?>">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="imc">IMC</label>
-                           <input type="text" class="form-control" name="anamnesis[imc]" value="<?php echo $anamnesis->imc; ?>">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="temperatura">Temperatura</label>
-                           <input type="text" class="form-control" name="anamnesis[temperatura]" value="<?php echo $anamnesis->temperatura; ?>">
-                        </div>
-                     </div>
-
-                     <div class="row" style="margin-top: 10px">
-                        <div class="col-md-3">
-                           <label for="presion_sanguinea_sistolica">P. anguinea sistolica</label>
-                           <input type="text" class="form-control" name="anamnesis[presion_sanguinea_sistolica]" value="<?php echo $anamnesis->presion_sanguinea_sistolica; ?>">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="presion_sanguinea_diastolica">P. sanguinea diastolica</label>
-                           <input type="text" class="form-control" name="anamnesis[presion_sanguinea_diastolica]" value="<?php echo $anamnesis->presion_sanguinea_diastolica; ?>">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="frecuencia_respiratoria">Frecuencia respiratoria</label>
-                           <input type="text" class="form-control" name="anamnesis[frecuencia_respiratoria]" value="<?php echo $anamnesis->frecuencia_respiratoria; ?>">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="frecuencia_cardiaca">Frecuencia cardiaca</label>
-                           <input type="text" class="form-control" name="anamnesis[frecuencia_cardiaca]" value="<?php echo $anamnesis->frecuencia_cardiaca; ?>">
-                        </div>
-                     </div>
-
-                     <div class="row" style="margin-top: 10px">
-                        <div class="col-md-3">
-                           <label for="imc_20">Exceso de peso, IMC 20</label>
-                           <input type="text" class="form-control" name="anamnesis[imc_20]" value="<?php echo $anamnesis->imc_20; ?>">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="imc_30">Exceso de peso, IMC 30</label>
-                           <input type="text" class="form-control" name="anamnesis[imc_30]" value="<?php echo $anamnesis->imc_30; ?>">
-                        </div>
-                     </div>
-
-                     <div class="row" style="margin-top: 30px">
-                        <div class="col-md-12">
-                           <div class="form-group">
-                              <label for="examen_fisico">Examen físico</label>
-                              <textarea name="anamnesis[examen_fisico]" cols="30" rows="10" class="form-control"><?php echo $anamnesis->examen_fisico; ?></textarea>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="row" style="margin-top: 30px">
-                        <div class="col-md-12">
-                           <div class="form-group">
-                              <label for="diagnostico">Diagnostico</label>
-                              <textarea name="anamnesis[diagnostico]" cols="30" rows="10" class="form-control"><?php echo $anamnesis->diagnostico; ?></textarea>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="row">
-                        <div class="col-md-12" style="margin-top: 30px">
-                           <div class="form-group">
-                              <label for="cie10">CIE-10</label>
-                              <select style="height: 150px" name="anamnesis[cie10]" class="form-control">
-                                 <?php foreach ($enfermedades as $enfermedad): ?>
-                                    <option <?php echo (isset($anamnesis->cie10) and ($enfermedad->codigo . ' - ' . $enfermedad->descripcion == $anamnesis->cie10)) ? 'selected' : ''; ?> value="<?php echo $enfermedad->codigo . ' - ' . $enfermedad->descripcion; ?>"><?php echo $enfermedad->codigo . ' - ' . $enfermedad->descripcion; ?></option>
-                                 <?php endforeach; ?>
-                              </select>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="col-md-6">
-                     <div class="form-group">
-                        <label for="anamnesis">Actividad fisica</label>
-                        <input class="form-control" name="anamnesis[actividad_fisica]" value="<?php echo $anamnesis->actividad_fisica; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Etilismo</label>
-                        <input class="form-control" name="anamnesis[etilismo]" value="<?php echo $anamnesis->etilismo; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Fumador</label>
-                        <input class="form-control" name="anamnesis[fumador]" value="<?php echo $anamnesis->fumador; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Drogas</label>
-                        <input class="form-control" name="anamnesis[drogas]" value="<?php echo $anamnesis->drogas; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Alergias</label>
-                        <input class="form-control" name="anamnesis[alergias]" value="<?php echo $anamnesis->alergias; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Diabetes</label>
-                        <input class="form-control" name="anamnesis[diabetes]" value="<?php echo $anamnesis->diabetes; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Enfermedades cronicas</label>
-                        <input class="form-control" name="anamnesis[enfermedades_cronicas]" value="<?php echo $anamnesis->enfermedades_cronicas; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Hipertension</label>
-                        <input class="form-control" name="anamnesis[hipertension]" value="<?php echo $anamnesis->hipertension; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Neoplasma</label>
-                        <input class="form-control" name="anamnesis[neoplasma]" value="<?php echo $anamnesis->neoplasma; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Medicamentos a pedido</label>
-                        <input class="form-control" name="anamnesis[medicamentos_pedido]" value="<?php echo $anamnesis->medicamentos_pedido; ?>">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Metodos anticonceptivos</label>
-                        <input class="form-control" name="anamnesis[metodos_anticonceptivos]" value="<?php echo $anamnesis->metodos_anticonceptivos; ?>">
-                     </div>
-
-                     <div class="form-group" style="margin-top: 30px">
-                        <div class="panel panel-default">
-                           <div class="panel-heading">Fotos</div>
-
-                           <div class="panel-body">
-                              <input type="file" multiple name="fotos[]">
-
-                              <hr>
-
-                              <?php foreach (json_decode($consulta->fotos) as $foto): ?>
-                                 <a href="<?php echo '/uploads/consultas/' . $foto; ?>" data-title="<?php echo $foto; ?>" data-lightbox="fotos">
-                                    <img width="25%" src="<?php echo '/uploads/consultas/' . $foto; ?>" alt="">
-                                 </a>
-                              <?php endforeach; ?>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="col-md-12">
-                     <div class="form-group">
-                        <label for="prescripcion_medica">Prescripcion medica</label>
-                        <textarea cols="30" rows="10" name="anamnesis[prescripcion_medica]" class="form-control"><?php echo $anamnesis->prescripcion_medica; ?></textarea>
-                     </div>
-                  </div>
-
-                  <div class="col-md-12">
-                     <button type="submit" class="btn btn-info">Modificar consulta</button>
-
-                     <?php if (isset($_GET['estado']) && $_GET['estado'] == 'En atención'): ?>
-                        <input type="hidden" name="estado" value="Completada">
-                        <button type="submit" class="btn btn-info">Finalizar consulta</button>
-                     <?php endif; ?>
-                  </div>
+               <div class="col-md-12" style="border-top: 0.5px solid silver">
+                  <h4>Antecedenes familiares</h4>
                </div>
-            </div>
+
+               <div class="col-md-2">
+                  <label for="obesidad">Obesidad</label><br>
+
+                  <input type="radio" name="obesidad" value="Si" <?php echo $anamnesis->obesidad == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="obesidad" value="No" <?php echo $anamnesis->obesidad == 'Si' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="hta">HTA</label><br>
+
+                  <input type="radio" name="hta" value="Si" <?php echo $anamnesis->hta == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="hta" value="No" <?php echo $anamnesis->hta == 'Si' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="diabetes">Diabetes</label><br>
+
+                  <input type="radio" name="diabetes" value="Si" <?php echo $anamnesis->diabetes == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="diabetes" value="No" <?php echo $anamnesis->diabetes == 'Si' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="iam">IAM</label><br>
+
+                  <input type="radio" name="iam" value="Si" <?php echo $anamnesis->iam == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="iam" value="No" <?php echo $anamnesis->iam == 'Si' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="acv">ACV</label><br>
+
+                  <input type="radio" name="acv" value="Si" <?php echo $anamnesis->acv == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="acv" value="No" <?php echo $anamnesis->acv == 'Si' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="cancer">Cancer</label><br>
+
+                  <input type="radio" name="cancer" value="Si" <?php echo $anamnesis->cancer == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="cancer" value="No" <?php echo $anamnesis->cancer == 'Si' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="col-md-12" style="margin-top: 20px">
+                  <label for="aclaraciones">Aclaraciones</label>
+                  <textarea name="aclaraciones" class="form-control"><?php echo $anamnesis->aclaraciones; ?></textarea>
+               </div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <h4>Antecedenes gineco obstetricos</h4>
+               </div>
+
+               <div class="col-md-6">
+                  <label for="¿Alguno de sus hijos pesó más de 4kg al nacer?">¿Alguno de sus hijos pesó más de 4kg al nacer?</label><br>
+
+                  <input type="radio" name="¿Alguno de sus hijos pesó más de 4kg al nacer?" value="Si" <?php echo $anamnesis->'¿Alguno de sus hijos pesó más de 4kg al nacer?' == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="¿Alguno de sus hijos pesó más de 4kg al nacer?" value="No" <?php echo $anamnesis->'¿Alguno de sus hijos pesó más de 4kg al nacer?' == 'Si' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="col-md-6">
+                  <label for="¿Ha enido algún aborto, muerte, fetal, neonatal?">¿Ha enido algún aborto, muerte, fetal, neonatal?</label><br>
+
+                  <input type="radio" name="¿Ha enido algún aborto, muerte, fetal, neonatal?" value="Si" <?php echo $anamnesis->'¿Ha enido algún aborto, muerte, fetal, neonatal?' == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="¿Ha enido algún aborto, muerte, fetal, neonatal?" value="No" <?php echo $anamnesis->'¿Ha enido algún aborto, muerte, fetal, neonatal?' == 'Si' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <h4>Antecedenes personales</h4>
+               </div>
+
+               <div class="col-md-2">HTA</div>
+               <div class="col-md-2">
+                  <input type="radio" name="hta_personal" value="Si" <?php echo $anamnesis->hta_personal == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="hta_personal" value="No" <?php echo $anamnesis->hta_personal == 'No' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Obesidad</div>
+               <div class="col-md-2">
+                  <input type="radio" name="obesidad_personal" value="Si" <?php echo $anamnesis->obesidad_personal == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="obesidad_personal" value="No" <?php echo $anamnesis->obesidad_personal == 'No' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Diabetes</div>
+               <div class="col-md-2">
+                  <input type="radio" name="diabetes_personal" value="Si" <?php echo $anamnesis->diabetes_personal == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="diabetes_personal" value="No" <?php echo $anamnesis->diabetes_personal == 'No' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Fuma</div>
+               <div class="col-md-2">
+                  <input type="radio" name="fuma" value="Si" <?php echo $anamnesis->fuma == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="fuma" value="No" <?php echo $anamnesis->fuma == 'No' ? 'checked' : '' ?>> No
+               </div>
+               <div class="col-md-2">
+                  <input type="text" class="form-control form-control-sm" name="fuma_frencuencia" placeholder="Frecuencia:" value="<?php echo $anamnesis->fuma_frecuencia ?>">
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Bebidas alcoholicas</div>
+               <div class="col-md-2">
+                  <input type="radio" name="bebidas alcoholicas" value="Si" <?php echo $anamnesis->'bebidas alcoholicas' == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="bebidas alcoholicas" value="No" <?php echo $anamnesis->'bebidas alcoholicas' == 'No' ? 'checked' : '' ?>> No
+               </div>
+               <div class="col-md-2">
+                  <input type="text" class="form-control form-control-sm" name="bebidas_frencuencia" placeholder="Frecuencia:" value="<?php echo $anamnesis->bebidas_frecuencia ?>">
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Fondo de ojo anual</div>
+               <div class="col-md-2">
+                  <input type="radio" name="Fondo de ojo anual" value="Si" <?php echo $anamnesis->'Fondo de ojo anual' == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="Fondo de ojo anual" value="No" <?php echo $anamnesis->'Fondo de ojo anual' == 'No' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">ECG anual</div>
+               <div class="col-md-2">
+                  <input type="radio" name="ECG anual" value="Si" <?php echo $anamnesis->'ECG anual' == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="ECG anual" value="No" <?php echo $anamnesis->'ECG anual' == 'No' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Educación en diabetes</div>
+               <div class="col-md-2">
+                  <input type="radio" name="Educación en diabetes" value="Si" <?php echo $anamnesis->'Educación en diabetes' == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="Educación en diabetes" value="No" <?php echo $anamnesis->'Educación en diabetes' == 'No' ? 'checked' : '' ?>> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Antecedentes quirurgicos</div>
+               <div class="col-md-2">
+                  <input type="text" name="Antecedentes quirurgicos" class="form-control form-control-sm" value="<?php echo $anamnesis->'Antecedentes quirurgicos' ?>">
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="motivo" style="margin-top: 10px">Motivo de la consulta</label>
+                  <textarea name="motivo" class="form-control"><?php echo $anamnesis->motivo ?></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <h4>Signos vitales y medidas antropometricas</h4>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">
+                  <label for="pa">PA</label>
+                  <input type="text" class="form-control" name="pa" value="<?php echo $anamnesis->pa; ?>">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="pulso">Pulso</label>
+                  <input type="text" class="form-control" name="pulso" value="<?php echo $anamnesis->pulso; ?>">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="peso">Peso</label>
+                  <input type="text" class="form-control" name="peso" value="<?php echo $anamnesis->peso; ?>">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="talla">Talla</label>
+                  <input type="text" class="form-control" name="talla" value="<?php echo $anamnesis->talla; ?>">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="imc">IMC</label>
+                  <input type="text" class="form-control" name="imc" value="<?php echo $anamnesis->imc; ?>">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="pcintura">P/cintura</label>
+                  <input type="text" class="form-control" name="pcintura" value="<?php echo $anamnesis->pcintura; ?>">
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Historial de enfermedad actual" style="margin-top: 10px">Historial de enfermedad actual</label>
+                  <textarea name="Historial de enfermedad actual" class="form-control"><?php echo $anamnesis->'Historial de enfermedad actual'; ?></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Examen físico" style="margin-top: 10px">Examen físico</label>
+                  <textarea name="Examen físico" class="form-control"><?php echo $anamnesis->'Examen físico'; ?></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Diagnóstico presuntivo" style="margin-top: 10px">Diagnóstico presuntivo</label>
+                  <textarea name="Diagnóstico presuntivo" class="form-control"><?php echo $anamnesis->'Diagnóstico presuntivo'; ?></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Laboratorios, estudios o exámenes solicitados" style="margin-top: 10px">Laboratorios, estudios o exámenes solicitados</label>
+                  <textarea name="Laboratorios, estudios o exámenes solicitados" class="form-control"><?php echo $anamnesis->'Laboratorios, estudios o exámenes solicitados'; ?></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Tratamiento" style="margin-top: 10px">Tratamiento</label>
+                  <textarea name="Tratamiento" class="form-control"><?php echo $anamnesis->Tratamiento; ?></textarea>
+               </div>
+
+               <div class="col-md-12" style="margin-top: 30px; margin-bottom: 30px; border-top: 0.5px solid silver">
+                  <h4>Firma y sella del médico</h4>
+               </div>
+
+               <div class="col-md-3">Elaborado:</div>
+
+               <div class="col-md-3">
+                  ________________________________<br>
+                  Lic.Alberto Terrazas C.<br>
+                  Coordinador Administrativo<br>
+                  Unidades de Servicio - F.C.S.H.
+               </div>
+
+               <div class="col-md-3">Aprobado:</div>
+
+               <div class="col-md-3">
+                  ________________________________<br>
+                  Dr. Reinerio Vargas B.<br>
+                  Decano<br>
+                  F.C.S.U. - U.A.G.R.M
+               </div>
+
+               <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
+
+               <input type="hidden" name="tipo" value="diabetes" value="<?php echo $consulta->tipo ?>">
+
+            <?php endif; ?>
+
+
+
+
+            <?php if ($consulta->tipo == 'neurologia'): ?>
+
+               <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
+
+               <input type="hidden" name="tipo" value="neurologia" value="<?php echo $consulta->tipo ?>">
+
+            <?php endif; ?>
 
             <input type="hidden" name="id" value="<?php echo $consulta->id; ?>">
          <?php echo form_close(); ?>

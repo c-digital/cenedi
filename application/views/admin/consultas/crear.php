@@ -52,185 +52,275 @@
                <input type="text" class="form-control" name="monto">
             </div>
 
-            <div class="col-md-12" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid silver">
-               <div class="row">
-                  <div class="col-md-12">
-                     <h4>Anamnesis</h4>
-                  </div>
+            <?php if ($_GET['tipo'] == 'diabetes'): ?>
 
-                  <div class="col-md-6">
-                     <div class="form-group">
-                        <label for="anamnesis[general]">Información general</label>
-                        <textarea name="anamnesis[general]" cols="30" rows="10" class="form-control"></textarea>
-                     </div>
-
-                     <div class="row" style="margin-top: 50px">
-                        <div class="col-md-3">
-                           <label for="peso">Peso</label>
-                           <input type="number" class="form-control" id="peso" name="anamnesis[peso]">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="altura">Altura</label>
-                           <input type="number" class="form-control" id="altura" name="anamnesis[altura]">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="imc">IMC</label>
-                           <input type="text" readonly id="imc" class="form-control" name="anamnesis[imc]">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="temperatura">Temperatura</label>
-                           <input type="text" class="form-control" name="anamnesis[temperatura]">
-                        </div>
-                     </div>
-
-                     <div class="row" style="margin-top: 10px">
-                        <div class="col-md-3">
-                           <label for="presion_sanguinea_sistolica">P. anguinea sistolica</label>
-                           <input type="text" class="form-control" name="anamnesis[presion_sanguinea_sistolica]">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="presion_sanguinea_diastolica">P. sanguinea diastolica</label>
-                           <input type="text" class="form-control" name="anamnesis[presion_sanguinea_diastolica]">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="frecuencia_respiratoria">Frecuencia respiratoria</label>
-                           <input type="text" class="form-control" name="anamnesis[frecuencia_respiratoria]">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="frecuencia_cardiaca">Frecuencia cardiaca</label>
-                           <input type="text" class="form-control" name="anamnesis[frecuencia_cardiaca]">
-                        </div>
-                     </div>
-
-                     <div class="row" style="margin-top: 10px">
-                        <div class="col-md-3">
-                           <label for="imc_20">Exceso de peso, IMC 20</label>
-                           <input type="text" class="form-control" name="anamnesis[imc_20]">
-                        </div>
-
-                        <div class="col-md-3">
-                           <label for="imc_30">Exceso de peso, IMC 30</label>
-                           <input type="text" class="form-control" name="anamnesis[imc_30]">
-                        </div>
-                     </div>
-
-                     <div class="row" style="margin-top: 30px">
-                        <div class="col-md-12">
-                           <div class="form-group">
-                              <label for="examen_fisico">Examen físico</label>
-                              <textarea name="anamnesis[examen_fisico]" cols="30" rows="10" class="form-control"></textarea>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="row" style="margin-top: 30px">
-                        <div class="col-md-12">
-                           <div class="form-group">
-                              <label for="diagnostico">Diagnostico</label>
-                              <textarea name="anamnesis[diagnostico]" cols="30" rows="10" class="form-control"></textarea>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="row">
-                        <div class="col-md-12" style="margin-top: 30px">
-                           <div class="form-group">
-                              <label for="cie10">CIE-10</label>
-                              <select style="height: 150px" name="anamnesis[cie10]" class="form-control">
-                                 <?php foreach ($enfermedades as $enfermedad): ?>
-                                    <option value="<?php echo $enfermedad->codigo . ' - ' . $enfermedad->descripcion; ?>"><?php echo $enfermedad->codigo . ' - ' . $enfermedad->descripcion; ?></option>
-                                 <?php endforeach; ?>
-                              </select>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="col-md-6">
-                     <div class="form-group">
-                        <label for="anamnesis">Actividad fisica</label>
-                        <input class="form-control" name="anamnesis[actividad_fisica]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Etilismo</label>
-                        <input class="form-control" name="anamnesis[etilismo]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Fumador</label>
-                        <input class="form-control" name="anamnesis[fumador]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Drogas</label>
-                        <input class="form-control" name="anamnesis[drogas]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Alergias</label>
-                        <input class="form-control" name="anamnesis[alergias]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Diabetes</label>
-                        <input class="form-control" name="anamnesis[diabetes]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Enfermedades cronicas</label>
-                        <input class="form-control" name="anamnesis[enfermedades_cronicas]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Hipertension</label>
-                        <input class="form-control" name="anamnesis[hipertension]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Neoplasma</label>
-                        <input class="form-control" name="anamnesis[neoplasma]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Medicamentos a pedido</label>
-                        <input class="form-control" name="anamnesis[medicamentos_pedido]">
-                     </div>
-
-                     <div class="form-group">
-                        <label for="anamnesis">Metodos anticonceptivos</label>
-                        <input class="form-control" name="anamnesis[metodos_anticonceptivos]">
-                     </div>
-
-                     <div class="form-group" style="margin-top: 30px">
-                        <div class="panel panel-default">
-                           <div class="panel-heading">Fotos</div>
-
-                           <div class="panel-body">
-                              <input type="file" multiple name="fotos[]">
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="col-md-12">
-                     <div class="form-group">
-                        <label for="prescripcion_medica">Prescripcion medica</label>
-                        <textarea cols="30" rows="10" name="anamnesis[prescripcion_medica]" class="form-control"></textarea>
-                     </div>
-                  </div>
-
-                  <div class="col-md-12">
-                     <button type="submit" class="btn btn-info">Registrar consulta</button>
-                  </div>
+               <div class="col-md-12" style="border-top: 0.5px solid silver">
+                  <h4>Antecedenes familiares</h4>
                </div>
-            </div>
+
+               <div class="col-md-2">
+                  <label for="obesidad">Obesidad</label><br>
+
+                  <input type="radio" name="obesidad" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="obesidad" value="No"> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="hta">HTA</label><br>
+
+                  <input type="radio" name="hta" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="hta" value="No"> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="diabetes">Diabetes</label><br>
+
+                  <input type="radio" name="diabetes" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="diabetes" value="No"> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="iam">IAM</label><br>
+
+                  <input type="radio" name="iam" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="iam" value="No"> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="acv">ACV</label><br>
+
+                  <input type="radio" name="acv" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="acv" value="No"> No
+               </div>
+
+               <div class="col-md-2">
+                  <label for="cancer">Cancer</label><br>
+
+                  <input type="radio" name="cancer" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="cancer" value="No"> No
+               </div>
+
+               <div class="col-md-12" style="margin-top: 20px">
+                  <label for="aclaraciones">Aclaraciones</label>
+                  <textarea name="aclaraciones" class="form-control"></textarea>
+               </div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <h4>Antecedenes gineco obstetricos</h4>
+               </div>
+
+               <div class="col-md-6">
+                  <label for="¿Alguno de sus hijos pesó más de 4kg al nacer?">¿Alguno de sus hijos pesó más de 4kg al nacer?</label><br>
+
+                  <input type="radio" name="¿Alguno de sus hijos pesó más de 4kg al nacer?" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="¿Alguno de sus hijos pesó más de 4kg al nacer?" value="No"> No
+               </div>
+
+               <div class="col-md-6">
+                  <label for="¿Ha enido algún aborto, muerte, fetal, neonatal?">¿Ha enido algún aborto, muerte, fetal, neonatal?</label><br>
+
+                  <input type="radio" name="¿Ha enido algún aborto, muerte, fetal, neonatal?" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="¿Ha enido algún aborto, muerte, fetal, neonatal?" value="No"> No
+               </div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <h4>Antecedenes personales</h4>
+               </div>
+
+               <div class="col-md-2">HTA</div>
+               <div class="col-md-2">
+                  <input type="radio" name="hta_personal" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="hta_personal" value="No"> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Obesidad</div>
+               <div class="col-md-2">
+                  <input type="radio" name="obesidad_personal" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="obesidad_personal" value="No"> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Diabetes</div>
+               <div class="col-md-2">
+                  <input type="radio" name="diabetes_personal" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="diabetes_personal" value="No"> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Fuma</div>
+               <div class="col-md-2">
+                  <input type="radio" name="fuma" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="fuma" value="No"> No
+               </div>
+               <div class="col-md-2">
+                  <input type="text" class="form-control form-control-sm" name="fuma_frencuencia" placeholder="Frecuencia:">
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Bebidas alcoholicas</div>
+               <div class="col-md-2">
+                  <input type="radio" name="bebidas alcoholicas" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="bebidas alcoholicas" value="No"> No
+               </div>
+               <div class="col-md-2">
+                  <input type="text" class="form-control form-control-sm" name="bebidas_frencuencia" placeholder="Frecuencia:">
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Fondo de ojo anual</div>
+               <div class="col-md-2">
+                  <input type="radio" name="Fondo de ojo anual" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="Fondo de ojo anual" value="No"> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">ECG anual</div>
+               <div class="col-md-2">
+                  <input type="radio" name="ECG anual" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="ECG anual" value="No"> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Educación en diabetes</div>
+               <div class="col-md-2">
+                  <input type="radio" name="Educación en diabetes" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="Educación en diabetes" value="No"> No
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">Antecedentes quirurgicos</div>
+               <div class="col-md-2">
+                  <input type="text" name="Antecedentes quirurgicos" class="form-control form-control-sm">
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="motivo" style="margin-top: 10px">Motivo de la consulta</label>
+                  <textarea name="motivo" class="form-control"></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <h4>Signos vitales y medidas antropometricas</h4>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-2">
+                  <label for="pa">PA</label>
+                  <input type="text" class="form-control" name="pa">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="pulso">Pulso</label>
+                  <input type="text" class="form-control" name="pulso">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="peso">Peso</label>
+                  <input type="text" class="form-control" name="peso">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="talla">Talla</label>
+                  <input type="text" class="form-control" name="talla">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="imc">IMC</label>
+                  <input type="text" class="form-control" name="imc">
+               </div>
+
+               <div class="col-md-2">
+                  <label for="pcintura">P/cintura</label>
+                  <input type="text" class="form-control" name="pcintura">
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Historial de enfermedad actual" style="margin-top: 10px">Historial de enfermedad actual</label>
+                  <textarea name="Historial de enfermedad actual" class="form-control"></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Examen físico" style="margin-top: 10px">Examen físico</label>
+                  <textarea name="Examen físico" class="form-control"></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Diagnóstico presuntivo" style="margin-top: 10px">Diagnóstico presuntivo</label>
+                  <textarea name="Diagnóstico presuntivo" class="form-control"></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Laboratorios, estudios o exámenes solicitados" style="margin-top: 10px">Laboratorios, estudios o exámenes solicitados</label>
+                  <textarea name="Laboratorios, estudios o exámenes solicitados" class="form-control"></textarea>
+               </div>
+
+               <div class="row"></div>
+
+               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
+                  <label for="Tratamiento" style="margin-top: 10px">Tratamiento</label>
+                  <textarea name="Tratamiento" class="form-control"></textarea>
+               </div>
+
+               <div class="col-md-12" style="margin-top: 30px; margin-bottom: 30px; border-top: 0.5px solid silver">
+                  <h4>Firma y sella del médico</h4>
+               </div>
+
+               <div class="col-md-3">Elaborado:</div>
+
+               <div class="col-md-3">
+                  ________________________________<br>
+                  Lic.Alberto Terrazas C.<br>
+                  Coordinador Administrativo<br>
+                  Unidades de Servicio - F.C.S.H.
+               </div>
+
+               <div class="col-md-3">Aprobado:</div>
+
+               <div class="col-md-3">
+                  ________________________________<br>
+                  Dr. Reinerio Vargas B.<br>
+                  Decano<br>
+                  F.C.S.U. - U.A.G.R.M
+               </div>
+
+               <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
+
+               <input type="hidden" name="tipo" value="diabetes">
+
+            <?php endif; ?>
+
+
+
+
+            <?php if ($_GET['tipo'] == 'neurologia'): ?>
+
+               <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
+
+               <input type="hidden" name="tipo" value="neurologia">
+
+            <?php endif; ?>
+
          <?php echo form_close(); ?>
       </div>
    </div>
@@ -249,43 +339,6 @@
             }
             reader.readAsDataURL(input.files[0]);
          }
-      });
-
-      $('.img-circle').click(function () {
-         $('[name=foto_perfil]').click();
-      });
-
-      function imc() {
-         peso = $('#peso').val();
-         altura = $('#altura').val();
-
-         if (peso != '') {
-            peso = parseInt(peso);
-         }
-
-         if (altura != '') {
-            altura = parseInt(altura);
-         }
-
-         if (peso != '' && altura == '') {
-            $('#imc').val(peso);
-         }
-
-         if (altura != '' && peso == '') {
-            $('#imc').val(altura * altura);
-         }
-
-         if (peso != '' && altura != '') {
-            $('#imc').val(peso + (altura * altura));
-         }
-      }
-
-      $('#peso').change(function () {
-         imc();
-      });
-
-      $('#altura').change(function () {
-         imc();
       });
 
       $('[name=id_client]').on('change', function () {

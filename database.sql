@@ -2,30 +2,24 @@
 -- version 4.9.11
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Mar 01, 2023 at 08:54 PM
--- Server version: 5.7.41
--- PHP Version: 7.4.33
+-- Servidor: localhost:3306
+-- Tiempo de generación: 02-03-2023 a las 16:55:16
+-- Versión del servidor: 5.7.41
+-- Versión de PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Database: `deconsul_cenedi`
+-- Base de datos: `i9finance_cenedi`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblaccount_planning`
+-- Estructura de tabla para la tabla `tblaccount_planning`
 --
 
 CREATE TABLE `tblaccount_planning` (
@@ -60,7 +54,7 @@ CREATE TABLE `tblaccount_planning` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblaccount_planning_current_service`
+-- Estructura de tabla para la tabla `tblaccount_planning_current_service`
 --
 
 CREATE TABLE `tblaccount_planning_current_service` (
@@ -73,7 +67,7 @@ CREATE TABLE `tblaccount_planning_current_service` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblaccount_planning_financial`
+-- Estructura de tabla para la tabla `tblaccount_planning_financial`
 --
 
 CREATE TABLE `tblaccount_planning_financial` (
@@ -89,7 +83,7 @@ CREATE TABLE `tblaccount_planning_financial` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblaccount_planning_items`
+-- Estructura de tabla para la tabla `tblaccount_planning_items`
 --
 
 CREATE TABLE `tblaccount_planning_items` (
@@ -103,7 +97,7 @@ CREATE TABLE `tblaccount_planning_items` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblaccount_planning_marketing_activities`
+-- Estructura de tabla para la tabla `tblaccount_planning_marketing_activities`
 --
 
 CREATE TABLE `tblaccount_planning_marketing_activities` (
@@ -116,7 +110,7 @@ CREATE TABLE `tblaccount_planning_marketing_activities` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblaccount_planning_objective`
+-- Estructura de tabla para la tabla `tblaccount_planning_objective`
 --
 
 CREATE TABLE `tblaccount_planning_objective` (
@@ -129,7 +123,7 @@ CREATE TABLE `tblaccount_planning_objective` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblaccount_planning_service_ability_offering`
+-- Estructura de tabla para la tabla `tblaccount_planning_service_ability_offering`
 --
 
 CREATE TABLE `tblaccount_planning_service_ability_offering` (
@@ -145,7 +139,7 @@ CREATE TABLE `tblaccount_planning_service_ability_offering` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblaccount_planning_task`
+-- Estructura de tabla para la tabla `tblaccount_planning_task`
 --
 
 CREATE TABLE `tblaccount_planning_task` (
@@ -165,7 +159,7 @@ CREATE TABLE `tblaccount_planning_task` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblaccount_planning_team`
+-- Estructura de tabla para la tabla `tblaccount_planning_team`
 --
 
 CREATE TABLE `tblaccount_planning_team` (
@@ -178,7 +172,7 @@ CREATE TABLE `tblaccount_planning_team` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_accounts`
+-- Estructura de tabla para la tabla `tblacc_accounts`
 --
 
 CREATE TABLE `tblacc_accounts` (
@@ -197,7 +191,7 @@ CREATE TABLE `tblacc_accounts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblacc_accounts`
+-- Volcado de datos para la tabla `tblacc_accounts`
 --
 
 INSERT INTO `tblacc_accounts` (`id`, `name`, `key_name`, `number`, `parent_account`, `account_type_id`, `account_detail_type_id`, `balance`, `balance_as_of`, `description`, `default_account`, `active`) VALUES
@@ -292,7 +286,7 @@ INSERT INTO `tblacc_accounts` (`id`, `name`, `key_name`, `number`, `parent_accou
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_account_history`
+-- Estructura de tabla para la tabla `tblacc_account_history`
 --
 
 CREATE TABLE `tblacc_account_history` (
@@ -315,7 +309,7 @@ CREATE TABLE `tblacc_account_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblacc_account_history`
+-- Volcado de datos para la tabla `tblacc_account_history`
 --
 
 INSERT INTO `tblacc_account_history` (`id`, `account`, `debit`, `credit`, `description`, `rel_id`, `rel_type`, `datecreated`, `addedfrom`, `customer`, `reconcile`, `split`, `item`, `paid`, `date`, `tax`) VALUES
@@ -387,7 +381,7 @@ INSERT INTO `tblacc_account_history` (`id`, `account`, `debit`, `credit`, `descr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_account_type_details`
+-- Estructura de tabla para la tabla `tblacc_account_type_details`
 --
 
 CREATE TABLE `tblacc_account_type_details` (
@@ -401,7 +395,7 @@ CREATE TABLE `tblacc_account_type_details` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_banking_rules`
+-- Estructura de tabla para la tabla `tblacc_banking_rules`
 --
 
 CREATE TABLE `tblacc_banking_rules` (
@@ -418,7 +412,7 @@ CREATE TABLE `tblacc_banking_rules` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_banking_rule_details`
+-- Estructura de tabla para la tabla `tblacc_banking_rule_details`
 --
 
 CREATE TABLE `tblacc_banking_rule_details` (
@@ -433,7 +427,7 @@ CREATE TABLE `tblacc_banking_rule_details` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_expense_category_mappings`
+-- Estructura de tabla para la tabla `tblacc_expense_category_mappings`
 --
 
 CREATE TABLE `tblacc_expense_category_mappings` (
@@ -447,7 +441,7 @@ CREATE TABLE `tblacc_expense_category_mappings` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_item_automatics`
+-- Estructura de tabla para la tabla `tblacc_item_automatics`
 --
 
 CREATE TABLE `tblacc_item_automatics` (
@@ -461,7 +455,7 @@ CREATE TABLE `tblacc_item_automatics` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_journal_entries`
+-- Estructura de tabla para la tabla `tblacc_journal_entries`
 --
 
 CREATE TABLE `tblacc_journal_entries` (
@@ -477,7 +471,7 @@ CREATE TABLE `tblacc_journal_entries` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_payment_mode_mappings`
+-- Estructura de tabla para la tabla `tblacc_payment_mode_mappings`
 --
 
 CREATE TABLE `tblacc_payment_mode_mappings` (
@@ -492,7 +486,7 @@ CREATE TABLE `tblacc_payment_mode_mappings` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_reconciles`
+-- Estructura de tabla para la tabla `tblacc_reconciles`
 --
 
 CREATE TABLE `tblacc_reconciles` (
@@ -513,7 +507,7 @@ CREATE TABLE `tblacc_reconciles` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_tax_mappings`
+-- Estructura de tabla para la tabla `tblacc_tax_mappings`
 --
 
 CREATE TABLE `tblacc_tax_mappings` (
@@ -528,7 +522,7 @@ CREATE TABLE `tblacc_tax_mappings` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_transaction_bankings`
+-- Estructura de tabla para la tabla `tblacc_transaction_bankings`
 --
 
 CREATE TABLE `tblacc_transaction_bankings` (
@@ -545,7 +539,7 @@ CREATE TABLE `tblacc_transaction_bankings` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblacc_transfers`
+-- Estructura de tabla para la tabla `tblacc_transfers`
 --
 
 CREATE TABLE `tblacc_transfers` (
@@ -562,7 +556,7 @@ CREATE TABLE `tblacc_transfers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblactivity_log`
+-- Estructura de tabla para la tabla `tblactivity_log`
 --
 
 CREATE TABLE `tblactivity_log` (
@@ -573,7 +567,7 @@ CREATE TABLE `tblactivity_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblactivity_log`
+-- Volcado de datos para la tabla `tblactivity_log`
 --
 
 INSERT INTO `tblactivity_log` (`id`, `description`, `date`, `staffid`) VALUES
@@ -761,12 +755,15 @@ INSERT INTO `tblactivity_log` (`id`, `description`, `date`, `staffid`) VALUES
 (222, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 186.121.195.25]', '2023-02-28 13:42:27', 'Admin Admin'),
 (223, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 161.138.23.98]', '2023-02-28 16:20:38', 'Admin Admin'),
 (224, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 161.138.23.98]', '2023-02-28 16:53:30', 'Admin Admin'),
-(225, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 186.121.195.102]', '2023-03-01 19:36:54', 'Admin Admin');
+(225, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 186.121.195.102]', '2023-03-01 19:36:54', 'Admin Admin'),
+(226, 'Non Existing User Tried to Login [Email: admin@admin.com, Is Staff Member: No, IP: 38.25.226.185]', '2023-03-02 11:28:32', NULL),
+(227, 'Failed Login Attempt [Email: admin@admin.com, Is Staff Member: Yes, IP: 38.25.226.185]', '2023-03-02 11:28:48', NULL),
+(228, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 38.25.226.185]', '2023-03-02 11:28:54', 'Admin Admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblannouncements`
+-- Estructura de tabla para la tabla `tblannouncements`
 --
 
 CREATE TABLE `tblannouncements` (
@@ -783,7 +780,7 @@ CREATE TABLE `tblannouncements` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblappointly_appointments`
+-- Estructura de tabla para la tabla `tblappointly_appointments`
 --
 
 CREATE TABLE `tblappointly_appointments` (
@@ -830,7 +827,7 @@ CREATE TABLE `tblappointly_appointments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblappointly_appointments`
+-- Volcado de datos para la tabla `tblappointly_appointments`
 --
 
 INSERT INTO `tblappointly_appointments` (`id`, `google_event_id`, `google_calendar_link`, `google_added_by_id`, `subject`, `description`, `email`, `name`, `phone`, `address`, `notes`, `contact_id`, `by_sms`, `by_email`, `hash`, `notification_date`, `external_notification_date`, `date`, `start_hour`, `approved`, `created_by`, `reminder_before`, `reminder_before_type`, `finished`, `cancelled`, `cancel_notes`, `source`, `type_id`, `feedback`, `feedback_comment`, `outlook_event_id`, `outlook_calendar_link`, `outlook_added_by_id`, `recurring`, `recurring_type`, `repeat_every`, `custom_recurring`, `cycles`, `total_cycles`, `last_recurring_date`) VALUES
@@ -840,7 +837,7 @@ INSERT INTO `tblappointly_appointments` (`id`, `google_event_id`, `google_calend
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblappointly_appointment_types`
+-- Estructura de tabla para la tabla `tblappointly_appointment_types`
 --
 
 CREATE TABLE `tblappointly_appointment_types` (
@@ -850,7 +847,7 @@ CREATE TABLE `tblappointly_appointment_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblappointly_appointment_types`
+-- Volcado de datos para la tabla `tblappointly_appointment_types`
 --
 
 INSERT INTO `tblappointly_appointment_types` (`id`, `type`, `color`) VALUES
@@ -859,7 +856,7 @@ INSERT INTO `tblappointly_appointment_types` (`id`, `type`, `color`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblappointly_attendees`
+-- Estructura de tabla para la tabla `tblappointly_attendees`
 --
 
 CREATE TABLE `tblappointly_attendees` (
@@ -868,7 +865,7 @@ CREATE TABLE `tblappointly_attendees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblappointly_attendees`
+-- Volcado de datos para la tabla `tblappointly_attendees`
 --
 
 INSERT INTO `tblappointly_attendees` (`staff_id`, `appointment_id`) VALUES
@@ -878,7 +875,7 @@ INSERT INTO `tblappointly_attendees` (`staff_id`, `appointment_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblappointly_callbacks`
+-- Estructura de tabla para la tabla `tblappointly_callbacks`
 --
 
 CREATE TABLE `tblappointly_callbacks` (
@@ -897,7 +894,7 @@ CREATE TABLE `tblappointly_callbacks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblappointly_callbacks`
+-- Volcado de datos para la tabla `tblappointly_callbacks`
 --
 
 INSERT INTO `tblappointly_callbacks` (`id`, `call_type`, `phone_number`, `timezone`, `firstname`, `lastname`, `status`, `message`, `email`, `date_start`, `date_end`, `date_added`) VALUES
@@ -907,7 +904,7 @@ INSERT INTO `tblappointly_callbacks` (`id`, `call_type`, `phone_number`, `timezo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblappointly_callbacks_assignees`
+-- Estructura de tabla para la tabla `tblappointly_callbacks_assignees`
 --
 
 CREATE TABLE `tblappointly_callbacks_assignees` (
@@ -917,7 +914,7 @@ CREATE TABLE `tblappointly_callbacks_assignees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblappointly_callbacks_assignees`
+-- Volcado de datos para la tabla `tblappointly_callbacks_assignees`
 --
 
 INSERT INTO `tblappointly_callbacks_assignees` (`id`, `callbackid`, `user_id`) VALUES
@@ -926,7 +923,7 @@ INSERT INTO `tblappointly_callbacks_assignees` (`id`, `callbackid`, `user_id`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblappointly_google`
+-- Estructura de tabla para la tabla `tblappointly_google`
 --
 
 CREATE TABLE `tblappointly_google` (
@@ -940,7 +937,7 @@ CREATE TABLE `tblappointly_google` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblbonus_discipline`
+-- Estructura de tabla para la tabla `tblbonus_discipline`
 --
 
 CREATE TABLE `tblbonus_discipline` (
@@ -961,7 +958,7 @@ CREATE TABLE `tblbonus_discipline` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblbonus_discipline_detail`
+-- Estructura de tabla para la tabla `tblbonus_discipline_detail`
 --
 
 CREATE TABLE `tblbonus_discipline_detail` (
@@ -979,7 +976,7 @@ CREATE TABLE `tblbonus_discipline_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcd_care`
+-- Estructura de tabla para la tabla `tblcd_care`
 --
 
 CREATE TABLE `tblcd_care` (
@@ -996,7 +993,7 @@ CREATE TABLE `tblcd_care` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcd_family_infor`
+-- Estructura de tabla para la tabla `tblcd_family_infor`
 --
 
 CREATE TABLE `tblcd_family_infor` (
@@ -1013,7 +1010,7 @@ CREATE TABLE `tblcd_family_infor` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcd_interview`
+-- Estructura de tabla para la tabla `tblcd_interview`
 --
 
 CREATE TABLE `tblcd_interview` (
@@ -1025,7 +1022,7 @@ CREATE TABLE `tblcd_interview` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcd_literacy`
+-- Estructura de tabla para la tabla `tblcd_literacy`
 --
 
 CREATE TABLE `tblcd_literacy` (
@@ -1042,7 +1039,7 @@ CREATE TABLE `tblcd_literacy` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcd_skill`
+-- Estructura de tabla para la tabla `tblcd_skill`
 --
 
 CREATE TABLE `tblcd_skill` (
@@ -1055,7 +1052,7 @@ CREATE TABLE `tblcd_skill` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcd_work_experience`
+-- Estructura de tabla para la tabla `tblcd_work_experience`
 --
 
 CREATE TABLE `tblcd_work_experience` (
@@ -1074,7 +1071,7 @@ CREATE TABLE `tblcd_work_experience` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchatclientmessages`
+-- Estructura de tabla para la tabla `tblchatclientmessages`
 --
 
 CREATE TABLE `tblchatclientmessages` (
@@ -1090,7 +1087,7 @@ CREATE TABLE `tblchatclientmessages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchatgroupmembers`
+-- Estructura de tabla para la tabla `tblchatgroupmembers`
 --
 
 CREATE TABLE `tblchatgroupmembers` (
@@ -1103,7 +1100,7 @@ CREATE TABLE `tblchatgroupmembers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchatgroupmessages`
+-- Estructura de tabla para la tabla `tblchatgroupmessages`
 --
 
 CREATE TABLE `tblchatgroupmessages` (
@@ -1117,7 +1114,7 @@ CREATE TABLE `tblchatgroupmessages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchatgroups`
+-- Estructura de tabla para la tabla `tblchatgroups`
 --
 
 CREATE TABLE `tblchatgroups` (
@@ -1129,7 +1126,7 @@ CREATE TABLE `tblchatgroups` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchatgroupsharedfiles`
+-- Estructura de tabla para la tabla `tblchatgroupsharedfiles`
 --
 
 CREATE TABLE `tblchatgroupsharedfiles` (
@@ -1142,7 +1139,7 @@ CREATE TABLE `tblchatgroupsharedfiles` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchatmessages`
+-- Estructura de tabla para la tabla `tblchatmessages`
 --
 
 CREATE TABLE `tblchatmessages` (
@@ -1158,7 +1155,7 @@ CREATE TABLE `tblchatmessages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchatsettings`
+-- Estructura de tabla para la tabla `tblchatsettings`
 --
 
 CREATE TABLE `tblchatsettings` (
@@ -1171,7 +1168,7 @@ CREATE TABLE `tblchatsettings` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchatsharedfiles`
+-- Estructura de tabla para la tabla `tblchatsharedfiles`
 --
 
 CREATE TABLE `tblchatsharedfiles` (
@@ -1184,7 +1181,7 @@ CREATE TABLE `tblchatsharedfiles` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchecklist`
+-- Estructura de tabla para la tabla `tblchecklist`
 --
 
 CREATE TABLE `tblchecklist` (
@@ -1196,7 +1193,7 @@ CREATE TABLE `tblchecklist` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblchecklist_allocation`
+-- Estructura de tabla para la tabla `tblchecklist_allocation`
 --
 
 CREATE TABLE `tblchecklist_allocation` (
@@ -1210,7 +1207,7 @@ CREATE TABLE `tblchecklist_allocation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblclients`
+-- Estructura de tabla para la tabla `tblclients`
 --
 
 CREATE TABLE `tblclients` (
@@ -1251,7 +1248,7 @@ CREATE TABLE `tblclients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblclients`
+-- Volcado de datos para la tabla `tblclients`
 --
 
 INSERT INTO `tblclients` (`userid`, `company`, `is_preffered`, `vat`, `phonenumber`, `country`, `city`, `zip`, `state`, `address`, `website`, `datecreated`, `active`, `leadid`, `billing_street`, `billing_city`, `billing_state`, `billing_zip`, `billing_country`, `shipping_street`, `shipping_city`, `shipping_state`, `shipping_zip`, `shipping_country`, `longitude`, `latitude`, `default_language`, `default_currency`, `show_primary_contact`, `is_supplier`, `stripe_id`, `registration_confirmed`, `addedfrom`, `loy_point`) VALUES
@@ -1262,7 +1259,7 @@ INSERT INTO `tblclients` (`userid`, `company`, `is_preffered`, `vat`, `phonenumb
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblconsents`
+-- Estructura de tabla para la tabla `tblconsents`
 --
 
 CREATE TABLE `tblconsents` (
@@ -1281,7 +1278,7 @@ CREATE TABLE `tblconsents` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblconsent_purposes`
+-- Estructura de tabla para la tabla `tblconsent_purposes`
 --
 
 CREATE TABLE `tblconsent_purposes` (
@@ -1295,7 +1292,7 @@ CREATE TABLE `tblconsent_purposes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblconsultas`
+-- Estructura de tabla para la tabla `tblconsultas`
 --
 
 CREATE TABLE `tblconsultas` (
@@ -1309,27 +1306,14 @@ CREATE TABLE `tblconsultas` (
   `fotos` text,
   `edad` varchar(256) DEFAULT NULL,
   `foto_perfil` varchar(256) DEFAULT NULL,
-  `estado` varchar(256) DEFAULT NULL
+  `estado` varchar(256) DEFAULT NULL,
+  `tipo` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tblconsultas`
---
-
-INSERT INTO `tblconsultas` (`id`, `id_client`, `id_staff`, `fecha`, `anamnesis`, `comentarios`, `monto`, `fotos`, `edad`, `foto_perfil`, `estado`) VALUES
-(1, 1, 1, '2022-01-14 11:36:52', '{\"general\":\"Paciente 35 anos llegu00f3 reclamando de dolor abdominal\",\"peso\":\"66\",\"altura\":\"150\",\"imc\":\"\",\"temperatura\":\"15\",\"presion_sanguinea_sistolica\":\"130\",\"presion_sanguinea_diastolica\":\"80\",\"frecuencia_respiratoria\":\"130\",\"frecuencia_cardiaca\":\"110\",\"imc_20\":\"\",\"imc_30\":\"\",\"examen_fisico\":\"Normal\",\"diagnostico\":\"Testejn0ni\",\"cie10\":\"A000 - COLERA DEBIDO A VIBRIO CHOLERAE O1, BIOTIPO CHOLERAE\",\"actividad_fisica\":\"No\",\"etilismo\":\"No\",\"fumador\":\"No\",\"drogas\":\"No\",\"alergias\":\"No\",\"diabetes\":\"No\",\"enfermedades_cronicas\":\"No\",\"hipertension\":\"\",\"neoplasma\":\"\",\"medicamentos_pedido\":\"\",\"metodos_anticonceptivos\":\"\",\"prescripcion_medica\":\"teste\"}', NULL, '100', '[\"IMG_9732~1.jpg\",\"IMG_9733~1.jpg\",\"IMG_9734~1.jpg\",\"\",\"\",\"\",\"\"]', '35', '12189063_192902174380813_6192279883125431059_n-596x556.jpg', 'En atención'),
-(2, 1, 1, '2022-01-14 11:36:52', '{\"general\":\"Paciente 35 anos llegu00f3 reclamando de dolor abdominal\",\"peso\":\"66\",\"altura\":\"150\",\"imc\":\"\",\"temperatura\":\"15\",\"presion_sanguinea_sistolica\":\"130\",\"presion_sanguinea_diastolica\":\"80\",\"frecuencia_respiratoria\":\"130\",\"frecuencia_cardiaca\":\"110\",\"imc_20\":\"\",\"imc_30\":\"\",\"examen_fisico\":\"Normal\",\"diagnostico\":\"Teste\",\"cie10\":\"A010 - FIEBRE TIFOIDEA\",\"actividad_fisica\":\"No\",\"etilismo\":\"No\",\"fumador\":\"No\",\"drogas\":\"No\",\"alergias\":\"No\",\"diabetes\":\"No\",\"enfermedades_cronicas\":\"No\",\"hipertension\":\"\",\"neoplasma\":\"\",\"medicamentos_pedido\":\"\",\"metodos_anticonceptivos\":\"\",\"prescripcion_medica\":\"teste\"}', NULL, '100', '[\"IMG_9732~1.jpg\",\"IMG_9733~1.jpg\",\"IMG_9734~1.jpg\",\"\",\"\"]', '35', '', 'Cancelada'),
-(3, 1, 1, '2022-01-20 17:40:41', '{\"general\":\"TEste\",\"peso\":\"72\",\"altura\":\"1.69\",\"imc\":\"28633\",\"temperatura\":\"15\",\"presion_sanguinea_sistolica\":\"100\",\"presion_sanguinea_diastolica\":\"120\",\"frecuencia_respiratoria\":\"\",\"frecuencia_cardiaca\":\"\",\"imc_20\":\"\",\"imc_30\":\"\",\"examen_fisico\":\"\",\"diagnostico\":\"\",\"cie10\":\"A000 - COLERA DEBIDO A VIBRIO CHOLERAE O1, BIOTIPO CHOLERA\",\"actividad_fisica\":\"No\",\"etilismo\":\"no\",\"fumador\":\"no\",\"drogas\":\"no\",\"alergias\":\"no\",\"diabetes\":\"no\",\"enfermedades_cronicas\":\"\",\"hipertension\":\"\",\"neoplasma\":\"\",\"medicamentos_pedido\":\"\",\"metodos_anticonceptivos\":\"\",\"prescripcion_medica\":\"\"}', NULL, '100', '[\"\",\"\"]', '35', '', 'En atención'),
-(4, 1, 1, '2022-02-11 14:12:52', '{\"general\":\"teste\",\"peso\":\"85\",\"altura\":\"1.65\",\"imc\":\"28636\",\"temperatura\":\"36\",\"presion_sanguinea_sistolica\":\"\",\"presion_sanguinea_diastolica\":\"\",\"frecuencia_respiratoria\":\"\",\"frecuencia_cardiaca\":\"\",\"imc_20\":\"\",\"imc_30\":\"\",\"examen_fisico\":\"\",\"diagnostico\":\"\",\"cie10\":\"A000 - COLERA DEBIDO A VIBRIO CHOLERAE O1, BIOTIPO CHOLERAE\",\"actividad_fisica\":\"\",\"etilismo\":\"\",\"fumador\":\"\",\"drogas\":\"\",\"alergias\":\"\",\"diabetes\":\"\",\"enfermedades_cronicas\":\"\",\"hipertension\":\"\",\"neoplasma\":\"\",\"medicamentos_pedido\":\"\",\"metodos_anticonceptivos\":\"\",\"prescripcion_medica\":\"\"}', NULL, '200', '[\"\",\"\"]', '35', '', 'En atención'),
-(5, 1, 1, '2022-02-26 10:18:13', '{\"general\":\"Paciente con Fractura en el Femur.\",\"peso\":\"72\",\"altura\":\"170\",\"imc\":\"28972\",\"temperatura\":\"36\",\"presion_sanguinea_sistolica\":\"\",\"presion_sanguinea_diastolica\":\"\",\"frecuencia_respiratoria\":\"\",\"frecuencia_cardiaca\":\"\",\"imc_20\":\"\",\"imc_30\":\"\",\"examen_fisico\":\"\",\"diagnostico\":\"\",\"cie10\":\"A000 - COLERA DEBIDO A VIBRIO CHOLERAE O1, BIOTIPO CHOLERAE\",\"actividad_fisica\":\"\",\"etilismo\":\"\",\"fumador\":\"\",\"drogas\":\"\",\"alergias\":\"\",\"diabetes\":\"\",\"enfermedades_cronicas\":\"\",\"hipertension\":\"\",\"neoplasma\":\"\",\"medicamentos_pedido\":\"\",\"metodos_anticonceptivos\":\"\",\"prescripcion_medica\":\"\"}', NULL, '100', '[\"\"]', '35', '', 'Cancelada'),
-(6, 2, 1, '2022-03-08 11:19:04', '{\"general\":\"\",\"peso\":\"\",\"altura\":\"\",\"imc\":\"\",\"temperatura\":\"\",\"presion_sanguinea_sistolica\":\"\",\"presion_sanguinea_diastolica\":\"\",\"frecuencia_respiratoria\":\"\",\"frecuencia_cardiaca\":\"\",\"imc_20\":\"\",\"imc_30\":\"\",\"examen_fisico\":\"\",\"diagnostico\":\"\",\"cie10\":\"A000 - COLERA DEBIDO A VIBRIO CHOLERAE O1, BIOTIPO CHOLERAE\",\"actividad_fisica\":\"\",\"etilismo\":\"\",\"fumador\":\"\",\"drogas\":\"\",\"alergias\":\"\",\"diabetes\":\"\",\"enfermedades_cronicas\":\"\",\"hipertension\":\"\",\"neoplasma\":\"\",\"medicamentos_pedido\":\"\",\"metodos_anticonceptivos\":\"\",\"prescripcion_medica\":\"\"}', NULL, '100', '[\"logo.jpeg\"]', '30', '', 'En atención'),
-(7, 1, 1, '2022-04-05 16:31:08', '{\"general\":\"fefef\",\"peso\":\"\",\"altura\":\"\",\"imc\":\"\",\"temperatura\":\"\",\"presion_sanguinea_sistolica\":\"\",\"presion_sanguinea_diastolica\":\"\",\"frecuencia_respiratoria\":\"\",\"frecuencia_cardiaca\":\"\",\"imc_20\":\"\",\"imc_30\":\"\",\"examen_fisico\":\"\",\"diagnostico\":\"\",\"cie10\":\"A000 - COLERA DEBIDO A VIBRIO CHOLERAE O1, BIOTIPO CHOLERAE\",\"actividad_fisica\":\"\",\"etilismo\":\"\",\"fumador\":\"\",\"drogas\":\"\",\"alergias\":\"\",\"diabetes\":\"\",\"enfermedades_cronicas\":\"\",\"hipertension\":\"\",\"neoplasma\":\"\",\"medicamentos_pedido\":\"\",\"metodos_anticonceptivos\":\"\",\"prescripcion_medica\":\"\"}', NULL, '', '[\"\"]', '', '', 'En atención'),
-(8, 3, 1, '2023-02-28 17:34:48', '{\"general\":\"\",\"peso\":\"\",\"altura\":\"\",\"imc\":\"\",\"temperatura\":\"\",\"presion_sanguinea_sistolica\":\"\",\"presion_sanguinea_diastolica\":\"\",\"frecuencia_respiratoria\":\"\",\"frecuencia_cardiaca\":\"\",\"imc_20\":\"\",\"imc_30\":\"\",\"examen_fisico\":\"\",\"diagnostico\":\"\",\"cie10\":\"A000 - COLERA DEBIDO A VIBRIO CHOLERAE O1, BIOTIPO CHOLERAE\",\"actividad_fisica\":\"\",\"etilismo\":\"\",\"fumador\":\"\",\"drogas\":\"\",\"alergias\":\"\",\"diabetes\":\"\",\"enfermedades_cronicas\":\"\",\"hipertension\":\"\",\"neoplasma\":\"\",\"medicamentos_pedido\":\"\",\"metodos_anticonceptivos\":\"\",\"prescripcion_medica\":\"\"}', NULL, '', '[\"\"]', '', '', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcontacts`
+-- Estructura de tabla para la tabla `tblcontacts`
 --
 
 CREATE TABLE `tblcontacts` (
@@ -1364,7 +1348,7 @@ CREATE TABLE `tblcontacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblcontacts`
+-- Volcado de datos para la tabla `tblcontacts`
 --
 
 INSERT INTO `tblcontacts` (`id`, `userid`, `is_primary`, `firstname`, `lastname`, `email`, `phonenumber`, `title`, `datecreated`, `password`, `new_pass_key`, `new_pass_key_requested`, `email_verified_at`, `email_verification_key`, `email_verification_sent_at`, `last_ip`, `last_login`, `last_password_change`, `active`, `profile_image`, `direction`, `invoice_emails`, `estimate_emails`, `credit_note_emails`, `contract_emails`, `task_emails`, `project_emails`, `ticket_emails`) VALUES
@@ -1374,7 +1358,7 @@ INSERT INTO `tblcontacts` (`id`, `userid`, `is_primary`, `firstname`, `lastname`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcontact_permissions`
+-- Estructura de tabla para la tabla `tblcontact_permissions`
 --
 
 CREATE TABLE `tblcontact_permissions` (
@@ -1384,7 +1368,7 @@ CREATE TABLE `tblcontact_permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblcontact_permissions`
+-- Volcado de datos para la tabla `tblcontact_permissions`
 --
 
 INSERT INTO `tblcontact_permissions` (`id`, `permission_id`, `userid`) VALUES
@@ -1404,7 +1388,7 @@ INSERT INTO `tblcontact_permissions` (`id`, `permission_id`, `userid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcontracts`
+-- Estructura de tabla para la tabla `tblcontracts`
 --
 
 CREATE TABLE `tblcontracts` (
@@ -1436,7 +1420,7 @@ CREATE TABLE `tblcontracts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblcontracts`
+-- Volcado de datos para la tabla `tblcontracts`
 --
 
 INSERT INTO `tblcontracts` (`id`, `content`, `description`, `subject`, `client`, `datestart`, `dateend`, `contract_type`, `project_id`, `addedfrom`, `dateadded`, `isexpirynotified`, `contract_value`, `trash`, `not_visible_to_client`, `hash`, `signed`, `signature`, `marked_as_signed`, `acceptance_firstname`, `acceptance_lastname`, `acceptance_email`, `acceptance_date`, `acceptance_ip`, `short_link`) VALUES
@@ -1446,7 +1430,7 @@ INSERT INTO `tblcontracts` (`id`, `content`, `description`, `subject`, `client`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcontracts_types`
+-- Estructura de tabla para la tabla `tblcontracts_types`
 --
 
 CREATE TABLE `tblcontracts_types` (
@@ -1455,7 +1439,7 @@ CREATE TABLE `tblcontracts_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblcontracts_types`
+-- Volcado de datos para la tabla `tblcontracts_types`
 --
 
 INSERT INTO `tblcontracts_types` (`id`, `name`) VALUES
@@ -1464,7 +1448,7 @@ INSERT INTO `tblcontracts_types` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcontract_comments`
+-- Estructura de tabla para la tabla `tblcontract_comments`
 --
 
 CREATE TABLE `tblcontract_comments` (
@@ -1478,7 +1462,7 @@ CREATE TABLE `tblcontract_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcontract_renewals`
+-- Estructura de tabla para la tabla `tblcontract_renewals`
 --
 
 CREATE TABLE `tblcontract_renewals` (
@@ -1499,7 +1483,7 @@ CREATE TABLE `tblcontract_renewals` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcountries`
+-- Estructura de tabla para la tabla `tblcountries`
 --
 
 CREATE TABLE `tblcountries` (
@@ -1515,7 +1499,7 @@ CREATE TABLE `tblcountries` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblcountries`
+-- Volcado de datos para la tabla `tblcountries`
 --
 
 INSERT INTO `tblcountries` (`country_id`, `iso2`, `short_name`, `long_name`, `iso3`, `numcode`, `un_member`, `calling_code`, `cctld`) VALUES
@@ -1773,7 +1757,7 @@ INSERT INTO `tblcountries` (`country_id`, `iso2`, `short_name`, `long_name`, `is
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcreditnotes`
+-- Estructura de tabla para la tabla `tblcreditnotes`
 --
 
 CREATE TABLE `tblcreditnotes` (
@@ -1818,7 +1802,7 @@ CREATE TABLE `tblcreditnotes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcreditnote_refunds`
+-- Estructura de tabla para la tabla `tblcreditnote_refunds`
 --
 
 CREATE TABLE `tblcreditnote_refunds` (
@@ -1835,7 +1819,7 @@ CREATE TABLE `tblcreditnote_refunds` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcredits`
+-- Estructura de tabla para la tabla `tblcredits`
 --
 
 CREATE TABLE `tblcredits` (
@@ -1851,7 +1835,7 @@ CREATE TABLE `tblcredits` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcurrencies`
+-- Estructura de tabla para la tabla `tblcurrencies`
 --
 
 CREATE TABLE `tblcurrencies` (
@@ -1865,7 +1849,7 @@ CREATE TABLE `tblcurrencies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblcurrencies`
+-- Volcado de datos para la tabla `tblcurrencies`
 --
 
 INSERT INTO `tblcurrencies` (`id`, `symbol`, `name`, `decimal_separator`, `thousand_separator`, `placement`, `isdefault`) VALUES
@@ -1875,7 +1859,7 @@ INSERT INTO `tblcurrencies` (`id`, `symbol`, `name`, `decimal_separator`, `thous
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcustomers_groups`
+-- Estructura de tabla para la tabla `tblcustomers_groups`
 --
 
 CREATE TABLE `tblcustomers_groups` (
@@ -1884,7 +1868,7 @@ CREATE TABLE `tblcustomers_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblcustomers_groups`
+-- Volcado de datos para la tabla `tblcustomers_groups`
 --
 
 INSERT INTO `tblcustomers_groups` (`id`, `name`) VALUES
@@ -1893,7 +1877,7 @@ INSERT INTO `tblcustomers_groups` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcustomer_admins`
+-- Estructura de tabla para la tabla `tblcustomer_admins`
 --
 
 CREATE TABLE `tblcustomer_admins` (
@@ -1905,7 +1889,7 @@ CREATE TABLE `tblcustomer_admins` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcustomer_groups`
+-- Estructura de tabla para la tabla `tblcustomer_groups`
 --
 
 CREATE TABLE `tblcustomer_groups` (
@@ -1915,7 +1899,7 @@ CREATE TABLE `tblcustomer_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblcustomer_groups`
+-- Volcado de datos para la tabla `tblcustomer_groups`
 --
 
 INSERT INTO `tblcustomer_groups` (`id`, `groupid`, `customer_id`) VALUES
@@ -1925,7 +1909,7 @@ INSERT INTO `tblcustomer_groups` (`id`, `groupid`, `customer_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcustomfields`
+-- Estructura de tabla para la tabla `tblcustomfields`
 --
 
 CREATE TABLE `tblcustomfields` (
@@ -1952,7 +1936,7 @@ CREATE TABLE `tblcustomfields` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcustomfieldsvalues`
+-- Estructura de tabla para la tabla `tblcustomfieldsvalues`
 --
 
 CREATE TABLE `tblcustomfieldsvalues` (
@@ -1966,7 +1950,7 @@ CREATE TABLE `tblcustomfieldsvalues` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblcustom_templates`
+-- Estructura de tabla para la tabla `tblcustom_templates`
 --
 
 CREATE TABLE `tblcustom_templates` (
@@ -1979,7 +1963,7 @@ CREATE TABLE `tblcustom_templates` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbldepartments`
+-- Estructura de tabla para la tabla `tbldepartments`
 --
 
 CREATE TABLE `tbldepartments` (
@@ -2002,7 +1986,7 @@ CREATE TABLE `tbldepartments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbldismissed_announcements`
+-- Estructura de tabla para la tabla `tbldismissed_announcements`
 --
 
 CREATE TABLE `tbldismissed_announcements` (
@@ -2015,7 +1999,7 @@ CREATE TABLE `tbldismissed_announcements` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblemaillists`
+-- Estructura de tabla para la tabla `tblemaillists`
 --
 
 CREATE TABLE `tblemaillists` (
@@ -2028,7 +2012,7 @@ CREATE TABLE `tblemaillists` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblemailtemplates`
+-- Estructura de tabla para la tabla `tblemailtemplates`
 --
 
 CREATE TABLE `tblemailtemplates` (
@@ -2047,7 +2031,7 @@ CREATE TABLE `tblemailtemplates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblemailtemplates`
+-- Volcado de datos para la tabla `tblemailtemplates`
 --
 
 INSERT INTO `tblemailtemplates` (`emailtemplateid`, `type`, `slug`, `language`, `name`, `subject`, `message`, `fromname`, `fromemail`, `plaintext`, `active`, `order`) VALUES
@@ -4513,7 +4497,7 @@ INSERT INTO `tblemailtemplates` (`emailtemplateid`, `type`, `slug`, `language`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblenfermedades`
+-- Estructura de tabla para la tabla `tblenfermedades`
 --
 
 CREATE TABLE `tblenfermedades` (
@@ -4523,7 +4507,7 @@ CREATE TABLE `tblenfermedades` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tblenfermedades`
+-- Volcado de datos para la tabla `tblenfermedades`
 --
 
 INSERT INTO `tblenfermedades` (`id`, `codigo`, `descripcion`) VALUES
@@ -16973,7 +16957,7 @@ INSERT INTO `tblenfermedades` (`id`, `codigo`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblestimates`
+-- Estructura de tabla para la tabla `tblestimates`
 --
 
 CREATE TABLE `tblestimates` (
@@ -17034,7 +17018,7 @@ CREATE TABLE `tblestimates` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblestimate_requests`
+-- Estructura de tabla para la tabla `tblestimate_requests`
 --
 
 CREATE TABLE `tblestimate_requests` (
@@ -17053,7 +17037,7 @@ CREATE TABLE `tblestimate_requests` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblestimate_request_forms`
+-- Estructura de tabla para la tabla `tblestimate_request_forms`
 --
 
 CREATE TABLE `tblestimate_request_forms` (
@@ -17079,7 +17063,7 @@ CREATE TABLE `tblestimate_request_forms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblestimate_request_forms`
+-- Volcado de datos para la tabla `tblestimate_request_forms`
 --
 
 INSERT INTO `tblestimate_request_forms` (`id`, `form_key`, `type`, `name`, `form_data`, `recaptcha`, `status`, `submit_btn_name`, `submit_btn_bg_color`, `submit_btn_text_color`, `success_submit_msg`, `submit_action`, `submit_redirect_url`, `language`, `dateadded`, `notify_type`, `notify_ids`, `responsible`, `notify_request_submitted`) VALUES
@@ -17088,7 +17072,7 @@ INSERT INTO `tblestimate_request_forms` (`id`, `form_key`, `type`, `name`, `form
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblestimate_request_status`
+-- Estructura de tabla para la tabla `tblestimate_request_status`
 --
 
 CREATE TABLE `tblestimate_request_status` (
@@ -17100,7 +17084,7 @@ CREATE TABLE `tblestimate_request_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblestimate_request_status`
+-- Volcado de datos para la tabla `tblestimate_request_status`
 --
 
 INSERT INTO `tblestimate_request_status` (`id`, `name`, `statusorder`, `color`, `flag`) VALUES
@@ -17113,7 +17097,7 @@ INSERT INTO `tblestimate_request_status` (`id`, `name`, `statusorder`, `color`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblevents`
+-- Estructura de tabla para la tabla `tblevents`
 --
 
 CREATE TABLE `tblevents` (
@@ -17131,7 +17115,7 @@ CREATE TABLE `tblevents` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblevents`
+-- Volcado de datos para la tabla `tblevents`
 --
 
 INSERT INTO `tblevents` (`eventid`, `title`, `description`, `userid`, `start`, `end`, `public`, `color`, `isstartnotified`, `reminder_before`, `reminder_before_type`) VALUES
@@ -17147,7 +17131,7 @@ INSERT INTO `tblevents` (`eventid`, `title`, `description`, `userid`, `start`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblexpenses`
+-- Estructura de tabla para la tabla `tblexpenses`
 --
 
 CREATE TABLE `tblexpenses` (
@@ -17183,7 +17167,7 @@ CREATE TABLE `tblexpenses` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblexpenses_categories`
+-- Estructura de tabla para la tabla `tblexpenses_categories`
 --
 
 CREATE TABLE `tblexpenses_categories` (
@@ -17193,7 +17177,7 @@ CREATE TABLE `tblexpenses_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblexpenses_categories`
+-- Volcado de datos para la tabla `tblexpenses_categories`
 --
 
 INSERT INTO `tblexpenses_categories` (`id`, `name`, `description`) VALUES
@@ -17202,7 +17186,7 @@ INSERT INTO `tblexpenses_categories` (`id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblfeedback`
+-- Estructura de tabla para la tabla `tblfeedback`
 --
 
 CREATE TABLE `tblfeedback` (
@@ -17221,7 +17205,7 @@ CREATE TABLE `tblfeedback` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblfiles`
+-- Estructura de tabla para la tabla `tblfiles`
 --
 
 CREATE TABLE `tblfiles` (
@@ -17242,7 +17226,7 @@ CREATE TABLE `tblfiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblfiles`
+-- Volcado de datos para la tabla `tblfiles`
 --
 
 INSERT INTO `tblfiles` (`id`, `rel_id`, `rel_type`, `file_name`, `filetype`, `visible_to_customer`, `attachment_key`, `external`, `external_link`, `thumbnail_link`, `staffid`, `contact_id`, `task_comment_id`, `dateadded`) VALUES
@@ -17252,7 +17236,7 @@ INSERT INTO `tblfiles` (`id`, `rel_id`, `rel_type`, `file_name`, `filetype`, `vi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblform_questions`
+-- Estructura de tabla para la tabla `tblform_questions`
 --
 
 CREATE TABLE `tblform_questions` (
@@ -17267,7 +17251,7 @@ CREATE TABLE `tblform_questions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblform_question_box`
+-- Estructura de tabla para la tabla `tblform_question_box`
 --
 
 CREATE TABLE `tblform_question_box` (
@@ -17279,7 +17263,7 @@ CREATE TABLE `tblform_question_box` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblform_question_box_description`
+-- Estructura de tabla para la tabla `tblform_question_box_description`
 --
 
 CREATE TABLE `tblform_question_box_description` (
@@ -17292,7 +17276,7 @@ CREATE TABLE `tblform_question_box_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblform_results`
+-- Estructura de tabla para la tabla `tblform_results`
 --
 
 CREATE TABLE `tblform_results` (
@@ -17309,7 +17293,7 @@ CREATE TABLE `tblform_results` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblfs_downloads`
+-- Estructura de tabla para la tabla `tblfs_downloads`
 --
 
 CREATE TABLE `tblfs_downloads` (
@@ -17324,7 +17308,7 @@ CREATE TABLE `tblfs_downloads` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblfs_file_overview`
+-- Estructura de tabla para la tabla `tblfs_file_overview`
 --
 
 CREATE TABLE `tblfs_file_overview` (
@@ -17344,7 +17328,7 @@ CREATE TABLE `tblfs_file_overview` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblfs_genenal_ip_share`
+-- Estructura de tabla para la tabla `tblfs_genenal_ip_share`
 --
 
 CREATE TABLE `tblfs_genenal_ip_share` (
@@ -17358,7 +17342,7 @@ CREATE TABLE `tblfs_genenal_ip_share` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblfs_setting_configuration`
+-- Estructura de tabla para la tabla `tblfs_setting_configuration`
 --
 
 CREATE TABLE `tblfs_setting_configuration` (
@@ -17381,7 +17365,7 @@ CREATE TABLE `tblfs_setting_configuration` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblfs_setting_configuration_relationship`
+-- Estructura de tabla para la tabla `tblfs_setting_configuration_relationship`
 --
 
 CREATE TABLE `tblfs_setting_configuration_relationship` (
@@ -17394,7 +17378,7 @@ CREATE TABLE `tblfs_setting_configuration_relationship` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblfs_sharings`
+-- Estructura de tabla para la tabla `tblfs_sharings`
 --
 
 CREATE TABLE `tblfs_sharings` (
@@ -17434,7 +17418,7 @@ CREATE TABLE `tblfs_sharings` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblfs_sharing_relationship`
+-- Estructura de tabla para la tabla `tblfs_sharing_relationship`
 --
 
 CREATE TABLE `tblfs_sharing_relationship` (
@@ -17447,7 +17431,7 @@ CREATE TABLE `tblfs_sharing_relationship` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblgdpr_requests`
+-- Estructura de tabla para la tabla `tblgdpr_requests`
 --
 
 CREATE TABLE `tblgdpr_requests` (
@@ -17465,7 +17449,7 @@ CREATE TABLE `tblgdpr_requests` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblgoals`
+-- Estructura de tabla para la tabla `tblgoals`
 --
 
 CREATE TABLE `tblgoals` (
@@ -17486,7 +17470,7 @@ CREATE TABLE `tblgoals` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblgroup_checklist`
+-- Estructura de tabla para la tabla `tblgroup_checklist`
 --
 
 CREATE TABLE `tblgroup_checklist` (
@@ -17498,7 +17482,7 @@ CREATE TABLE `tblgroup_checklist` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblgroup_checklist_allocation`
+-- Estructura de tabla para la tabla `tblgroup_checklist_allocation`
 --
 
 CREATE TABLE `tblgroup_checklist_allocation` (
@@ -17511,7 +17495,7 @@ CREATE TABLE `tblgroup_checklist_allocation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_allocation_asset`
+-- Estructura de tabla para la tabla `tblhr_allocation_asset`
 --
 
 CREATE TABLE `tblhr_allocation_asset` (
@@ -17525,7 +17509,7 @@ CREATE TABLE `tblhr_allocation_asset` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_allowance_type`
+-- Estructura de tabla para la tabla `tblhr_allowance_type`
 --
 
 CREATE TABLE `tblhr_allowance_type` (
@@ -17538,7 +17522,7 @@ CREATE TABLE `tblhr_allowance_type` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_checklist_allocation`
+-- Estructura de tabla para la tabla `tblhr_checklist_allocation`
 --
 
 CREATE TABLE `tblhr_checklist_allocation` (
@@ -17551,7 +17535,7 @@ CREATE TABLE `tblhr_checklist_allocation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_dependent_person`
+-- Estructura de tabla para la tabla `tblhr_dependent_person`
 --
 
 CREATE TABLE `tblhr_dependent_person` (
@@ -17571,7 +17555,7 @@ CREATE TABLE `tblhr_dependent_person` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_education`
+-- Estructura de tabla para la tabla `tblhr_education`
 --
 
 CREATE TABLE `tblhr_education` (
@@ -17592,7 +17576,7 @@ CREATE TABLE `tblhr_education` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_group_checklist_allocation`
+-- Estructura de tabla para la tabla `tblhr_group_checklist_allocation`
 --
 
 CREATE TABLE `tblhr_group_checklist_allocation` (
@@ -17605,7 +17589,7 @@ CREATE TABLE `tblhr_group_checklist_allocation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_job_p`
+-- Estructura de tabla para la tabla `tblhr_job_p`
 --
 
 CREATE TABLE `tblhr_job_p` (
@@ -17617,7 +17601,7 @@ CREATE TABLE `tblhr_job_p` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_job_position`
+-- Estructura de tabla para la tabla `tblhr_job_position`
 --
 
 CREATE TABLE `tblhr_job_position` (
@@ -17632,7 +17616,7 @@ CREATE TABLE `tblhr_job_position` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_jp_interview_training`
+-- Estructura de tabla para la tabla `tblhr_jp_interview_training`
 --
 
 CREATE TABLE `tblhr_jp_interview_training` (
@@ -17653,7 +17637,7 @@ CREATE TABLE `tblhr_jp_interview_training` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_jp_salary_scale`
+-- Estructura de tabla para la tabla `tblhr_jp_salary_scale`
 --
 
 CREATE TABLE `tblhr_jp_salary_scale` (
@@ -17667,7 +17651,7 @@ CREATE TABLE `tblhr_jp_salary_scale` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_knowedge_base_article_feedback`
+-- Estructura de tabla para la tabla `tblhr_knowedge_base_article_feedback`
 --
 
 CREATE TABLE `tblhr_knowedge_base_article_feedback` (
@@ -17681,7 +17665,7 @@ CREATE TABLE `tblhr_knowedge_base_article_feedback` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_knowledge_base`
+-- Estructura de tabla para la tabla `tblhr_knowledge_base`
 --
 
 CREATE TABLE `tblhr_knowledge_base` (
@@ -17704,7 +17688,7 @@ CREATE TABLE `tblhr_knowledge_base` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_knowledge_base_groups`
+-- Estructura de tabla para la tabla `tblhr_knowledge_base_groups`
 --
 
 CREATE TABLE `tblhr_knowledge_base_groups` (
@@ -17720,7 +17704,7 @@ CREATE TABLE `tblhr_knowledge_base_groups` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_list_staff_quitting_work`
+-- Estructura de tabla para la tabla `tblhr_list_staff_quitting_work`
 --
 
 CREATE TABLE `tblhr_list_staff_quitting_work` (
@@ -17737,7 +17721,7 @@ CREATE TABLE `tblhr_list_staff_quitting_work` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_position_training`
+-- Estructura de tabla para la tabla `tblhr_position_training`
 --
 
 CREATE TABLE `tblhr_position_training` (
@@ -17761,7 +17745,7 @@ CREATE TABLE `tblhr_position_training` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_position_training_question_form`
+-- Estructura de tabla para la tabla `tblhr_position_training_question_form`
 --
 
 CREATE TABLE `tblhr_position_training_question_form` (
@@ -17777,7 +17761,7 @@ CREATE TABLE `tblhr_position_training_question_form` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_procedure_retire`
+-- Estructura de tabla para la tabla `tblhr_procedure_retire`
 --
 
 CREATE TABLE `tblhr_procedure_retire` (
@@ -17792,7 +17776,7 @@ CREATE TABLE `tblhr_procedure_retire` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_procedure_retire_manage`
+-- Estructura de tabla para la tabla `tblhr_procedure_retire_manage`
 --
 
 CREATE TABLE `tblhr_procedure_retire_manage` (
@@ -17805,7 +17789,7 @@ CREATE TABLE `tblhr_procedure_retire_manage` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_procedure_retire_of_staff`
+-- Estructura de tabla para la tabla `tblhr_procedure_retire_of_staff`
 --
 
 CREATE TABLE `tblhr_procedure_retire_of_staff` (
@@ -17819,7 +17803,7 @@ CREATE TABLE `tblhr_procedure_retire_of_staff` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_procedure_retire_of_staff_by_id`
+-- Estructura de tabla para la tabla `tblhr_procedure_retire_of_staff_by_id`
 --
 
 CREATE TABLE `tblhr_procedure_retire_of_staff_by_id` (
@@ -17831,7 +17815,7 @@ CREATE TABLE `tblhr_procedure_retire_of_staff_by_id` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_profile_option`
+-- Estructura de tabla para la tabla `tblhr_profile_option`
 --
 
 CREATE TABLE `tblhr_profile_option` (
@@ -17842,7 +17826,7 @@ CREATE TABLE `tblhr_profile_option` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblhr_profile_option`
+-- Volcado de datos para la tabla `tblhr_profile_option`
 --
 
 INSERT INTO `tblhr_profile_option` (`option_id`, `option_name`, `option_val`, `auto`) VALUES
@@ -17856,7 +17840,7 @@ INSERT INTO `tblhr_profile_option` (`option_id`, `option_name`, `option_val`, `a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_p_t_form_question_box`
+-- Estructura de tabla para la tabla `tblhr_p_t_form_question_box`
 --
 
 CREATE TABLE `tblhr_p_t_form_question_box` (
@@ -17868,7 +17852,7 @@ CREATE TABLE `tblhr_p_t_form_question_box` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_p_t_form_question_box_description`
+-- Estructura de tabla para la tabla `tblhr_p_t_form_question_box_description`
 --
 
 CREATE TABLE `tblhr_p_t_form_question_box_description` (
@@ -17882,7 +17866,7 @@ CREATE TABLE `tblhr_p_t_form_question_box_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_p_t_form_results`
+-- Estructura de tabla para la tabla `tblhr_p_t_form_results`
 --
 
 CREATE TABLE `tblhr_p_t_form_results` (
@@ -17899,7 +17883,7 @@ CREATE TABLE `tblhr_p_t_form_results` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_p_t_surveyresultsets`
+-- Estructura de tabla para la tabla `tblhr_p_t_surveyresultsets`
 --
 
 CREATE TABLE `tblhr_p_t_surveyresultsets` (
@@ -17914,7 +17898,7 @@ CREATE TABLE `tblhr_p_t_surveyresultsets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_rec_transfer_records`
+-- Estructura de tabla para la tabla `tblhr_rec_transfer_records`
 --
 
 CREATE TABLE `tblhr_rec_transfer_records` (
@@ -17931,7 +17915,7 @@ CREATE TABLE `tblhr_rec_transfer_records` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_salary_form`
+-- Estructura de tabla para la tabla `tblhr_salary_form`
 --
 
 CREATE TABLE `tblhr_salary_form` (
@@ -17944,7 +17928,7 @@ CREATE TABLE `tblhr_salary_form` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_staff_contract`
+-- Estructura de tabla para la tabla `tblhr_staff_contract`
 --
 
 CREATE TABLE `tblhr_staff_contract` (
@@ -17963,7 +17947,7 @@ CREATE TABLE `tblhr_staff_contract` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_staff_contract_detail`
+-- Estructura de tabla para la tabla `tblhr_staff_contract_detail`
 --
 
 CREATE TABLE `tblhr_staff_contract_detail` (
@@ -17979,7 +17963,7 @@ CREATE TABLE `tblhr_staff_contract_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_staff_contract_type`
+-- Estructura de tabla para la tabla `tblhr_staff_contract_type`
 --
 
 CREATE TABLE `tblhr_staff_contract_type` (
@@ -17994,7 +17978,7 @@ CREATE TABLE `tblhr_staff_contract_type` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_training_allocation`
+-- Estructura de tabla para la tabla `tblhr_training_allocation`
 --
 
 CREATE TABLE `tblhr_training_allocation` (
@@ -18010,7 +17994,7 @@ CREATE TABLE `tblhr_training_allocation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_type_of_trainings`
+-- Estructura de tabla para la tabla `tblhr_type_of_trainings`
 --
 
 CREATE TABLE `tblhr_type_of_trainings` (
@@ -18019,7 +18003,7 @@ CREATE TABLE `tblhr_type_of_trainings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblhr_type_of_trainings`
+-- Volcado de datos para la tabla `tblhr_type_of_trainings`
 --
 
 INSERT INTO `tblhr_type_of_trainings` (`id`, `name`) VALUES
@@ -18028,7 +18012,7 @@ INSERT INTO `tblhr_type_of_trainings` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_views_tracking`
+-- Estructura de tabla para la tabla `tblhr_views_tracking`
 --
 
 CREATE TABLE `tblhr_views_tracking` (
@@ -18042,7 +18026,7 @@ CREATE TABLE `tblhr_views_tracking` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblhr_workplace`
+-- Estructura de tabla para la tabla `tblhr_workplace`
 --
 
 CREATE TABLE `tblhr_workplace` (
@@ -18057,7 +18041,7 @@ CREATE TABLE `tblhr_workplace` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblinvoicepaymentrecords`
+-- Estructura de tabla para la tabla `tblinvoicepaymentrecords`
 --
 
 CREATE TABLE `tblinvoicepaymentrecords` (
@@ -18073,7 +18057,7 @@ CREATE TABLE `tblinvoicepaymentrecords` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblinvoicepaymentrecords`
+-- Volcado de datos para la tabla `tblinvoicepaymentrecords`
 --
 
 INSERT INTO `tblinvoicepaymentrecords` (`id`, `invoiceid`, `amount`, `paymentmode`, `paymentmethod`, `date`, `daterecorded`, `note`, `transactionid`) VALUES
@@ -18084,7 +18068,7 @@ INSERT INTO `tblinvoicepaymentrecords` (`id`, `invoiceid`, `amount`, `paymentmod
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblinvoices`
+-- Estructura de tabla para la tabla `tblinvoices`
 --
 
 CREATE TABLE `tblinvoices` (
@@ -18145,7 +18129,7 @@ CREATE TABLE `tblinvoices` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblinvoices`
+-- Volcado de datos para la tabla `tblinvoices`
 --
 
 INSERT INTO `tblinvoices` (`id`, `sent`, `datesend`, `clientid`, `deleted_customer_name`, `number`, `prefix`, `number_format`, `datecreated`, `date`, `duedate`, `currency`, `subtotal`, `total_tax`, `total`, `adjustment`, `addedfrom`, `hash`, `status`, `clientnote`, `adminnote`, `last_overdue_reminder`, `last_due_reminder`, `cancel_overdue_reminders`, `allowed_payment_modes`, `token`, `discount_percent`, `discount_total`, `discount_type`, `recurring`, `recurring_type`, `custom_recurring`, `cycles`, `total_cycles`, `is_recurring_from`, `last_recurring_date`, `terms`, `sale_agent`, `billing_street`, `billing_city`, `billing_state`, `billing_zip`, `billing_country`, `shipping_street`, `shipping_city`, `shipping_state`, `shipping_zip`, `shipping_country`, `include_shipping`, `show_shipping_on_invoice`, `show_quantity_as`, `project_id`, `subscription_id`, `short_link`) VALUES
@@ -18157,7 +18141,7 @@ INSERT INTO `tblinvoices` (`id`, `sent`, `datesend`, `clientid`, `deleted_custom
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblitemable`
+-- Estructura de tabla para la tabla `tblitemable`
 --
 
 CREATE TABLE `tblitemable` (
@@ -18173,7 +18157,7 @@ CREATE TABLE `tblitemable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblitemable`
+-- Volcado de datos para la tabla `tblitemable`
 --
 
 INSERT INTO `tblitemable` (`id`, `rel_id`, `rel_type`, `description`, `long_description`, `qty`, `rate`, `unit`, `item_order`) VALUES
@@ -18230,7 +18214,7 @@ INSERT INTO `tblitemable` (`id`, `rel_id`, `rel_type`, `description`, `long_desc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblitems`
+-- Estructura de tabla para la tabla `tblitems`
 --
 
 CREATE TABLE `tblitems` (
@@ -18253,7 +18237,7 @@ CREATE TABLE `tblitems` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblitems`
+-- Volcado de datos para la tabla `tblitems`
 --
 
 INSERT INTO `tblitems` (`id`, `userid`, `description`, `long_description`, `rate`, `tax`, `tax2`, `unit`, `group_id`, `commodity_code`, `commodity_barcode`, `unit_id`, `sku_code`, `sku_name`, `purchase_price`, `treatment`) VALUES
@@ -18266,7 +18250,7 @@ INSERT INTO `tblitems` (`id`, `userid`, `description`, `long_description`, `rate
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblitems_groups`
+-- Estructura de tabla para la tabla `tblitems_groups`
 --
 
 CREATE TABLE `tblitems_groups` (
@@ -18281,7 +18265,7 @@ CREATE TABLE `tblitems_groups` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblitem_tax`
+-- Estructura de tabla para la tabla `tblitem_tax`
 --
 
 CREATE TABLE `tblitem_tax` (
@@ -18296,7 +18280,7 @@ CREATE TABLE `tblitem_tax` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbljob_industry`
+-- Estructura de tabla para la tabla `tbljob_industry`
 --
 
 CREATE TABLE `tbljob_industry` (
@@ -18308,7 +18292,7 @@ CREATE TABLE `tbljob_industry` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblknowedge_base_article_feedback`
+-- Estructura de tabla para la tabla `tblknowedge_base_article_feedback`
 --
 
 CREATE TABLE `tblknowedge_base_article_feedback` (
@@ -18322,7 +18306,7 @@ CREATE TABLE `tblknowedge_base_article_feedback` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblknowledge_base`
+-- Estructura de tabla para la tabla `tblknowledge_base`
 --
 
 CREATE TABLE `tblknowledge_base` (
@@ -18345,7 +18329,7 @@ CREATE TABLE `tblknowledge_base` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblknowledge_base_groups`
+-- Estructura de tabla para la tabla `tblknowledge_base_groups`
 --
 
 CREATE TABLE `tblknowledge_base_groups` (
@@ -18361,7 +18345,7 @@ CREATE TABLE `tblknowledge_base_groups` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblleads`
+-- Estructura de tabla para la tabla `tblleads`
 --
 
 CREATE TABLE `tblleads` (
@@ -18406,7 +18390,7 @@ CREATE TABLE `tblleads` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblleads_email_integration`
+-- Estructura de tabla para la tabla `tblleads_email_integration`
 --
 
 CREATE TABLE `tblleads_email_integration` (
@@ -18433,7 +18417,7 @@ CREATE TABLE `tblleads_email_integration` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblleads_email_integration`
+-- Volcado de datos para la tabla `tblleads_email_integration`
 --
 
 INSERT INTO `tblleads_email_integration` (`id`, `active`, `email`, `imap_server`, `password`, `check_every`, `responsible`, `lead_source`, `lead_status`, `encryption`, `folder`, `last_run`, `notify_lead_imported`, `notify_lead_contact_more_times`, `notify_type`, `notify_ids`, `mark_public`, `only_loop_on_unseen_emails`, `delete_after_import`, `create_task_if_customer`) VALUES
@@ -18442,7 +18426,7 @@ INSERT INTO `tblleads_email_integration` (`id`, `active`, `email`, `imap_server`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblleads_sources`
+-- Estructura de tabla para la tabla `tblleads_sources`
 --
 
 CREATE TABLE `tblleads_sources` (
@@ -18451,7 +18435,7 @@ CREATE TABLE `tblleads_sources` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblleads_sources`
+-- Volcado de datos para la tabla `tblleads_sources`
 --
 
 INSERT INTO `tblleads_sources` (`id`, `name`) VALUES
@@ -18461,7 +18445,7 @@ INSERT INTO `tblleads_sources` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblleads_status`
+-- Estructura de tabla para la tabla `tblleads_status`
 --
 
 CREATE TABLE `tblleads_status` (
@@ -18473,7 +18457,7 @@ CREATE TABLE `tblleads_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblleads_status`
+-- Volcado de datos para la tabla `tblleads_status`
 --
 
 INSERT INTO `tblleads_status` (`id`, `name`, `statusorder`, `color`, `isdefault`) VALUES
@@ -18482,7 +18466,7 @@ INSERT INTO `tblleads_status` (`id`, `name`, `statusorder`, `color`, `isdefault`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbllead_activity_log`
+-- Estructura de tabla para la tabla `tbllead_activity_log`
 --
 
 CREATE TABLE `tbllead_activity_log` (
@@ -18499,7 +18483,7 @@ CREATE TABLE `tbllead_activity_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbllead_integration_emails`
+-- Estructura de tabla para la tabla `tbllead_integration_emails`
 --
 
 CREATE TABLE `tbllead_integration_emails` (
@@ -18514,7 +18498,7 @@ CREATE TABLE `tbllead_integration_emails` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbllead_manager_activity_log`
+-- Estructura de tabla para la tabla `tbllead_manager_activity_log`
 --
 
 CREATE TABLE `tbllead_manager_activity_log` (
@@ -18533,7 +18517,7 @@ CREATE TABLE `tbllead_manager_activity_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbllead_manager_meeting_remark`
+-- Estructura de tabla para la tabla `tbllead_manager_meeting_remark`
 --
 
 CREATE TABLE `tbllead_manager_meeting_remark` (
@@ -18548,7 +18532,7 @@ CREATE TABLE `tbllead_manager_meeting_remark` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbllead_manager_missed_calls`
+-- Estructura de tabla para la tabla `tbllead_manager_missed_calls`
 --
 
 CREATE TABLE `tbllead_manager_missed_calls` (
@@ -18562,7 +18546,7 @@ CREATE TABLE `tbllead_manager_missed_calls` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbllead_manager_zoom_meeting`
+-- Estructura de tabla para la tabla `tbllead_manager_zoom_meeting`
 --
 
 CREATE TABLE `tbllead_manager_zoom_meeting` (
@@ -18592,7 +18576,7 @@ CREATE TABLE `tbllead_manager_zoom_meeting` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbllistemails`
+-- Estructura de tabla para la tabla `tbllistemails`
 --
 
 CREATE TABLE `tbllistemails` (
@@ -18605,7 +18589,7 @@ CREATE TABLE `tbllistemails` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblloy_card`
+-- Estructura de tabla para la tabla `tblloy_card`
 --
 
 CREATE TABLE `tblloy_card` (
@@ -18626,7 +18610,7 @@ CREATE TABLE `tblloy_card` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblloy_mbs_program`
+-- Estructura de tabla para la tabla `tblloy_mbs_program`
 --
 
 CREATE TABLE `tblloy_mbs_program` (
@@ -18651,7 +18635,7 @@ CREATE TABLE `tblloy_mbs_program` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblloy_mbs_rule`
+-- Estructura de tabla para la tabla `tblloy_mbs_rule`
 --
 
 CREATE TABLE `tblloy_mbs_rule` (
@@ -18670,7 +18654,7 @@ CREATE TABLE `tblloy_mbs_rule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblloy_program_detail`
+-- Estructura de tabla para la tabla `tblloy_program_detail`
 --
 
 CREATE TABLE `tblloy_program_detail` (
@@ -18684,7 +18668,7 @@ CREATE TABLE `tblloy_program_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblloy_redeem_log`
+-- Estructura de tabla para la tabla `tblloy_redeem_log`
 --
 
 CREATE TABLE `tblloy_redeem_log` (
@@ -18702,7 +18686,7 @@ CREATE TABLE `tblloy_redeem_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblloy_redemp_detail`
+-- Estructura de tabla para la tabla `tblloy_redemp_detail`
 --
 
 CREATE TABLE `tblloy_redemp_detail` (
@@ -18718,7 +18702,7 @@ CREATE TABLE `tblloy_redemp_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblloy_rule`
+-- Estructura de tabla para la tabla `tblloy_rule`
 --
 
 CREATE TABLE `tblloy_rule` (
@@ -18746,7 +18730,7 @@ CREATE TABLE `tblloy_rule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblloy_rule_detail`
+-- Estructura de tabla para la tabla `tblloy_rule_detail`
 --
 
 CREATE TABLE `tblloy_rule_detail` (
@@ -18760,7 +18744,7 @@ CREATE TABLE `tblloy_rule_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblloy_transation`
+-- Estructura de tabla para la tabla `tblloy_transation`
 --
 
 CREATE TABLE `tblloy_transation` (
@@ -18778,7 +18762,7 @@ CREATE TABLE `tblloy_transation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblmaillistscustomfields`
+-- Estructura de tabla para la tabla `tblmaillistscustomfields`
 --
 
 CREATE TABLE `tblmaillistscustomfields` (
@@ -18791,7 +18775,7 @@ CREATE TABLE `tblmaillistscustomfields` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblmaillistscustomfieldvalues`
+-- Estructura de tabla para la tabla `tblmaillistscustomfieldvalues`
 --
 
 CREATE TABLE `tblmaillistscustomfieldvalues` (
@@ -18805,7 +18789,7 @@ CREATE TABLE `tblmaillistscustomfieldvalues` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblmail_queue`
+-- Estructura de tabla para la tabla `tblmail_queue`
 --
 
 CREATE TABLE `tblmail_queue` (
@@ -18825,7 +18809,7 @@ CREATE TABLE `tblmail_queue` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblmigrations`
+-- Estructura de tabla para la tabla `tblmigrations`
 --
 
 CREATE TABLE `tblmigrations` (
@@ -18833,7 +18817,7 @@ CREATE TABLE `tblmigrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblmigrations`
+-- Volcado de datos para la tabla `tblmigrations`
 --
 
 INSERT INTO `tblmigrations` (`version`) VALUES
@@ -18842,7 +18826,7 @@ INSERT INTO `tblmigrations` (`version`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblmilestones`
+-- Estructura de tabla para la tabla `tblmilestones`
 --
 
 CREATE TABLE `tblmilestones` (
@@ -18862,7 +18846,7 @@ CREATE TABLE `tblmilestones` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblmodules`
+-- Estructura de tabla para la tabla `tblmodules`
 --
 
 CREATE TABLE `tblmodules` (
@@ -18873,7 +18857,7 @@ CREATE TABLE `tblmodules` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblmodules`
+-- Volcado de datos para la tabla `tblmodules`
 --
 
 INSERT INTO `tblmodules` (`id`, `module_name`, `installed_version`, `active`) VALUES
@@ -18904,7 +18888,7 @@ INSERT INTO `tblmodules` (`id`, `module_name`, `installed_version`, `active`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblnewsfeed_comment_likes`
+-- Estructura de tabla para la tabla `tblnewsfeed_comment_likes`
 --
 
 CREATE TABLE `tblnewsfeed_comment_likes` (
@@ -18918,7 +18902,7 @@ CREATE TABLE `tblnewsfeed_comment_likes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblnewsfeed_posts`
+-- Estructura de tabla para la tabla `tblnewsfeed_posts`
 --
 
 CREATE TABLE `tblnewsfeed_posts` (
@@ -18934,7 +18918,7 @@ CREATE TABLE `tblnewsfeed_posts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblnewsfeed_post_comments`
+-- Estructura de tabla para la tabla `tblnewsfeed_post_comments`
 --
 
 CREATE TABLE `tblnewsfeed_post_comments` (
@@ -18948,7 +18932,7 @@ CREATE TABLE `tblnewsfeed_post_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblnewsfeed_post_likes`
+-- Estructura de tabla para la tabla `tblnewsfeed_post_likes`
 --
 
 CREATE TABLE `tblnewsfeed_post_likes` (
@@ -18961,7 +18945,7 @@ CREATE TABLE `tblnewsfeed_post_likes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblnotes`
+-- Estructura de tabla para la tabla `tblnotes`
 --
 
 CREATE TABLE `tblnotes` (
@@ -18975,7 +18959,7 @@ CREATE TABLE `tblnotes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblnotes`
+-- Volcado de datos para la tabla `tblnotes`
 --
 
 INSERT INTO `tblnotes` (`id`, `rel_id`, `rel_type`, `description`, `date_contacted`, `addedfrom`, `dateadded`) VALUES
@@ -18987,7 +18971,7 @@ INSERT INTO `tblnotes` (`id`, `rel_id`, `rel_type`, `description`, `date_contact
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblnotifications`
+-- Estructura de tabla para la tabla `tblnotifications`
 --
 
 CREATE TABLE `tblnotifications` (
@@ -19006,7 +18990,7 @@ CREATE TABLE `tblnotifications` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblnotifications`
+-- Volcado de datos para la tabla `tblnotifications`
 --
 
 INSERT INTO `tblnotifications` (`id`, `isread`, `isread_inline`, `date`, `description`, `fromuserid`, `fromclientid`, `from_fullname`, `touserid`, `fromcompany`, `link`, `additional_data`) VALUES
@@ -19019,7 +19003,7 @@ INSERT INTO `tblnotifications` (`id`, `isread`, `isread_inline`, `date`, `descri
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbloptions`
+-- Estructura de tabla para la tabla `tbloptions`
 --
 
 CREATE TABLE `tbloptions` (
@@ -19030,12 +19014,12 @@ CREATE TABLE `tbloptions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbloptions`
+-- Volcado de datos para la tabla `tbloptions`
 --
 
 INSERT INTO `tbloptions` (`id`, `name`, `value`, `autoload`) VALUES
 (1, 'dateformat', 'd/m/Y|%d/%m/%Y', 1),
-(2, 'companyname', 'Dermafit Estetica & Antienvejecimiento', 1),
+(2, 'companyname', 'Cenedi Neurologia & Diabetes', 1),
 (3, 'services', '1', 1),
 (4, 'maximum_allowed_ticket_attachments', '4', 1),
 (5, 'ticket_attachments_file_extensions', '.jpg,.png,.pdf,.doc,.zip,.rar', 1),
@@ -19049,9 +19033,9 @@ INSERT INTO `tbloptions` (`id`, `name`, `value`, `autoload`) VALUES
 (13, 'smtp_email_charset', 'utf-8', 1),
 (14, 'default_timezone', 'America/La_Paz', 1),
 (15, 'clients_default_theme', 'perfex', 1),
-(16, 'company_logo', '7d5110c919d705b6771a1ecedf220a4a.png', 1),
+(16, 'company_logo', 'cenedi.jpg', 1),
 (17, 'tables_pagination_limit', '25', 1),
-(18, 'main_domain', 'criativedigital.com', 1),
+(18, 'main_domain', 'cenedi.i9finance.com', 1),
 (19, 'allow_registration', '0', 1),
 (20, 'knowledge_base_without_registration', '1', 1),
 (21, 'email_signature', '', 1),
@@ -19100,7 +19084,7 @@ INSERT INTO `tbloptions` (`id`, `name`, `value`, `autoload`) VALUES
 (64, 'predefined_clientnote_invoice', '', 1),
 (65, 'predefined_clientnote_estimate', '', 1),
 (66, 'custom_pdf_logo_image_url', '', 1),
-(67, 'favicon', 'favicon.png', 1),
+(67, 'favicon', 'cenedi.jpg', 1),
 (68, 'invoice_due_after', '30', 1),
 (69, 'google_api_key', '', 1),
 (70, 'google_calendar_main_calendar', 'sistema@criativedigital.com', 1),
@@ -19309,7 +19293,7 @@ INSERT INTO `tbloptions` (`id`, `name`, `value`, `autoload`) VALUES
 (271, 'gdpr_after_lead_converted_delete', '0', 1),
 (272, 'gdpr_show_terms_and_conditions_in_footer', '0', 1),
 (273, 'save_last_order_for_tables', '0', 1),
-(274, 'company_logo_dark', 'd1b9a971cf92f01df5a3a2b1fd266d24.png', 1),
+(274, 'company_logo_dark', 'cenedi.jpg', 1),
 (275, 'customers_register_require_confirmation', '0', 1),
 (276, 'allow_non_admin_staff_to_delete_ticket_attachments', '0', 1),
 (277, 'receive_notification_on_new_ticket_replies', '1', 0),
@@ -19582,7 +19566,7 @@ INSERT INTO `tbloptions` (`id`, `name`, `value`, `autoload`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblorder_items`
+-- Estructura de tabla para la tabla `tblorder_items`
 --
 
 CREATE TABLE `tblorder_items` (
@@ -19596,7 +19580,7 @@ CREATE TABLE `tblorder_items` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblorder_master`
+-- Estructura de tabla para la tabla `tblorder_master`
 --
 
 CREATE TABLE `tblorder_master` (
@@ -19613,7 +19597,7 @@ CREATE TABLE `tblorder_master` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblparts`
+-- Estructura de tabla para la tabla `tblparts`
 --
 
 CREATE TABLE `tblparts` (
@@ -19626,7 +19610,7 @@ CREATE TABLE `tblparts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tblparts`
+-- Volcado de datos para la tabla `tblparts`
 --
 
 INSERT INTO `tblparts` (`id`, `id_client`, `id_item`, `id_sale`, `quantity`, `realized`) VALUES
@@ -19639,7 +19623,7 @@ INSERT INTO `tblparts` (`id`, `id_client`, `id_item`, `id_sale`, `quantity`, `re
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpayment_modes`
+-- Estructura de tabla para la tabla `tblpayment_modes`
 --
 
 CREATE TABLE `tblpayment_modes` (
@@ -19654,7 +19638,7 @@ CREATE TABLE `tblpayment_modes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblpayment_modes`
+-- Volcado de datos para la tabla `tblpayment_modes`
 --
 
 INSERT INTO `tblpayment_modes` (`id`, `name`, `description`, `show_on_pdf`, `invoices_only`, `expenses_only`, `selected_by_default`, `active`) VALUES
@@ -19666,7 +19650,7 @@ INSERT INTO `tblpayment_modes` (`id`, `name`, `description`, `show_on_pdf`, `inv
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpinned_projects`
+-- Estructura de tabla para la tabla `tblpinned_projects`
 --
 
 CREATE TABLE `tblpinned_projects` (
@@ -19678,7 +19662,7 @@ CREATE TABLE `tblpinned_projects` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblposition_training_question_form`
+-- Estructura de tabla para la tabla `tblposition_training_question_form`
 --
 
 CREATE TABLE `tblposition_training_question_form` (
@@ -19694,7 +19678,7 @@ CREATE TABLE `tblposition_training_question_form` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblproduct_categories`
+-- Estructura de tabla para la tabla `tblproduct_categories`
 --
 
 CREATE TABLE `tblproduct_categories` (
@@ -19706,7 +19690,7 @@ CREATE TABLE `tblproduct_categories` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblproduct_master`
+-- Estructura de tabla para la tabla `tblproduct_master`
 --
 
 CREATE TABLE `tblproduct_master` (
@@ -19727,7 +19711,7 @@ CREATE TABLE `tblproduct_master` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblprojectdiscussioncomments`
+-- Estructura de tabla para la tabla `tblprojectdiscussioncomments`
 --
 
 CREATE TABLE `tblprojectdiscussioncomments` (
@@ -19748,7 +19732,7 @@ CREATE TABLE `tblprojectdiscussioncomments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblprojectdiscussions`
+-- Estructura de tabla para la tabla `tblprojectdiscussions`
 --
 
 CREATE TABLE `tblprojectdiscussions` (
@@ -19766,7 +19750,7 @@ CREATE TABLE `tblprojectdiscussions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblprojects`
+-- Estructura de tabla para la tabla `tblprojects`
 --
 
 CREATE TABLE `tblprojects` (
@@ -19791,7 +19775,7 @@ CREATE TABLE `tblprojects` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblprojects`
+-- Volcado de datos para la tabla `tblprojects`
 --
 
 INSERT INTO `tblprojects` (`id`, `name`, `description`, `status`, `clientid`, `billing_type`, `start_date`, `deadline`, `project_created`, `date_finished`, `progress`, `progress_from_tasks`, `project_cost`, `project_rate_per_hour`, `estimated_hours`, `addedfrom`, `contact_notification`, `notify_contacts`) VALUES
@@ -19800,7 +19784,7 @@ INSERT INTO `tblprojects` (`id`, `name`, `description`, `status`, `clientid`, `b
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblproject_activity`
+-- Estructura de tabla para la tabla `tblproject_activity`
 --
 
 CREATE TABLE `tblproject_activity` (
@@ -19816,7 +19800,7 @@ CREATE TABLE `tblproject_activity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblproject_activity`
+-- Volcado de datos para la tabla `tblproject_activity`
 --
 
 INSERT INTO `tblproject_activity` (`id`, `project_id`, `staff_id`, `contact_id`, `fullname`, `visible_to_customer`, `description_key`, `additional_data`, `dateadded`) VALUES
@@ -19828,7 +19812,7 @@ INSERT INTO `tblproject_activity` (`id`, `project_id`, `staff_id`, `contact_id`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblproject_files`
+-- Estructura de tabla para la tabla `tblproject_files`
 --
 
 CREATE TABLE `tblproject_files` (
@@ -19852,7 +19836,7 @@ CREATE TABLE `tblproject_files` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblproject_members`
+-- Estructura de tabla para la tabla `tblproject_members`
 --
 
 CREATE TABLE `tblproject_members` (
@@ -19862,7 +19846,7 @@ CREATE TABLE `tblproject_members` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblproject_members`
+-- Volcado de datos para la tabla `tblproject_members`
 --
 
 INSERT INTO `tblproject_members` (`id`, `project_id`, `staff_id`) VALUES
@@ -19871,7 +19855,7 @@ INSERT INTO `tblproject_members` (`id`, `project_id`, `staff_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblproject_notes`
+-- Estructura de tabla para la tabla `tblproject_notes`
 --
 
 CREATE TABLE `tblproject_notes` (
@@ -19884,7 +19868,7 @@ CREATE TABLE `tblproject_notes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblproject_settings`
+-- Estructura de tabla para la tabla `tblproject_settings`
 --
 
 CREATE TABLE `tblproject_settings` (
@@ -19895,7 +19879,7 @@ CREATE TABLE `tblproject_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblproject_settings`
+-- Volcado de datos para la tabla `tblproject_settings`
 --
 
 INSERT INTO `tblproject_settings` (`id`, `project_id`, `name`, `value`) VALUES
@@ -19922,7 +19906,7 @@ INSERT INTO `tblproject_settings` (`id`, `project_id`, `name`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblproposals`
+-- Estructura de tabla para la tabla `tblproposals`
 --
 
 CREATE TABLE `tblproposals` (
@@ -19973,7 +19957,7 @@ CREATE TABLE `tblproposals` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblproposal_comments`
+-- Estructura de tabla para la tabla `tblproposal_comments`
 --
 
 CREATE TABLE `tblproposal_comments` (
@@ -19987,7 +19971,7 @@ CREATE TABLE `tblproposal_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpurchase_option`
+-- Estructura de tabla para la tabla `tblpurchase_option`
 --
 
 CREATE TABLE `tblpurchase_option` (
@@ -19998,7 +19982,7 @@ CREATE TABLE `tblpurchase_option` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblpurchase_option`
+-- Volcado de datos para la tabla `tblpurchase_option`
 --
 
 INSERT INTO `tblpurchase_option` (`option_id`, `option_name`, `option_val`, `auto`) VALUES
@@ -20007,7 +19991,7 @@ INSERT INTO `tblpurchase_option` (`option_id`, `option_name`, `option_val`, `aut
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_approval_details`
+-- Estructura de tabla para la tabla `tblpur_approval_details`
 --
 
 CREATE TABLE `tblpur_approval_details` (
@@ -20031,7 +20015,7 @@ CREATE TABLE `tblpur_approval_details` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_approval_setting`
+-- Estructura de tabla para la tabla `tblpur_approval_setting`
 --
 
 CREATE TABLE `tblpur_approval_setting` (
@@ -20044,7 +20028,7 @@ CREATE TABLE `tblpur_approval_setting` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_contacts`
+-- Estructura de tabla para la tabla `tblpur_contacts`
 --
 
 CREATE TABLE `tblpur_contacts` (
@@ -20081,7 +20065,7 @@ CREATE TABLE `tblpur_contacts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_contracts`
+-- Estructura de tabla para la tabla `tblpur_contracts`
 --
 
 CREATE TABLE `tblpur_contracts` (
@@ -20107,7 +20091,7 @@ CREATE TABLE `tblpur_contracts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_estimates`
+-- Estructura de tabla para la tabla `tblpur_estimates`
 --
 
 CREATE TABLE `tblpur_estimates` (
@@ -20167,7 +20151,7 @@ CREATE TABLE `tblpur_estimates` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_estimate_detail`
+-- Estructura de tabla para la tabla `tblpur_estimate_detail`
 --
 
 CREATE TABLE `tblpur_estimate_detail` (
@@ -20188,7 +20172,7 @@ CREATE TABLE `tblpur_estimate_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_orders`
+-- Estructura de tabla para la tabla `tblpur_orders`
 --
 
 CREATE TABLE `tblpur_orders` (
@@ -20219,7 +20203,7 @@ CREATE TABLE `tblpur_orders` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_order_detail`
+-- Estructura de tabla para la tabla `tblpur_order_detail`
 --
 
 CREATE TABLE `tblpur_order_detail` (
@@ -20240,7 +20224,7 @@ CREATE TABLE `tblpur_order_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_order_payment`
+-- Estructura de tabla para la tabla `tblpur_order_payment`
 --
 
 CREATE TABLE `tblpur_order_payment` (
@@ -20257,7 +20241,7 @@ CREATE TABLE `tblpur_order_payment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_request`
+-- Estructura de tabla para la tabla `tblpur_request`
 --
 
 CREATE TABLE `tblpur_request` (
@@ -20275,7 +20259,7 @@ CREATE TABLE `tblpur_request` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_request_detail`
+-- Estructura de tabla para la tabla `tblpur_request_detail`
 --
 
 CREATE TABLE `tblpur_request_detail` (
@@ -20292,7 +20276,7 @@ CREATE TABLE `tblpur_request_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_unit`
+-- Estructura de tabla para la tabla `tblpur_unit`
 --
 
 CREATE TABLE `tblpur_unit` (
@@ -20303,7 +20287,7 @@ CREATE TABLE `tblpur_unit` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_vendor`
+-- Estructura de tabla para la tabla `tblpur_vendor`
 --
 
 CREATE TABLE `tblpur_vendor` (
@@ -20343,7 +20327,7 @@ CREATE TABLE `tblpur_vendor` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblpur_vendor_admin`
+-- Estructura de tabla para la tabla `tblpur_vendor_admin`
 --
 
 CREATE TABLE `tblpur_vendor_admin` (
@@ -20355,7 +20339,7 @@ CREATE TABLE `tblpur_vendor_admin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblp_t_form_question_box_description`
+-- Estructura de tabla para la tabla `tblp_t_form_question_box_description`
 --
 
 CREATE TABLE `tblp_t_form_question_box_description` (
@@ -20369,7 +20353,7 @@ CREATE TABLE `tblp_t_form_question_box_description` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrecords_meta`
+-- Estructura de tabla para la tabla `tblrecords_meta`
 --
 
 CREATE TABLE `tblrecords_meta` (
@@ -20379,7 +20363,7 @@ CREATE TABLE `tblrecords_meta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblrecords_meta`
+-- Volcado de datos para la tabla `tblrecords_meta`
 --
 
 INSERT INTO `tblrecords_meta` (`id`, `name`, `meta`) VALUES
@@ -20405,7 +20389,7 @@ INSERT INTO `tblrecords_meta` (`id`, `name`, `meta`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_campaign`
+-- Estructura de tabla para la tabla `tblrec_campaign`
 --
 
 CREATE TABLE `tblrec_campaign` (
@@ -20444,7 +20428,7 @@ CREATE TABLE `tblrec_campaign` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_campaign_form_web`
+-- Estructura de tabla para la tabla `tblrec_campaign_form_web`
 --
 
 CREATE TABLE `tblrec_campaign_form_web` (
@@ -20476,7 +20460,7 @@ CREATE TABLE `tblrec_campaign_form_web` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_candidate`
+-- Estructura de tabla para la tabla `tblrec_candidate`
 --
 
 CREATE TABLE `tblrec_candidate` (
@@ -20519,7 +20503,7 @@ CREATE TABLE `tblrec_candidate` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_cd_evaluation`
+-- Estructura de tabla para la tabla `tblrec_cd_evaluation`
 --
 
 CREATE TABLE `tblrec_cd_evaluation` (
@@ -20537,7 +20521,7 @@ CREATE TABLE `tblrec_cd_evaluation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_company`
+-- Estructura de tabla para la tabla `tblrec_company`
 --
 
 CREATE TABLE `tblrec_company` (
@@ -20551,7 +20535,7 @@ CREATE TABLE `tblrec_company` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_criteria`
+-- Estructura de tabla para la tabla `tblrec_criteria`
 --
 
 CREATE TABLE `tblrec_criteria` (
@@ -20572,7 +20556,7 @@ CREATE TABLE `tblrec_criteria` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_evaluation_form`
+-- Estructura de tabla para la tabla `tblrec_evaluation_form`
 --
 
 CREATE TABLE `tblrec_evaluation_form` (
@@ -20586,7 +20570,7 @@ CREATE TABLE `tblrec_evaluation_form` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_interview`
+-- Estructura de tabla para la tabla `tblrec_interview`
 --
 
 CREATE TABLE `tblrec_interview` (
@@ -20607,7 +20591,7 @@ CREATE TABLE `tblrec_interview` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_job_position`
+-- Estructura de tabla para la tabla `tblrec_job_position`
 --
 
 CREATE TABLE `tblrec_job_position` (
@@ -20622,7 +20606,7 @@ CREATE TABLE `tblrec_job_position` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_list_criteria`
+-- Estructura de tabla para la tabla `tblrec_list_criteria`
 --
 
 CREATE TABLE `tblrec_list_criteria` (
@@ -20636,7 +20620,7 @@ CREATE TABLE `tblrec_list_criteria` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_proposal`
+-- Estructura de tabla para la tabla `tblrec_proposal`
 --
 
 CREATE TABLE `tblrec_proposal` (
@@ -20669,7 +20653,7 @@ CREATE TABLE `tblrec_proposal` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_set_transfer_record`
+-- Estructura de tabla para la tabla `tblrec_set_transfer_record`
 --
 
 CREATE TABLE `tblrec_set_transfer_record` (
@@ -20686,7 +20670,7 @@ CREATE TABLE `tblrec_set_transfer_record` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_skill`
+-- Estructura de tabla para la tabla `tblrec_skill`
 --
 
 CREATE TABLE `tblrec_skill` (
@@ -20697,7 +20681,7 @@ CREATE TABLE `tblrec_skill` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrec_transfer_records`
+-- Estructura de tabla para la tabla `tblrec_transfer_records`
 --
 
 CREATE TABLE `tblrec_transfer_records` (
@@ -20715,7 +20699,7 @@ CREATE TABLE `tblrec_transfer_records` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblrelated_items`
+-- Estructura de tabla para la tabla `tblrelated_items`
 --
 
 CREATE TABLE `tblrelated_items` (
@@ -20728,7 +20712,7 @@ CREATE TABLE `tblrelated_items` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblreminders`
+-- Estructura de tabla para la tabla `tblreminders`
 --
 
 CREATE TABLE `tblreminders` (
@@ -20744,7 +20728,7 @@ CREATE TABLE `tblreminders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblreminders`
+-- Volcado de datos para la tabla `tblreminders`
 --
 
 INSERT INTO `tblreminders` (`id`, `description`, `date`, `isnotified`, `rel_id`, `staff`, `rel_type`, `notify_by_email`, `creator`) VALUES
@@ -20753,7 +20737,7 @@ INSERT INTO `tblreminders` (`id`, `description`, `date`, `isnotified`, `rel_id`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblroles`
+-- Estructura de tabla para la tabla `tblroles`
 --
 
 CREATE TABLE `tblroles` (
@@ -20763,7 +20747,7 @@ CREATE TABLE `tblroles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblroles`
+-- Volcado de datos para la tabla `tblroles`
 --
 
 INSERT INTO `tblroles` (`roleid`, `name`, `permissions`) VALUES
@@ -20773,7 +20757,7 @@ INSERT INTO `tblroles` (`roleid`, `name`, `permissions`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsales_activity`
+-- Estructura de tabla para la tabla `tblsales_activity`
 --
 
 CREATE TABLE `tblsales_activity` (
@@ -20788,7 +20772,7 @@ CREATE TABLE `tblsales_activity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblsales_activity`
+-- Volcado de datos para la tabla `tblsales_activity`
 --
 
 INSERT INTO `tblsales_activity` (`id`, `rel_type`, `rel_id`, `description`, `additional_data`, `staffid`, `full_name`, `date`) VALUES
@@ -20830,7 +20814,7 @@ INSERT INTO `tblsales_activity` (`id`, `rel_type`, `rel_id`, `description`, `add
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblscheduled_emails`
+-- Estructura de tabla para la tabla `tblscheduled_emails`
 --
 
 CREATE TABLE `tblscheduled_emails` (
@@ -20847,7 +20831,7 @@ CREATE TABLE `tblscheduled_emails` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblservices`
+-- Estructura de tabla para la tabla `tblservices`
 --
 
 CREATE TABLE `tblservices` (
@@ -20858,7 +20842,7 @@ CREATE TABLE `tblservices` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsessions`
+-- Estructura de tabla para la tabla `tblsessions`
 --
 
 CREATE TABLE `tblsessions` (
@@ -20869,465 +20853,30 @@ CREATE TABLE `tblsessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblsessions`
+-- Volcado de datos para la tabla `tblsessions`
 --
 
 INSERT INTO `tblsessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('0133b030f20c9b380c657f5a335ee06121cbbe40', '167.94.138.119', 1662126404, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323132363430343b),
-('0275e207d64a872327fdef5ad7a98c87b61fa726', '205.210.31.151', 1657519452, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373531393434383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('02pijgqe1cqjfjtcku8georasck4qm8f', '161.138.23.98', 1677616021, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373631363032313b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('0494891b2e9a36977c89b050e64fc6ef7cb90125', '200.87.152.63', 1660221293, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303232313239333b),
-('0497f7c851ba40a2d0474bb05acedbb0422df221', '51.254.49.100', 1657998847, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373939383834373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('04hb0tr7r78ve4rkgebacvgrvbadhgd4', '205.210.31.42', 1669345799, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393334353739393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('065c1151fb971e12bf19ea116043aa86e47c32b4', '51.158.108.61', 1662352653, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323335323634393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('07ab5dbd22e49d6c4ca548dc538683e3f4dec09b', '38.25.167.49', 1661278113, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313237383131333b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('08d4b5fa18cd050f6769929f4671f3527cd274a3', '35.233.62.116', 1657898740, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373839383733373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('0au92tisruogrst8o9n2u8rn3c8c5eti', '198.235.24.137', 1673044761, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333034343736313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('0d13olpjp5cti8t65a5rbom5g5hogqfb', '198.235.24.155', 1664157852, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343135373834393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('0d2c3fcb50d0e55d7ff936b0e59c57094eb63e29', '104.248.151.218', 1657855519, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353531383b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('0d4hsfbqlragtqe8a0745ffaotpnckp9', '74.207.237.46', 1677606027, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363032363b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('0fnas18flj5leeclokhqlshp8av0nh9j', '198.235.24.26', 1670061043, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303036313034303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('0ms5g3m285f8sn71gdvnpr0tulvga259', '198.235.24.12', 1664972415, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343937323431313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('0u0hfer7fudd7j9eetbnktgfjmg4vs5q', '167.94.138.44', 1668518749, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636383531383734393b),
-('1035d5eaee0a4ac27d2a82aeb907edd033d09dad', '167.248.133.119', 1660407548, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303430373534353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('10be1eee36e4880be6fd457e3d97c0364eb4d5e5', '38.25.162.128', 1662483725, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323438333732303b7265645f75726c7c733a34323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e223b),
-('11lb1mgnjca5rai8av59u93n6upgca3h', '205.210.31.176', 1671313464, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313331333436343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1208a461e5d4f7fa2b95b600490e6f1a9b538a38', '52.201.213.231', 1662397808, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323339373830343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('14d15723b7df23745ba5171ef34636c220051491', '205.210.31.134', 1659496792, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635393439363738393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1535419ae095bc7c69ab3879d1942032e770c04f', '139.47.25.166', 1662454680, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323435343637373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('157f1ead5ac8b29247c55c5c8407214397dcd405', '198.235.24.179', 1662276933, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323237363933303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('16bcf8f32f36874a9c8623bbb8eced71384dbb5d', '51.255.62.9', 1657991523, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373939313532303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('16e3cbe7f53c2597176a3516a103ac49a3b62f7e', '172.104.234.191', 1657855511, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353531313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('18d352e3d9e6b3a3180f1cfa1700c19fefb7ee43', '198.235.24.8', 1657671568, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373637313536383b),
-('19tqovv3vn4slpj0ardhd7q1kuv8hrir', '198.235.24.135', 1665724611, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353732343630383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1d6a7f203e896a48f92ed121de412060f5c913c3', '46.101.189.134', 1663385298, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353239353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1db95a0619d3d68e755ac3b1b7fe3a3409aec052', '141.98.102.235', 1660208719, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303230383731323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1es2tld18l1ue2peir1oa247saviju8l', '198.235.24.131', 1665816936, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353831363933333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1esir19fdu272ljeporsjb0oha4konr1', '3.252.255.180', 1667491050, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373439313034363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1f9e9dd4e866df05e3442c7bd5dc41dc503db4fa', '51.81.167.146', 1657855510, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353530373b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1itcbu0a0kbbm2t4111dmq6pigvdq9n0', '205.210.31.29', 1665162800, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353136323739393b),
-('1m3n9dbo8u3i2eq5o0spmm23o8a8rlf4', '198.235.24.46', 1670079020, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303037393031373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1nh9rcbuv5crvp2o8pmaa98at3jo54qp', '205.210.31.171', 1669449112, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393434393130393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1njg3mn318m13mco3g7bfb1c3dijl5k5', '205.210.31.20', 1670254186, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303235343138363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1tc4ni4dipt7b8l4cfv47v60dkad6k7h', '198.235.24.178', 1665838507, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353833383530373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('1tfa9igaej0ma89vq8c6cbit45gsqcsp', '139.144.150.205', 1677606031, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363033313b7265645f75726c7c733a36323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f3f726573745f726f7574653d2f77702f76322f75736572732f223b),
-('1tsaoe6omu3gfcdaumijsc1d713so5re', '206.1.224.212', 1677714498, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373731343439383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('219fqjkoqabv1cf0h6phac2m7p3gbiuc', '205.210.31.38', 1671833168, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313833333136383b),
-('21e1k59pp90hgiagkbo8rf2ngrv76kb8', '139.144.150.205', 1677606026, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363032363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('22ke3esqjerejodd4qnus4jck3cmb6qs', '87.236.176.42', 1672745080, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323734353037363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('2310t2n4p1deeuadbghumpk93ag3revq', '205.210.31.40', 1665202776, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353230323737343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('2337f8d57318c541147f89942b97541954c1f782', '198.235.24.179', 1662276935, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323237363933353b),
-('243a1f264e79c66ba860198b49901399250b4dd1', '37.1.201.237', 1660595727, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303539353732373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('2745a2a1f63efefd8d302b93ed70895a3e2c9d4a', '186.121.195.147', 1660173222, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303137333036363b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('28rlfm3bd3c5469h17ndofbd318sft57', '205.210.31.145', 1671305456, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313330353435333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('2cd1qdr4u1au6hj7r8tqv6dtl9c4poga', '3.250.100.91', 1667479422, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373437393431383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('2f6113db1b301694531f861d126c613facec9f0a', '195.201.58.156', 1660594734, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303539343732323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('2f98c3a1768066c53d7e097f2e5164d6b2af222b', '188.165.87.98', 1657997415, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373939373431343b),
-('2mjh8ipgcluh8qccvdrqtn3eaupabbhc', '198.235.24.172', 1664225021, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343232353031373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('2uvfogj1qam3iqln572ibshc996t0bmq', '186.121.195.102', 1677714179, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373731343137393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b),
-('30gld5f8g4fon7edu986befiss0sdnu6', '51.255.62.10', 1663618056, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333631383035333b),
-('36e5d15b21c81c7c75afc488d8fbf39d1d916dc7', '167.94.138.119', 1662126400, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323132363339363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('383d87680c3f0ee9a150882ad43f69e8c77b04f8', '54.210.162.153', 1657855734, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353733333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('383dca7dd9c4334d4821f6d4c3b1ed85279a66fb', '195.201.58.156', 1660594734, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303539343732323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('38fe77a42d5c05a126f409795eb1eeb031468386', '104.248.172.107', 1657855521, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353532303b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('390155fa5f3bd6230f6dbec8e96651c1760ac7aa', '200.87.208.65', 1660688218, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303638383134333b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('39db1f2ef702982b5992699da9a29fbdf4e6856d', '167.94.138.46', 1661181365, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138313336353b),
-('3d62e021e3be0b84e26e7743007f938d2a960e08', '104.248.172.107', 1657855510, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353531303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('3eb76368e90aea5f7b884b89a7f05af76943d9e4', '172.104.234.191', 1657855519, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353531383b7265645f75726c7c733a36323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f3f726573745f726f7574653d2f77702f76322f75736572732f223b),
-('3f18ab69b0b067c02628a1c5256d2420f3fe0d51', '167.94.138.119', 1662126404, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323132363430343b),
-('3ghmgbmor08agav7hh0rs4aknf6m1480', '35.214.190.203', 1663812311, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333831323330373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('3qolhbr7qvll2lhq0vu3idosspmctvb5', '205.210.31.171', 1669449113, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393434393131333b),
-('3rl1cjhq1uhbars3u8t1qq05l1m8iu53', '205.210.31.145', 1671305458, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313330353435383b),
-('406pgqljhde6vgl68e8r0cid5fol04d4', '205.210.31.47', 1672438632, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323433383632393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('46jcu811l2obrglp9394oigu0qo0shgp', '47.242.105.176', 1677653487, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373635333438373b),
-('46vooh02rs7s8ucul7je5gejimbnkh2n', '51.158.37.181', 1671923224, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313932333232303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('47qgk4l5ehbq58hhqbccra3i0ljj4l0c', '198.235.24.57', 1669924135, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393932343133323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('483adf7ab8b6e21bf993aa61ba391f91e41984da', '18.206.55.48', 1657232693, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373233323639323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('48bsrb5pt33b643359qamstocb9s39l5', '205.210.31.174', 1665576161, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353537363136313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('4a9306eeb4d7d2c0eb0d34d5e056f69b113c0f97', '205.210.31.151', 1657519454, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373531393435333b),
-('4b0ad4a5712b1a7c37178639f20008f6ee0b9ae6', '151.106.120.184', 1663385514, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353531343b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('4b3aa0ucq97br7vgmc67lq1d8vpgbkfl', '167.94.138.44', 1668518748, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636383531383734343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('4be8782686cdae64000627bf64886cd5d400e903', '38.25.167.49', 1661188259, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138383235393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('4cdc5b90cd80b52aba59d77e6ee90fba3b5535a5', '198.235.24.142', 1657667300, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373636373330303b),
-('4d966d3b42dc126eefe297b4928357cdcd9687e9', '50.227.230.200', 1662400972, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323430303937323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('4edkhgjbq7f1fl1rlndafs2b8jauvphu', '167.94.138.44', 1664731252, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343733313235313b),
-('4et3f1ecd3h706s44tarq0lcsqf8c0or', '198.235.24.54', 1663945901, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333934353839383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('4f23dhv8j7qiguqa8oa7tfn7m1loshev', '165.227.232.121', 1670210961, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303936313b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('4i0pumk98eoru0t5inca5rb39rb8ulh8', '198.235.24.145', 1670931252, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303933313235323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('4k6e5gcrvmfmsgq2cbbpbffmrdg9l1n2', '198.235.24.172', 1664225022, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343232353032323b),
-('4p64jcqsf00kvj4hriqk1pjst27i6uri', '167.94.138.45', 1667309655, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373330393635323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('4rcrbmg56tb8cri5dhqe5v7rl8d9qalh', '205.210.31.162', 1670063453, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303036333435333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('4vcnfpv34goq373a60kgkrsopt8s11ug', '198.235.24.24', 1664858602, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343835383630313b),
-('504gumun7afv0evml3bf9h86lcqesdds', '165.227.232.121', 1670210949, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303934393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('508266913dbae5ff0556304bdf23d67812f220d8', '205.210.31.147', 1657377260, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373337373235363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('50ctfonfnvmib5kod3iemqojvucg3pjj', '205.210.31.14', 1664772376, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343737323337363b),
-('5127883a0cc7271a3e2662612a5863ce49e702cf', '54.227.32.154', 1658087001, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635383038373030313b),
-('54kenfqm4h7d5urreu5uugpb5i6k9d9a', '205.210.31.143', 1665115900, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353131353839373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('55q4chppf32r93phftp5citj7o6p82f7', '205.210.31.185', 1671288274, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313238383237343b),
-('580bf5d288b8c367bf278bed8ee06d941e69c5f3', '60.243.95.132', 1662413310, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323431333236313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('5c4b82d17307422939464e63489950104d8aabb1', '195.201.58.156', 1660594734, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303539343732323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('5c7966a7a2633bb0a45b606df79856f7d7a0089f', '82.193.104.168', 1663385336, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353333363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('5ee1f65ca0a1453bc99878c51d5f146e7a1f7986', '198.235.24.8', 1657671565, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373637313536353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('5f53374e4aec6fb4c4ef9d567389d2cdcece9140', '18.206.55.48', 1657530088, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373533303038383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('5kg09rpk19tid6c25tf47p4uqgi0e9mj', '167.248.133.46', 1672839569, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323833393536393b),
-('5ti158s110rvdsif85n9t0r38rm5uer0', '198.235.24.44', 1672737743, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323733373734303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('5vbapkkaku26euv734tfcji4f9qplocq', '167.94.138.45', 1667309658, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373330393635383b),
-('613g7d8elfoohd0mdqae3vqq3f4kgprk', '205.210.31.47', 1672507017, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323530373031363b),
-('61cbm6cbf6v5gieqn1ue3bklft5jpojc', '164.92.135.200', 1670210951, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303935313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('6238a13493755909eff2957e4e0842780ae50712', '82.193.104.168', 1663385339, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353333393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('6403be0de1f00a0cc4e0bb2eed969d391363ec47', '172.104.234.191', 1657855514, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353531343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('6405965fa2d6314b57699beb86e2a2213a8d2bcf', '198.235.24.146', 1657675942, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373637353934323b),
-('6641419f92d68fa2f97f29d8e92d2195657f4f46', '82.193.104.168', 1663385326, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353332363b),
-('67b0264a2edf92c76b482cf8e6edfa47b753ef14', '139.47.25.166', 1662454680, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323435343637373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('69uk0jtu67jlgd2qdph2qhl53utrhage', '205.210.31.147', 1665777404, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353737373430343b),
-('6a4e687b99107e7e0210fbeb3fe5f2bad9961e35', '167.94.138.44', 1661659306, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313635393330353b),
-('6ab554fc16ab195063b8f32ee231d066c8994fe0', '38.25.167.49', 1661178652, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313137383635323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('6ac8ce590b42a35862e92b82be773a278174c76e', '38.25.211.118', 1661884180, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313838343133373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('6hrqf1kf19cge2mlra4ahln8262tm032', '167.248.133.45', 1665063580, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353036333538303b),
-('6i339p7nueb1vv9k66l3eh6aftuq96ri', '205.210.31.185', 1671288272, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313238383236383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('70cb842c23c6ecbb3fa7e70850f538f177d8b248', '198.235.24.140', 1659421667, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635393432313636333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7126ae64510dc6d3cd2abb8e233e3106026e96d7', '195.201.58.156', 1660594734, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303539343732323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7201408ee33b25f59aa08cf633bfb44d9dc0fff8', '18.206.55.48', 1657232689, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373233323638363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('72jiaghaf5e9dog5katd5aho83kf65k2', '198.235.24.53', 1664747657, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343734373635373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('743efc4dc25db2c57144a3465fba7e1a030153ab', '167.248.133.119', 1660407548, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303430373534353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('74433bac996d83e82e44608576220ac1d3da074f', '198.235.24.167', 1662310996, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323331303939343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('74d0e9a5c59afb35332c5f805c001937050855a8', '139.162.88.197', 1663385304, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353330333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('76695504ebbbe4c4baf4cbc409a5e430422052f2', '200.87.152.63', 1660241445, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303234313434353b69735f6d6f62696c657c623a313b7265645f75726c7c733a34323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e223b),
-('767be72b4791c11b3c61f00169f671f130cb898d', '186.121.195.252', 1661030964, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313033303936343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('76fdc67c2ef7ee1ff2369c9a0cc90ca495b1058f', '198.235.24.19', 1659450221, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635393435303231373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('78d9cuq6qjoorot9f306jkoujfba05j1', '198.235.24.53', 1673038001, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333033373939383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('797t8r5hnutrmtdurcujmcq30fofc722', '167.248.133.46', 1672839566, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323833393536323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('79cl68010dootnm1ku22uo6m9b51muqb', '198.235.24.179', 1665574856, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353537343835343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7a382b4d6517b3e59eaf71b22e8a7eea9c36acad', '23.95.63.23', 1660163579, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303136333537363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7a8f6f42ef5b18b8f39d865e86a429bbb193eba4', '79.104.53.14', 1657855993, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353939333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7adb28eb82a7e636639b833c7677cb783a634377', '38.25.167.49', 1661187523, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138373532333b7265645f75726c7c733a3137373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e2f7574696c69746965732f6765745f63616c656e6461725f646174613f637372665f746f6b656e5f6e616d653d62383162356365353330643139643864633366616538313439666132366139302673746172743d323032322d30382d30315430302533413030253341303026656e643d323032322d30392d313254303025334130302533413030223b),
-('7b6de60b1d5702fe6e02c8a8aaeae346d5990072', '18.206.55.48', 1657530089, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373533303038383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7c29cec08528f5ef80c9a2f889c0f5402380a5fd', '159.89.207.131', 1663092793, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333039323737323b7265645f75726c7c733a34323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e223b),
-('7cepd0b5437nsl1cj0avf5s56i0baqq8', '162.142.125.8', 1671370299, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313337303239353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7e49b67e5df88d3feedd4b1784403b6565961534', '198.235.24.146', 1657406667, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373430363636373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7id8qonpis992f2d3ksuloqm7e0niq9u', '205.210.31.13', 1672345737, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323334353733343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7o9uu9bp47i5abg0vmk6llj8936senic', '205.210.31.6', 1664276318, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343237363331383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('7rtqptu3h977aaa1t098stvavr839tif', '198.235.24.149', 1670242918, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303234323931383b),
-('7ve2bqks4je6dnqmmos32be4u7dcjj4f', '205.210.31.172', 1665443441, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353434333434313b),
-('81ff8988ebca565bb3c3a12e3635fa8cace99fdd', '18.206.55.48', 1657240618, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373234303631383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('81vbne3ml130h7q9hf92p7b1grpmmfk8', '198.235.24.59', 1671776017, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313737363031353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('830059574f65cfc69463caeaf48054d141e1731d', '186.121.195.240', 1659749539, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635393734393339383b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('83t1f9i2kcgbf802volg6jmcmbm2rjkt', '34.241.201.172', 1670347057, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303334373035333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('860d7428f8ffa086eba3ec4c82c3e936af74eaa9', '211.176.125.70', 1657405196, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373430353139363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('8784129987bee15b0a9df16f5c67446b6c16790b', '172.104.234.191', 1657855524, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353532343b7265645f75726c7c733a36323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f3f726573745f726f7574653d2f77702f76322f75736572732f223b),
-('8a6618754e45915c79eb6f40c7cb4116dd7842f5', '198.235.24.140', 1659421669, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635393432313636393b),
-('8af7b5b478bb4aa29fceb20876857f8852772150', '18.206.55.48', 1657232689, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373233323638353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('8e7bc320b0da5d2adcc2f9449b15296c003f9977', '159.89.207.131', 1663092795, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333039323738323b),
-('8ec36490db0323938f9f406f25c1197022acb709', '20.122.142.223', 1663385355, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353335353b),
-('8ed07cee0f1d757ee90ef178d8503d03e060c65d', '186.121.195.252', 1661031116, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313033303936343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('8ee6875eea1d2b8532125024fbcbb6619031b0c1', '38.25.154.218', 1661038216, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313033383231363b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('8f09453a22a590cbb395342249f81716e0a04cba', '54.227.32.154', 1657232699, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373233323639393b),
-('8gf4a2uljo4tp3ujj22k4p0qup8duk1d', '164.92.135.200', 1670210958, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303935383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('8tkc6n9bifuulf1jsd5o9vva113sq3pc', '3.250.100.91', 1667479426, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373437393432363b),
-('8udqlbatftnfk7h1ddpvi0c714ag0tnk', '198.235.24.12', 1665502199, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353530323139363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('91051c44bd8b598537d75d770de80c8558e06d44', '82.193.104.168', 1663385341, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353334313b),
-('92l7v1vhrfnl86m0j3ldupben571o78n', '205.210.31.9', 1665211060, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353231313035393b),
-('9321d139c5f9d049fc3a0bbe02da2cc52fc59049', '151.106.120.184', 1658037472, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635383033373436383b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('932h9k9119rt6ieu6u1plqr1n8rnbcr7', '139.144.150.205', 1677677039, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373637373033353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('94c915b86922492cf1b36458fc54ce1b67dd124c', '38.25.167.49', 1661187511, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138373531313b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('94ivjcp6ecj05mj2r0npr64eivnfpd88', '205.210.31.17', 1672495420, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323439353431393b),
-('95db57819a557215e10d4c9f0c76d0ffe0764d62', '209.97.157.91', 1660423754, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303432333735343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('975i4rt8ta7kk18ktepavlk4hbqk0of1', '198.235.24.181', 1664049034, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343034393033313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('97d0589deedc8504e58e600c7d5d68f4cdf3316c', '51.255.62.10', 1657991549, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373939313534393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('97ealqbnf96td6lm016ljj23sefdsbq1', '198.235.24.26', 1673420955, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333432303935333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('9983cef2123bbd3de1a95f87f5af4c47d723ab1c', '170.187.181.53', 1663385303, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353330333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('9ad010d08394f7353bb032df226ae006b8a4a469', '200.87.208.65', 1660686161, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303638363136313b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('9adb907249bbee6167fcb4f80a681a1a627b29de', '200.87.152.80', 1660222280, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303232323234313b69735f6d6f62696c657c623a313b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('9fca3dc57caf6ea916633ec7068a4a162be8ac77', '186.121.195.177', 1660516640, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303531363633363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('9h0j9qspdpmj66e9r9vhv5g6r9fd4ftj', '198.235.24.18', 1664972716, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343937323731363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('9jln30asmd0p3ec8r3gel0cgmsvnbmka', '198.235.24.155', 1665874554, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353837343535343b),
-('9mdlg6qlcuc2j2gfdlek03o6f97mpus0', '205.210.31.51', 1669488043, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393438383034333b),
-('9ojquaob131lg8leomcfds9lssr2jhtt', '198.235.24.36', 1670953519, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303935333531353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a01e153d6e4e05744e9988a8dce944e9413852f7', '82.193.104.168', 1663385326, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353332363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a0bc918c4716d9a45e1c8c2ecdc93839e252ea56', '172.104.234.191', 1657855524, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353532343b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a0v7n34kn92fap5ssv799c35t34vjum4', '205.210.31.16', 1672192771, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323139323737303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a242a062bcf331d52bf131ff2d7fbb1603e48fae', '104.248.151.218', 1657855518, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353531363b7265645f75726c7c733a36323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f3f726573745f726f7574653d2f77702f76322f75736572732f223b),
-('a359a39479f49fea1d582fad81077f882a9d9668', '38.25.154.218', 1661030445, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313033303434323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a4c8ae7816b97436f7ad7b8d1a06770ebb8b2d1a', '205.210.31.150', 1661273980, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313237333938303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a4ce1d84299ef138af1270c220d80bd5ae00316f', '198.235.24.5', 1657633739, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373633333733393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a5488ec8cec1c221950f3420829e8bd1d0024728', '51.255.62.1', 1657991549, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373939313534393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a6177c8e3823afd4477367e1739c182eebdddd0a', '198.235.24.5', 1657633741, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373633333734313b),
-('a65171f76dc639d21f7d0cd4419f2fb0ead5691f', '198.235.24.8', 1657385876, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373338353837343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a7e99cstodvnofbtccl53cnm4bin2vpt', '198.235.24.11', 1671140710, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313134303730393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a7f3b1ee4842c46fe3f9729a3047dead5aba2740', '35.233.62.116', 1657898740, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373839383733373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('a97846e24749a45a32ef38e700aa254c2ff8476b', '167.248.133.119', 1660407549, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303430373534393b),
-('aa403728c801b0010a9e11c600285c38275189c2', '82.193.104.168', 1663385337, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353333373b),
-('ad68c7jqdm45jkbr24h45skgt5uq87ec', '205.210.31.176', 1665985769, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353938353736373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('adc55a3880540104221fd45057cb435fe8ddd9ed', '18.206.55.48', 1657626840, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373632363833373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('agf9fng9b4k3na1scev0nef1k6d0labg', '198.235.24.135', 1669508189, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393530383138383b),
-('agia26p70rj6v641fakh2e6b1ng5bdv6', '198.235.24.145', 1664264047, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343236343034373b),
-('al4vptf6ncrdsi2janv51crvcpkt01js', '198.235.24.167', 1664635714, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343633353731303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('amedstc6o9didk55dh01tlt5qtg6e6t0', '205.210.31.135', 1670286454, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303238363435343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('aovh80578904njt7tf969ot1pkrn894v', '165.227.232.121', 1670210960, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303936303b7265645f75726c7c733a36323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f3f726573745f726f7574653d2f77702f76322f75736572732f223b),
-('apd2os2m9bmbe8our3avf3pi2r1smp1g', '205.210.31.60', 1672601546, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323630313534363b),
-('aq848ktb4ebdrnk0643d03k49u60meq3', '47.88.5.56', 1677649334, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373634393333343b69735f6d6f62696c657c623a313b),
-('atpl3lg9a5b2j8ms97vbvm8ancs6bk77', '167.248.133.46', 1672839566, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323833393536323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('b0g0aufi8aptgbodkoght4ulmf9g1hkk', '162.142.125.212', 1670331239, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303333313233393b),
-('b123b209926170e1cb6fbd131c5de3336e182d42', '51.81.167.146', 1663385379, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353337393b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('b163e0e2c9f26366f04a473d8444b8ca10580915', '167.94.138.46', 1661181365, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138313336343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('b28e55dddc74056571adfc46f10850a8aeb23f36', '151.106.120.184', 1658037472, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635383033373436383b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('b3a6bb8733b88e7424654e69a2a988847a739553', '38.25.211.118', 1661884139, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313838343133373b7265645f75726c7c733a34323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e223b),
-('b3aondn9qds9iqoni5k1955rghrr054r', '198.235.24.53', 1673038004, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333033383030333b),
-('b4er1uss3e3h8ag6vh7irm16gb0j79gk', '34.254.153.19', 1673519216, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333531393231333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('b580a01608d9a001ffc7b6078bf50d23f48d6708', '51.81.167.146', 1658225746, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635383232353734333b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('b6d2b835d4e072c4f06340570f9dc74e1c0dc5e8', '198.235.24.182', 1662318297, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323331383239373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('b7b23efcb65031cf6664c06990a4c2fb91294417', '167.94.138.44', 1661659305, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313635393330323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('b985540adb42030d0c73606eacb3630a83646400', '38.25.167.49', 1661181133, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138313133333b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('ba82cd7735af794304061bacfbe30966a11ad8e4', '167.94.138.46', 1661181365, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138313336353b),
-('baafe98bc3c8b1b4ad2633ea6f2687a48cc01046', '38.25.167.49', 1661278319, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313237383131333b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('bb1e0e49aa0969e4c87b9c60b23740a3cfa941e7', '38.25.167.49', 1661276274, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313237363237343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('bc3377gnv7lgs54o8vhegf91kcrlmnc1', '198.235.24.50', 1672393701, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323339333639393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('bcqdsnqikj6lkjpijr510ueg324646it', '198.235.24.155', 1665874552, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353837343534393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('bcvs6v0g7amveudj5pgo6a9iog5hf3qf', '205.210.31.14', 1672714640, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323731343633373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('bdfba749a6f3a0e0851ec75139dd5648fa245799', '20.122.142.223', 1663385354, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353335343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('be24ac89bc9c8e5f363069740225b9482838c2f2', '200.87.208.65', 1660688143, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303638383134333b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('bh7fkvugie1l933o7pednu3qb1h3edg6', '51.254.49.97', 1663534114, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333533343131343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('bj0oppr75ga0qi72e7g2sd3i3ddtltfv', '167.94.138.63', 1667671472, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373637313437323b),
-('bk4pk20vduds9qjsr94s51kros8tqrmu', '161.138.23.98', 1677616357, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373631363335373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('bkv4h4almrcavi8lhfj9iav8i9e7cl67', '47.88.5.56', 1677649333, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373634393333333b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('borm9mftqbdehn7hmmmfcq849r06fdq4', '205.210.31.40', 1670135354, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303133353334363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b);
-INSERT INTO `tblsessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('bq0277j922ee1hrugimmq104qv3boaaj', '51.255.62.5', 1663529509, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333532393530363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('bsqsra2c4g9as2553mtcvb62t9ghtaun', '51.158.109.3', 1672756221, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323735363231373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('btimihvejfdbjijoe8g57o0vl62lksm3', '186.121.195.102', 1677704032, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373730343032393b7265645f75726c7c733a35383a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e2f636f6e73756c7461732f7665722f31223b),
-('bvj68nd7vu2ifcr6iieddsu4nscta1uc', '167.94.138.118', 1671137890, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313133373839303b),
-('c06f0e48c1a2946bdf0da1f5a9825eec86d23521', '198.235.24.142', 1657667299, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373636373239353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('c153dd4c7357cda6111e027a6f84c2ffcf5748a3', '90.160.195.4', 1662454683, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323435343638333b),
-('c1e381i63rruaur1ni2mm45f34356re3', '205.210.31.141', 1665122442, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353132323433393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('c2aab03eb420daaf5b42be7f370b7733e6cc5d1f', '195.74.76.198', 1663385304, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353330343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('c338b63c94659427958d21a621c5bf816470afb3', '38.25.167.49', 1661190166, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313139303136363b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('c50e9b68b0d94a3f6975c8c04d860d632adf7b32', '205.210.31.3', 1661848031, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313834383032383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('c56c8b330f5e1d8e25ed761374509a10a0cefb19', '207.154.241.99', 1663385298, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353239353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('c5ae9257fb07716573f0a456bae1b32c1e812290', '18.206.55.48', 1658086990, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635383038363939303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('c64974fe7f7df3f69265a4161adadae7aa2b96ee', '200.87.152.63', 1660241447, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303234313434353b69735f6d6f62696c657c623a313b7265645f75726c7c733a34323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e223b),
-('c8597bf2362aeb8cbc7d3bc4e287c3d172800acb', '104.248.151.218', 1657855514, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353531333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('c8e625061b8100fe82004e424d1e8bfd4df118dc', '167.248.133.119', 1660407549, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303430373534393b),
-('cd87f2ef3db32a5f57f465137868ec3b28349431', '51.158.127.119', 1661983387, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313938333338343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('cdd26a65dd568594b3a118147816e93348fd7498', '54.227.32.154', 1657240648, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373234303634383b),
-('cefad03044bec1244facc46cdc58a693fea18f56', '167.94.138.119', 1662126400, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323132363339363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('cf6abc6118f32050895b4584c773a7c0cfb76322', '167.94.138.44', 1661659306, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313635393330353b),
-('clhhg41rg0clou9q39nkr1qe4ca0acag', '167.94.138.118', 1671137890, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313133373839303b),
-('cpt2dvf1og25oqvbk9u5c3lk9b1e5497', '193.56.29.120', 1663787587, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333738373538373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('cs6ppuvhh2q9uf4sblos8n6b84d8eoed', '195.74.76.198', 1677606021, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363031383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('d04ce60842887c489ba323c02eb0ed054c773220', '38.25.154.218', 1661039306, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313033393330363b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('d287d391da3fbe7ca880b4336cf6f0f2aad3351f', '200.87.208.65', 1660685779, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303638353737393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('d59b3f747f5a451f63dedd335d45017a7778e482', '167.94.138.47', 1658075047, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635383037353034343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('d5f083a46eb67853a95459ace22f102fad510c90', '38.25.211.118', 1661801925, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313830313735343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('d6et0rmtqhjv4ao557oli103d1nqcm1i', '205.210.31.176', 1665985771, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353938353737313b),
-('d6hgftcst73hei0tfg1mpfs0ch32memg', '205.210.31.180', 1672188470, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323138383436373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('d7bb29791c1383dc12165cff37dc674211fb766e', '82.193.104.168', 1663385342, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353334323b),
-('d8af359feb74a8639e154ad6c906883166e863e6', '24.220.112.134', 1662400043, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323430303034303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('d8e946c067305c852c6512ec67d116a18278af34', '165.227.98.119', 1657935493, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373933353438393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('d9c2b97915405a6e447ab02fb6e55d6ba45964e9', '167.94.138.47', 1658075047, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635383037353034373b),
-('dbgrfhcj9jvm63pkfvoc66so9ntn5qki', '205.210.31.140', 1671952056, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313935323035353b),
-('dbpa0up37efbdal85el29btc6gg91i0j', '205.210.31.137', 1670139938, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303133393933353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('dd1b471f07f8460580ca09f47ec9d25762299906', '18.206.55.48', 1657240620, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373234303631393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ddda792a3efb58f010484241dc208afd7594476f', '38.25.154.218', 1661039306, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313033393330363b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ddsrkl7rgtii8qel0pire48oajcmg34d', '205.210.31.174', 1664517811, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343531373830383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('de559b43ej41d7lp7gae6qkjdhovsg8s', '205.210.31.56', 1672192587, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323139323538373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('de5c798594ee84f2c52a1d435259b2f4a3cb7572', '82.193.104.168', 1663385340, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353334303b),
-('de882e3271a634a6b9bd0790afa4f2535988d329', '172.104.234.191', 1657855519, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353531383b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('df38bae8f72f579341aa721473710d4fbfcc7853', '198.235.24.146', 1657675940, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373637353934303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('dgr7udeen62corgn843u4567elmjfvf3', '198.235.24.44', 1665837058, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353833373035353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('dlkfahr84rqbdfsp7o203u1rr8uel73b', '205.210.31.23', 1673133744, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333133333734343b),
-('e32bu989i5v6fu7qu0sc0uopcdju4bm3', '193.56.29.120', 1663787586, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333738373538323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('e52c1d4d65c4f4a512b7a25e9324690c5e91700b', '205.210.31.134', 1657404318, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373430343331383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('e56b18f0d0a6b5fef3f6cd2036a6cdb727bc5715', '38.25.167.49', 1661190559, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313139303533373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('e94d7a95b3b63eaa317db330da0ea4874f1bf8aa', '107.175.105.163', 1662476989, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323437363938353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ea9f188c0d48d50b596c25a4425eb1bb1fec58ea', '54.227.32.154', 1657626850, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373632363835303b),
-('eaa0331e3105db83de3ef42f7e4e364487b11e50', '18.206.55.48', 1658086994, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635383038363939343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ecf940b2768ac9ae67c536c88e302c55ccda556c', '38.25.167.49', 1661181150, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138313135303b7265645f75726c7c733a3137373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e2f7574696c69746965732f6765745f63616c656e6461725f646174613f637372665f746f6b656e5f6e616d653d61323564653732366536323739333064633561613632346461396563363563342673746172743d323032322d30382d30315430302533413030253341303026656e643d323032322d30392d313254303025334130302533413030223b),
-('ee5a516732e7048f4c0b62643ee9b55859ba7561', '38.25.167.49', 1661188920, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138383932303b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('eft50i1d0tjqleq6r4rqf1t6co11iap7', '198.235.24.182', 1670925673, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303932353636393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('eggn39cpabq7e1tu2j6im0j7svuuevpj', '205.210.31.167', 1673131142, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333133313133393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('eo3metrj8eiqf4etdv9ac9tb7no30pjq', '205.210.31.9', 1665211059, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353231313035393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('erkqs7dk5aot84pttajp3bptl5e2dqhb', '205.210.31.41', 1664290605, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343239303630323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('esi02dmnaicqo63an7iviu7cegicqb4b', '51.255.62.6', 1663529509, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333532393530363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('esqrc9j049kg0v4alt66fj93do8a2c6b', '198.235.24.50', 1669467381, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393436373337373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('evio8cgq1i4kmi34vru5opmrvn0adc1n', '87.236.176.4', 1670545401, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303534353339363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f05995efa56cd176e56adf68e7e9e3d559fef867', '195.74.76.198', 1663385306, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353330363b),
-('f07mtv4agekfhibj439d1ae6j12fmdh7', '186.121.195.102', 1677714179, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373731343137393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b),
-('f102dbf38bcf3a48e5930f8d62c12e75ee7e6d29', '51.254.49.97', 1657998847, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373939383834373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f187b0a961227d7b309234578876e7bfead0436a', '54.227.32.154', 1657530098, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373533303039383b),
-('f1bc686a703548511ff89fe95aad995ddaab5e0b', '167.94.138.44', 1661659305, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313635393330323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f24bbmq4q7b147bei7jtjsbdgc3sc4n7', '167.94.138.44', 1664731251, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343733313234393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f25070f612780a3a25f6d49a9848f3a0d26712f3', '18.206.55.48', 1657626840, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373632363833383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f32264c59fb7b9290cda7aa46fe11f9ec4468c9d', '52.0.160.141', 1662397807, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323339373830343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f38d309f6a1b9cebabcc2401dc4824b7ed3b50ac', '51.255.62.10', 1657991547, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373939313534373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f3cfcaa8b4fcea23e73bc119f93d80368744eab7', '82.193.104.168', 1663385328, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353332373b),
-('f488edc259be230e1cddbf2634b699ff0dee1b47', '51.81.167.146', 1663385383, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353338333b69735f6d6f62696c657c623a313b),
-('f49146cab47c525976a29ede85a285ab54e4fa93', '167.94.138.46', 1661181365, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313138313336353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f4953541f7a90beafc0c4cd0071766bdef00fadb', '37.1.201.237', 1660595728, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636303539353732383b),
-('f5pvriahue2h9impjvff3467pgsk91l5', '205.210.31.23', 1673133743, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333133333734333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f65eb4757b6908d2ec23eedd5b5f2a8887a7cd54', '18.206.55.48', 1657626846, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373632363834363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f6805d4b176998973e780d9e158482b9c806bf01', '159.89.207.131', 1663087425, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333038373431323b7265645f75726c7c733a34323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e223b),
-('f6ce6378174fa42943ea4c5de9c7ef0d25846d2a', '104.248.172.107', 1657855520, 0x5f5f63695f6c6173745f726567656e65726174657c693a313635373835353531393b7265645f75726c7c733a36323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f3f726573745f726f7574653d2f77702f76322f75736572732f223b),
-('f893bfebed61702ca0924186d1a985f8ddd44074', '18.194.4.20', 1662441684, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323434313638303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('f91bb5f533c0e9cc17899a50b21146ad1ce6420a', '82.193.104.168', 1663385340, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353334303b),
-('fa9d0617bce80c14e0081567d1c4329b6189b9e4', '82.193.104.168', 1663385324, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333338353332343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('fbc5bb32489a5c33d5fe6dc00a9fc0c01a94226f', '38.25.154.218', 1661030938, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313033303933383b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('fc2892092f1e517b89739fdd61ff3790f588dd73', '38.25.167.49', 1661190537, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636313139303533373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('fe33b957c41fb5a5aa98659e8cb1101fed77797a', '107.175.105.163', 1662476990, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636323437363938353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('feekt2dq2m6u370k8vsj6pmfufm4c760', '163.172.180.25', 1666076856, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636363037363835323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('fs6gpof7kukd15ut50nlao3q4fgbtde8', '198.235.24.154', 1665571124, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353537313132313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('fscg37gj5c20ur0au13oe373u67m1ium', '167.94.138.63', 1664285757, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343238353735343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('fttd6vh4184msgmojf0n8ck51hibpbiu', '139.144.188.181', 1670210952, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303935323b7265645f75726c7c733a36323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f3f726573745f726f7574653d2f77702f76322f75736572732f223b),
-('gaaiuocd7ko2llutcbug3929q1ghd42c', '47.251.11.3', 1677649335, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373634393333353b69735f6d6f62696c657c623a313b),
-('ge1f46ugsme6rat4emhnl5dko3qqna5g', '205.210.31.141', 1670285461, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303238353435373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('giimtl61n47p2mobr44627k63mfa1q86', '74.207.237.46', 1677606027, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363032363b7265645f75726c7c733a36323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f3f726573745f726f7574653d2f77702f76322f75736572732f223b),
-('gin2tvei9qff41up52mjo38tjofe5nmb', '167.94.138.63', 1667671472, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373637313436383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('gn5gbfkb4nrl88h1ipsc3pn5ct21st5l', '198.235.24.184', 1671265034, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313236353033313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('gshn51r0unsvm9r24v4o6gv40gsqdvd4', '205.210.31.38', 1671833167, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313833333136343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('guubmom4i8cn3j15hi69pgpp8kqh75cg', '205.210.31.183', 1665411326, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353431313332353b),
-('h1hee3gbq1jr7a3tod6cl7lo38c8shj3', '198.235.24.145', 1664264043, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343236343034303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('h7c7k9i2a4g3gqpqc3m4p2p92if79k9h', '198.235.24.8', 1664982740, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343938323733373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('hi7huqndk77rd5aut70okbichajjd4n1', '205.210.31.156', 1664603589, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343630333538383b),
-('hku1hup6eihf7iuedpije46t5h47d101', '167.94.138.63', 1667671472, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373637313436383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('hlsvepru65dqm8cproggpuorheigh5ef', '104.198.44.54', 1663497443, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333439373434313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('hm6joh31joldkoq3mpdqh7fs1uaa1738', '188.165.87.101', 1663534136, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333533343133363b),
-('hn1a3is2rlk32208o3s97upsib3ubukg', '205.210.31.29', 1665162799, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353136323739353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('hnp1eu2jtbak8iqb4e5p00vkrlnblglo', '38.25.226.185', 1677606096, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363039353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('i18ne552tfrnsismtmimft021q1cblmg', '198.235.24.52', 1669338651, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393333383634383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('i4apk75rcthfksakjekgnaaj8ihf4u0v', '205.210.31.52', 1669333564, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393333333536303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('iact3aua7orr5ja0nin72n3q9g7jco4r', '205.210.31.140', 1671952054, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313935323035313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('iaig3hk0rjv6omt910p0t5ungc8k24ut', '205.210.31.176', 1669940793, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393934303738393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('idua5q9gh8jjdpje9v19e3cg78q7alli', '161.138.23.98', 1677615624, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373631353632323b7265645f75726c7c733a34323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f61646d696e223b),
-('ifd47eogv55jokm55niih0h2mkrt25i0', '51.158.109.3', 1669140665, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393134303636323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('imt45ccnbp050tc0guoh4spdmvcp0mif', '167.94.138.118', 1671137889, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313133373838363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('iv68rqo9fjm5gr84vk730i4c5ogdvi64', '205.210.31.23', 1672813913, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323831333931303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ja8o09u6eu7uptfb6nvddpnbi1mfclh8', '3.252.255.180', 1667491055, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373439313035343b),
-('jh1kjnp91ogi5ic8qjueeu2bv4aj5c5a', '198.235.24.20', 1672155636, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323135353633323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('jkg0dojo3863ubutlk9ll2v64540j334', '205.210.31.167', 1673131144, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333133313134343b),
-('jldh555mlrb6cd5lr91pelmp6nbjegrf', '148.113.140.244', 1677608152, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630383135313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('jmv3je7ebddbtrqulm2qjtc75k4jn75f', '206.1.224.212', 1677714615, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373731343439393b),
-('jqr75om2dmdct8a0b1hb28uunj351j0b', '104.198.44.54', 1663497440, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333439373433383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('jra4v3n48v28tq41dqk06i2cl71tbeqg', '148.113.142.65', 1677608107, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630383130373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('jtj6pd1n3kh74reeqmtta2854kv5oqt1', '87.236.176.40', 1673476865, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333437363836313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('jutups36kr9fmfgvldu9129rrecb8l28', '51.255.62.6', 1663529509, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333532393530363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('k0518ne51mfr1d3hvsl6oto14hsas9h9', '47.254.25.10', 1677649333, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373634393333323b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('k21u5pbe26rpc1une3lm81d608hj7sta', '148.113.140.244', 1677608152, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630383135323b),
-('k57o2sila4srr8oc48o376peitilc0qb', '198.235.24.140', 1671817136, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313831373133323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('klueq96gq687qsu0p7n8ma3eu80lcqjm', '205.210.31.47', 1670127271, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303132373236383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('kochvvpf5ka8mk5bkourrf21m1l5ef8v', '198.235.24.2', 1665410908, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353431303930343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('kop9up4vp68ud0qsgbcsbbv8acg6sjh7', '205.210.31.5', 1664370999, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343337303939353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('kpttarq6pl1b6f60r861mqkhivoucuqq', '167.94.138.63', 1667671472, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636373637313437323b),
-('kr57d3hsot9co96kq1utgml6v8fv2i4h', '35.214.190.203', 1663812311, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333831323331313b),
-('kr7e5dodltoo6a8ub8ekeh45g4c59i8s', '163.172.148.199', 1673357854, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333335373835303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('l2g7n2c03aunndj19qjt7qm1l5v98ebf', '195.74.76.198', 1677606021, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363031383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('l318aqroa8s98p1m4tqdogbja9er9ju1', '95.95.76.70', 1677607246, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630373234363b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('l9k2si5qnt2enupens3j2ru3c1ij0pse', '74.207.237.46', 1677606026, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363032363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('lbjcai0sel0mrfqhjslqlm89fv65qk3d', '177.222.98.228', 1677639101, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373633393039373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('lg1cijf14281rim9ihgq0nfi3hv4ejn2', '198.235.24.53', 1664747658, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343734373635383b),
-('lpidconv75rr2mll3ej3bjhmf3aprimv', '167.248.133.45', 1665063580, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353036333538303b),
-('ls1skj962cne9718scounj503mv42b99', '162.142.125.8', 1671370300, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313337303330303b),
-('lu2n4n8tdvcrc5oemhuc7d427e415muj', '167.94.138.63', 1664285759, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343238353735393b),
-('m5pt0sbmigg1o9n65a3dlabbuva1fit4', '198.235.24.6', 1665508530, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353530383532363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('mhv1olvhncbdfu8cfif58ts5901obpfu', '198.235.24.14', 1669776408, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393737363430373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('mplv8bsci2pmk4mt8cj3ouh43isv4jvd', '193.56.29.120', 1663787586, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333738373538343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('n06jn1e8ms1o2iqk39d0f2e6an6dlehi', '205.210.31.58', 1670043414, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303034333431313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('n0sihtraqef96jqigcbvf6dfdu1ggi01', '205.210.31.172', 1665443440, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353434333433393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('n3b2oicqhs55gd023ec98rdu8giqnp2u', '198.235.24.133', 1670401361, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303430313336313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('n5pqivu7s1qr3ms7i7qm82asq5420t3v', '198.235.24.185', 1664559790, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343535393738363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('n6gdq9ephfm2esu7h0ong2lrpf0rboub', '198.235.24.179', 1664022238, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343032323233343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('n7fe3dj4ti9f00mcd9qu8qb9d5veihl9', '198.235.24.147', 1673028074, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333032383037303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('n7l1j49vt42qs2i6noipem1ts16qo98q', '165.227.183.60', 1668024477, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636383032343437343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('n981il9c4u6nbfk9oissi244m1t8a5j8', '167.94.138.44', 1668518748, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636383531383734343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('n9fs6rr270supbstd24lhsscvfn66dbn', '167.94.138.63', 1664285757, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343238353735343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('nfdsag5a2pnplao2euf0fiepk8qrn99a', '205.210.31.176', 1671313465, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313331333436353b),
-('nj5hc5fbrp7o31p7ikrg6kliv5jd0sfs', '198.235.24.184', 1671265036, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313236353033353b),
-('njmkatsq2t2h0uai3iclm6gc1frm8rkg', '205.210.31.147', 1665777403, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353737373430303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('njmlp5kd292slbp23mehmuulhl831jsa', '161.138.23.98', 1677617578, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373631373537383b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c623a313b),
-('nm6654822ccal3stdrt54subd8p0lmon', '198.235.24.132', 1664542699, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343534323639353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('nns0g98glnq00f2hkqt9ndc4kd68f7to', '198.235.24.130', 1669402360, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393430323335363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('np06pi3nn1pitahpls8bmq01brk5i7oc', '164.92.135.200', 1670210966, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303936363b7265645f75726c7c733a36323a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f3f726573745f726f7574653d2f77702f76322f75736572732f223b),
-('nt6h4ioaqpeunme58gmi2p87qul4lo9i', '205.210.31.49', 1664229959, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343232393935373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('o2l5infu5ag6r55lgidhe7fli88nubfq', '87.236.176.96', 1671503839, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313530333833383b),
-('o44qelde38o8qoojc1q2q6t5vfpk5hve', '167.248.133.46', 1672839570, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323833393537303b),
-('o7am4hqjnlg8duigha3ajcf6etk33h2r', '198.235.24.155', 1664157854, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343135373835343b),
-('oetlrkotcfu54qkj9c4d0n2j4iob5rod', '205.210.31.54', 1673135001, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333133353030313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('p21e1m21vg0t1daoc8vupjq702e8bjdp', '198.235.24.146', 1671194204, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313139343230303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('p3pnl364r1but96re2pl309gif3t5698', '3.249.224.191', 1673462418, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333436323431353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('p5j46enhbfvpvkukeun3um2o3e4rrci4', '205.210.31.183', 1665411324, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353431313332343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('p729t7o8jg3m4qsmmuhb4j2jh1t87ckq', '64.225.0.73', 1665435456, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353433353435323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('pb5o3q58pemic1q77spa0eadur4vfu8a', '205.210.31.60', 1672601545, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323630313534323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('pdv5699crkc5hq35389t1c1hg08b0ip1', '205.210.31.147', 1664372629, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343337323632393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('pgvrt35hgm04bu7ie2enof5ngesmhaj6', '198.235.24.24', 1664858599, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343835383539373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ph7gj2j54onhjgggve7eba9i9fjt108s', '193.56.29.120', 1663787586, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333738373538323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('pktbt595jn2khhe22bopk2bmg0t5vilr', '164.92.135.200', 1670210967, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303936363b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('pml21jhtug6f7b7tbkp2mjvmogb1pgih', '167.94.138.44', 1664731252, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343733313235313b),
-('pndgsjm202n6st51qmldcbpc14vjofpb', '205.210.31.54', 1673135002, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333133353030323b),
-('ps8sj4p3j1h3l23b52spoculeov62tit', '163.172.180.25', 1666042156, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636363034323135333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('qamfat059evt3g856pmmo4snm67bf6br', '198.235.24.10', 1670248345, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303234383334313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('qgcps828n0f7n7i5joadu7jpfsrchors', '139.144.150.205', 1677606031, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363033313b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('qklumv6fsj1i494guc8e22nmukng65rd', '162.142.125.212', 1670331238, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303333313233373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('qqtd260vmspaj8oik72qm9bd1jehf5ep', '198.235.24.142', 1664726631, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343732363632373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('qs4bils7fe5u95a5jeclin6l8j46149v', '205.210.31.174', 1670906784, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303930363738323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('r01ml64jl8t79adaepheum3o1abm0sq5', '162.142.125.8', 1671370300, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313337303330303b),
-('r22bm8u3jk85vd987ona6mi46m26g4u2', '205.210.31.51', 1669488041, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393438383033383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('r32q1jq03tlpjt5m7p9h7ou6j5rtacod', '205.210.31.39', 1672616037, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323631363033363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('r4jdthe4db04ufp9nfsuer89p30erek8', '195.211.77.140', 1670210916, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303931323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('r51lfg5th34o1pmvsveuehhuaiofl887', '104.198.44.54', 1663497440, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333439373434303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('r8rv3ai9iked8f4buujl9if3527hdagb', '87.236.176.163', 1670002306, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303030323330323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('r9d22dcgu1rgul7a1083nhs5phcf2k60', '198.235.24.172', 1670310445, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303331303434353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ran4sgb7jhptvtnrctp1q52btnlmgmsr', '87.236.176.96', 1671503838, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313530333833343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('rc2k8ccs22rukktrb398tbm4ekrk70ch', '167.248.133.45', 1665063576, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353036333537323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('rdqj05cftt09i9cvrj4bnhsdvt8p2dne', '198.235.24.149', 1670242917, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303234323931343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('rf3pdcf2uafqo5utpa18kmo12pp85aq3', '205.210.31.182', 1669730181, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393733303137373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('rimlardljukep5i1c49jsna0t0u5v2s8', '139.144.188.181', 1670210949, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303934393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('rina2ua1sfdnj9qs0qf5375e9g7uscqi', '139.144.188.181', 1670210950, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303231303935303b69735f6d6f62696c657c623a313b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('rm2l3u9bd64d9a2d0hb8qt8h25ubuphe', '205.210.31.55', 1671776328, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313737363332373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('rnht6v3rthl3sdp7cjts5imqlsvs7gkj', '162.142.125.212', 1670331239, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303333313233393b),
-('rofvrik51mks39h13e4suja6udr02o6e', '87.236.176.8', 1671084064, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313038343035393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('rscrn86unqr8hkqcjm2c04r9148jsreh', '205.210.31.49', 1664229961, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343232393936303b),
-('rugjagosnf1lj11m4imq4qmusg8qgvdt', '198.235.24.21', 1673421593, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333432313539333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('rvc2346b1no4pg131g195letgqvdqpv6', '205.210.31.156', 1664603587, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343630333538343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('s4vhcldq44b12dibo5dgl744n541vipm', '198.235.24.135', 1669508187, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393530383138373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('s7e9veksh127qrf8gfgtbq806okituje', '205.210.31.26', 1671251790, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313235313738373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('sdhoqncnshq162iaec6g0k7rdmsrghec', '186.121.195.25', 1677606221, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373630363133313b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('senvtfu6fpf7choucoectk6bg6h2skii', '205.210.31.20', 1670254187, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303235343138373b),
-('sh1fdpge0kc6gro5o1voqnevfhb3ae8j', '167.94.138.63', 1664285759, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343238353735393b),
-('taf900tjr5ccutjli3q01b48rpsktaih', '34.254.153.19', 1673519246, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333531393234353b),
-('tjtsst5hrt0ouk13nvrnhl0cks5vv9ai', '198.235.24.58', 1669759035, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393735393033323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('tnap2pipm1v7hnrb3tul6hns8n3g4bev', '34.241.201.172', 1670347061, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303334373036313b),
-('trsqp7iistqe9k16s1siuch4l9deqrfl', '87.236.176.68', 1672261369, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323236313336393b),
-('u11qdbv6fo4dlhk4irbric7u3greeisp', '167.248.133.45', 1665063576, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353036333537323b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('u3sib86jtihtcfomb73go8092js8jeqm', '51.254.49.103', 1663534114, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333533343131343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('u50purituhagte70utje28ttsq3d6tv8', '198.235.24.175', 1672404187, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323430343138343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('u6idprmd5lcoe8233sjaao46to0ebok1', '205.210.31.17', 1672495419, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323439353431353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('u89g8tjiqsr3g7n2v7f9d14uoa42206o', '205.210.31.50', 1665761022, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353736313031393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('u8ohj35q0v3ia76udrt5k2qqtkd399lv', '198.235.24.5', 1672758176, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323735383137353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('uajfgnf1niksc2fl2m197jgc8ls4rnm7', '87.236.176.68', 1672261368, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323236313336353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('uc4jblu1nc8v3mm01p0fn8b9le7a4b34', '51.158.127.119', 1668839893, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636383833393839303b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ud33da3049obk4hv5bjlkplvpauisava', '47.242.105.176', 1677653486, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373635333438363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('udcjn3204596pif7ahf2r0kr8r6r8rgm', '167.94.138.44', 1664731251, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343733313234393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('uf8edcq0kbkus3315f534cn90nfd8vtm', '139.144.150.205', 1677677039, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373637373033353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ugt13k1slbkgg50bhvreiu3v496ok5ev', '205.210.31.149', 1671167507, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313136373530343b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('uhjsna8de3nqfra0fpq1693p6tvk6unl', '198.235.24.154', 1671753683, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313735333637393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ukdampbqv2hsb3bgi67q4k5s8bkjtscc', '162.142.125.212', 1670331238, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303333313233373b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ul6j3hfo8ufbtndni3cup8tkltd3jmht', '162.142.125.8', 1671370299, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313337303239353b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('ulk2g1l3gand12unec465v1pmdo5utg0', '198.235.24.134', 1673016462, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637333031363435383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b);
-INSERT INTO `tblsessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('uq3dlvij8mogbdur8cq96t3ki01ed6q0', '198.235.24.28', 1669720232, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636393732303232383b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('urqcr1hk5elcl1v5hm5otoilpjt76uqm', '205.210.31.39', 1672616037, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323631363033373b),
-('v1l1n1m11ndi31vc8ku76qttv9uujggr', '205.210.31.47', 1672507016, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637323530373031333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('v1up0a9ugbib87do8bdmiocnmsuu9eae', '167.94.138.118', 1671137889, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637313133373838363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('v3k9mvd91ecut4rrtr1vlmfj4uoscjlk', '198.235.24.178', 1665838509, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636353833383530383b),
-('v3vnpt6didrg7ncub44d2ofk3m8gdvug', '167.94.138.44', 1668518749, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636383531383734393b),
-('v43rhsqc7g7s9ksg6vlkfg2e2l5vkfsc', '161.138.23.98', 1677639149, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373633393039373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('v507b26m7blev12bhs85um5bld4n84na', '51.255.62.11', 1663529509, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636333532393530363b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('v8h5ob2rpfj7fn2kksr9g6jo7mf1826k', '205.210.31.177', 1664033012, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343033333030393b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b),
-('vqnik064v1g1c20ghi9ktu3434lifapl', '205.210.31.137', 1670139940, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637303133393933393b),
-('vveg8mm85631mcfmlhc487qdo2l1107b', '205.210.31.14', 1664772376, 0x5f5f63695f6c6173745f726567656e65726174657c693a313636343737323337333b7265645f75726c7c733a33373a2268747470733a2f2f65737465746963612e63726961746976656469676974616c2e636f6d2f223b);
+('105146691f1757846a05921a0ec778fbb6e6ca08', '38.25.226.185', 1677781754, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373738313735343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('26fe839a2dfbb9daa3941783862c9a457d4440d2', '38.25.226.185', 1677771737, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737313733373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('31726811d0a63abeb7542e986d3041410055873b', '38.25.226.185', 1677782819, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373738323831393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('7cd7030a368bf044e6199fb4d2ca14526bbf7119', '38.25.226.185', 1677774357, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737343335373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c623a313b),
+('7f1108ab3790758437881de817c1802e9da9dc29', '38.25.226.185', 1677772667, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737323636373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('896373be9fa4d3acdcddd74c3a31680f7d7815ee', '34.229.216.5', 1677774373, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737343337323b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
+('8f641f3df8fbc990196dffa8b45357042235a95c', '38.25.226.185', 1677786672, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373738363637303b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
+('9f45a35b38d0b1a6915cebf4062c3073e91f1896', '38.25.226.185', 1677778562, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737383536323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('a01bae9dde112e1a9db43735c69aa88bad21041d', '38.25.226.185', 1677778964, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737383936343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('b1791982ff2a679f9635305871154e5a63f1cc51', '38.25.226.185', 1677772972, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737323937323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('ba3c6337d420e01a2ddb4f8df5c83ae1a54bf911', '38.25.226.185', 1677772039, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737323033393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('be98452d2350ac0694bca09397ec3d7bed228e08', '38.25.226.185', 1677771273, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737313237333b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('d2af3c285bd6284257cc5641b98eba1db2add74f', '38.25.226.185', 1677786682, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373738363637303b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
+('dacb363e03e927ecc362d6b46e1e12e8832b0228', '38.25.226.185', 1677772340, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737323334303b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('fbd8ec21c949d94b27457de34b4a35b5d7e16d2d', '38.25.226.185', 1677776885, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737363838353b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsetting_asset_allocation`
+-- Estructura de tabla para la tabla `tblsetting_asset_allocation`
 --
 
 CREATE TABLE `tblsetting_asset_allocation` (
@@ -21339,7 +20888,7 @@ CREATE TABLE `tblsetting_asset_allocation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsetting_training`
+-- Estructura de tabla para la tabla `tblsetting_training`
 --
 
 CREATE TABLE `tblsetting_training` (
@@ -21351,7 +20900,7 @@ CREATE TABLE `tblsetting_training` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsetting_transfer_records`
+-- Estructura de tabla para la tabla `tblsetting_transfer_records`
 --
 
 CREATE TABLE `tblsetting_transfer_records` (
@@ -21363,7 +20912,7 @@ CREATE TABLE `tblsetting_transfer_records` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblshared_customer_files`
+-- Estructura de tabla para la tabla `tblshared_customer_files`
 --
 
 CREATE TABLE `tblshared_customer_files` (
@@ -21372,7 +20921,7 @@ CREATE TABLE `tblshared_customer_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblshared_customer_files`
+-- Volcado de datos para la tabla `tblshared_customer_files`
 --
 
 INSERT INTO `tblshared_customer_files` (`file_id`, `contact_id`) VALUES
@@ -21381,7 +20930,7 @@ INSERT INTO `tblshared_customer_files` (`file_id`, `contact_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsi_lead_filter`
+-- Estructura de tabla para la tabla `tblsi_lead_filter`
 --
 
 CREATE TABLE `tblsi_lead_filter` (
@@ -21394,7 +20943,7 @@ CREATE TABLE `tblsi_lead_filter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsi_task_filter`
+-- Estructura de tabla para la tabla `tblsi_task_filter`
 --
 
 CREATE TABLE `tblsi_task_filter` (
@@ -21407,7 +20956,7 @@ CREATE TABLE `tblsi_task_filter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblspam_filters`
+-- Estructura de tabla para la tabla `tblspam_filters`
 --
 
 CREATE TABLE `tblspam_filters` (
@@ -21420,7 +20969,7 @@ CREATE TABLE `tblspam_filters` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblstaff`
+-- Estructura de tabla para la tabla `tblstaff`
 --
 
 CREATE TABLE `tblstaff` (
@@ -21482,17 +21031,17 @@ CREATE TABLE `tblstaff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblstaff`
+-- Volcado de datos para la tabla `tblstaff`
 --
 
 INSERT INTO `tblstaff` (`staffid`, `email`, `firstname`, `lastname`, `facebook`, `linkedin`, `phonenumber`, `skype`, `password`, `datecreated`, `profile_image`, `last_ip`, `last_login`, `last_activity`, `last_password_change`, `new_pass_key`, `new_pass_key_requested`, `admin`, `role`, `active`, `default_language`, `direction`, `media_path_slug`, `is_not_staff`, `hourly_rate`, `two_factor_auth_enabled`, `two_factor_auth_code`, `two_factor_auth_code_requested`, `email_signature`, `birthday`, `birthplace`, `sex`, `marital_status`, `nation`, `religion`, `identification`, `days_for_identity`, `home_town`, `resident`, `current_address`, `literacy`, `orther_infor`, `job_position`, `workplace`, `place_of_issue`, `account_number`, `name_account`, `issue_bank`, `records_received`, `Personal_tax_code`, `google_auth_secret`, `team_manage`, `staff_identifi`, `status_work`, `date_update`) VALUES
 (1, 'CONTACTO@CRIATIVEDIGITAL.COM', 'Dr. Erick', 'Santos', '', '', '', '', '$2a$08$hlT5cDSiLHr5FOyWCCyDeecAcHBclJ29CvfFHudodKSM9bADa1eS.', '2021-12-16 03:23:51', 'FAv2.png', '190.129.40.105', '2022-05-04 10:52:48', '2022-05-04 11:24:49', NULL, NULL, NULL, 1, 0, 1, 'spanish', '', NULL, 0, '0.00', 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
-(2, 'admin@admin.com', 'Admin', 'Admin', '', '', '', '', '$2a$08$Lk0jYNH8NkwF1BYAuIFSn.j7eGEYuJFPtuZbxT1cMWwWQZjqLaPyG', '2021-12-16 14:27:13', 'SITE - SOBRE MIM - MISSÃO (780X780).png', '186.121.195.102', '2023-03-01 19:36:54', '2023-03-01 19:42:59', '2022-02-10 11:39:44', NULL, NULL, 0, 1, 1, 'spanish', '', 'admin-admin', 0, '0.00', 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL);
+(2, 'admin@admin.com', 'Admin', 'Admin', '', '', '', '', '$2a$08$Lk0jYNH8NkwF1BYAuIFSn.j7eGEYuJFPtuZbxT1cMWwWQZjqLaPyG', '2021-12-16 14:27:13', 'SITE - SOBRE MIM - MISSÃO (780X780).png', '38.25.226.185', '2023-03-02 11:28:54', '2023-03-02 15:51:21', '2022-02-10 11:39:44', NULL, NULL, 0, 1, 1, 'spanish', '', 'admin-admin', 0, '0.00', 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblstaff_departments`
+-- Estructura de tabla para la tabla `tblstaff_departments`
 --
 
 CREATE TABLE `tblstaff_departments` (
@@ -21504,7 +21053,7 @@ CREATE TABLE `tblstaff_departments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblstaff_permissions`
+-- Estructura de tabla para la tabla `tblstaff_permissions`
 --
 
 CREATE TABLE `tblstaff_permissions` (
@@ -21514,7 +21063,7 @@ CREATE TABLE `tblstaff_permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblstaff_permissions`
+-- Volcado de datos para la tabla `tblstaff_permissions`
 --
 
 INSERT INTO `tblstaff_permissions` (`staff_id`, `feature`, `capability`) VALUES
@@ -21593,7 +21142,7 @@ INSERT INTO `tblstaff_permissions` (`staff_id`, `feature`, `capability`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsubscriptions`
+-- Estructura de tabla para la tabla `tblsubscriptions`
 --
 
 CREATE TABLE `tblsubscriptions` (
@@ -21626,7 +21175,7 @@ CREATE TABLE `tblsubscriptions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsurveyresultsets`
+-- Estructura de tabla para la tabla `tblsurveyresultsets`
 --
 
 CREATE TABLE `tblsurveyresultsets` (
@@ -21640,7 +21189,7 @@ CREATE TABLE `tblsurveyresultsets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsurveys`
+-- Estructura de tabla para la tabla `tblsurveys`
 --
 
 CREATE TABLE `tblsurveys` (
@@ -21662,7 +21211,7 @@ CREATE TABLE `tblsurveys` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsurveysemailsendcron`
+-- Estructura de tabla para la tabla `tblsurveysemailsendcron`
 --
 
 CREATE TABLE `tblsurveysemailsendcron` (
@@ -21677,7 +21226,7 @@ CREATE TABLE `tblsurveysemailsendcron` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblsurveysendlog`
+-- Estructura de tabla para la tabla `tblsurveysendlog`
 --
 
 CREATE TABLE `tblsurveysendlog` (
@@ -21692,7 +21241,7 @@ CREATE TABLE `tblsurveysendlog` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltaggables`
+-- Estructura de tabla para la tabla `tbltaggables`
 --
 
 CREATE TABLE `tbltaggables` (
@@ -21705,7 +21254,7 @@ CREATE TABLE `tbltaggables` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltags`
+-- Estructura de tabla para la tabla `tbltags`
 --
 
 CREATE TABLE `tbltags` (
@@ -21716,7 +21265,7 @@ CREATE TABLE `tbltags` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltasks`
+-- Estructura de tabla para la tabla `tbltasks`
 --
 
 CREATE TABLE `tbltasks` (
@@ -21754,7 +21303,7 @@ CREATE TABLE `tbltasks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbltasks`
+-- Volcado de datos para la tabla `tbltasks`
 --
 
 INSERT INTO `tbltasks` (`id`, `name`, `description`, `priority`, `dateadded`, `startdate`, `duedate`, `datefinished`, `addedfrom`, `is_added_from_contact`, `status`, `recurring_type`, `repeat_every`, `recurring`, `is_recurring_from`, `cycles`, `total_cycles`, `custom_recurring`, `last_recurring_date`, `rel_id`, `rel_type`, `is_public`, `billable`, `billed`, `invoice_id`, `hourly_rate`, `milestone`, `kanban_order`, `milestone_order`, `visible_to_client`, `deadline_notified`) VALUES
@@ -21764,7 +21313,7 @@ INSERT INTO `tbltasks` (`id`, `name`, `description`, `priority`, `dateadded`, `s
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltaskstimers`
+-- Estructura de tabla para la tabla `tbltaskstimers`
 --
 
 CREATE TABLE `tbltaskstimers` (
@@ -21780,7 +21329,7 @@ CREATE TABLE `tbltaskstimers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltasks_checklist_templates`
+-- Estructura de tabla para la tabla `tbltasks_checklist_templates`
 --
 
 CREATE TABLE `tbltasks_checklist_templates` (
@@ -21791,7 +21340,7 @@ CREATE TABLE `tbltasks_checklist_templates` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltask_assigned`
+-- Estructura de tabla para la tabla `tbltask_assigned`
 --
 
 CREATE TABLE `tbltask_assigned` (
@@ -21803,7 +21352,7 @@ CREATE TABLE `tbltask_assigned` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbltask_assigned`
+-- Volcado de datos para la tabla `tbltask_assigned`
 --
 
 INSERT INTO `tbltask_assigned` (`id`, `staffid`, `taskid`, `assigned_from`, `is_assigned_from_contact`) VALUES
@@ -21813,7 +21362,7 @@ INSERT INTO `tbltask_assigned` (`id`, `staffid`, `taskid`, `assigned_from`, `is_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltask_checklist_items`
+-- Estructura de tabla para la tabla `tbltask_checklist_items`
 --
 
 CREATE TABLE `tbltask_checklist_items` (
@@ -21831,7 +21380,7 @@ CREATE TABLE `tbltask_checklist_items` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltask_comments`
+-- Estructura de tabla para la tabla `tbltask_comments`
 --
 
 CREATE TABLE `tbltask_comments` (
@@ -21847,7 +21396,7 @@ CREATE TABLE `tbltask_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltask_followers`
+-- Estructura de tabla para la tabla `tbltask_followers`
 --
 
 CREATE TABLE `tbltask_followers` (
@@ -21859,7 +21408,7 @@ CREATE TABLE `tbltask_followers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltaxes`
+-- Estructura de tabla para la tabla `tbltaxes`
 --
 
 CREATE TABLE `tbltaxes` (
@@ -21871,7 +21420,7 @@ CREATE TABLE `tbltaxes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltemplates`
+-- Estructura de tabla para la tabla `tbltemplates`
 --
 
 CREATE TABLE `tbltemplates` (
@@ -21885,7 +21434,7 @@ CREATE TABLE `tbltemplates` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltickets`
+-- Estructura de tabla para la tabla `tbltickets`
 --
 
 CREATE TABLE `tbltickets` (
@@ -21917,7 +21466,7 @@ CREATE TABLE `tbltickets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltickets_pipe_log`
+-- Estructura de tabla para la tabla `tbltickets_pipe_log`
 --
 
 CREATE TABLE `tbltickets_pipe_log` (
@@ -21934,7 +21483,7 @@ CREATE TABLE `tbltickets_pipe_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltickets_predefined_replies`
+-- Estructura de tabla para la tabla `tbltickets_predefined_replies`
 --
 
 CREATE TABLE `tbltickets_predefined_replies` (
@@ -21946,7 +21495,7 @@ CREATE TABLE `tbltickets_predefined_replies` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltickets_priorities`
+-- Estructura de tabla para la tabla `tbltickets_priorities`
 --
 
 CREATE TABLE `tbltickets_priorities` (
@@ -21955,7 +21504,7 @@ CREATE TABLE `tbltickets_priorities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbltickets_priorities`
+-- Volcado de datos para la tabla `tbltickets_priorities`
 --
 
 INSERT INTO `tbltickets_priorities` (`priorityid`, `name`) VALUES
@@ -21966,7 +21515,7 @@ INSERT INTO `tbltickets_priorities` (`priorityid`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltickets_status`
+-- Estructura de tabla para la tabla `tbltickets_status`
 --
 
 CREATE TABLE `tbltickets_status` (
@@ -21978,7 +21527,7 @@ CREATE TABLE `tbltickets_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbltickets_status`
+-- Volcado de datos para la tabla `tbltickets_status`
 --
 
 INSERT INTO `tbltickets_status` (`ticketstatusid`, `name`, `isdefault`, `statuscolor`, `statusorder`) VALUES
@@ -21991,7 +21540,7 @@ INSERT INTO `tbltickets_status` (`ticketstatusid`, `name`, `isdefault`, `statusc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblticket_attachments`
+-- Estructura de tabla para la tabla `tblticket_attachments`
 --
 
 CREATE TABLE `tblticket_attachments` (
@@ -22006,7 +21555,7 @@ CREATE TABLE `tblticket_attachments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblticket_replies`
+-- Estructura de tabla para la tabla `tblticket_replies`
 --
 
 CREATE TABLE `tblticket_replies` (
@@ -22025,7 +21574,7 @@ CREATE TABLE `tblticket_replies` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltodos`
+-- Estructura de tabla para la tabla `tbltodos`
 --
 
 CREATE TABLE `tbltodos` (
@@ -22039,7 +21588,7 @@ CREATE TABLE `tbltodos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbltodos`
+-- Volcado de datos para la tabla `tbltodos`
 --
 
 INSERT INTO `tbltodos` (`todoid`, `description`, `staffid`, `dateadded`, `finished`, `datefinished`, `item_order`) VALUES
@@ -22048,7 +21597,7 @@ INSERT INTO `tbltodos` (`todoid`, `description`, `staffid`, `dateadded`, `finish
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltracked_mails`
+-- Estructura de tabla para la tabla `tbltracked_mails`
 --
 
 CREATE TABLE `tbltracked_mails` (
@@ -22066,7 +21615,7 @@ CREATE TABLE `tbltracked_mails` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltraining_allocation`
+-- Estructura de tabla para la tabla `tbltraining_allocation`
 --
 
 CREATE TABLE `tbltraining_allocation` (
@@ -22081,7 +21630,7 @@ CREATE TABLE `tbltraining_allocation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltransfer_records_reception`
+-- Estructura de tabla para la tabla `tbltransfer_records_reception`
 --
 
 CREATE TABLE `tbltransfer_records_reception` (
@@ -22094,7 +21643,7 @@ CREATE TABLE `tbltransfer_records_reception` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbltwocheckout_log`
+-- Estructura de tabla para la tabla `tbltwocheckout_log`
 --
 
 CREATE TABLE `tbltwocheckout_log` (
@@ -22108,7 +21657,7 @@ CREATE TABLE `tbltwocheckout_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbluser_auto_login`
+-- Estructura de tabla para la tabla `tbluser_auto_login`
 --
 
 CREATE TABLE `tbluser_auto_login` (
@@ -22121,7 +21670,7 @@ CREATE TABLE `tbluser_auto_login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbluser_auto_login`
+-- Volcado de datos para la tabla `tbluser_auto_login`
 --
 
 INSERT INTO `tbluser_auto_login` (`key_id`, `user_id`, `user_agent`, `last_ip`, `last_login`, `staff`) VALUES
@@ -22132,7 +21681,7 @@ INSERT INTO `tbluser_auto_login` (`key_id`, `user_id`, `user_agent`, `last_ip`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbluser_meta`
+-- Estructura de tabla para la tabla `tbluser_meta`
 --
 
 CREATE TABLE `tbluser_meta` (
@@ -22145,7 +21694,7 @@ CREATE TABLE `tbluser_meta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbluser_meta`
+-- Volcado de datos para la tabla `tbluser_meta`
 --
 
 INSERT INTO `tbluser_meta` (`umeta_id`, `staff_id`, `client_id`, `contact_id`, `meta_key`, `meta_value`) VALUES
@@ -22156,7 +21705,7 @@ INSERT INTO `tbluser_meta` (`umeta_id`, `staff_id`, `client_id`, `contact_id`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblvault`
+-- Estructura de tabla para la tabla `tblvault`
 --
 
 CREATE TABLE `tblvault` (
@@ -22179,7 +21728,7 @@ CREATE TABLE `tblvault` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblviews_tracking`
+-- Estructura de tabla para la tabla `tblviews_tracking`
 --
 
 CREATE TABLE `tblviews_tracking` (
@@ -22193,7 +21742,7 @@ CREATE TABLE `tblviews_tracking` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblware_unit_type`
+-- Estructura de tabla para la tabla `tblware_unit_type`
 --
 
 CREATE TABLE `tblware_unit_type` (
@@ -22209,7 +21758,7 @@ CREATE TABLE `tblware_unit_type` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblweb_to_lead`
+-- Estructura de tabla para la tabla `tblweb_to_lead`
 --
 
 CREATE TABLE `tblweb_to_lead` (
@@ -22243,7 +21792,7 @@ CREATE TABLE `tblweb_to_lead` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblweb_to_recruitment`
+-- Estructura de tabla para la tabla `tblweb_to_recruitment`
 --
 
 CREATE TABLE `tblweb_to_recruitment` (
@@ -22309,302 +21858,302 @@ CREATE TABLE `tblweb_to_recruitment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tblweb_to_recruitment`
+-- Volcado de datos para la tabla `tblweb_to_recruitment`
 --
 
 INSERT INTO `tblweb_to_recruitment` (`id`, `campaign_code`, `campaign_name`, `cp_proposal`, `cp_position`, `cp_department`, `cp_amount_recruiment`, `cp_form_work`, `cp_workplace`, `cp_salary_from`, `cp_salary_to`, `cp_from_date`, `cp_to_date`, `cp_reason_recruitment`, `cp_job_description`, `cp_manager`, `cp_follower`, `cp_ages_from`, `cp_ages_to`, `cp_gender`, `cp_height`, `cp_weight`, `cp_literacy`, `cp_experience`, `cp_add_from`, `cp_date_add`, `cp_status`, `nation`, `nationality`, `religion`, `marital_status`, `birthplace`, `home_town`, `resident`, `current_accommodation`, `cp_desired_salary`, `specialized`, `training_form`, `training_places`, `lead_source`, `lead_status`, `notify_ids_staff`, `notify_ids_roles`, `form_key`, `notify_lead_imported`, `notify_type`, `notify_ids`, `responsible`, `name`, `form_data`, `recaptcha`, `submit_btn_name`, `success_submit_msg`, `language`, `allow_duplicate`, `mark_public`, `track_duplicate_field`, `track_duplicate_field_and`, `create_task_on_duplicate`) VALUES
 (1, '', '', '', 0, 0, 1, '', '', '0', '0', '0000-00-00', '0000-00-00', '', '', '', '', 15, 60, '', 1, 40, '', '', 0, '0000-00-00', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '132c185362fb4a47f5521b8b8a8d9a0a', 0, '', '', 0, 'recruitment_form', '[{\"label\":\"Croatia\",\"value\":\"55\"},{\"label\":\"Cuba\",\"value\":\"56\"},{\"label\":\"Curacao\",\"value\":\"57\"},{\"label\":\"Cyprus\",\"value\":\"58\"},{\"label\":\"Czech Republic\",\"value\":\"59\"},{\"label\":\"Democratic Republic of the Congo\",\"value\":\"60\"},{\"label\":\"Denmark\",\"value\":\"61\"},{\"label\":\"Djibouti\",\"value\":\"62\"},{\"label\":\"Dominica\",\"value\":\"63\"},{\"label\":\"Dominican Republic\",\"value\":\"64\"},{\"label\":\"Ecuador\",\"value\":\"65\"},{\"label\":\"Egypt\",\"value\":\"66\"},{\"label\":\"El Salvador\",\"value\":\"67\"},{\"label\":\"Equatorial Guinea\",\"value\":\"68\"},{\"label\":\"Eritrea\",\"value\":\"69\"},{\"label\":\"Estonia\",\"value\":\"70\"},{\"label\":\"Ethiopia\",\"value\":\"71\"},{\"label\":\"Falkland Islands (Malvinas)\",\"value\":\"72\"},{\"label\":\"Faroe Islands\",\"value\":\"73\"},{\"label\":\"Fiji\",\"value\":\"74\"},{\"label\":\"Finland\",\"value\":\"75\"},{\"label\":\"France\",\"value\":\"76\"},{\"label\":\"French Guiana\",\"value\":\"77\"},{\"label\":\"French Polynesia\",\"value\":\"78\"},{\"label\":\"French Southern Territories\",\"value\":\"79\"},{\"label\":\"Gabon\",\"value\":\"80\"},{\"label\":\"Gambia\",\"value\":\"81\"},{\"label\":\"Georgia\",\"value\":\"82\"},{\"label\":\"Germany\",\"value\":\"83\"},{\"label\":\"Ghana\",\"value\":\"84\"},{\"label\":\"Gibraltar\",\"value\":\"85\"},{\"label\":\"Greece\",\"value\":\"86\"},{\"label\":\"Greenland\",\"value\":\"87\"},{\"label\":\"Grenada\",\"value\":\"88\"},{\"label\":\"Guadaloupe\",\"value\":\"89\"},{\"label\":\"Guam\",\"value\":\"90\"},{\"label\":\"Guatemala\",\"value\":\"91\"},{\"label\":\"Guernsey\",\"value\":\"92\"},{\"label\":\"Guinea\",\"value\":\"93\"},{\"label\":\"Guinea-Bissau\",\"value\":\"94\"},{\"label\":\"Guyana\",\"value\":\"95\"},{\"label\":\"Haiti\",\"value\":\"96\"},{\"label\":\"Heard Island and McDonald Islands\",\"value\":\"97\"},{\"label\":\"Honduras\",\"value\":\"98\"},{\"label\":\"Hong Kong\",\"value\":\"99\"},{\"label\":\"Hungary\",\"value\":\"100\"},{\"label\":\"Iceland\",\"value\":\"101\"},{\"label\":\"India\",\"value\":\"102\"},{\"label\":\"Indonesia\",\"value\":\"103\"},{\"label\":\"Iran\",\"value\":\"104\"},{\"label\":\"Iraq\",\"value\":\"105\"},{\"label\":\"Ireland\",\"value\":\"106\"},{\"label\":\"Isle of Man\",\"value\":\"107\"},{\"label\":\"Israel\",\"value\":\"108\"},{\"label\":\"Italy\",\"value\":\"109\"},{\"label\":\"Jamaica\",\"value\":\"110\"},{\"label\":\"Japan\",\"value\":\"111\"},{\"label\":\"Jersey\",\"value\":\"112\"},{\"label\":\"Jordan\",\"value\":\"113\"},{\"label\":\"Kazakhstan\",\"value\":\"114\"},{\"label\":\"Kenya\",\"value\":\"115\"},{\"label\":\"Kiribati\",\"value\":\"116\"},{\"label\":\"Kosovo\",\"value\":\"117\"},{\"label\":\"Kuwait\",\"value\":\"118\"},{\"label\":\"Kyrgyzstan\",\"value\":\"119\"},{\"label\":\"Laos\",\"value\":\"120\"},{\"label\":\"Latvia\",\"value\":\"121\"},{\"label\":\"Lebanon\",\"value\":\"122\"},{\"label\":\"Lesotho\",\"value\":\"123\"},{\"label\":\"Liberia\",\"value\":\"124\"},{\"label\":\"Libya\",\"value\":\"125\"},{\"label\":\"Liechtenstein\",\"value\":\"126\"},{\"label\":\"Lithuania\",\"value\":\"127\"},{\"label\":\"Luxembourg\",\"value\":\"128\"},{\"label\":\"Macao\",\"value\":\"129\"},{\"label\":\"North Macedonia\",\"value\":\"130\"},{\"label\":\"Madagascar\",\"value\":\"131\"},{\"label\":\"Malawi\",\"value\":\"132\"},{\"label\":\"Malaysia\",\"value\":\"133\"},{\"label\":\"Maldives\",\"value\":\"134\"},{\"label\":\"Mali\",\"value\":\"135\"},{\"label\":\"Malta\",\"value\":\"136\"},{\"label\":\"Marshall Islands\",\"value\":\"137\"},{\"label\":\"Martinique\",\"value\":\"138\"},{\"label\":\"Mauritania\",\"value\":\"139\"},{\"label\":\"Mauritius\",\"value\":\"140\"},{\"label\":\"Mayotte\",\"value\":\"141\"},{\"label\":\"Mexico\",\"value\":\"142\"},{\"label\":\"Micronesia\",\"value\":\"143\"},{\"label\":\"Moldava\",\"value\":\"144\"},{\"label\":\"Monaco\",\"value\":\"145\"},{\"label\":\"Mongolia\",\"value\":\"146\"},{\"label\":\"Montenegro\",\"value\":\"147\"},{\"label\":\"Montserrat\",\"value\":\"148\"},{\"label\":\"Morocco\",\"value\":\"149\"},{\"label\":\"Mozambique\",\"value\":\"150\"},{\"label\":\"Myanmar (Burma)\",\"value\":\"151\"},{\"label\":\"Namibia\",\"value\":\"152\"},{\"label\":\"Nauru\",\"value\":\"153\"},{\"label\":\"Nepal\",\"value\":\"154\"},{\"label\":\"Netherlands\",\"value\":\"155\"},{\"label\":\"New Caledonia\",\"value\":\"156\"},{\"label\":\"New Zealand\",\"value\":\"157\"},{\"label\":\"Nicaragua\",\"value\":\"158\"},{\"label\":\"Niger\",\"value\":\"159\"},{\"label\":\"Nigeria\",\"value\":\"160\"},{\"label\":\"Niue\",\"value\":\"161\"},{\"label\":\"Norfolk Island\",\"value\":\"162\"},{\"label\":\"North Korea\",\"value\":\"163\"},{\"label\":\"Northern Mariana Islands\",\"value\":\"164\"},{\"label\":\"Norway\",\"value\":\"165\"},{\"label\":\"Oman\",\"value\":\"166\"},{\"label\":\"Pakistan\",\"value\":\"167\"},{\"label\":\"Palau\",\"value\":\"168\"},{\"label\":\"Palestine\",\"value\":\"169\"},{\"label\":\"Panama\",\"value\":\"170\"},{\"label\":\"Papua New Guinea\",\"value\":\"171\"},{\"label\":\"Paraguay\",\"value\":\"172\"},{\"label\":\"Peru\",\"value\":\"173\"},{\"label\":\"Phillipines\",\"value\":\"174\"},{\"label\":\"Pitcairn\",\"value\":\"175\"},{\"label\":\"Poland\",\"value\":\"176\"},{\"label\":\"Portugal\",\"value\":\"177\"},{\"label\":\"Puerto Rico\",\"value\":\"178\"},{\"label\":\"Qatar\",\"value\":\"179\"},{\"label\":\"Reunion\",\"value\":\"180\"},{\"label\":\"Romania\",\"value\":\"181\"},{\"label\":\"Russia\",\"value\":\"182\"},{\"label\":\"Rwanda\",\"value\":\"183\"},{\"label\":\"Saint Barthelemy\",\"value\":\"184\"},{\"label\":\"Saint Helena\",\"value\":\"185\"},{\"label\":\"Saint Kitts and Nevis\",\"value\":\"186\"},{\"label\":\"Saint Lucia\",\"value\":\"187\"},{\"label\":\"Saint Martin\",\"value\":\"188\"},{\"label\":\"Saint Pierre and Miquelon\",\"value\":\"189\"},{\"label\":\"Saint Vincent and the Grenadines\",\"value\":\"190\"},{\"label\":\"Samoa\",\"value\":\"191\"},{\"label\":\"San Marino\",\"value\":\"192\"},{\"label\":\"Sao Tome and Principe\",\"value\":\"193\"},{\"label\":\"Saudi Arabia\",\"value\":\"194\"},{\"label\":\"Senegal\",\"value\":\"195\"},{\"label\":\"Serbia\",\"value\":\"196\"},{\"label\":\"Seychelles\",\"value\":\"197\"},{\"label\":\"Sierra Leone\",\"value\":\"198\"},{\"label\":\"Singapore\",\"value\":\"199\"},{\"label\":\"Sint Maarten\",\"value\":\"200\"},{\"label\":\"Slovakia\",\"value\":\"201\"},{\"label\":\"Slovenia\",\"value\":\"202\"},{\"label\":\"Solomon Islands\",\"value\":\"203\"},{\"label\":\"Somalia\",\"value\":\"204\"},{\"label\":\"South Africa\",\"value\":\"205\"},{\"label\":\"South Georgia and the South Sandwich Islands\",\"value\":\"206\"},{\"label\":\"South Korea\",\"value\":\"207\"},{\"label\":\"South Sudan\",\"value\":\"208\"},{\"label\":\"Spain\",\"value\":\"209\"},{\"label\":\"Sri Lanka\",\"value\":\"210\"},{\"label\":\"Sudan\",\"value\":\"211\"},{\"label\":\"Suriname\",\"value\":\"212\"},{\"label\":\"Svalbard and Jan Mayen\",\"value\":\"213\"},{\"label\":\"Swaziland\",\"value\":\"214\"},{\"label\":\"Sweden\",\"value\":\"215\"},{\"label\":\"Switzerland\",\"value\":\"216\"},{\"label\":\"Syria\",\"value\":\"217\"},{\"label\":\"Taiwan\",\"value\":\"218\"},{\"label\":\"Tajikistan\",\"value\":\"219\"},{\"label\":\"Tanzania\",\"value\":\"220\"},{\"label\":\"Thailand\",\"value\":\"221\"},{\"label\":\"Timor-Leste (East Timor)\",\"value\":\"222\"},{\"label\":\"Togo\",\"value\":\"223\"},{\"label\":\"Tokelau\",\"value\":\"224\"},{\"label\":\"Tonga\",\"value\":\"225\"},{\"label\":\"Trinidad and Tobago\",\"value\":\"226\"},{\"label\":\"Tunisia\",\"value\":\"227\"},{\"label\":\"Turkey\",\"value\":\"228\"},{\"label\":\"Turkmenistan\",\"value\":\"229\"},{\"label\":\"Turks and Caicos Islands\",\"value\":\"230\"},{\"label\":\"Tuvalu\",\"value\":\"231\"},{\"label\":\"Uganda\",\"value\":\"232\"},{\"label\":\"Ukraine\",\"value\":\"233\"},{\"label\":\"United Arab Emirates\",\"value\":\"234\"},{\"label\":\"United Kingdom\",\"value\":\"235\"},{\"label\":\"United States\",\"value\":\"236\"},{\"label\":\"United States Minor Outlying Islands\",\"value\":\"237\"},{\"label\":\"Uruguay\",\"value\":\"238\"},{\"label\":\"Uzbekistan\",\"value\":\"239\"},{\"label\":\"Vanuatu\",\"value\":\"240\"},{\"label\":\"Vatican City\",\"value\":\"241\"},{\"label\":\"Venezuela\",\"value\":\"242\"},{\"label\":\"Vietnam\",\"value\":\"243\",\"selected\":true},{\"label\":\"Virgin Islands, British\",\"value\":\"244\"},{\"label\":\"Virgin Islands, US\",\"value\":\"245\"},{\"label\":\"Wallis and Futuna\",\"value\":\"246\"},{\"label\":\"Western Sahara\",\"value\":\"247\"},{\"label\":\"Yemen\",\"value\":\"248\"},{\"label\":\"Zambia\",\"value\":\"249\"},{\"label\":\"Zimbabwe\",\"value\":\"250\"}]},{\"type\":\"text\",\"label\":\"_national\",\"className\":\"form-control\",\"name\":\"nation\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"_religion\",\"className\":\"form-control\",\"name\":\"religion\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"_phone\",\"className\":\"form-control\",\"name\":\"phonenumber\",\"subtype\":\"text\"},{\"type\":\"select\",\"label\":\"_diploma\",\"className\":\"form-control\",\"name\":\"diploma\",\"values\":[{\"label\":\"\",\"value\":\"\"},{\"label\":\"master_s_degree\",\"value\":\"0\"},{\"label\":\"Ph_D\",\"value\":\"1\"},{\"label\":\"bachelor\",\"value\":\"2\"},{\"label\":\"university\",\"value\":\"3\"},{\"label\":\"vocational_colleges\",\"value\":\"4\"},{\"label\":\"vocational\",\"value\":\"5\"},{\"label\":\"high_school\",\"value\":\"6\"}]},{\"type\":\"text\",\"label\":\"training_places\",\"className\":\"form-control\",\"name\":\"training_places\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"specialized\",\"className\":\"form-control\",\"name\":\"specialized\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"forms_of_training\",\"className\":\"form-control\",\"name\":\"training_form\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"issue_date_identification_card\",\"className\":\"form-control fc-datepicker\",\"name\":\"days_for_identity\",\"subtype\":\"text\"}]', 0, 'sent', 'sent_successfully', '', 0, 0, '', '', 0);
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `tblaccount_planning`
+-- Indices de la tabla `tblaccount_planning`
 --
 ALTER TABLE `tblaccount_planning`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblaccount_planning_current_service`
+-- Indices de la tabla `tblaccount_planning_current_service`
 --
 ALTER TABLE `tblaccount_planning_current_service`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblaccount_planning_financial`
+-- Indices de la tabla `tblaccount_planning_financial`
 --
 ALTER TABLE `tblaccount_planning_financial`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblaccount_planning_items`
+-- Indices de la tabla `tblaccount_planning_items`
 --
 ALTER TABLE `tblaccount_planning_items`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblaccount_planning_marketing_activities`
+-- Indices de la tabla `tblaccount_planning_marketing_activities`
 --
 ALTER TABLE `tblaccount_planning_marketing_activities`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblaccount_planning_objective`
+-- Indices de la tabla `tblaccount_planning_objective`
 --
 ALTER TABLE `tblaccount_planning_objective`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblaccount_planning_service_ability_offering`
+-- Indices de la tabla `tblaccount_planning_service_ability_offering`
 --
 ALTER TABLE `tblaccount_planning_service_ability_offering`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblaccount_planning_task`
+-- Indices de la tabla `tblaccount_planning_task`
 --
 ALTER TABLE `tblaccount_planning_task`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblaccount_planning_team`
+-- Indices de la tabla `tblaccount_planning_team`
 --
 ALTER TABLE `tblaccount_planning_team`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_accounts`
+-- Indices de la tabla `tblacc_accounts`
 --
 ALTER TABLE `tblacc_accounts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_account_history`
+-- Indices de la tabla `tblacc_account_history`
 --
 ALTER TABLE `tblacc_account_history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_account_type_details`
+-- Indices de la tabla `tblacc_account_type_details`
 --
 ALTER TABLE `tblacc_account_type_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_banking_rules`
+-- Indices de la tabla `tblacc_banking_rules`
 --
 ALTER TABLE `tblacc_banking_rules`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_banking_rule_details`
+-- Indices de la tabla `tblacc_banking_rule_details`
 --
 ALTER TABLE `tblacc_banking_rule_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_expense_category_mappings`
+-- Indices de la tabla `tblacc_expense_category_mappings`
 --
 ALTER TABLE `tblacc_expense_category_mappings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_item_automatics`
+-- Indices de la tabla `tblacc_item_automatics`
 --
 ALTER TABLE `tblacc_item_automatics`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_journal_entries`
+-- Indices de la tabla `tblacc_journal_entries`
 --
 ALTER TABLE `tblacc_journal_entries`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_payment_mode_mappings`
+-- Indices de la tabla `tblacc_payment_mode_mappings`
 --
 ALTER TABLE `tblacc_payment_mode_mappings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_reconciles`
+-- Indices de la tabla `tblacc_reconciles`
 --
 ALTER TABLE `tblacc_reconciles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_tax_mappings`
+-- Indices de la tabla `tblacc_tax_mappings`
 --
 ALTER TABLE `tblacc_tax_mappings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_transaction_bankings`
+-- Indices de la tabla `tblacc_transaction_bankings`
 --
 ALTER TABLE `tblacc_transaction_bankings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblacc_transfers`
+-- Indices de la tabla `tblacc_transfers`
 --
 ALTER TABLE `tblacc_transfers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblactivity_log`
+-- Indices de la tabla `tblactivity_log`
 --
 ALTER TABLE `tblactivity_log`
   ADD PRIMARY KEY (`id`),
   ADD KEY `staffid` (`staffid`);
 
 --
--- Indexes for table `tblannouncements`
+-- Indices de la tabla `tblannouncements`
 --
 ALTER TABLE `tblannouncements`
   ADD PRIMARY KEY (`announcementid`);
 
 --
--- Indexes for table `tblappointly_appointments`
+-- Indices de la tabla `tblappointly_appointments`
 --
 ALTER TABLE `tblappointly_appointments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblappointly_appointment_types`
+-- Indices de la tabla `tblappointly_appointment_types`
 --
 ALTER TABLE `tblappointly_appointment_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblappointly_callbacks`
+-- Indices de la tabla `tblappointly_callbacks`
 --
 ALTER TABLE `tblappointly_callbacks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblappointly_callbacks_assignees`
+-- Indices de la tabla `tblappointly_callbacks_assignees`
 --
 ALTER TABLE `tblappointly_callbacks_assignees`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblappointly_google`
+-- Indices de la tabla `tblappointly_google`
 --
 ALTER TABLE `tblappointly_google`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblbonus_discipline`
+-- Indices de la tabla `tblbonus_discipline`
 --
 ALTER TABLE `tblbonus_discipline`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblbonus_discipline_detail`
+-- Indices de la tabla `tblbonus_discipline_detail`
 --
 ALTER TABLE `tblbonus_discipline_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcd_care`
+-- Indices de la tabla `tblcd_care`
 --
 ALTER TABLE `tblcd_care`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcd_family_infor`
+-- Indices de la tabla `tblcd_family_infor`
 --
 ALTER TABLE `tblcd_family_infor`
   ADD PRIMARY KEY (`fi_id`);
 
 --
--- Indexes for table `tblcd_interview`
+-- Indices de la tabla `tblcd_interview`
 --
 ALTER TABLE `tblcd_interview`
   ADD PRIMARY KEY (`in_id`);
 
 --
--- Indexes for table `tblcd_literacy`
+-- Indices de la tabla `tblcd_literacy`
 --
 ALTER TABLE `tblcd_literacy`
   ADD PRIMARY KEY (`li_id`);
 
 --
--- Indexes for table `tblcd_skill`
+-- Indices de la tabla `tblcd_skill`
 --
 ALTER TABLE `tblcd_skill`
   ADD PRIMARY KEY (`id`,`candidate`);
 
 --
--- Indexes for table `tblcd_work_experience`
+-- Indices de la tabla `tblcd_work_experience`
 --
 ALTER TABLE `tblcd_work_experience`
   ADD PRIMARY KEY (`we_id`);
 
 --
--- Indexes for table `tblchatclientmessages`
+-- Indices de la tabla `tblchatclientmessages`
 --
 ALTER TABLE `tblchatclientmessages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblchatgroupmembers`
+-- Indices de la tabla `tblchatgroupmembers`
 --
 ALTER TABLE `tblchatgroupmembers`
   ADD PRIMARY KEY (`id`),
   ADD KEY `group_id` (`group_id`);
 
 --
--- Indexes for table `tblchatgroupmessages`
+-- Indices de la tabla `tblchatgroupmessages`
 --
 ALTER TABLE `tblchatgroupmessages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblchatgroups`
+-- Indices de la tabla `tblchatgroups`
 --
 ALTER TABLE `tblchatgroups`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblchatgroupsharedfiles`
+-- Indices de la tabla `tblchatgroupsharedfiles`
 --
 ALTER TABLE `tblchatgroupsharedfiles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblchatmessages`
+-- Indices de la tabla `tblchatmessages`
 --
 ALTER TABLE `tblchatmessages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblchatsettings`
+-- Indices de la tabla `tblchatsettings`
 --
 ALTER TABLE `tblchatsettings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblchatsharedfiles`
+-- Indices de la tabla `tblchatsharedfiles`
 --
 ALTER TABLE `tblchatsharedfiles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblchecklist`
+-- Indices de la tabla `tblchecklist`
 --
 ALTER TABLE `tblchecklist`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblchecklist_allocation`
+-- Indices de la tabla `tblchecklist_allocation`
 --
 ALTER TABLE `tblchecklist_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblclients`
+-- Indices de la tabla `tblclients`
 --
 ALTER TABLE `tblclients`
   ADD PRIMARY KEY (`userid`),
@@ -22614,7 +22163,7 @@ ALTER TABLE `tblclients`
   ADD KEY `active` (`active`);
 
 --
--- Indexes for table `tblconsents`
+-- Indices de la tabla `tblconsents`
 --
 ALTER TABLE `tblconsents`
   ADD PRIMARY KEY (`id`),
@@ -22623,19 +22172,19 @@ ALTER TABLE `tblconsents`
   ADD KEY `lead_id` (`lead_id`);
 
 --
--- Indexes for table `tblconsent_purposes`
+-- Indices de la tabla `tblconsent_purposes`
 --
 ALTER TABLE `tblconsent_purposes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblconsultas`
+-- Indices de la tabla `tblconsultas`
 --
 ALTER TABLE `tblconsultas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcontacts`
+-- Indices de la tabla `tblcontacts`
 --
 ALTER TABLE `tblcontacts`
   ADD PRIMARY KEY (`id`),
@@ -22646,13 +22195,13 @@ ALTER TABLE `tblcontacts`
   ADD KEY `is_primary` (`is_primary`);
 
 --
--- Indexes for table `tblcontact_permissions`
+-- Indices de la tabla `tblcontact_permissions`
 --
 ALTER TABLE `tblcontact_permissions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcontracts`
+-- Indices de la tabla `tblcontracts`
 --
 ALTER TABLE `tblcontracts`
   ADD PRIMARY KEY (`id`),
@@ -22660,31 +22209,31 @@ ALTER TABLE `tblcontracts`
   ADD KEY `contract_type` (`contract_type`);
 
 --
--- Indexes for table `tblcontracts_types`
+-- Indices de la tabla `tblcontracts_types`
 --
 ALTER TABLE `tblcontracts_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcontract_comments`
+-- Indices de la tabla `tblcontract_comments`
 --
 ALTER TABLE `tblcontract_comments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcontract_renewals`
+-- Indices de la tabla `tblcontract_renewals`
 --
 ALTER TABLE `tblcontract_renewals`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcountries`
+-- Indices de la tabla `tblcountries`
 --
 ALTER TABLE `tblcountries`
   ADD PRIMARY KEY (`country_id`);
 
 --
--- Indexes for table `tblcreditnotes`
+-- Indices de la tabla `tblcreditnotes`
 --
 ALTER TABLE `tblcreditnotes`
   ADD PRIMARY KEY (`id`),
@@ -22693,39 +22242,39 @@ ALTER TABLE `tblcreditnotes`
   ADD KEY `project_id` (`project_id`);
 
 --
--- Indexes for table `tblcreditnote_refunds`
+-- Indices de la tabla `tblcreditnote_refunds`
 --
 ALTER TABLE `tblcreditnote_refunds`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcredits`
+-- Indices de la tabla `tblcredits`
 --
 ALTER TABLE `tblcredits`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcurrencies`
+-- Indices de la tabla `tblcurrencies`
 --
 ALTER TABLE `tblcurrencies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcustomers_groups`
+-- Indices de la tabla `tblcustomers_groups`
 --
 ALTER TABLE `tblcustomers_groups`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indexes for table `tblcustomer_admins`
+-- Indices de la tabla `tblcustomer_admins`
 --
 ALTER TABLE `tblcustomer_admins`
   ADD KEY `customer_id` (`customer_id`),
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indexes for table `tblcustomer_groups`
+-- Indices de la tabla `tblcustomer_groups`
 --
 ALTER TABLE `tblcustomer_groups`
   ADD PRIMARY KEY (`id`),
@@ -22733,13 +22282,13 @@ ALTER TABLE `tblcustomer_groups`
   ADD KEY `customer_id` (`customer_id`);
 
 --
--- Indexes for table `tblcustomfields`
+-- Indices de la tabla `tblcustomfields`
 --
 ALTER TABLE `tblcustomfields`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblcustomfieldsvalues`
+-- Indices de la tabla `tblcustomfieldsvalues`
 --
 ALTER TABLE `tblcustomfieldsvalues`
   ADD PRIMARY KEY (`id`),
@@ -22748,20 +22297,20 @@ ALTER TABLE `tblcustomfieldsvalues`
   ADD KEY `fieldid` (`fieldid`);
 
 --
--- Indexes for table `tblcustom_templates`
+-- Indices de la tabla `tblcustom_templates`
 --
 ALTER TABLE `tblcustom_templates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbldepartments`
+-- Indices de la tabla `tbldepartments`
 --
 ALTER TABLE `tbldepartments`
   ADD PRIMARY KEY (`departmentid`),
   ADD KEY `name` (`name`);
 
 --
--- Indexes for table `tbldismissed_announcements`
+-- Indices de la tabla `tbldismissed_announcements`
 --
 ALTER TABLE `tbldismissed_announcements`
   ADD PRIMARY KEY (`dismissedannouncementid`),
@@ -22770,25 +22319,25 @@ ALTER TABLE `tbldismissed_announcements`
   ADD KEY `userid` (`userid`);
 
 --
--- Indexes for table `tblemaillists`
+-- Indices de la tabla `tblemaillists`
 --
 ALTER TABLE `tblemaillists`
   ADD PRIMARY KEY (`listid`);
 
 --
--- Indexes for table `tblemailtemplates`
+-- Indices de la tabla `tblemailtemplates`
 --
 ALTER TABLE `tblemailtemplates`
   ADD PRIMARY KEY (`emailtemplateid`);
 
 --
--- Indexes for table `tblenfermedades`
+-- Indices de la tabla `tblenfermedades`
 --
 ALTER TABLE `tblenfermedades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblestimates`
+-- Indices de la tabla `tblestimates`
 --
 ALTER TABLE `tblestimates`
   ADD PRIMARY KEY (`id`),
@@ -22799,31 +22348,31 @@ ALTER TABLE `tblestimates`
   ADD KEY `status` (`status`);
 
 --
--- Indexes for table `tblestimate_requests`
+-- Indices de la tabla `tblestimate_requests`
 --
 ALTER TABLE `tblestimate_requests`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblestimate_request_forms`
+-- Indices de la tabla `tblestimate_request_forms`
 --
 ALTER TABLE `tblestimate_request_forms`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblestimate_request_status`
+-- Indices de la tabla `tblestimate_request_status`
 --
 ALTER TABLE `tblestimate_request_status`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblevents`
+-- Indices de la tabla `tblevents`
 --
 ALTER TABLE `tblevents`
   ADD PRIMARY KEY (`eventid`);
 
 --
--- Indexes for table `tblexpenses`
+-- Indices de la tabla `tblexpenses`
 --
 ALTER TABLE `tblexpenses`
   ADD PRIMARY KEY (`id`),
@@ -22833,19 +22382,19 @@ ALTER TABLE `tblexpenses`
   ADD KEY `currency` (`currency`);
 
 --
--- Indexes for table `tblexpenses_categories`
+-- Indices de la tabla `tblexpenses_categories`
 --
 ALTER TABLE `tblexpenses_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblfeedback`
+-- Indices de la tabla `tblfeedback`
 --
 ALTER TABLE `tblfeedback`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblfiles`
+-- Indices de la tabla `tblfiles`
 --
 ALTER TABLE `tblfiles`
   ADD PRIMARY KEY (`id`),
@@ -22853,302 +22402,302 @@ ALTER TABLE `tblfiles`
   ADD KEY `rel_type` (`rel_type`);
 
 --
--- Indexes for table `tblform_questions`
+-- Indices de la tabla `tblform_questions`
 --
 ALTER TABLE `tblform_questions`
   ADD PRIMARY KEY (`questionid`);
 
 --
--- Indexes for table `tblform_question_box`
+-- Indices de la tabla `tblform_question_box`
 --
 ALTER TABLE `tblform_question_box`
   ADD PRIMARY KEY (`boxid`);
 
 --
--- Indexes for table `tblform_question_box_description`
+-- Indices de la tabla `tblform_question_box_description`
 --
 ALTER TABLE `tblform_question_box_description`
   ADD PRIMARY KEY (`questionboxdescriptionid`);
 
 --
--- Indexes for table `tblform_results`
+-- Indices de la tabla `tblform_results`
 --
 ALTER TABLE `tblform_results`
   ADD PRIMARY KEY (`resultid`);
 
 --
--- Indexes for table `tblfs_downloads`
+-- Indices de la tabla `tblfs_downloads`
 --
 ALTER TABLE `tblfs_downloads`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblfs_file_overview`
+-- Indices de la tabla `tblfs_file_overview`
 --
 ALTER TABLE `tblfs_file_overview`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblfs_genenal_ip_share`
+-- Indices de la tabla `tblfs_genenal_ip_share`
 --
 ALTER TABLE `tblfs_genenal_ip_share`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblfs_setting_configuration`
+-- Indices de la tabla `tblfs_setting_configuration`
 --
 ALTER TABLE `tblfs_setting_configuration`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblfs_setting_configuration_relationship`
+-- Indices de la tabla `tblfs_setting_configuration_relationship`
 --
 ALTER TABLE `tblfs_setting_configuration_relationship`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblfs_sharings`
+-- Indices de la tabla `tblfs_sharings`
 --
 ALTER TABLE `tblfs_sharings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblfs_sharing_relationship`
+-- Indices de la tabla `tblfs_sharing_relationship`
 --
 ALTER TABLE `tblfs_sharing_relationship`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblgdpr_requests`
+-- Indices de la tabla `tblgdpr_requests`
 --
 ALTER TABLE `tblgdpr_requests`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblgoals`
+-- Indices de la tabla `tblgoals`
 --
 ALTER TABLE `tblgoals`
   ADD PRIMARY KEY (`id`),
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indexes for table `tblgroup_checklist`
+-- Indices de la tabla `tblgroup_checklist`
 --
 ALTER TABLE `tblgroup_checklist`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblgroup_checklist_allocation`
+-- Indices de la tabla `tblgroup_checklist_allocation`
 --
 ALTER TABLE `tblgroup_checklist_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_allocation_asset`
+-- Indices de la tabla `tblhr_allocation_asset`
 --
 ALTER TABLE `tblhr_allocation_asset`
   ADD PRIMARY KEY (`allocation_id`);
 
 --
--- Indexes for table `tblhr_allowance_type`
+-- Indices de la tabla `tblhr_allowance_type`
 --
 ALTER TABLE `tblhr_allowance_type`
   ADD PRIMARY KEY (`type_id`);
 
 --
--- Indexes for table `tblhr_checklist_allocation`
+-- Indices de la tabla `tblhr_checklist_allocation`
 --
 ALTER TABLE `tblhr_checklist_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_dependent_person`
+-- Indices de la tabla `tblhr_dependent_person`
 --
 ALTER TABLE `tblhr_dependent_person`
   ADD PRIMARY KEY (`id`,`dependent_iden`);
 
 --
--- Indexes for table `tblhr_education`
+-- Indices de la tabla `tblhr_education`
 --
 ALTER TABLE `tblhr_education`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_group_checklist_allocation`
+-- Indices de la tabla `tblhr_group_checklist_allocation`
 --
 ALTER TABLE `tblhr_group_checklist_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_job_p`
+-- Indices de la tabla `tblhr_job_p`
 --
 ALTER TABLE `tblhr_job_p`
   ADD PRIMARY KEY (`job_id`);
 
 --
--- Indexes for table `tblhr_job_position`
+-- Indices de la tabla `tblhr_job_position`
 --
 ALTER TABLE `tblhr_job_position`
   ADD PRIMARY KEY (`position_id`);
 
 --
--- Indexes for table `tblhr_jp_interview_training`
+-- Indices de la tabla `tblhr_jp_interview_training`
 --
 ALTER TABLE `tblhr_jp_interview_training`
   ADD PRIMARY KEY (`training_process_id`);
 
 --
--- Indexes for table `tblhr_jp_salary_scale`
+-- Indices de la tabla `tblhr_jp_salary_scale`
 --
 ALTER TABLE `tblhr_jp_salary_scale`
   ADD PRIMARY KEY (`salary_scale_id`);
 
 --
--- Indexes for table `tblhr_knowedge_base_article_feedback`
+-- Indices de la tabla `tblhr_knowedge_base_article_feedback`
 --
 ALTER TABLE `tblhr_knowedge_base_article_feedback`
   ADD PRIMARY KEY (`articleanswerid`);
 
 --
--- Indexes for table `tblhr_knowledge_base`
+-- Indices de la tabla `tblhr_knowledge_base`
 --
 ALTER TABLE `tblhr_knowledge_base`
   ADD PRIMARY KEY (`articleid`);
 
 --
--- Indexes for table `tblhr_knowledge_base_groups`
+-- Indices de la tabla `tblhr_knowledge_base_groups`
 --
 ALTER TABLE `tblhr_knowledge_base_groups`
   ADD PRIMARY KEY (`groupid`);
 
 --
--- Indexes for table `tblhr_list_staff_quitting_work`
+-- Indices de la tabla `tblhr_list_staff_quitting_work`
 --
 ALTER TABLE `tblhr_list_staff_quitting_work`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_position_training`
+-- Indices de la tabla `tblhr_position_training`
 --
 ALTER TABLE `tblhr_position_training`
   ADD PRIMARY KEY (`training_id`);
 
 --
--- Indexes for table `tblhr_position_training_question_form`
+-- Indices de la tabla `tblhr_position_training_question_form`
 --
 ALTER TABLE `tblhr_position_training_question_form`
   ADD PRIMARY KEY (`questionid`);
 
 --
--- Indexes for table `tblhr_procedure_retire`
+-- Indices de la tabla `tblhr_procedure_retire`
 --
 ALTER TABLE `tblhr_procedure_retire`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_procedure_retire_manage`
+-- Indices de la tabla `tblhr_procedure_retire_manage`
 --
 ALTER TABLE `tblhr_procedure_retire_manage`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_procedure_retire_of_staff`
+-- Indices de la tabla `tblhr_procedure_retire_of_staff`
 --
 ALTER TABLE `tblhr_procedure_retire_of_staff`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_procedure_retire_of_staff_by_id`
+-- Indices de la tabla `tblhr_procedure_retire_of_staff_by_id`
 --
 ALTER TABLE `tblhr_procedure_retire_of_staff_by_id`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_profile_option`
+-- Indices de la tabla `tblhr_profile_option`
 --
 ALTER TABLE `tblhr_profile_option`
   ADD PRIMARY KEY (`option_id`);
 
 --
--- Indexes for table `tblhr_p_t_form_question_box`
+-- Indices de la tabla `tblhr_p_t_form_question_box`
 --
 ALTER TABLE `tblhr_p_t_form_question_box`
   ADD PRIMARY KEY (`boxid`);
 
 --
--- Indexes for table `tblhr_p_t_form_question_box_description`
+-- Indices de la tabla `tblhr_p_t_form_question_box_description`
 --
 ALTER TABLE `tblhr_p_t_form_question_box_description`
   ADD PRIMARY KEY (`questionboxdescriptionid`);
 
 --
--- Indexes for table `tblhr_p_t_form_results`
+-- Indices de la tabla `tblhr_p_t_form_results`
 --
 ALTER TABLE `tblhr_p_t_form_results`
   ADD PRIMARY KEY (`resultid`);
 
 --
--- Indexes for table `tblhr_p_t_surveyresultsets`
+-- Indices de la tabla `tblhr_p_t_surveyresultsets`
 --
 ALTER TABLE `tblhr_p_t_surveyresultsets`
   ADD PRIMARY KEY (`resultsetid`);
 
 --
--- Indexes for table `tblhr_rec_transfer_records`
+-- Indices de la tabla `tblhr_rec_transfer_records`
 --
 ALTER TABLE `tblhr_rec_transfer_records`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_salary_form`
+-- Indices de la tabla `tblhr_salary_form`
 --
 ALTER TABLE `tblhr_salary_form`
   ADD PRIMARY KEY (`form_id`);
 
 --
--- Indexes for table `tblhr_staff_contract`
+-- Indices de la tabla `tblhr_staff_contract`
 --
 ALTER TABLE `tblhr_staff_contract`
   ADD PRIMARY KEY (`id_contract`);
 
 --
--- Indexes for table `tblhr_staff_contract_detail`
+-- Indices de la tabla `tblhr_staff_contract_detail`
 --
 ALTER TABLE `tblhr_staff_contract_detail`
   ADD PRIMARY KEY (`contract_detail_id`);
 
 --
--- Indexes for table `tblhr_staff_contract_type`
+-- Indices de la tabla `tblhr_staff_contract_type`
 --
 ALTER TABLE `tblhr_staff_contract_type`
   ADD PRIMARY KEY (`id_contracttype`);
 
 --
--- Indexes for table `tblhr_training_allocation`
+-- Indices de la tabla `tblhr_training_allocation`
 --
 ALTER TABLE `tblhr_training_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_type_of_trainings`
+-- Indices de la tabla `tblhr_type_of_trainings`
 --
 ALTER TABLE `tblhr_type_of_trainings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_views_tracking`
+-- Indices de la tabla `tblhr_views_tracking`
 --
 ALTER TABLE `tblhr_views_tracking`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblhr_workplace`
+-- Indices de la tabla `tblhr_workplace`
 --
 ALTER TABLE `tblhr_workplace`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblinvoicepaymentrecords`
+-- Indices de la tabla `tblinvoicepaymentrecords`
 --
 ALTER TABLE `tblinvoicepaymentrecords`
   ADD PRIMARY KEY (`id`),
@@ -23156,7 +22705,7 @@ ALTER TABLE `tblinvoicepaymentrecords`
   ADD KEY `paymentmethod` (`paymentmethod`);
 
 --
--- Indexes for table `tblinvoices`
+-- Indices de la tabla `tblinvoices`
 --
 ALTER TABLE `tblinvoices`
   ADD PRIMARY KEY (`id`),
@@ -23168,7 +22717,7 @@ ALTER TABLE `tblinvoices`
   ADD KEY `status` (`status`);
 
 --
--- Indexes for table `tblitemable`
+-- Indices de la tabla `tblitemable`
 --
 ALTER TABLE `tblitemable`
   ADD PRIMARY KEY (`id`),
@@ -23178,7 +22727,7 @@ ALTER TABLE `tblitemable`
   ADD KEY `rate` (`rate`);
 
 --
--- Indexes for table `tblitems`
+-- Indices de la tabla `tblitems`
 --
 ALTER TABLE `tblitems`
   ADD PRIMARY KEY (`id`),
@@ -23187,13 +22736,13 @@ ALTER TABLE `tblitems`
   ADD KEY `group_id` (`group_id`);
 
 --
--- Indexes for table `tblitems_groups`
+-- Indices de la tabla `tblitems_groups`
 --
 ALTER TABLE `tblitems_groups`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblitem_tax`
+-- Indices de la tabla `tblitem_tax`
 --
 ALTER TABLE `tblitem_tax`
   ADD PRIMARY KEY (`id`),
@@ -23201,31 +22750,31 @@ ALTER TABLE `tblitem_tax`
   ADD KEY `rel_id` (`rel_id`);
 
 --
--- Indexes for table `tbljob_industry`
+-- Indices de la tabla `tbljob_industry`
 --
 ALTER TABLE `tbljob_industry`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblknowedge_base_article_feedback`
+-- Indices de la tabla `tblknowedge_base_article_feedback`
 --
 ALTER TABLE `tblknowedge_base_article_feedback`
   ADD PRIMARY KEY (`articleanswerid`);
 
 --
--- Indexes for table `tblknowledge_base`
+-- Indices de la tabla `tblknowledge_base`
 --
 ALTER TABLE `tblknowledge_base`
   ADD PRIMARY KEY (`articleid`);
 
 --
--- Indexes for table `tblknowledge_base_groups`
+-- Indices de la tabla `tblknowledge_base_groups`
 --
 ALTER TABLE `tblknowledge_base_groups`
   ADD PRIMARY KEY (`groupid`);
 
 --
--- Indexes for table `tblleads`
+-- Indices de la tabla `tblleads`
 --
 ALTER TABLE `tblleads`
   ADD PRIMARY KEY (`id`),
@@ -23241,129 +22790,129 @@ ALTER TABLE `tblleads`
   ADD KEY `from_form_id` (`from_form_id`);
 
 --
--- Indexes for table `tblleads_email_integration`
+-- Indices de la tabla `tblleads_email_integration`
 --
 ALTER TABLE `tblleads_email_integration`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblleads_sources`
+-- Indices de la tabla `tblleads_sources`
 --
 ALTER TABLE `tblleads_sources`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indexes for table `tblleads_status`
+-- Indices de la tabla `tblleads_status`
 --
 ALTER TABLE `tblleads_status`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indexes for table `tbllead_activity_log`
+-- Indices de la tabla `tbllead_activity_log`
 --
 ALTER TABLE `tbllead_activity_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbllead_integration_emails`
+-- Indices de la tabla `tbllead_integration_emails`
 --
 ALTER TABLE `tbllead_integration_emails`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbllead_manager_activity_log`
+-- Indices de la tabla `tbllead_manager_activity_log`
 --
 ALTER TABLE `tbllead_manager_activity_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbllead_manager_meeting_remark`
+-- Indices de la tabla `tbllead_manager_meeting_remark`
 --
 ALTER TABLE `tbllead_manager_meeting_remark`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbllead_manager_missed_calls`
+-- Indices de la tabla `tbllead_manager_missed_calls`
 --
 ALTER TABLE `tbllead_manager_missed_calls`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbllead_manager_zoom_meeting`
+-- Indices de la tabla `tbllead_manager_zoom_meeting`
 --
 ALTER TABLE `tbllead_manager_zoom_meeting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbllistemails`
+-- Indices de la tabla `tbllistemails`
 --
 ALTER TABLE `tbllistemails`
   ADD PRIMARY KEY (`emailid`);
 
 --
--- Indexes for table `tblloy_card`
+-- Indices de la tabla `tblloy_card`
 --
 ALTER TABLE `tblloy_card`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblloy_mbs_program`
+-- Indices de la tabla `tblloy_mbs_program`
 --
 ALTER TABLE `tblloy_mbs_program`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblloy_mbs_rule`
+-- Indices de la tabla `tblloy_mbs_rule`
 --
 ALTER TABLE `tblloy_mbs_rule`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblloy_program_detail`
+-- Indices de la tabla `tblloy_program_detail`
 --
 ALTER TABLE `tblloy_program_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblloy_redeem_log`
+-- Indices de la tabla `tblloy_redeem_log`
 --
 ALTER TABLE `tblloy_redeem_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblloy_redemp_detail`
+-- Indices de la tabla `tblloy_redemp_detail`
 --
 ALTER TABLE `tblloy_redemp_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblloy_rule`
+-- Indices de la tabla `tblloy_rule`
 --
 ALTER TABLE `tblloy_rule`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblloy_rule_detail`
+-- Indices de la tabla `tblloy_rule_detail`
 --
 ALTER TABLE `tblloy_rule_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblloy_transation`
+-- Indices de la tabla `tblloy_transation`
 --
 ALTER TABLE `tblloy_transation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblmaillistscustomfields`
+-- Indices de la tabla `tblmaillistscustomfields`
 --
 ALTER TABLE `tblmaillistscustomfields`
   ADD PRIMARY KEY (`customfieldid`);
 
 --
--- Indexes for table `tblmaillistscustomfieldvalues`
+-- Indices de la tabla `tblmaillistscustomfieldvalues`
 --
 ALTER TABLE `tblmaillistscustomfieldvalues`
   ADD PRIMARY KEY (`customfieldvalueid`),
@@ -23371,49 +22920,49 @@ ALTER TABLE `tblmaillistscustomfieldvalues`
   ADD KEY `customfieldid` (`customfieldid`);
 
 --
--- Indexes for table `tblmail_queue`
+-- Indices de la tabla `tblmail_queue`
 --
 ALTER TABLE `tblmail_queue`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblmilestones`
+-- Indices de la tabla `tblmilestones`
 --
 ALTER TABLE `tblmilestones`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblmodules`
+-- Indices de la tabla `tblmodules`
 --
 ALTER TABLE `tblmodules`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblnewsfeed_comment_likes`
+-- Indices de la tabla `tblnewsfeed_comment_likes`
 --
 ALTER TABLE `tblnewsfeed_comment_likes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblnewsfeed_posts`
+-- Indices de la tabla `tblnewsfeed_posts`
 --
 ALTER TABLE `tblnewsfeed_posts`
   ADD PRIMARY KEY (`postid`);
 
 --
--- Indexes for table `tblnewsfeed_post_comments`
+-- Indices de la tabla `tblnewsfeed_post_comments`
 --
 ALTER TABLE `tblnewsfeed_post_comments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblnewsfeed_post_likes`
+-- Indices de la tabla `tblnewsfeed_post_likes`
 --
 ALTER TABLE `tblnewsfeed_post_likes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblnotes`
+-- Indices de la tabla `tblnotes`
 --
 ALTER TABLE `tblnotes`
   ADD PRIMARY KEY (`id`),
@@ -23421,20 +22970,20 @@ ALTER TABLE `tblnotes`
   ADD KEY `rel_type` (`rel_type`);
 
 --
--- Indexes for table `tblnotifications`
+-- Indices de la tabla `tblnotifications`
 --
 ALTER TABLE `tblnotifications`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbloptions`
+-- Indices de la tabla `tbloptions`
 --
 ALTER TABLE `tbloptions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indexes for table `tblorder_items`
+-- Indices de la tabla `tblorder_items`
 --
 ALTER TABLE `tblorder_items`
   ADD PRIMARY KEY (`id`),
@@ -23442,7 +22991,7 @@ ALTER TABLE `tblorder_items`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `tblorder_master`
+-- Indices de la tabla `tblorder_master`
 --
 ALTER TABLE `tblorder_master`
   ADD PRIMARY KEY (`id`),
@@ -23450,57 +22999,57 @@ ALTER TABLE `tblorder_master`
   ADD KEY `clientid` (`clientid`);
 
 --
--- Indexes for table `tblparts`
+-- Indices de la tabla `tblparts`
 --
 ALTER TABLE `tblparts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpayment_modes`
+-- Indices de la tabla `tblpayment_modes`
 --
 ALTER TABLE `tblpayment_modes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpinned_projects`
+-- Indices de la tabla `tblpinned_projects`
 --
 ALTER TABLE `tblpinned_projects`
   ADD PRIMARY KEY (`id`),
   ADD KEY `project_id` (`project_id`);
 
 --
--- Indexes for table `tblposition_training_question_form`
+-- Indices de la tabla `tblposition_training_question_form`
 --
 ALTER TABLE `tblposition_training_question_form`
   ADD PRIMARY KEY (`questionid`);
 
 --
--- Indexes for table `tblproduct_categories`
+-- Indices de la tabla `tblproduct_categories`
 --
 ALTER TABLE `tblproduct_categories`
   ADD PRIMARY KEY (`p_category_id`);
 
 --
--- Indexes for table `tblproduct_master`
+-- Indices de la tabla `tblproduct_master`
 --
 ALTER TABLE `tblproduct_master`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_category_id` (`product_category_id`);
 
 --
--- Indexes for table `tblprojectdiscussioncomments`
+-- Indices de la tabla `tblprojectdiscussioncomments`
 --
 ALTER TABLE `tblprojectdiscussioncomments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblprojectdiscussions`
+-- Indices de la tabla `tblprojectdiscussions`
 --
 ALTER TABLE `tblprojectdiscussions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblprojects`
+-- Indices de la tabla `tblprojects`
 --
 ALTER TABLE `tblprojects`
   ADD PRIMARY KEY (`id`),
@@ -23508,19 +23057,19 @@ ALTER TABLE `tblprojects`
   ADD KEY `name` (`name`);
 
 --
--- Indexes for table `tblproject_activity`
+-- Indices de la tabla `tblproject_activity`
 --
 ALTER TABLE `tblproject_activity`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblproject_files`
+-- Indices de la tabla `tblproject_files`
 --
 ALTER TABLE `tblproject_files`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblproject_members`
+-- Indices de la tabla `tblproject_members`
 --
 ALTER TABLE `tblproject_members`
   ADD PRIMARY KEY (`id`),
@@ -23528,219 +23077,219 @@ ALTER TABLE `tblproject_members`
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indexes for table `tblproject_notes`
+-- Indices de la tabla `tblproject_notes`
 --
 ALTER TABLE `tblproject_notes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblproject_settings`
+-- Indices de la tabla `tblproject_settings`
 --
 ALTER TABLE `tblproject_settings`
   ADD PRIMARY KEY (`id`),
   ADD KEY `project_id` (`project_id`);
 
 --
--- Indexes for table `tblproposals`
+-- Indices de la tabla `tblproposals`
 --
 ALTER TABLE `tblproposals`
   ADD PRIMARY KEY (`id`),
   ADD KEY `status` (`status`);
 
 --
--- Indexes for table `tblproposal_comments`
+-- Indices de la tabla `tblproposal_comments`
 --
 ALTER TABLE `tblproposal_comments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpurchase_option`
+-- Indices de la tabla `tblpurchase_option`
 --
 ALTER TABLE `tblpurchase_option`
   ADD PRIMARY KEY (`option_id`);
 
 --
--- Indexes for table `tblpur_approval_details`
+-- Indices de la tabla `tblpur_approval_details`
 --
 ALTER TABLE `tblpur_approval_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_approval_setting`
+-- Indices de la tabla `tblpur_approval_setting`
 --
 ALTER TABLE `tblpur_approval_setting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_contacts`
+-- Indices de la tabla `tblpur_contacts`
 --
 ALTER TABLE `tblpur_contacts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_contracts`
+-- Indices de la tabla `tblpur_contracts`
 --
 ALTER TABLE `tblpur_contracts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_estimates`
+-- Indices de la tabla `tblpur_estimates`
 --
 ALTER TABLE `tblpur_estimates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_estimate_detail`
+-- Indices de la tabla `tblpur_estimate_detail`
 --
 ALTER TABLE `tblpur_estimate_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_orders`
+-- Indices de la tabla `tblpur_orders`
 --
 ALTER TABLE `tblpur_orders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_order_detail`
+-- Indices de la tabla `tblpur_order_detail`
 --
 ALTER TABLE `tblpur_order_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_order_payment`
+-- Indices de la tabla `tblpur_order_payment`
 --
 ALTER TABLE `tblpur_order_payment`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_request`
+-- Indices de la tabla `tblpur_request`
 --
 ALTER TABLE `tblpur_request`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblpur_request_detail`
+-- Indices de la tabla `tblpur_request_detail`
 --
 ALTER TABLE `tblpur_request_detail`
   ADD PRIMARY KEY (`prd_id`);
 
 --
--- Indexes for table `tblpur_unit`
+-- Indices de la tabla `tblpur_unit`
 --
 ALTER TABLE `tblpur_unit`
   ADD PRIMARY KEY (`unit_id`);
 
 --
--- Indexes for table `tblpur_vendor`
+-- Indices de la tabla `tblpur_vendor`
 --
 ALTER TABLE `tblpur_vendor`
   ADD PRIMARY KEY (`userid`);
 
 --
--- Indexes for table `tblp_t_form_question_box_description`
+-- Indices de la tabla `tblp_t_form_question_box_description`
 --
 ALTER TABLE `tblp_t_form_question_box_description`
   ADD PRIMARY KEY (`questionboxdescriptionid`);
 
 --
--- Indexes for table `tblrecords_meta`
+-- Indices de la tabla `tblrecords_meta`
 --
 ALTER TABLE `tblrecords_meta`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblrec_campaign`
+-- Indices de la tabla `tblrec_campaign`
 --
 ALTER TABLE `tblrec_campaign`
   ADD PRIMARY KEY (`cp_id`);
 
 --
--- Indexes for table `tblrec_campaign_form_web`
+-- Indices de la tabla `tblrec_campaign_form_web`
 --
 ALTER TABLE `tblrec_campaign_form_web`
   ADD PRIMARY KEY (`id`,`rec_campaign_id`);
 
 --
--- Indexes for table `tblrec_candidate`
+-- Indices de la tabla `tblrec_candidate`
 --
 ALTER TABLE `tblrec_candidate`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblrec_cd_evaluation`
+-- Indices de la tabla `tblrec_cd_evaluation`
 --
 ALTER TABLE `tblrec_cd_evaluation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblrec_company`
+-- Indices de la tabla `tblrec_company`
 --
 ALTER TABLE `tblrec_company`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblrec_criteria`
+-- Indices de la tabla `tblrec_criteria`
 --
 ALTER TABLE `tblrec_criteria`
   ADD PRIMARY KEY (`criteria_id`);
 
 --
--- Indexes for table `tblrec_evaluation_form`
+-- Indices de la tabla `tblrec_evaluation_form`
 --
 ALTER TABLE `tblrec_evaluation_form`
   ADD PRIMARY KEY (`form_id`);
 
 --
--- Indexes for table `tblrec_interview`
+-- Indices de la tabla `tblrec_interview`
 --
 ALTER TABLE `tblrec_interview`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblrec_job_position`
+-- Indices de la tabla `tblrec_job_position`
 --
 ALTER TABLE `tblrec_job_position`
   ADD PRIMARY KEY (`position_id`);
 
 --
--- Indexes for table `tblrec_list_criteria`
+-- Indices de la tabla `tblrec_list_criteria`
 --
 ALTER TABLE `tblrec_list_criteria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblrec_proposal`
+-- Indices de la tabla `tblrec_proposal`
 --
 ALTER TABLE `tblrec_proposal`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblrec_set_transfer_record`
+-- Indices de la tabla `tblrec_set_transfer_record`
 --
 ALTER TABLE `tblrec_set_transfer_record`
   ADD PRIMARY KEY (`set_id`);
 
 --
--- Indexes for table `tblrec_skill`
+-- Indices de la tabla `tblrec_skill`
 --
 ALTER TABLE `tblrec_skill`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblrec_transfer_records`
+-- Indices de la tabla `tblrec_transfer_records`
 --
 ALTER TABLE `tblrec_transfer_records`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblrelated_items`
+-- Indices de la tabla `tblrelated_items`
 --
 ALTER TABLE `tblrelated_items`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblreminders`
+-- Indices de la tabla `tblreminders`
 --
 ALTER TABLE `tblreminders`
   ADD PRIMARY KEY (`id`),
@@ -23749,76 +23298,76 @@ ALTER TABLE `tblreminders`
   ADD KEY `staff` (`staff`);
 
 --
--- Indexes for table `tblroles`
+-- Indices de la tabla `tblroles`
 --
 ALTER TABLE `tblroles`
   ADD PRIMARY KEY (`roleid`);
 
 --
--- Indexes for table `tblsales_activity`
+-- Indices de la tabla `tblsales_activity`
 --
 ALTER TABLE `tblsales_activity`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblscheduled_emails`
+-- Indices de la tabla `tblscheduled_emails`
 --
 ALTER TABLE `tblscheduled_emails`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblservices`
+-- Indices de la tabla `tblservices`
 --
 ALTER TABLE `tblservices`
   ADD PRIMARY KEY (`serviceid`);
 
 --
--- Indexes for table `tblsessions`
+-- Indices de la tabla `tblsessions`
 --
 ALTER TABLE `tblsessions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
--- Indexes for table `tblsetting_asset_allocation`
+-- Indices de la tabla `tblsetting_asset_allocation`
 --
 ALTER TABLE `tblsetting_asset_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblsetting_training`
+-- Indices de la tabla `tblsetting_training`
 --
 ALTER TABLE `tblsetting_training`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblsetting_transfer_records`
+-- Indices de la tabla `tblsetting_transfer_records`
 --
 ALTER TABLE `tblsetting_transfer_records`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblsi_lead_filter`
+-- Indices de la tabla `tblsi_lead_filter`
 --
 ALTER TABLE `tblsi_lead_filter`
   ADD PRIMARY KEY (`id`),
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indexes for table `tblsi_task_filter`
+-- Indices de la tabla `tblsi_task_filter`
 --
 ALTER TABLE `tblsi_task_filter`
   ADD PRIMARY KEY (`id`),
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indexes for table `tblspam_filters`
+-- Indices de la tabla `tblspam_filters`
 --
 ALTER TABLE `tblspam_filters`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblstaff`
+-- Indices de la tabla `tblstaff`
 --
 ALTER TABLE `tblstaff`
   ADD PRIMARY KEY (`staffid`),
@@ -23826,13 +23375,13 @@ ALTER TABLE `tblstaff`
   ADD KEY `lastname` (`lastname`);
 
 --
--- Indexes for table `tblstaff_departments`
+-- Indices de la tabla `tblstaff_departments`
 --
 ALTER TABLE `tblstaff_departments`
   ADD PRIMARY KEY (`staffdepartmentid`);
 
 --
--- Indexes for table `tblsubscriptions`
+-- Indices de la tabla `tblsubscriptions`
 --
 ALTER TABLE `tblsubscriptions`
   ADD PRIMARY KEY (`id`),
@@ -23841,31 +23390,31 @@ ALTER TABLE `tblsubscriptions`
   ADD KEY `tax_id` (`tax_id`);
 
 --
--- Indexes for table `tblsurveyresultsets`
+-- Indices de la tabla `tblsurveyresultsets`
 --
 ALTER TABLE `tblsurveyresultsets`
   ADD PRIMARY KEY (`resultsetid`);
 
 --
--- Indexes for table `tblsurveys`
+-- Indices de la tabla `tblsurveys`
 --
 ALTER TABLE `tblsurveys`
   ADD PRIMARY KEY (`surveyid`);
 
 --
--- Indexes for table `tblsurveysemailsendcron`
+-- Indices de la tabla `tblsurveysemailsendcron`
 --
 ALTER TABLE `tblsurveysemailsendcron`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblsurveysendlog`
+-- Indices de la tabla `tblsurveysendlog`
 --
 ALTER TABLE `tblsurveysendlog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltaggables`
+-- Indices de la tabla `tbltaggables`
 --
 ALTER TABLE `tbltaggables`
   ADD KEY `rel_id` (`rel_id`),
@@ -23873,14 +23422,14 @@ ALTER TABLE `tbltaggables`
   ADD KEY `tag_id` (`tag_id`);
 
 --
--- Indexes for table `tbltags`
+-- Indices de la tabla `tbltags`
 --
 ALTER TABLE `tbltags`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indexes for table `tbltasks`
+-- Indices de la tabla `tbltasks`
 --
 ALTER TABLE `tbltasks`
   ADD PRIMARY KEY (`id`),
@@ -23891,7 +23440,7 @@ ALTER TABLE `tbltasks`
   ADD KEY `status` (`status`);
 
 --
--- Indexes for table `tbltaskstimers`
+-- Indices de la tabla `tbltaskstimers`
 --
 ALTER TABLE `tbltaskstimers`
   ADD PRIMARY KEY (`id`),
@@ -23899,13 +23448,13 @@ ALTER TABLE `tbltaskstimers`
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indexes for table `tbltasks_checklist_templates`
+-- Indices de la tabla `tbltasks_checklist_templates`
 --
 ALTER TABLE `tbltasks_checklist_templates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltask_assigned`
+-- Indices de la tabla `tbltask_assigned`
 --
 ALTER TABLE `tbltask_assigned`
   ADD PRIMARY KEY (`id`),
@@ -23913,14 +23462,14 @@ ALTER TABLE `tbltask_assigned`
   ADD KEY `staffid` (`staffid`);
 
 --
--- Indexes for table `tbltask_checklist_items`
+-- Indices de la tabla `tbltask_checklist_items`
 --
 ALTER TABLE `tbltask_checklist_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `taskid` (`taskid`);
 
 --
--- Indexes for table `tbltask_comments`
+-- Indices de la tabla `tbltask_comments`
 --
 ALTER TABLE `tbltask_comments`
   ADD PRIMARY KEY (`id`),
@@ -23928,25 +23477,25 @@ ALTER TABLE `tbltask_comments`
   ADD KEY `taskid` (`taskid`);
 
 --
--- Indexes for table `tbltask_followers`
+-- Indices de la tabla `tbltask_followers`
 --
 ALTER TABLE `tbltask_followers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltaxes`
+-- Indices de la tabla `tbltaxes`
 --
 ALTER TABLE `tbltaxes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltemplates`
+-- Indices de la tabla `tbltemplates`
 --
 ALTER TABLE `tbltemplates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltickets`
+-- Indices de la tabla `tbltickets`
 --
 ALTER TABLE `tbltickets`
   ADD PRIMARY KEY (`ticketid`),
@@ -23959,1737 +23508,1733 @@ ALTER TABLE `tbltickets`
   ADD KEY `contactid` (`contactid`);
 
 --
--- Indexes for table `tbltickets_pipe_log`
+-- Indices de la tabla `tbltickets_pipe_log`
 --
 ALTER TABLE `tbltickets_pipe_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltickets_predefined_replies`
+-- Indices de la tabla `tbltickets_predefined_replies`
 --
 ALTER TABLE `tbltickets_predefined_replies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltickets_priorities`
+-- Indices de la tabla `tbltickets_priorities`
 --
 ALTER TABLE `tbltickets_priorities`
   ADD PRIMARY KEY (`priorityid`);
 
 --
--- Indexes for table `tbltickets_status`
+-- Indices de la tabla `tbltickets_status`
 --
 ALTER TABLE `tbltickets_status`
   ADD PRIMARY KEY (`ticketstatusid`);
 
 --
--- Indexes for table `tblticket_attachments`
+-- Indices de la tabla `tblticket_attachments`
 --
 ALTER TABLE `tblticket_attachments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblticket_replies`
+-- Indices de la tabla `tblticket_replies`
 --
 ALTER TABLE `tblticket_replies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltodos`
+-- Indices de la tabla `tbltodos`
 --
 ALTER TABLE `tbltodos`
   ADD PRIMARY KEY (`todoid`);
 
 --
--- Indexes for table `tbltracked_mails`
+-- Indices de la tabla `tbltracked_mails`
 --
 ALTER TABLE `tbltracked_mails`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltraining_allocation`
+-- Indices de la tabla `tbltraining_allocation`
 --
 ALTER TABLE `tbltraining_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltransfer_records_reception`
+-- Indices de la tabla `tbltransfer_records_reception`
 --
 ALTER TABLE `tbltransfer_records_reception`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbltwocheckout_log`
+-- Indices de la tabla `tbltwocheckout_log`
 --
 ALTER TABLE `tbltwocheckout_log`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_id` (`invoice_id`);
 
 --
--- Indexes for table `tbluser_meta`
+-- Indices de la tabla `tbluser_meta`
 --
 ALTER TABLE `tbluser_meta`
   ADD PRIMARY KEY (`umeta_id`);
 
 --
--- Indexes for table `tblvault`
+-- Indices de la tabla `tblvault`
 --
 ALTER TABLE `tblvault`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblviews_tracking`
+-- Indices de la tabla `tblviews_tracking`
 --
 ALTER TABLE `tblviews_tracking`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblware_unit_type`
+-- Indices de la tabla `tblware_unit_type`
 --
 ALTER TABLE `tblware_unit_type`
   ADD PRIMARY KEY (`unit_type_id`);
 
 --
--- Indexes for table `tblweb_to_lead`
+-- Indices de la tabla `tblweb_to_lead`
 --
 ALTER TABLE `tblweb_to_lead`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tblweb_to_recruitment`
+-- Indices de la tabla `tblweb_to_recruitment`
 --
 ALTER TABLE `tblweb_to_recruitment`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `tblaccount_planning`
+-- AUTO_INCREMENT de la tabla `tblaccount_planning`
 --
 ALTER TABLE `tblaccount_planning`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblaccount_planning_current_service`
+-- AUTO_INCREMENT de la tabla `tblaccount_planning_current_service`
 --
 ALTER TABLE `tblaccount_planning_current_service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblaccount_planning_financial`
+-- AUTO_INCREMENT de la tabla `tblaccount_planning_financial`
 --
 ALTER TABLE `tblaccount_planning_financial`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblaccount_planning_items`
+-- AUTO_INCREMENT de la tabla `tblaccount_planning_items`
 --
 ALTER TABLE `tblaccount_planning_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblaccount_planning_marketing_activities`
+-- AUTO_INCREMENT de la tabla `tblaccount_planning_marketing_activities`
 --
 ALTER TABLE `tblaccount_planning_marketing_activities`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblaccount_planning_objective`
+-- AUTO_INCREMENT de la tabla `tblaccount_planning_objective`
 --
 ALTER TABLE `tblaccount_planning_objective`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblaccount_planning_service_ability_offering`
+-- AUTO_INCREMENT de la tabla `tblaccount_planning_service_ability_offering`
 --
 ALTER TABLE `tblaccount_planning_service_ability_offering`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblaccount_planning_task`
+-- AUTO_INCREMENT de la tabla `tblaccount_planning_task`
 --
 ALTER TABLE `tblaccount_planning_task`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblaccount_planning_team`
+-- AUTO_INCREMENT de la tabla `tblaccount_planning_team`
 --
 ALTER TABLE `tblaccount_planning_team`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_accounts`
+-- AUTO_INCREMENT de la tabla `tblacc_accounts`
 --
 ALTER TABLE `tblacc_accounts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
--- AUTO_INCREMENT for table `tblacc_account_history`
+-- AUTO_INCREMENT de la tabla `tblacc_account_history`
 --
 ALTER TABLE `tblacc_account_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT for table `tblacc_account_type_details`
+-- AUTO_INCREMENT de la tabla `tblacc_account_type_details`
 --
 ALTER TABLE `tblacc_account_type_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_banking_rules`
+-- AUTO_INCREMENT de la tabla `tblacc_banking_rules`
 --
 ALTER TABLE `tblacc_banking_rules`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_banking_rule_details`
+-- AUTO_INCREMENT de la tabla `tblacc_banking_rule_details`
 --
 ALTER TABLE `tblacc_banking_rule_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_expense_category_mappings`
+-- AUTO_INCREMENT de la tabla `tblacc_expense_category_mappings`
 --
 ALTER TABLE `tblacc_expense_category_mappings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_item_automatics`
+-- AUTO_INCREMENT de la tabla `tblacc_item_automatics`
 --
 ALTER TABLE `tblacc_item_automatics`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_journal_entries`
+-- AUTO_INCREMENT de la tabla `tblacc_journal_entries`
 --
 ALTER TABLE `tblacc_journal_entries`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_payment_mode_mappings`
+-- AUTO_INCREMENT de la tabla `tblacc_payment_mode_mappings`
 --
 ALTER TABLE `tblacc_payment_mode_mappings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_reconciles`
+-- AUTO_INCREMENT de la tabla `tblacc_reconciles`
 --
 ALTER TABLE `tblacc_reconciles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_tax_mappings`
+-- AUTO_INCREMENT de la tabla `tblacc_tax_mappings`
 --
 ALTER TABLE `tblacc_tax_mappings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_transaction_bankings`
+-- AUTO_INCREMENT de la tabla `tblacc_transaction_bankings`
 --
 ALTER TABLE `tblacc_transaction_bankings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblacc_transfers`
+-- AUTO_INCREMENT de la tabla `tblacc_transfers`
 --
 ALTER TABLE `tblacc_transfers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblactivity_log`
+-- AUTO_INCREMENT de la tabla `tblactivity_log`
 --
 ALTER TABLE `tblactivity_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=229;
 
 --
--- AUTO_INCREMENT for table `tblannouncements`
+-- AUTO_INCREMENT de la tabla `tblannouncements`
 --
 ALTER TABLE `tblannouncements`
   MODIFY `announcementid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblappointly_appointments`
+-- AUTO_INCREMENT de la tabla `tblappointly_appointments`
 --
 ALTER TABLE `tblappointly_appointments`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblappointly_appointment_types`
+-- AUTO_INCREMENT de la tabla `tblappointly_appointment_types`
 --
 ALTER TABLE `tblappointly_appointment_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblappointly_callbacks`
+-- AUTO_INCREMENT de la tabla `tblappointly_callbacks`
 --
 ALTER TABLE `tblappointly_callbacks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblappointly_callbacks_assignees`
+-- AUTO_INCREMENT de la tabla `tblappointly_callbacks_assignees`
 --
 ALTER TABLE `tblappointly_callbacks_assignees`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblappointly_google`
+-- AUTO_INCREMENT de la tabla `tblappointly_google`
 --
 ALTER TABLE `tblappointly_google`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblbonus_discipline`
+-- AUTO_INCREMENT de la tabla `tblbonus_discipline`
 --
 ALTER TABLE `tblbonus_discipline`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblbonus_discipline_detail`
+-- AUTO_INCREMENT de la tabla `tblbonus_discipline_detail`
 --
 ALTER TABLE `tblbonus_discipline_detail`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcd_care`
+-- AUTO_INCREMENT de la tabla `tblcd_care`
 --
 ALTER TABLE `tblcd_care`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcd_family_infor`
+-- AUTO_INCREMENT de la tabla `tblcd_family_infor`
 --
 ALTER TABLE `tblcd_family_infor`
   MODIFY `fi_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcd_interview`
+-- AUTO_INCREMENT de la tabla `tblcd_interview`
 --
 ALTER TABLE `tblcd_interview`
   MODIFY `in_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcd_literacy`
+-- AUTO_INCREMENT de la tabla `tblcd_literacy`
 --
 ALTER TABLE `tblcd_literacy`
   MODIFY `li_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcd_skill`
+-- AUTO_INCREMENT de la tabla `tblcd_skill`
 --
 ALTER TABLE `tblcd_skill`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcd_work_experience`
+-- AUTO_INCREMENT de la tabla `tblcd_work_experience`
 --
 ALTER TABLE `tblcd_work_experience`
   MODIFY `we_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchatclientmessages`
+-- AUTO_INCREMENT de la tabla `tblchatclientmessages`
 --
 ALTER TABLE `tblchatclientmessages`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchatgroupmembers`
+-- AUTO_INCREMENT de la tabla `tblchatgroupmembers`
 --
 ALTER TABLE `tblchatgroupmembers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchatgroupmessages`
+-- AUTO_INCREMENT de la tabla `tblchatgroupmessages`
 --
 ALTER TABLE `tblchatgroupmessages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchatgroups`
+-- AUTO_INCREMENT de la tabla `tblchatgroups`
 --
 ALTER TABLE `tblchatgroups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchatgroupsharedfiles`
+-- AUTO_INCREMENT de la tabla `tblchatgroupsharedfiles`
 --
 ALTER TABLE `tblchatgroupsharedfiles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchatmessages`
+-- AUTO_INCREMENT de la tabla `tblchatmessages`
 --
 ALTER TABLE `tblchatmessages`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchatsettings`
+-- AUTO_INCREMENT de la tabla `tblchatsettings`
 --
 ALTER TABLE `tblchatsettings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchatsharedfiles`
+-- AUTO_INCREMENT de la tabla `tblchatsharedfiles`
 --
 ALTER TABLE `tblchatsharedfiles`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchecklist`
+-- AUTO_INCREMENT de la tabla `tblchecklist`
 --
 ALTER TABLE `tblchecklist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblchecklist_allocation`
+-- AUTO_INCREMENT de la tabla `tblchecklist_allocation`
 --
 ALTER TABLE `tblchecklist_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblclients`
+-- AUTO_INCREMENT de la tabla `tblclients`
 --
 ALTER TABLE `tblclients`
   MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `tblconsents`
+-- AUTO_INCREMENT de la tabla `tblconsents`
 --
 ALTER TABLE `tblconsents`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblconsent_purposes`
+-- AUTO_INCREMENT de la tabla `tblconsent_purposes`
 --
 ALTER TABLE `tblconsent_purposes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblconsultas`
+-- AUTO_INCREMENT de la tabla `tblconsultas`
 --
 ALTER TABLE `tblconsultas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `tblcontacts`
+-- AUTO_INCREMENT de la tabla `tblcontacts`
 --
 ALTER TABLE `tblcontacts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblcontact_permissions`
+-- AUTO_INCREMENT de la tabla `tblcontact_permissions`
 --
 ALTER TABLE `tblcontact_permissions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `tblcontracts`
+-- AUTO_INCREMENT de la tabla `tblcontracts`
 --
 ALTER TABLE `tblcontracts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblcontracts_types`
+-- AUTO_INCREMENT de la tabla `tblcontracts_types`
 --
 ALTER TABLE `tblcontracts_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblcontract_comments`
+-- AUTO_INCREMENT de la tabla `tblcontract_comments`
 --
 ALTER TABLE `tblcontract_comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcontract_renewals`
+-- AUTO_INCREMENT de la tabla `tblcontract_renewals`
 --
 ALTER TABLE `tblcontract_renewals`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcountries`
+-- AUTO_INCREMENT de la tabla `tblcountries`
 --
 ALTER TABLE `tblcountries`
   MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=251;
 
 --
--- AUTO_INCREMENT for table `tblcreditnotes`
+-- AUTO_INCREMENT de la tabla `tblcreditnotes`
 --
 ALTER TABLE `tblcreditnotes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcreditnote_refunds`
+-- AUTO_INCREMENT de la tabla `tblcreditnote_refunds`
 --
 ALTER TABLE `tblcreditnote_refunds`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcredits`
+-- AUTO_INCREMENT de la tabla `tblcredits`
 --
 ALTER TABLE `tblcredits`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcurrencies`
+-- AUTO_INCREMENT de la tabla `tblcurrencies`
 --
 ALTER TABLE `tblcurrencies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblcustomers_groups`
+-- AUTO_INCREMENT de la tabla `tblcustomers_groups`
 --
 ALTER TABLE `tblcustomers_groups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblcustomer_groups`
+-- AUTO_INCREMENT de la tabla `tblcustomer_groups`
 --
 ALTER TABLE `tblcustomer_groups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblcustomfields`
+-- AUTO_INCREMENT de la tabla `tblcustomfields`
 --
 ALTER TABLE `tblcustomfields`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcustomfieldsvalues`
+-- AUTO_INCREMENT de la tabla `tblcustomfieldsvalues`
 --
 ALTER TABLE `tblcustomfieldsvalues`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblcustom_templates`
+-- AUTO_INCREMENT de la tabla `tblcustom_templates`
 --
 ALTER TABLE `tblcustom_templates`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbldepartments`
+-- AUTO_INCREMENT de la tabla `tbldepartments`
 --
 ALTER TABLE `tbldepartments`
   MODIFY `departmentid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbldismissed_announcements`
+-- AUTO_INCREMENT de la tabla `tbldismissed_announcements`
 --
 ALTER TABLE `tbldismissed_announcements`
   MODIFY `dismissedannouncementid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblemaillists`
+-- AUTO_INCREMENT de la tabla `tblemaillists`
 --
 ALTER TABLE `tblemaillists`
   MODIFY `listid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblemailtemplates`
+-- AUTO_INCREMENT de la tabla `tblemailtemplates`
 --
 ALTER TABLE `tblemailtemplates`
   MODIFY `emailtemplateid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2449;
 
 --
--- AUTO_INCREMENT for table `tblenfermedades`
+-- AUTO_INCREMENT de la tabla `tblenfermedades`
 --
 ALTER TABLE `tblenfermedades`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12424;
 
 --
--- AUTO_INCREMENT for table `tblestimates`
+-- AUTO_INCREMENT de la tabla `tblestimates`
 --
 ALTER TABLE `tblestimates`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblestimate_requests`
+-- AUTO_INCREMENT de la tabla `tblestimate_requests`
 --
 ALTER TABLE `tblestimate_requests`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblestimate_request_forms`
+-- AUTO_INCREMENT de la tabla `tblestimate_request_forms`
 --
 ALTER TABLE `tblestimate_request_forms`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblestimate_request_status`
+-- AUTO_INCREMENT de la tabla `tblestimate_request_status`
 --
 ALTER TABLE `tblestimate_request_status`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tblevents`
+-- AUTO_INCREMENT de la tabla `tblevents`
 --
 ALTER TABLE `tblevents`
   MODIFY `eventid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `tblexpenses`
+-- AUTO_INCREMENT de la tabla `tblexpenses`
 --
 ALTER TABLE `tblexpenses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblexpenses_categories`
+-- AUTO_INCREMENT de la tabla `tblexpenses_categories`
 --
 ALTER TABLE `tblexpenses_categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblfeedback`
+-- AUTO_INCREMENT de la tabla `tblfeedback`
 --
 ALTER TABLE `tblfeedback`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblfiles`
+-- AUTO_INCREMENT de la tabla `tblfiles`
 --
 ALTER TABLE `tblfiles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblform_questions`
+-- AUTO_INCREMENT de la tabla `tblform_questions`
 --
 ALTER TABLE `tblform_questions`
   MODIFY `questionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblform_question_box`
+-- AUTO_INCREMENT de la tabla `tblform_question_box`
 --
 ALTER TABLE `tblform_question_box`
   MODIFY `boxid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblform_question_box_description`
+-- AUTO_INCREMENT de la tabla `tblform_question_box_description`
 --
 ALTER TABLE `tblform_question_box_description`
   MODIFY `questionboxdescriptionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblform_results`
+-- AUTO_INCREMENT de la tabla `tblform_results`
 --
 ALTER TABLE `tblform_results`
   MODIFY `resultid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblfs_downloads`
+-- AUTO_INCREMENT de la tabla `tblfs_downloads`
 --
 ALTER TABLE `tblfs_downloads`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblfs_file_overview`
+-- AUTO_INCREMENT de la tabla `tblfs_file_overview`
 --
 ALTER TABLE `tblfs_file_overview`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblfs_genenal_ip_share`
+-- AUTO_INCREMENT de la tabla `tblfs_genenal_ip_share`
 --
 ALTER TABLE `tblfs_genenal_ip_share`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblfs_setting_configuration`
+-- AUTO_INCREMENT de la tabla `tblfs_setting_configuration`
 --
 ALTER TABLE `tblfs_setting_configuration`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblfs_setting_configuration_relationship`
+-- AUTO_INCREMENT de la tabla `tblfs_setting_configuration_relationship`
 --
 ALTER TABLE `tblfs_setting_configuration_relationship`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblfs_sharings`
+-- AUTO_INCREMENT de la tabla `tblfs_sharings`
 --
 ALTER TABLE `tblfs_sharings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblfs_sharing_relationship`
+-- AUTO_INCREMENT de la tabla `tblfs_sharing_relationship`
 --
 ALTER TABLE `tblfs_sharing_relationship`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblgdpr_requests`
+-- AUTO_INCREMENT de la tabla `tblgdpr_requests`
 --
 ALTER TABLE `tblgdpr_requests`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblgoals`
+-- AUTO_INCREMENT de la tabla `tblgoals`
 --
 ALTER TABLE `tblgoals`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblgroup_checklist`
+-- AUTO_INCREMENT de la tabla `tblgroup_checklist`
 --
 ALTER TABLE `tblgroup_checklist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblgroup_checklist_allocation`
+-- AUTO_INCREMENT de la tabla `tblgroup_checklist_allocation`
 --
 ALTER TABLE `tblgroup_checklist_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_allocation_asset`
+-- AUTO_INCREMENT de la tabla `tblhr_allocation_asset`
 --
 ALTER TABLE `tblhr_allocation_asset`
   MODIFY `allocation_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_allowance_type`
+-- AUTO_INCREMENT de la tabla `tblhr_allowance_type`
 --
 ALTER TABLE `tblhr_allowance_type`
   MODIFY `type_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_checklist_allocation`
+-- AUTO_INCREMENT de la tabla `tblhr_checklist_allocation`
 --
 ALTER TABLE `tblhr_checklist_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_dependent_person`
+-- AUTO_INCREMENT de la tabla `tblhr_dependent_person`
 --
 ALTER TABLE `tblhr_dependent_person`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_education`
+-- AUTO_INCREMENT de la tabla `tblhr_education`
 --
 ALTER TABLE `tblhr_education`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_group_checklist_allocation`
+-- AUTO_INCREMENT de la tabla `tblhr_group_checklist_allocation`
 --
 ALTER TABLE `tblhr_group_checklist_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_job_p`
+-- AUTO_INCREMENT de la tabla `tblhr_job_p`
 --
 ALTER TABLE `tblhr_job_p`
   MODIFY `job_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_job_position`
+-- AUTO_INCREMENT de la tabla `tblhr_job_position`
 --
 ALTER TABLE `tblhr_job_position`
   MODIFY `position_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_jp_interview_training`
+-- AUTO_INCREMENT de la tabla `tblhr_jp_interview_training`
 --
 ALTER TABLE `tblhr_jp_interview_training`
   MODIFY `training_process_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_jp_salary_scale`
+-- AUTO_INCREMENT de la tabla `tblhr_jp_salary_scale`
 --
 ALTER TABLE `tblhr_jp_salary_scale`
   MODIFY `salary_scale_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_knowedge_base_article_feedback`
+-- AUTO_INCREMENT de la tabla `tblhr_knowedge_base_article_feedback`
 --
 ALTER TABLE `tblhr_knowedge_base_article_feedback`
   MODIFY `articleanswerid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_knowledge_base`
+-- AUTO_INCREMENT de la tabla `tblhr_knowledge_base`
 --
 ALTER TABLE `tblhr_knowledge_base`
   MODIFY `articleid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_knowledge_base_groups`
+-- AUTO_INCREMENT de la tabla `tblhr_knowledge_base_groups`
 --
 ALTER TABLE `tblhr_knowledge_base_groups`
   MODIFY `groupid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_list_staff_quitting_work`
+-- AUTO_INCREMENT de la tabla `tblhr_list_staff_quitting_work`
 --
 ALTER TABLE `tblhr_list_staff_quitting_work`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_position_training`
+-- AUTO_INCREMENT de la tabla `tblhr_position_training`
 --
 ALTER TABLE `tblhr_position_training`
   MODIFY `training_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_position_training_question_form`
+-- AUTO_INCREMENT de la tabla `tblhr_position_training_question_form`
 --
 ALTER TABLE `tblhr_position_training_question_form`
   MODIFY `questionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_procedure_retire`
+-- AUTO_INCREMENT de la tabla `tblhr_procedure_retire`
 --
 ALTER TABLE `tblhr_procedure_retire`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_procedure_retire_manage`
+-- AUTO_INCREMENT de la tabla `tblhr_procedure_retire_manage`
 --
 ALTER TABLE `tblhr_procedure_retire_manage`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_procedure_retire_of_staff`
+-- AUTO_INCREMENT de la tabla `tblhr_procedure_retire_of_staff`
 --
 ALTER TABLE `tblhr_procedure_retire_of_staff`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_procedure_retire_of_staff_by_id`
+-- AUTO_INCREMENT de la tabla `tblhr_procedure_retire_of_staff_by_id`
 --
 ALTER TABLE `tblhr_procedure_retire_of_staff_by_id`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_profile_option`
+-- AUTO_INCREMENT de la tabla `tblhr_profile_option`
 --
 ALTER TABLE `tblhr_profile_option`
   MODIFY `option_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `tblhr_p_t_form_question_box`
+-- AUTO_INCREMENT de la tabla `tblhr_p_t_form_question_box`
 --
 ALTER TABLE `tblhr_p_t_form_question_box`
   MODIFY `boxid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_p_t_form_question_box_description`
+-- AUTO_INCREMENT de la tabla `tblhr_p_t_form_question_box_description`
 --
 ALTER TABLE `tblhr_p_t_form_question_box_description`
   MODIFY `questionboxdescriptionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_p_t_form_results`
+-- AUTO_INCREMENT de la tabla `tblhr_p_t_form_results`
 --
 ALTER TABLE `tblhr_p_t_form_results`
   MODIFY `resultid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_p_t_surveyresultsets`
+-- AUTO_INCREMENT de la tabla `tblhr_p_t_surveyresultsets`
 --
 ALTER TABLE `tblhr_p_t_surveyresultsets`
   MODIFY `resultsetid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_rec_transfer_records`
+-- AUTO_INCREMENT de la tabla `tblhr_rec_transfer_records`
 --
 ALTER TABLE `tblhr_rec_transfer_records`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_salary_form`
+-- AUTO_INCREMENT de la tabla `tblhr_salary_form`
 --
 ALTER TABLE `tblhr_salary_form`
   MODIFY `form_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_staff_contract`
+-- AUTO_INCREMENT de la tabla `tblhr_staff_contract`
 --
 ALTER TABLE `tblhr_staff_contract`
   MODIFY `id_contract` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_staff_contract_detail`
+-- AUTO_INCREMENT de la tabla `tblhr_staff_contract_detail`
 --
 ALTER TABLE `tblhr_staff_contract_detail`
   MODIFY `contract_detail_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_staff_contract_type`
+-- AUTO_INCREMENT de la tabla `tblhr_staff_contract_type`
 --
 ALTER TABLE `tblhr_staff_contract_type`
   MODIFY `id_contracttype` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_training_allocation`
+-- AUTO_INCREMENT de la tabla `tblhr_training_allocation`
 --
 ALTER TABLE `tblhr_training_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_type_of_trainings`
+-- AUTO_INCREMENT de la tabla `tblhr_type_of_trainings`
 --
 ALTER TABLE `tblhr_type_of_trainings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblhr_views_tracking`
+-- AUTO_INCREMENT de la tabla `tblhr_views_tracking`
 --
 ALTER TABLE `tblhr_views_tracking`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblhr_workplace`
+-- AUTO_INCREMENT de la tabla `tblhr_workplace`
 --
 ALTER TABLE `tblhr_workplace`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblinvoicepaymentrecords`
+-- AUTO_INCREMENT de la tabla `tblinvoicepaymentrecords`
 --
 ALTER TABLE `tblinvoicepaymentrecords`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `tblinvoices`
+-- AUTO_INCREMENT de la tabla `tblinvoices`
 --
 ALTER TABLE `tblinvoices`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
--- AUTO_INCREMENT for table `tblitemable`
+-- AUTO_INCREMENT de la tabla `tblitemable`
 --
 ALTER TABLE `tblitemable`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
--- AUTO_INCREMENT for table `tblitems`
+-- AUTO_INCREMENT de la tabla `tblitems`
 --
 ALTER TABLE `tblitems`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tblitems_groups`
+-- AUTO_INCREMENT de la tabla `tblitems_groups`
 --
 ALTER TABLE `tblitems_groups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblitem_tax`
+-- AUTO_INCREMENT de la tabla `tblitem_tax`
 --
 ALTER TABLE `tblitem_tax`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbljob_industry`
+-- AUTO_INCREMENT de la tabla `tbljob_industry`
 --
 ALTER TABLE `tbljob_industry`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblknowedge_base_article_feedback`
+-- AUTO_INCREMENT de la tabla `tblknowedge_base_article_feedback`
 --
 ALTER TABLE `tblknowedge_base_article_feedback`
   MODIFY `articleanswerid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblknowledge_base`
+-- AUTO_INCREMENT de la tabla `tblknowledge_base`
 --
 ALTER TABLE `tblknowledge_base`
   MODIFY `articleid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblknowledge_base_groups`
+-- AUTO_INCREMENT de la tabla `tblknowledge_base_groups`
 --
 ALTER TABLE `tblknowledge_base_groups`
   MODIFY `groupid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblleads`
+-- AUTO_INCREMENT de la tabla `tblleads`
 --
 ALTER TABLE `tblleads`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblleads_email_integration`
+-- AUTO_INCREMENT de la tabla `tblleads_email_integration`
 --
 ALTER TABLE `tblleads_email_integration`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'the ID always must be 1', AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblleads_sources`
+-- AUTO_INCREMENT de la tabla `tblleads_sources`
 --
 ALTER TABLE `tblleads_sources`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblleads_status`
+-- AUTO_INCREMENT de la tabla `tblleads_status`
 --
 ALTER TABLE `tblleads_status`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tbllead_activity_log`
+-- AUTO_INCREMENT de la tabla `tbllead_activity_log`
 --
 ALTER TABLE `tbllead_activity_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbllead_integration_emails`
+-- AUTO_INCREMENT de la tabla `tbllead_integration_emails`
 --
 ALTER TABLE `tbllead_integration_emails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbllead_manager_activity_log`
+-- AUTO_INCREMENT de la tabla `tbllead_manager_activity_log`
 --
 ALTER TABLE `tbllead_manager_activity_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbllead_manager_meeting_remark`
+-- AUTO_INCREMENT de la tabla `tbllead_manager_meeting_remark`
 --
 ALTER TABLE `tbllead_manager_meeting_remark`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbllead_manager_missed_calls`
+-- AUTO_INCREMENT de la tabla `tbllead_manager_missed_calls`
 --
 ALTER TABLE `tbllead_manager_missed_calls`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbllead_manager_zoom_meeting`
+-- AUTO_INCREMENT de la tabla `tbllead_manager_zoom_meeting`
 --
 ALTER TABLE `tbllead_manager_zoom_meeting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbllistemails`
+-- AUTO_INCREMENT de la tabla `tbllistemails`
 --
 ALTER TABLE `tbllistemails`
   MODIFY `emailid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblloy_card`
+-- AUTO_INCREMENT de la tabla `tblloy_card`
 --
 ALTER TABLE `tblloy_card`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblloy_mbs_program`
+-- AUTO_INCREMENT de la tabla `tblloy_mbs_program`
 --
 ALTER TABLE `tblloy_mbs_program`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblloy_mbs_rule`
+-- AUTO_INCREMENT de la tabla `tblloy_mbs_rule`
 --
 ALTER TABLE `tblloy_mbs_rule`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblloy_program_detail`
+-- AUTO_INCREMENT de la tabla `tblloy_program_detail`
 --
 ALTER TABLE `tblloy_program_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblloy_redeem_log`
+-- AUTO_INCREMENT de la tabla `tblloy_redeem_log`
 --
 ALTER TABLE `tblloy_redeem_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblloy_redemp_detail`
+-- AUTO_INCREMENT de la tabla `tblloy_redemp_detail`
 --
 ALTER TABLE `tblloy_redemp_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblloy_rule`
+-- AUTO_INCREMENT de la tabla `tblloy_rule`
 --
 ALTER TABLE `tblloy_rule`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblloy_rule_detail`
+-- AUTO_INCREMENT de la tabla `tblloy_rule_detail`
 --
 ALTER TABLE `tblloy_rule_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblloy_transation`
+-- AUTO_INCREMENT de la tabla `tblloy_transation`
 --
 ALTER TABLE `tblloy_transation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblmaillistscustomfields`
+-- AUTO_INCREMENT de la tabla `tblmaillistscustomfields`
 --
 ALTER TABLE `tblmaillistscustomfields`
   MODIFY `customfieldid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblmaillistscustomfieldvalues`
+-- AUTO_INCREMENT de la tabla `tblmaillistscustomfieldvalues`
 --
 ALTER TABLE `tblmaillistscustomfieldvalues`
   MODIFY `customfieldvalueid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblmail_queue`
+-- AUTO_INCREMENT de la tabla `tblmail_queue`
 --
 ALTER TABLE `tblmail_queue`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblmilestones`
+-- AUTO_INCREMENT de la tabla `tblmilestones`
 --
 ALTER TABLE `tblmilestones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblmodules`
+-- AUTO_INCREMENT de la tabla `tblmodules`
 --
 ALTER TABLE `tblmodules`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT for table `tblnewsfeed_comment_likes`
+-- AUTO_INCREMENT de la tabla `tblnewsfeed_comment_likes`
 --
 ALTER TABLE `tblnewsfeed_comment_likes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblnewsfeed_posts`
+-- AUTO_INCREMENT de la tabla `tblnewsfeed_posts`
 --
 ALTER TABLE `tblnewsfeed_posts`
   MODIFY `postid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblnewsfeed_post_comments`
+-- AUTO_INCREMENT de la tabla `tblnewsfeed_post_comments`
 --
 ALTER TABLE `tblnewsfeed_post_comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblnewsfeed_post_likes`
+-- AUTO_INCREMENT de la tabla `tblnewsfeed_post_likes`
 --
 ALTER TABLE `tblnewsfeed_post_likes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblnotes`
+-- AUTO_INCREMENT de la tabla `tblnotes`
 --
 ALTER TABLE `tblnotes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `tblnotifications`
+-- AUTO_INCREMENT de la tabla `tblnotifications`
 --
 ALTER TABLE `tblnotifications`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tbloptions`
+-- AUTO_INCREMENT de la tabla `tbloptions`
 --
 ALTER TABLE `tbloptions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=544;
 
 --
--- AUTO_INCREMENT for table `tblorder_items`
+-- AUTO_INCREMENT de la tabla `tblorder_items`
 --
 ALTER TABLE `tblorder_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblorder_master`
+-- AUTO_INCREMENT de la tabla `tblorder_master`
 --
 ALTER TABLE `tblorder_master`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblparts`
+-- AUTO_INCREMENT de la tabla `tblparts`
 --
 ALTER TABLE `tblparts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `tblpayment_modes`
+-- AUTO_INCREMENT de la tabla `tblpayment_modes`
 --
 ALTER TABLE `tblpayment_modes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `tblpinned_projects`
+-- AUTO_INCREMENT de la tabla `tblpinned_projects`
 --
 ALTER TABLE `tblpinned_projects`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblposition_training_question_form`
+-- AUTO_INCREMENT de la tabla `tblposition_training_question_form`
 --
 ALTER TABLE `tblposition_training_question_form`
   MODIFY `questionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblproduct_categories`
+-- AUTO_INCREMENT de la tabla `tblproduct_categories`
 --
 ALTER TABLE `tblproduct_categories`
   MODIFY `p_category_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblproduct_master`
+-- AUTO_INCREMENT de la tabla `tblproduct_master`
 --
 ALTER TABLE `tblproduct_master`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblprojectdiscussioncomments`
+-- AUTO_INCREMENT de la tabla `tblprojectdiscussioncomments`
 --
 ALTER TABLE `tblprojectdiscussioncomments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblprojectdiscussions`
+-- AUTO_INCREMENT de la tabla `tblprojectdiscussions`
 --
 ALTER TABLE `tblprojectdiscussions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblprojects`
+-- AUTO_INCREMENT de la tabla `tblprojects`
 --
 ALTER TABLE `tblprojects`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblproject_activity`
+-- AUTO_INCREMENT de la tabla `tblproject_activity`
 --
 ALTER TABLE `tblproject_activity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `tblproject_files`
+-- AUTO_INCREMENT de la tabla `tblproject_files`
 --
 ALTER TABLE `tblproject_files`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblproject_members`
+-- AUTO_INCREMENT de la tabla `tblproject_members`
 --
 ALTER TABLE `tblproject_members`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblproject_notes`
+-- AUTO_INCREMENT de la tabla `tblproject_notes`
 --
 ALTER TABLE `tblproject_notes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblproject_settings`
+-- AUTO_INCREMENT de la tabla `tblproject_settings`
 --
 ALTER TABLE `tblproject_settings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `tblproposals`
+-- AUTO_INCREMENT de la tabla `tblproposals`
 --
 ALTER TABLE `tblproposals`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblproposal_comments`
+-- AUTO_INCREMENT de la tabla `tblproposal_comments`
 --
 ALTER TABLE `tblproposal_comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpurchase_option`
+-- AUTO_INCREMENT de la tabla `tblpurchase_option`
 --
 ALTER TABLE `tblpurchase_option`
   MODIFY `option_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblpur_approval_details`
+-- AUTO_INCREMENT de la tabla `tblpur_approval_details`
 --
 ALTER TABLE `tblpur_approval_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_approval_setting`
+-- AUTO_INCREMENT de la tabla `tblpur_approval_setting`
 --
 ALTER TABLE `tblpur_approval_setting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_contacts`
+-- AUTO_INCREMENT de la tabla `tblpur_contacts`
 --
 ALTER TABLE `tblpur_contacts`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_contracts`
+-- AUTO_INCREMENT de la tabla `tblpur_contracts`
 --
 ALTER TABLE `tblpur_contracts`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_estimates`
+-- AUTO_INCREMENT de la tabla `tblpur_estimates`
 --
 ALTER TABLE `tblpur_estimates`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_estimate_detail`
+-- AUTO_INCREMENT de la tabla `tblpur_estimate_detail`
 --
 ALTER TABLE `tblpur_estimate_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_orders`
+-- AUTO_INCREMENT de la tabla `tblpur_orders`
 --
 ALTER TABLE `tblpur_orders`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_order_detail`
+-- AUTO_INCREMENT de la tabla `tblpur_order_detail`
 --
 ALTER TABLE `tblpur_order_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_order_payment`
+-- AUTO_INCREMENT de la tabla `tblpur_order_payment`
 --
 ALTER TABLE `tblpur_order_payment`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_request`
+-- AUTO_INCREMENT de la tabla `tblpur_request`
 --
 ALTER TABLE `tblpur_request`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_request_detail`
+-- AUTO_INCREMENT de la tabla `tblpur_request_detail`
 --
 ALTER TABLE `tblpur_request_detail`
   MODIFY `prd_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_unit`
+-- AUTO_INCREMENT de la tabla `tblpur_unit`
 --
 ALTER TABLE `tblpur_unit`
   MODIFY `unit_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblpur_vendor`
+-- AUTO_INCREMENT de la tabla `tblpur_vendor`
 --
 ALTER TABLE `tblpur_vendor`
   MODIFY `userid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblp_t_form_question_box_description`
+-- AUTO_INCREMENT de la tabla `tblp_t_form_question_box_description`
 --
 ALTER TABLE `tblp_t_form_question_box_description`
   MODIFY `questionboxdescriptionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrecords_meta`
+-- AUTO_INCREMENT de la tabla `tblrecords_meta`
 --
 ALTER TABLE `tblrecords_meta`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `tblrec_campaign`
+-- AUTO_INCREMENT de la tabla `tblrec_campaign`
 --
 ALTER TABLE `tblrec_campaign`
   MODIFY `cp_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_campaign_form_web`
+-- AUTO_INCREMENT de la tabla `tblrec_campaign_form_web`
 --
 ALTER TABLE `tblrec_campaign_form_web`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_candidate`
+-- AUTO_INCREMENT de la tabla `tblrec_candidate`
 --
 ALTER TABLE `tblrec_candidate`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_cd_evaluation`
+-- AUTO_INCREMENT de la tabla `tblrec_cd_evaluation`
 --
 ALTER TABLE `tblrec_cd_evaluation`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_company`
+-- AUTO_INCREMENT de la tabla `tblrec_company`
 --
 ALTER TABLE `tblrec_company`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_criteria`
+-- AUTO_INCREMENT de la tabla `tblrec_criteria`
 --
 ALTER TABLE `tblrec_criteria`
   MODIFY `criteria_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_evaluation_form`
+-- AUTO_INCREMENT de la tabla `tblrec_evaluation_form`
 --
 ALTER TABLE `tblrec_evaluation_form`
   MODIFY `form_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_interview`
+-- AUTO_INCREMENT de la tabla `tblrec_interview`
 --
 ALTER TABLE `tblrec_interview`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_job_position`
+-- AUTO_INCREMENT de la tabla `tblrec_job_position`
 --
 ALTER TABLE `tblrec_job_position`
   MODIFY `position_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_list_criteria`
+-- AUTO_INCREMENT de la tabla `tblrec_list_criteria`
 --
 ALTER TABLE `tblrec_list_criteria`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_proposal`
+-- AUTO_INCREMENT de la tabla `tblrec_proposal`
 --
 ALTER TABLE `tblrec_proposal`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_set_transfer_record`
+-- AUTO_INCREMENT de la tabla `tblrec_set_transfer_record`
 --
 ALTER TABLE `tblrec_set_transfer_record`
   MODIFY `set_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_skill`
+-- AUTO_INCREMENT de la tabla `tblrec_skill`
 --
 ALTER TABLE `tblrec_skill`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrec_transfer_records`
+-- AUTO_INCREMENT de la tabla `tblrec_transfer_records`
 --
 ALTER TABLE `tblrec_transfer_records`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblrelated_items`
+-- AUTO_INCREMENT de la tabla `tblrelated_items`
 --
 ALTER TABLE `tblrelated_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblreminders`
+-- AUTO_INCREMENT de la tabla `tblreminders`
 --
 ALTER TABLE `tblreminders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tblroles`
+-- AUTO_INCREMENT de la tabla `tblroles`
 --
 ALTER TABLE `tblroles`
   MODIFY `roleid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblsales_activity`
+-- AUTO_INCREMENT de la tabla `tblsales_activity`
 --
 ALTER TABLE `tblsales_activity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT for table `tblscheduled_emails`
+-- AUTO_INCREMENT de la tabla `tblscheduled_emails`
 --
 ALTER TABLE `tblscheduled_emails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblservices`
+-- AUTO_INCREMENT de la tabla `tblservices`
 --
 ALTER TABLE `tblservices`
   MODIFY `serviceid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsetting_asset_allocation`
+-- AUTO_INCREMENT de la tabla `tblsetting_asset_allocation`
 --
 ALTER TABLE `tblsetting_asset_allocation`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsetting_training`
+-- AUTO_INCREMENT de la tabla `tblsetting_training`
 --
 ALTER TABLE `tblsetting_training`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsetting_transfer_records`
+-- AUTO_INCREMENT de la tabla `tblsetting_transfer_records`
 --
 ALTER TABLE `tblsetting_transfer_records`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsi_lead_filter`
+-- AUTO_INCREMENT de la tabla `tblsi_lead_filter`
 --
 ALTER TABLE `tblsi_lead_filter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsi_task_filter`
+-- AUTO_INCREMENT de la tabla `tblsi_task_filter`
 --
 ALTER TABLE `tblsi_task_filter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblspam_filters`
+-- AUTO_INCREMENT de la tabla `tblspam_filters`
 --
 ALTER TABLE `tblspam_filters`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblstaff`
+-- AUTO_INCREMENT de la tabla `tblstaff`
 --
 ALTER TABLE `tblstaff`
   MODIFY `staffid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tblstaff_departments`
+-- AUTO_INCREMENT de la tabla `tblstaff_departments`
 --
 ALTER TABLE `tblstaff_departments`
   MODIFY `staffdepartmentid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsubscriptions`
+-- AUTO_INCREMENT de la tabla `tblsubscriptions`
 --
 ALTER TABLE `tblsubscriptions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsurveyresultsets`
+-- AUTO_INCREMENT de la tabla `tblsurveyresultsets`
 --
 ALTER TABLE `tblsurveyresultsets`
   MODIFY `resultsetid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsurveys`
+-- AUTO_INCREMENT de la tabla `tblsurveys`
 --
 ALTER TABLE `tblsurveys`
   MODIFY `surveyid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsurveysemailsendcron`
+-- AUTO_INCREMENT de la tabla `tblsurveysemailsendcron`
 --
 ALTER TABLE `tblsurveysemailsendcron`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblsurveysendlog`
+-- AUTO_INCREMENT de la tabla `tblsurveysendlog`
 --
 ALTER TABLE `tblsurveysendlog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltags`
+-- AUTO_INCREMENT de la tabla `tbltags`
 --
 ALTER TABLE `tbltags`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltasks`
+-- AUTO_INCREMENT de la tabla `tbltasks`
 --
 ALTER TABLE `tbltasks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tbltaskstimers`
+-- AUTO_INCREMENT de la tabla `tbltaskstimers`
 --
 ALTER TABLE `tbltaskstimers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltasks_checklist_templates`
+-- AUTO_INCREMENT de la tabla `tbltasks_checklist_templates`
 --
 ALTER TABLE `tbltasks_checklist_templates`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltask_assigned`
+-- AUTO_INCREMENT de la tabla `tbltask_assigned`
 --
 ALTER TABLE `tbltask_assigned`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tbltask_checklist_items`
+-- AUTO_INCREMENT de la tabla `tbltask_checklist_items`
 --
 ALTER TABLE `tbltask_checklist_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltask_comments`
+-- AUTO_INCREMENT de la tabla `tbltask_comments`
 --
 ALTER TABLE `tbltask_comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltask_followers`
+-- AUTO_INCREMENT de la tabla `tbltask_followers`
 --
 ALTER TABLE `tbltask_followers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltaxes`
+-- AUTO_INCREMENT de la tabla `tbltaxes`
 --
 ALTER TABLE `tbltaxes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltemplates`
+-- AUTO_INCREMENT de la tabla `tbltemplates`
 --
 ALTER TABLE `tbltemplates`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltickets`
+-- AUTO_INCREMENT de la tabla `tbltickets`
 --
 ALTER TABLE `tbltickets`
   MODIFY `ticketid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltickets_pipe_log`
+-- AUTO_INCREMENT de la tabla `tbltickets_pipe_log`
 --
 ALTER TABLE `tbltickets_pipe_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltickets_predefined_replies`
+-- AUTO_INCREMENT de la tabla `tbltickets_predefined_replies`
 --
 ALTER TABLE `tbltickets_predefined_replies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltickets_priorities`
+-- AUTO_INCREMENT de la tabla `tbltickets_priorities`
 --
 ALTER TABLE `tbltickets_priorities`
   MODIFY `priorityid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `tbltickets_status`
+-- AUTO_INCREMENT de la tabla `tbltickets_status`
 --
 ALTER TABLE `tbltickets_status`
   MODIFY `ticketstatusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tblticket_attachments`
+-- AUTO_INCREMENT de la tabla `tblticket_attachments`
 --
 ALTER TABLE `tblticket_attachments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblticket_replies`
+-- AUTO_INCREMENT de la tabla `tblticket_replies`
 --
 ALTER TABLE `tblticket_replies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltodos`
+-- AUTO_INCREMENT de la tabla `tbltodos`
 --
 ALTER TABLE `tbltodos`
   MODIFY `todoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tbltracked_mails`
+-- AUTO_INCREMENT de la tabla `tbltracked_mails`
 --
 ALTER TABLE `tbltracked_mails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltraining_allocation`
+-- AUTO_INCREMENT de la tabla `tbltraining_allocation`
 --
 ALTER TABLE `tbltraining_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltransfer_records_reception`
+-- AUTO_INCREMENT de la tabla `tbltransfer_records_reception`
 --
 ALTER TABLE `tbltransfer_records_reception`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbltwocheckout_log`
+-- AUTO_INCREMENT de la tabla `tbltwocheckout_log`
 --
 ALTER TABLE `tbltwocheckout_log`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tbluser_meta`
+-- AUTO_INCREMENT de la tabla `tbluser_meta`
 --
 ALTER TABLE `tbluser_meta`
   MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `tblvault`
+-- AUTO_INCREMENT de la tabla `tblvault`
 --
 ALTER TABLE `tblvault`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblviews_tracking`
+-- AUTO_INCREMENT de la tabla `tblviews_tracking`
 --
 ALTER TABLE `tblviews_tracking`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblware_unit_type`
+-- AUTO_INCREMENT de la tabla `tblware_unit_type`
 --
 ALTER TABLE `tblware_unit_type`
   MODIFY `unit_type_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblweb_to_lead`
+-- AUTO_INCREMENT de la tabla `tblweb_to_lead`
 --
 ALTER TABLE `tblweb_to_lead`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tblweb_to_recruitment`
+-- AUTO_INCREMENT de la tabla `tblweb_to_recruitment`
 --
 ALTER TABLE `tblweb_to_recruitment`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `tblchatgroupmembers`
+-- Filtros para la tabla `tblchatgroupmembers`
 --
 ALTER TABLE `tblchatgroupmembers`
   ADD CONSTRAINT `tblchatgroupmembers_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `tblchatgroups` (`id`);
 
 --
--- Constraints for table `tblproduct_master`
+-- Filtros para la tabla `tblproduct_master`
 --
 ALTER TABLE `tblproduct_master`
   ADD CONSTRAINT `tblproduct_master_ibfk_1` FOREIGN KEY (`product_category_id`) REFERENCES `tblproduct_categories` (`p_category_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tbltwocheckout_log`
+-- Filtros para la tabla `tbltwocheckout_log`
 --
 ALTER TABLE `tbltwocheckout_log`
   ADD CONSTRAINT `tbltwocheckout_log_ibfk_1` FOREIGN KEY (`invoice_id`) REFERENCES `tblinvoices` (`id`) ON DELETE CASCADE;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

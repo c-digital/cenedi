@@ -23,8 +23,8 @@
                                      <span class="caret"></span>
                                    </button>
                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                     <li><a href="#">Neurologia</a></li>
-                                     <li><a href="#">Diabetes</a></li>
+                                     <li><a href="/admin/consultas/crear?tipo=neurologia">Neurologia</a></li>
+                                     <li><a href="/admin/consultas/crear?tipo=diabetes">Diabetes</a></li>
                                    </ul>
                                  </div>
                               </td>
@@ -115,6 +115,7 @@
                                   <th>Paciente</th>
                                   <th>Profesional</th>
                                   <th>Fecha</th>
+                                  <th>Tipo</th>
                                   <th>Estado</th>
                                   <th>Acciones</th>
                               </tr>
@@ -127,6 +128,7 @@
                                     <td><?php echo $consulta->paciente; ?></td>
                                     <td><?php echo $consulta->profesional; ?></td>
                                     <td><?php echo $consulta->fecha; ?></td>
+                                    <td><?php echo $consulta->tipo; ?></td>
                                     <td><?php echo ($consulta->estado) ? $consulta->estado : 'En espera'; ?></td>
                                     <td>
                                        <?php if (!$consulta->estado): ?>
@@ -143,7 +145,7 @@
                                           <i class="fa fa-eye"></i> Ver
                                        </a>
 
-                                       <a class="btn btn-default btn-xs" href="/admin/consultas/editar/<?php echo $consulta->id; ?>">
+                                       <a class="btn btn-default btn-xs" href="/admin/consultas/editar/<?php echo $consulta->id; ?>?tipo=<?php echo $consulta->tipo; ?>">
                                           <i class="fa fa-edit"></i> Editar
                                        </a>
 
