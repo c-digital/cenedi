@@ -72,6 +72,8 @@
                      } ?>
                   <?php $value=( isset($client) ? $client->phonenumber : ''); ?>
                   <?php echo render_input( 'phonenumber', 'client_phonenumber',$value); ?>
+                  <?php echo render_date_input( 'datebirth', 'Fecha de nacimiento',$client->datebirth??null); ?>
+                  <?php echo render_select( 'civilstate',[['name' => 'Viudo', 'short_name' => 'Viudo'], ['name' => 'Casado', 'short_name' => 'Casado'],['name' => 'Divorciado', 'short_name' => 'Divorciado'],['name' => 'Soltero', 'short_name' => 'Soltero']],array( 'name',array( 'short_name')), 'Estado civil',$client->civilstate??null,array('data-none-selected-text'=>_l('dropdown_non_selected_tex'))); ?>
                   <?php if((isset($client) && empty($client->website)) || !isset($client)){
                      $value=( isset($client) ? $client->website : '');
                      echo render_input( 'website', 'client_website',$value);
@@ -144,7 +146,9 @@
                   <?php echo render_input( 'state', 'client_state',$value); ?>
                   <?php $value=( isset($client) ? $client->zip : ''); ?>
                   <?php echo render_input( 'zip', 'client_postal_code',$value); ?>
+                  <?php echo render_input( 'occupation', 'Ocupación',$client->occupation??null); ?>
                   <?php $countries= get_all_countries();
+                  
                      $customer_default_country = get_option('customer_default_country');
                      $selected =( isset($client) ? $client->country : $customer_default_country);
                      echo render_select( 'country',$countries,array( 'country_id',array( 'short_name')), 'clients_country',$selected,array('data-none-selected-text'=>_l('dropdown_non_selected_tex')));

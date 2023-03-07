@@ -73,6 +73,7 @@ class Clients extends AdminController
     /* Edit client or add new client*/
     public function client($id = '')
     {
+
         if (!has_permission('customers', '', 'view')) {
             if ($id != '' && !is_customer_admin($id)) {
                 access_denied('customers');

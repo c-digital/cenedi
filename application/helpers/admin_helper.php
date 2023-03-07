@@ -5,6 +5,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 use app\services\messages\Message;
 use app\services\messages\PopupMessage;
 
+function dd($data)
+{
+    echo '<pre>';
+    print_r($data);
+    exit;
+}
+
 function app_admin_head()
 {
     hooks()->do_action('app_admin_head');

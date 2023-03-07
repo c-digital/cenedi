@@ -1,13 +1,14 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-<?php init_head(); ?>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
 
-<div id="wrapper" class="customer_profile">
+<div style="margin: 30px" id="wrapper" class="customer_profile">
    <div class="content">
       <div class="row" style="background: white;">
          <?php echo form_open('/admin/consultas/modificar', ['enctype' => 'multipart/form-data', 'method' => 'POST']); ?>
             <div class="col-md-11">
-               <h3>Agregar nueva consulta</h3>
+               <h3>Consulta</h3>
             </div>
 
             <div class="col-md-1">
@@ -117,10 +118,10 @@
                </div>
 
                <div class="col-md-6">
-                  <label for="Ha enido algun aborto, muerte, fetal, neonatal?">Ha enido algun aborto, muerte, fetal, neonatal?</label><br>
+                  <label for="Ha tenido algun aborto, muerte, fetal, neonatal?">Ha enido algun aborto, muerte, fetal, neonatal?</label><br>
 
-                  <input type="radio" name="Ha enido algun aborto, muerte, fetal, neonatal?" value="Si" <?php echo $anamnesis['Ha enido algun aborto, muerte, fetal, neonatal?'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="Ha enido algun aborto, muerte, fetal, neonatal?" value="No" <?php echo $anamnesis['Ha enido algun aborto, muerte, fetal, neonatal?'] == 'No' ? 'checked' : '' ?>> No
+                  <input type="radio" name="Ha tenido algun aborto, muerte, fetal, neonatal?" value="Si" <?php echo $anamnesis['Ha tenido algun aborto, muerte, fetal, neonatal?'] == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="Ha enido algun aborto, muerte, fetal, neonatal?" value="No" <?php echo $anamnesis['Ha tenido algun aborto, muerte, fetal, neonatal?'] == 'No' ? 'checked' : '' ?>> No
                </div>
 
                <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
@@ -304,8 +305,6 @@
                   F.C.S.U. - U.A.G.R.M
                </div>
 
-               <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
-
                <input type="hidden" name="tipo" value="diabetes" value="<?php echo $consulta->tipo ?>">
 
             <?php endif; ?>
@@ -314,56 +313,6 @@
 
 
             <?php if ($consulta->tipo == 'neurologia'): ?>
-
-               <div class="row"></div>
-
-               <div class="col-md-4">
-                  <div class="form-group">
-                     <label for="datebirth">Fecha de nacimiento</label>
-                     <input type="date" class="form-control" name="datebirth">
-                  </div>
-               </div>
-
-               <div class="col-md-4">
-                  <div class="form-group">
-                     <label for="procedencia">Procedencia</label>
-                     <input type="text" class="form-control" name="procedencia" value="<?php echo $anamnesis['procedencia'] ?>">
-                  </div>
-               </div>
-
-               <div class="col-md-4">
-                  <div class="form-group">
-                     <label for="civilstate">Estado civil</label>
-                     <select name="civilstate" id="civilstate" class="form-control">
-                        <option value=""></option>
-                        <option value="Soltero">Soltero</option>
-                        <option value="Casado">Casado</option>
-                        <option value="Divorciado">Divorciado</option>
-                        <option value="Viudo">Viudo</option>
-                     </select>
-                  </div>
-               </div>
-
-               <div class="col-md-6">
-                  <div class="form-group">
-                     <label for="address">Dirección</label>
-                     <input type="text" class="form-control" name="address">
-                  </div>
-               </div>
-
-               <div class="col-md-6">
-                  <div class="form-group">
-                     <label for="occupation">Ocupación</label>
-                     <input type="text" class="form-control" name="occupation">
-                  </div>
-               </div>
-
-               <div class="col-md-12">
-                  <div class="form-group">
-                     <label for="diagnostico">Diagnóstico</label>
-                     <textarea name="diagnostico" class="form-control"><?php echo $anamnesis['diagnostico'] ?></textarea>
-                  </div>
-               </div>
 
                <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
 
@@ -377,11 +326,10 @@
    </div>
 </div>
 
-<?php init_tail(); ?>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
    $(document).ready(function () {
@@ -399,6 +347,9 @@
       $('.img-circle').click(function () {
          $('[name=foto_perfil]').click();
       });
+
+      var element = document.getElementById('wrapper');
+      html2pdf(element);
    });
 </script>
 

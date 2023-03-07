@@ -110,17 +110,17 @@
                </div>
 
                <div class="col-md-6">
-                  <label for="¿Alguno de sus hijos pesó más de 4kg al nacer?">¿Alguno de sus hijos pesó más de 4kg al nacer?</label><br>
+                  <label for="Alguno de sus hijos peso mas de 4kg al nacer?">Alguno de sus hijos peso mas de 4kg al nacer?</label><br>
 
-                  <input type="radio" name="¿Alguno de sus hijos pesó más de 4kg al nacer?" value="Si"> Si
-                  <input style="margin-left: 10px" type="radio" name="¿Alguno de sus hijos pesó más de 4kg al nacer?" value="No"> No
+                  <input type="radio" name="Alguno de sus hijos peso mas de 4kg al nacer?" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="Alguno de sus hijos peso mas de 4kg al nacer?" value="No"> No
                </div>
 
                <div class="col-md-6">
-                  <label for="¿Ha enido algún aborto, muerte, fetal, neonatal?">¿Ha enido algún aborto, muerte, fetal, neonatal?</label><br>
+                  <label for="Ha tenido algun aborto, muerte, fetal, neonatal?">Ha tenido algun aborto, muerte, fetal, neonatal?</label><br>
 
-                  <input type="radio" name="¿Ha enido algún aborto, muerte, fetal, neonatal?" value="Si"> Si
-                  <input style="margin-left: 10px" type="radio" name="¿Ha enido algún aborto, muerte, fetal, neonatal?" value="No"> No
+                  <input type="radio" name="Ha tenido algun aborto, muerte, fetal, neonatal?" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="Ha tenido algun aborto, muerte, fetal, neonatal?" value="No"> No
                </div>
 
                <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
@@ -189,10 +189,10 @@
 
                <div class="row"></div>
 
-               <div class="col-md-2">Educación en diabetes</div>
+               <div class="col-md-2">Educacion en diabetes</div>
                <div class="col-md-2">
-                  <input type="radio" name="Educación en diabetes" value="Si"> Si
-                  <input style="margin-left: 10px" type="radio" name="Educación en diabetes" value="No"> No
+                  <input type="radio" name="Educacion en diabetes" value="Si"> Si
+                  <input style="margin-left: 10px" type="radio" name="Educacion en diabetes" value="No"> No
                </div>
 
                <div class="row"></div>
@@ -257,22 +257,22 @@
                <div class="row"></div>
 
                <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <label for="Examen físico" style="margin-top: 10px">Examen físico</label>
-                  <textarea name="Examen físico" class="form-control"></textarea>
+                  <label for="Examen fisico" style="margin-top: 10px">Examen fisico</label>
+                  <textarea name="Examen fisico" class="form-control"></textarea>
                </div>
 
                <div class="row"></div>
 
                <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <label for="Diagnóstico presuntivo" style="margin-top: 10px">Diagnóstico presuntivo</label>
-                  <textarea name="Diagnóstico presuntivo" class="form-control"></textarea>
+                  <label for="Diagnostico presuntivo" style="margin-top: 10px">Diagnostico presuntivo</label>
+                  <textarea name="Diagnostico presuntivo" class="form-control"></textarea>
                </div>
 
                <div class="row"></div>
 
                <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <label for="Laboratorios, estudios o exámenes solicitados" style="margin-top: 10px">Laboratorios, estudios o exámenes solicitados</label>
-                  <textarea name="Laboratorios, estudios o exámenes solicitados" class="form-control"></textarea>
+                  <label for="Laboratorios, estudios o examenes solicitados" style="margin-top: 10px">Laboratorios, estudios o examenes solicitados</label>
+                  <textarea name="Laboratorios, estudios o examenes solicitados" class="form-control"></textarea>
                </div>
 
                <div class="row"></div>
@@ -283,7 +283,7 @@
                </div>
 
                <div class="col-md-12" style="margin-top: 30px; margin-bottom: 30px; border-top: 0.5px solid silver">
-                  <h4>Firma y sella del médico</h4>
+                  <h4>Firma y sella del medico</h4>
                </div>
 
                <div class="col-md-3">Elaborado:</div>
@@ -292,7 +292,7 @@
                   ________________________________<br>
                   Lic.Alberto Terrazas C.<br>
                   Coordinador Administrativo<br>
-                  Unidades de Servicio - F.C.S.H.
+                  unidades de Servicio - F.C.S.H.
                </div>
 
                <div class="col-md-3">Aprobado:</div>
@@ -301,7 +301,7 @@
                   ________________________________<br>
                   Dr. Reinerio Vargas B.<br>
                   Decano<br>
-                  F.C.S.U. - U.A.G.R.M
+                  F.C.S.u. - u.A.G.R.M
                </div>
 
                <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
@@ -314,6 +314,56 @@
 
 
             <?php if ($_GET['tipo'] == 'neurologia'): ?>
+
+               <div class="row"></div>
+
+               <div class="col-md-4">
+                  <div class="form-group">
+                     <label for="datebirth">Fecha de nacimiento</label>
+                     <input type="date" class="form-control" name="datebirth">
+                  </div>
+               </div>
+
+               <div class="col-md-4">
+                  <div class="form-group">
+                     <label for="procedencia">Procedencia</label>
+                     <input type="text" class="form-control" name="procedencia">
+                  </div>
+               </div>
+
+               <div class="col-md-4">
+                  <div class="form-group">
+                     <label for="civilstate">Estado civil</label>
+                     <select name="civilstate" id="civilstate" class="form-control">
+                        <option value=""></option>
+                        <option value="Soltero">Soltero</option>
+                        <option value="Casado">Casado</option>
+                        <option value="Divorciado">Divorciado</option>
+                        <option value="Viudo">Viudo</option>
+                     </select>
+                  </div>
+               </div>
+
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="address">Dirección</label>
+                     <input type="text" class="form-control" name="address">
+                  </div>
+               </div>
+
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="occupation">Ocupación</label>
+                     <input type="text" class="form-control" name="occupation">
+                  </div>
+               </div>
+
+               <div class="col-md-12">
+                  <div class="form-group">
+                     <label for="diagnostico">Diagnóstico</label>
+                     <textarea name="diagnostico" class="form-control"></textarea>
+                  </div>
+               </div>
 
                <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
 
@@ -337,7 +387,7 @@
             reader.onload = function (event) {
                $('.user_photo').attr('src', event.target.result);
             }
-            reader.readAsDataURL(input.files[0]);
+            reader.readAsDatauRL(input.files[0]);
          }
       });
 
@@ -352,7 +402,18 @@
                id: value
             },
             success: function (response) {
-               $('.user_photo').attr('src', response);
+               response = JSON.parse(response);
+
+               $('.user_photo').attr('src', response.foto);
+
+               $('[name=datebirth]').val(response.datebirth);
+               $('[name=edad]').val(response.edad);
+               $('[name=civilstate]').val(response.civilstate);
+               $('[name=address]').val(response.address);
+               $('[name=occupation]').val(response.occupation);
+            },
+            error: function (error) {
+               $('body').html(error.responseText);
             }
          });
       });

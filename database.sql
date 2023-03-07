@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 02-03-2023 a las 16:55:16
+-- Tiempo de generación: 07-03-2023 a las 15:21:51
 -- Versión del servidor: 5.7.41
 -- Versión de PHP: 7.4.33
 
@@ -758,7 +758,15 @@ INSERT INTO `tblactivity_log` (`id`, `description`, `date`, `staffid`) VALUES
 (225, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 186.121.195.102]', '2023-03-01 19:36:54', 'Admin Admin'),
 (226, 'Non Existing User Tried to Login [Email: admin@admin.com, Is Staff Member: No, IP: 38.25.226.185]', '2023-03-02 11:28:32', NULL),
 (227, 'Failed Login Attempt [Email: admin@admin.com, Is Staff Member: Yes, IP: 38.25.226.185]', '2023-03-02 11:28:48', NULL),
-(228, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 38.25.226.185]', '2023-03-02 11:28:54', 'Admin Admin');
+(228, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 38.25.226.185]', '2023-03-02 11:28:54', 'Admin Admin'),
+(229, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 206.1.224.212]', '2023-03-03 19:22:31', 'Admin Admin'),
+(230, 'Failed Login Attempt [Email: admin@admin.com, Is Staff Member: Yes, IP: 206.1.232.79]', '2023-03-04 15:09:38', NULL),
+(231, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 206.1.232.79]', '2023-03-04 15:09:49', 'Admin Admin'),
+(232, 'Non Existing User Tried to Login [Email: admin@admin.com, Is Staff Member: No, IP: 206.1.217.43]', '2023-03-06 20:48:47', NULL),
+(233, 'Non Existing User Tried to Login [Email: admin@amdin.com, Is Staff Member: No, IP: 206.1.217.43]', '2023-03-06 20:48:53', NULL),
+(234, 'Failed Login Attempt [Email: admin@admin.com, Is Staff Member: Yes, IP: 206.1.217.43]', '2023-03-06 20:49:06', NULL),
+(235, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 206.1.217.43]', '2023-03-06 20:49:11', 'Admin Admin'),
+(236, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 38.25.162.237]', '2023-03-07 12:25:02', 'Admin Admin');
 
 -- --------------------------------------------------------
 
@@ -1244,17 +1252,20 @@ CREATE TABLE `tblclients` (
   `stripe_id` varchar(40) DEFAULT NULL,
   `registration_confirmed` int(11) NOT NULL DEFAULT '1',
   `addedfrom` int(11) NOT NULL DEFAULT '0',
-  `loy_point` decimal(10,0) DEFAULT '0'
+  `loy_point` decimal(10,0) DEFAULT '0',
+  `civilstate` varchar(30) DEFAULT NULL,
+  `datebirth` varchar(30) DEFAULT NULL,
+  `occupation` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tblclients`
 --
 
-INSERT INTO `tblclients` (`userid`, `company`, `is_preffered`, `vat`, `phonenumber`, `country`, `city`, `zip`, `state`, `address`, `website`, `datecreated`, `active`, `leadid`, `billing_street`, `billing_city`, `billing_state`, `billing_zip`, `billing_country`, `shipping_street`, `shipping_city`, `shipping_state`, `shipping_zip`, `shipping_country`, `longitude`, `latitude`, `default_language`, `default_currency`, `show_primary_contact`, `is_supplier`, `stripe_id`, `registration_confirmed`, `addedfrom`, `loy_point`) VALUES
-(1, 'Erick Santos', 0, '', '5569992638182', 0, '', '', '', '', 'M', '2021-12-19 20:32:43', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 1, 0, 0, NULL, 1, 1, '0'),
-(2, 'Carla Patricia Galva', 0, '', '77056957', 0, '', '', '', '', '', '2022-03-08 09:45:48', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 0, 0, 0, NULL, 1, 1, '0'),
-(3, 'Dora Franco', 0, '1234569', '78559424', 27, '', '', '', '', '', '2022-03-29 08:48:17', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 0, 0, 0, NULL, 1, 2, '0');
+INSERT INTO `tblclients` (`userid`, `company`, `is_preffered`, `vat`, `phonenumber`, `country`, `city`, `zip`, `state`, `address`, `website`, `datecreated`, `active`, `leadid`, `billing_street`, `billing_city`, `billing_state`, `billing_zip`, `billing_country`, `shipping_street`, `shipping_city`, `shipping_state`, `shipping_zip`, `shipping_country`, `longitude`, `latitude`, `default_language`, `default_currency`, `show_primary_contact`, `is_supplier`, `stripe_id`, `registration_confirmed`, `addedfrom`, `loy_point`, `civilstate`, `datebirth`, `occupation`) VALUES
+(1, 'Erick Santos', 0, '', '5569992638182', 0, '', '', '', '', 'M', '2021-12-19 20:32:43', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 1, 0, 0, NULL, 1, 1, '0', NULL, NULL, NULL),
+(2, 'Carla Patricia Galva', 0, '', '77056957', 0, '', '', '', '', '', '2022-03-08 09:45:48', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 0, 0, 0, NULL, 1, 1, '0', NULL, NULL, NULL),
+(3, 'Dora Franco', 0, '1234569', '78559424', 27, '', '', '', '', '', '2022-03-29 08:48:17', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 0, 0, 0, NULL, 1, 2, '0', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1309,6 +1320,13 @@ CREATE TABLE `tblconsultas` (
   `estado` varchar(256) DEFAULT NULL,
   `tipo` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tblconsultas`
+--
+
+INSERT INTO `tblconsultas` (`id`, `id_client`, `id_staff`, `fecha`, `anamnesis`, `comentarios`, `monto`, `fotos`, `edad`, `foto_perfil`, `estado`, `tipo`) VALUES
+(22, 1, 1, '2023-03-06 22:25:58', '{\"obesidad\":\"Si\",\"hta\":\"Si\",\"diabetes\":\"Si\",\"iam\":\"Si\",\"acv\":\"Si\",\"cancer\":\"Si\",\"Alguno de sus hijos peso mas de 4kg al nacer?\":\"No\",\"Ha tenido algun aborto, muerte, fetal, neonatal?\":\"Si\",\"hta_personal\":\"Si\",\"obesidad_personal\":\"Si\",\"diabetes_personal\":\"Si\",\"fuma\":\"Si\",\"fuma_frecuencia\":\" dasd\",\"bebidas alcoholicas\":\"Si\",\"bebidas_frecuencia\":\" asd\",\"Fondo de ojo anual\":\"Si\",\"ECG anual\":\"Si\",\"Educaciu00f3n en diabetes\":\"Si\",\"Antecedentes quirurgicos\":\"dasd\",\"motivo\":\"hkjh\",\"pa\":\"jhk\",\"pulso\":\"jhkj\",\"peso\":\"jl\",\"talla\":\"jlk\",\"imc\":\"jl\",\"pcintura\":\"k\",\"Historial de enfermedad actual\":\"lkl\",\"Examen fisico\":\"jlk\",\"Diagnostico presuntivo\":\"jk\",\"Laboratorios, estudios o examenes solicitados\":\"jk\",\"Tratamiento\":\"jk\",\"aclaraciones\":\"jl\"}', NULL, '123', '\"\"', '12', '', NULL, 'diabetes');
 
 -- --------------------------------------------------------
 
@@ -20857,21 +20875,15 @@ CREATE TABLE `tblsessions` (
 --
 
 INSERT INTO `tblsessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('105146691f1757846a05921a0ec778fbb6e6ca08', '38.25.226.185', 1677781754, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373738313735343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('26fe839a2dfbb9daa3941783862c9a457d4440d2', '38.25.226.185', 1677771737, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737313733373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('31726811d0a63abeb7542e986d3041410055873b', '38.25.226.185', 1677782819, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373738323831393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('7cd7030a368bf044e6199fb4d2ca14526bbf7119', '38.25.226.185', 1677774357, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737343335373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c623a313b),
-('7f1108ab3790758437881de817c1802e9da9dc29', '38.25.226.185', 1677772667, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737323636373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('896373be9fa4d3acdcddd74c3a31680f7d7815ee', '34.229.216.5', 1677774373, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737343337323b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
-('8f641f3df8fbc990196dffa8b45357042235a95c', '38.25.226.185', 1677786672, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373738363637303b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
-('9f45a35b38d0b1a6915cebf4062c3073e91f1896', '38.25.226.185', 1677778562, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737383536323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('a01bae9dde112e1a9db43735c69aa88bad21041d', '38.25.226.185', 1677778964, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737383936343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('b1791982ff2a679f9635305871154e5a63f1cc51', '38.25.226.185', 1677772972, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737323937323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('ba3c6337d420e01a2ddb4f8df5c83ae1a54bf911', '38.25.226.185', 1677772039, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737323033393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('be98452d2350ac0694bca09397ec3d7bed228e08', '38.25.226.185', 1677771273, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737313237333b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('d2af3c285bd6284257cc5641b98eba1db2add74f', '38.25.226.185', 1677786682, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373738363637303b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
-('dacb363e03e927ecc362d6b46e1e12e8832b0228', '38.25.226.185', 1677772340, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737323334303b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('fbd8ec21c949d94b27457de34b4a35b5d7e16d2d', '38.25.226.185', 1677776885, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637373737363838353b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b);
+('11e95d706f15ee2cb53270703b366a9760ab0186', '167.94.138.118', 1678185028, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383138353032383b),
+('14b7700cc3d065bcee468361f2a974b3ecd7fc4d', '38.25.162.237', 1678207562, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230373536323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('37f986fee44bd2a77f06e4135c66d6a80d7517dd', '38.25.162.237', 1678206602, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230363630323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('435e7280ffa052752bb6c04b79b43d0c232fdd6b', '167.94.138.118', 1678185028, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383138353032383b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
+('ba9315f6172f98107259ce69cf0f66aec92cd4b1', '38.25.162.237', 1678207226, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230373232363b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('bf3d99b3055bdd87e736fb257ad5b9bee6333180', '167.248.133.191', 1678191730, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383139313732393b),
+('cb4663a8f8f065859807097a6a5ce8e04b2ed0ca', '38.25.162.237', 1678206909, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230363930393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('d1502bdd92db9ed31181d41df7f428c3c460ea33', '167.248.133.191', 1678191729, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383139313732363b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
+('e180af2202560a307ec3197cc3434f32bf36dacd', '38.25.162.237', 1678207840, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230373536323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b);
 
 -- --------------------------------------------------------
 
@@ -21036,7 +21048,7 @@ CREATE TABLE `tblstaff` (
 
 INSERT INTO `tblstaff` (`staffid`, `email`, `firstname`, `lastname`, `facebook`, `linkedin`, `phonenumber`, `skype`, `password`, `datecreated`, `profile_image`, `last_ip`, `last_login`, `last_activity`, `last_password_change`, `new_pass_key`, `new_pass_key_requested`, `admin`, `role`, `active`, `default_language`, `direction`, `media_path_slug`, `is_not_staff`, `hourly_rate`, `two_factor_auth_enabled`, `two_factor_auth_code`, `two_factor_auth_code_requested`, `email_signature`, `birthday`, `birthplace`, `sex`, `marital_status`, `nation`, `religion`, `identification`, `days_for_identity`, `home_town`, `resident`, `current_address`, `literacy`, `orther_infor`, `job_position`, `workplace`, `place_of_issue`, `account_number`, `name_account`, `issue_bank`, `records_received`, `Personal_tax_code`, `google_auth_secret`, `team_manage`, `staff_identifi`, `status_work`, `date_update`) VALUES
 (1, 'CONTACTO@CRIATIVEDIGITAL.COM', 'Dr. Erick', 'Santos', '', '', '', '', '$2a$08$hlT5cDSiLHr5FOyWCCyDeecAcHBclJ29CvfFHudodKSM9bADa1eS.', '2021-12-16 03:23:51', 'FAv2.png', '190.129.40.105', '2022-05-04 10:52:48', '2022-05-04 11:24:49', NULL, NULL, NULL, 1, 0, 1, 'spanish', '', NULL, 0, '0.00', 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
-(2, 'admin@admin.com', 'Admin', 'Admin', '', '', '', '', '$2a$08$Lk0jYNH8NkwF1BYAuIFSn.j7eGEYuJFPtuZbxT1cMWwWQZjqLaPyG', '2021-12-16 14:27:13', 'SITE - SOBRE MIM - MISSÃO (780X780).png', '38.25.226.185', '2023-03-02 11:28:54', '2023-03-02 15:51:21', '2022-02-10 11:39:44', NULL, NULL, 0, 1, 1, 'spanish', '', 'admin-admin', 0, '0.00', 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL);
+(2, 'admin@admin.com', 'Admin', 'Admin', '', '', '', '', '$2a$08$Lk0jYNH8NkwF1BYAuIFSn.j7eGEYuJFPtuZbxT1cMWwWQZjqLaPyG', '2021-12-16 14:27:13', 'SITE - SOBRE MIM - MISSÃO (780X780).png', '38.25.162.237', '2023-03-07 12:25:02', '2023-03-07 12:50:40', '2022-02-10 11:39:44', NULL, NULL, 0, 1, 1, 'spanish', '', 'admin-admin', 0, '0.00', 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -21676,7 +21688,8 @@ CREATE TABLE `tbluser_auto_login` (
 INSERT INTO `tbluser_auto_login` (`key_id`, `user_id`, `user_agent`, `last_ip`, `last_login`, `staff`) VALUES
 ('cf60f2125fdadab31bb93f97a4f7b5bf', 2, 'Mozilla/5.0 (Linux; Android 10; Redmi Note 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36', '152.249.109.204', '2021-12-16 18:38:59', 1),
 ('274eb97706f1fa62b370be5b1aa183e9', 2, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36', '177.128.104.169', '2022-01-05 22:18:28', 1),
-('0f95d23ab3ad6620a93be457c5f4c4d9', 2, 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Mobile/15E148 Safari/604.1', '200.87.152.80', '2022-08-11 12:51:07', 1);
+('0f95d23ab3ad6620a93be457c5f4c4d9', 2, 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Mobile/15E148 Safari/604.1', '200.87.152.80', '2022-08-11 12:51:07', 1),
+('46167152ec65e73bdfe7c5443cd89de1', 2, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', '38.25.162.237', '2023-03-07 16:25:02', 1);
 
 -- --------------------------------------------------------
 
@@ -23750,7 +23763,7 @@ ALTER TABLE `tblacc_transfers`
 -- AUTO_INCREMENT de la tabla `tblactivity_log`
 --
 ALTER TABLE `tblactivity_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=229;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
 
 --
 -- AUTO_INCREMENT de la tabla `tblannouncements`
@@ -23918,7 +23931,7 @@ ALTER TABLE `tblconsent_purposes`
 -- AUTO_INCREMENT de la tabla `tblconsultas`
 --
 ALTER TABLE `tblconsultas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `tblcontacts`
