@@ -2,10 +2,10 @@
 -- version 4.9.11
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 07-03-2023 a las 15:21:51
--- Versión del servidor: 5.7.41
--- Versión de PHP: 7.4.33
+-- Host: localhost:3306
+-- Generation Time: Mar 08, 2023 at 10:21 AM
+-- Server version: 5.7.41-cll-lve
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -13,13 +13,13 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 --
--- Base de datos: `i9finance_cenedi`
+-- Database: `nisadelg_cenedi`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblaccount_planning`
+-- Table structure for table `tblaccount_planning`
 --
 
 CREATE TABLE `tblaccount_planning` (
@@ -54,7 +54,7 @@ CREATE TABLE `tblaccount_planning` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblaccount_planning_current_service`
+-- Table structure for table `tblaccount_planning_current_service`
 --
 
 CREATE TABLE `tblaccount_planning_current_service` (
@@ -67,7 +67,7 @@ CREATE TABLE `tblaccount_planning_current_service` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblaccount_planning_financial`
+-- Table structure for table `tblaccount_planning_financial`
 --
 
 CREATE TABLE `tblaccount_planning_financial` (
@@ -83,7 +83,7 @@ CREATE TABLE `tblaccount_planning_financial` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblaccount_planning_items`
+-- Table structure for table `tblaccount_planning_items`
 --
 
 CREATE TABLE `tblaccount_planning_items` (
@@ -97,7 +97,7 @@ CREATE TABLE `tblaccount_planning_items` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblaccount_planning_marketing_activities`
+-- Table structure for table `tblaccount_planning_marketing_activities`
 --
 
 CREATE TABLE `tblaccount_planning_marketing_activities` (
@@ -110,7 +110,7 @@ CREATE TABLE `tblaccount_planning_marketing_activities` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblaccount_planning_objective`
+-- Table structure for table `tblaccount_planning_objective`
 --
 
 CREATE TABLE `tblaccount_planning_objective` (
@@ -123,7 +123,7 @@ CREATE TABLE `tblaccount_planning_objective` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblaccount_planning_service_ability_offering`
+-- Table structure for table `tblaccount_planning_service_ability_offering`
 --
 
 CREATE TABLE `tblaccount_planning_service_ability_offering` (
@@ -139,7 +139,7 @@ CREATE TABLE `tblaccount_planning_service_ability_offering` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblaccount_planning_task`
+-- Table structure for table `tblaccount_planning_task`
 --
 
 CREATE TABLE `tblaccount_planning_task` (
@@ -159,7 +159,7 @@ CREATE TABLE `tblaccount_planning_task` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblaccount_planning_team`
+-- Table structure for table `tblaccount_planning_team`
 --
 
 CREATE TABLE `tblaccount_planning_team` (
@@ -172,7 +172,7 @@ CREATE TABLE `tblaccount_planning_team` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_accounts`
+-- Table structure for table `tblacc_accounts`
 --
 
 CREATE TABLE `tblacc_accounts` (
@@ -191,7 +191,7 @@ CREATE TABLE `tblacc_accounts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblacc_accounts`
+-- Dumping data for table `tblacc_accounts`
 --
 
 INSERT INTO `tblacc_accounts` (`id`, `name`, `key_name`, `number`, `parent_account`, `account_type_id`, `account_detail_type_id`, `balance`, `balance_as_of`, `description`, `default_account`, `active`) VALUES
@@ -286,7 +286,7 @@ INSERT INTO `tblacc_accounts` (`id`, `name`, `key_name`, `number`, `parent_accou
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_account_history`
+-- Table structure for table `tblacc_account_history`
 --
 
 CREATE TABLE `tblacc_account_history` (
@@ -309,7 +309,7 @@ CREATE TABLE `tblacc_account_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblacc_account_history`
+-- Dumping data for table `tblacc_account_history`
 --
 
 INSERT INTO `tblacc_account_history` (`id`, `account`, `debit`, `credit`, `description`, `rel_id`, `rel_type`, `datecreated`, `addedfrom`, `customer`, `reconcile`, `split`, `item`, `paid`, `date`, `tax`) VALUES
@@ -381,7 +381,7 @@ INSERT INTO `tblacc_account_history` (`id`, `account`, `debit`, `credit`, `descr
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_account_type_details`
+-- Table structure for table `tblacc_account_type_details`
 --
 
 CREATE TABLE `tblacc_account_type_details` (
@@ -395,7 +395,7 @@ CREATE TABLE `tblacc_account_type_details` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_banking_rules`
+-- Table structure for table `tblacc_banking_rules`
 --
 
 CREATE TABLE `tblacc_banking_rules` (
@@ -412,7 +412,7 @@ CREATE TABLE `tblacc_banking_rules` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_banking_rule_details`
+-- Table structure for table `tblacc_banking_rule_details`
 --
 
 CREATE TABLE `tblacc_banking_rule_details` (
@@ -427,7 +427,7 @@ CREATE TABLE `tblacc_banking_rule_details` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_expense_category_mappings`
+-- Table structure for table `tblacc_expense_category_mappings`
 --
 
 CREATE TABLE `tblacc_expense_category_mappings` (
@@ -441,7 +441,7 @@ CREATE TABLE `tblacc_expense_category_mappings` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_item_automatics`
+-- Table structure for table `tblacc_item_automatics`
 --
 
 CREATE TABLE `tblacc_item_automatics` (
@@ -455,7 +455,7 @@ CREATE TABLE `tblacc_item_automatics` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_journal_entries`
+-- Table structure for table `tblacc_journal_entries`
 --
 
 CREATE TABLE `tblacc_journal_entries` (
@@ -471,7 +471,7 @@ CREATE TABLE `tblacc_journal_entries` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_payment_mode_mappings`
+-- Table structure for table `tblacc_payment_mode_mappings`
 --
 
 CREATE TABLE `tblacc_payment_mode_mappings` (
@@ -486,7 +486,7 @@ CREATE TABLE `tblacc_payment_mode_mappings` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_reconciles`
+-- Table structure for table `tblacc_reconciles`
 --
 
 CREATE TABLE `tblacc_reconciles` (
@@ -507,7 +507,7 @@ CREATE TABLE `tblacc_reconciles` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_tax_mappings`
+-- Table structure for table `tblacc_tax_mappings`
 --
 
 CREATE TABLE `tblacc_tax_mappings` (
@@ -522,7 +522,7 @@ CREATE TABLE `tblacc_tax_mappings` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_transaction_bankings`
+-- Table structure for table `tblacc_transaction_bankings`
 --
 
 CREATE TABLE `tblacc_transaction_bankings` (
@@ -539,7 +539,7 @@ CREATE TABLE `tblacc_transaction_bankings` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblacc_transfers`
+-- Table structure for table `tblacc_transfers`
 --
 
 CREATE TABLE `tblacc_transfers` (
@@ -556,7 +556,7 @@ CREATE TABLE `tblacc_transfers` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblactivity_log`
+-- Table structure for table `tblactivity_log`
 --
 
 CREATE TABLE `tblactivity_log` (
@@ -567,7 +567,7 @@ CREATE TABLE `tblactivity_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblactivity_log`
+-- Dumping data for table `tblactivity_log`
 --
 
 INSERT INTO `tblactivity_log` (`id`, `description`, `date`, `staffid`) VALUES
@@ -766,12 +766,20 @@ INSERT INTO `tblactivity_log` (`id`, `description`, `date`, `staffid`) VALUES
 (233, 'Non Existing User Tried to Login [Email: admin@amdin.com, Is Staff Member: No, IP: 206.1.217.43]', '2023-03-06 20:48:53', NULL),
 (234, 'Failed Login Attempt [Email: admin@admin.com, Is Staff Member: Yes, IP: 206.1.217.43]', '2023-03-06 20:49:06', NULL),
 (235, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 206.1.217.43]', '2023-03-06 20:49:11', 'Admin Admin'),
-(236, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 38.25.162.237]', '2023-03-07 12:25:02', 'Admin Admin');
+(236, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 38.25.162.237]', '2023-03-07 12:25:02', 'Admin Admin'),
+(237, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 38.25.162.237]', '2023-03-07 14:26:52', 'Admin Admin'),
+(238, 'New Client Created [ID: 4, From Staff: 2]', '2023-03-07 14:27:07', 'Admin Admin'),
+(239, 'Client Deleted [ID: 4]', '2023-03-07 14:27:24', 'Admin Admin'),
+(240, 'New Client Created [ID: 5, From Staff: 2]', '2023-03-07 14:27:44', 'Admin Admin'),
+(241, 'Client Deleted [ID: 5]', '2023-03-07 14:57:00', 'Admin Admin'),
+(242, 'New Client Created [ID: 6, From Staff: 2]', '2023-03-07 14:59:53', 'Admin Admin'),
+(243, 'Failed Login Attempt [Email: admin@admin.com, Is Staff Member: Yes, IP: 206.1.245.214]', '2023-03-07 19:53:42', NULL),
+(244, 'User Successfully Logged In [User Id: 2, Is Staff Member: Yes, IP: 206.1.245.214]', '2023-03-07 19:53:49', 'Admin Admin');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblannouncements`
+-- Table structure for table `tblannouncements`
 --
 
 CREATE TABLE `tblannouncements` (
@@ -788,7 +796,7 @@ CREATE TABLE `tblannouncements` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblappointly_appointments`
+-- Table structure for table `tblappointly_appointments`
 --
 
 CREATE TABLE `tblappointly_appointments` (
@@ -835,7 +843,7 @@ CREATE TABLE `tblappointly_appointments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblappointly_appointments`
+-- Dumping data for table `tblappointly_appointments`
 --
 
 INSERT INTO `tblappointly_appointments` (`id`, `google_event_id`, `google_calendar_link`, `google_added_by_id`, `subject`, `description`, `email`, `name`, `phone`, `address`, `notes`, `contact_id`, `by_sms`, `by_email`, `hash`, `notification_date`, `external_notification_date`, `date`, `start_hour`, `approved`, `created_by`, `reminder_before`, `reminder_before_type`, `finished`, `cancelled`, `cancel_notes`, `source`, `type_id`, `feedback`, `feedback_comment`, `outlook_event_id`, `outlook_calendar_link`, `outlook_added_by_id`, `recurring`, `recurring_type`, `repeat_every`, `custom_recurring`, `cycles`, `total_cycles`, `last_recurring_date`) VALUES
@@ -845,7 +853,7 @@ INSERT INTO `tblappointly_appointments` (`id`, `google_event_id`, `google_calend
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblappointly_appointment_types`
+-- Table structure for table `tblappointly_appointment_types`
 --
 
 CREATE TABLE `tblappointly_appointment_types` (
@@ -855,7 +863,7 @@ CREATE TABLE `tblappointly_appointment_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblappointly_appointment_types`
+-- Dumping data for table `tblappointly_appointment_types`
 --
 
 INSERT INTO `tblappointly_appointment_types` (`id`, `type`, `color`) VALUES
@@ -864,7 +872,7 @@ INSERT INTO `tblappointly_appointment_types` (`id`, `type`, `color`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblappointly_attendees`
+-- Table structure for table `tblappointly_attendees`
 --
 
 CREATE TABLE `tblappointly_attendees` (
@@ -873,7 +881,7 @@ CREATE TABLE `tblappointly_attendees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblappointly_attendees`
+-- Dumping data for table `tblappointly_attendees`
 --
 
 INSERT INTO `tblappointly_attendees` (`staff_id`, `appointment_id`) VALUES
@@ -883,7 +891,7 @@ INSERT INTO `tblappointly_attendees` (`staff_id`, `appointment_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblappointly_callbacks`
+-- Table structure for table `tblappointly_callbacks`
 --
 
 CREATE TABLE `tblappointly_callbacks` (
@@ -902,7 +910,7 @@ CREATE TABLE `tblappointly_callbacks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblappointly_callbacks`
+-- Dumping data for table `tblappointly_callbacks`
 --
 
 INSERT INTO `tblappointly_callbacks` (`id`, `call_type`, `phone_number`, `timezone`, `firstname`, `lastname`, `status`, `message`, `email`, `date_start`, `date_end`, `date_added`) VALUES
@@ -912,7 +920,7 @@ INSERT INTO `tblappointly_callbacks` (`id`, `call_type`, `phone_number`, `timezo
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblappointly_callbacks_assignees`
+-- Table structure for table `tblappointly_callbacks_assignees`
 --
 
 CREATE TABLE `tblappointly_callbacks_assignees` (
@@ -922,7 +930,7 @@ CREATE TABLE `tblappointly_callbacks_assignees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblappointly_callbacks_assignees`
+-- Dumping data for table `tblappointly_callbacks_assignees`
 --
 
 INSERT INTO `tblappointly_callbacks_assignees` (`id`, `callbackid`, `user_id`) VALUES
@@ -931,7 +939,7 @@ INSERT INTO `tblappointly_callbacks_assignees` (`id`, `callbackid`, `user_id`) V
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblappointly_google`
+-- Table structure for table `tblappointly_google`
 --
 
 CREATE TABLE `tblappointly_google` (
@@ -945,7 +953,7 @@ CREATE TABLE `tblappointly_google` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblbonus_discipline`
+-- Table structure for table `tblbonus_discipline`
 --
 
 CREATE TABLE `tblbonus_discipline` (
@@ -966,7 +974,7 @@ CREATE TABLE `tblbonus_discipline` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblbonus_discipline_detail`
+-- Table structure for table `tblbonus_discipline_detail`
 --
 
 CREATE TABLE `tblbonus_discipline_detail` (
@@ -984,7 +992,7 @@ CREATE TABLE `tblbonus_discipline_detail` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcd_care`
+-- Table structure for table `tblcd_care`
 --
 
 CREATE TABLE `tblcd_care` (
@@ -1001,7 +1009,7 @@ CREATE TABLE `tblcd_care` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcd_family_infor`
+-- Table structure for table `tblcd_family_infor`
 --
 
 CREATE TABLE `tblcd_family_infor` (
@@ -1018,7 +1026,7 @@ CREATE TABLE `tblcd_family_infor` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcd_interview`
+-- Table structure for table `tblcd_interview`
 --
 
 CREATE TABLE `tblcd_interview` (
@@ -1030,7 +1038,7 @@ CREATE TABLE `tblcd_interview` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcd_literacy`
+-- Table structure for table `tblcd_literacy`
 --
 
 CREATE TABLE `tblcd_literacy` (
@@ -1047,7 +1055,7 @@ CREATE TABLE `tblcd_literacy` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcd_skill`
+-- Table structure for table `tblcd_skill`
 --
 
 CREATE TABLE `tblcd_skill` (
@@ -1060,7 +1068,7 @@ CREATE TABLE `tblcd_skill` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcd_work_experience`
+-- Table structure for table `tblcd_work_experience`
 --
 
 CREATE TABLE `tblcd_work_experience` (
@@ -1079,7 +1087,7 @@ CREATE TABLE `tblcd_work_experience` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchatclientmessages`
+-- Table structure for table `tblchatclientmessages`
 --
 
 CREATE TABLE `tblchatclientmessages` (
@@ -1095,7 +1103,7 @@ CREATE TABLE `tblchatclientmessages` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchatgroupmembers`
+-- Table structure for table `tblchatgroupmembers`
 --
 
 CREATE TABLE `tblchatgroupmembers` (
@@ -1108,7 +1116,7 @@ CREATE TABLE `tblchatgroupmembers` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchatgroupmessages`
+-- Table structure for table `tblchatgroupmessages`
 --
 
 CREATE TABLE `tblchatgroupmessages` (
@@ -1122,7 +1130,7 @@ CREATE TABLE `tblchatgroupmessages` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchatgroups`
+-- Table structure for table `tblchatgroups`
 --
 
 CREATE TABLE `tblchatgroups` (
@@ -1134,7 +1142,7 @@ CREATE TABLE `tblchatgroups` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchatgroupsharedfiles`
+-- Table structure for table `tblchatgroupsharedfiles`
 --
 
 CREATE TABLE `tblchatgroupsharedfiles` (
@@ -1147,7 +1155,7 @@ CREATE TABLE `tblchatgroupsharedfiles` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchatmessages`
+-- Table structure for table `tblchatmessages`
 --
 
 CREATE TABLE `tblchatmessages` (
@@ -1163,7 +1171,7 @@ CREATE TABLE `tblchatmessages` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchatsettings`
+-- Table structure for table `tblchatsettings`
 --
 
 CREATE TABLE `tblchatsettings` (
@@ -1176,7 +1184,7 @@ CREATE TABLE `tblchatsettings` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchatsharedfiles`
+-- Table structure for table `tblchatsharedfiles`
 --
 
 CREATE TABLE `tblchatsharedfiles` (
@@ -1189,7 +1197,7 @@ CREATE TABLE `tblchatsharedfiles` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchecklist`
+-- Table structure for table `tblchecklist`
 --
 
 CREATE TABLE `tblchecklist` (
@@ -1201,7 +1209,7 @@ CREATE TABLE `tblchecklist` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblchecklist_allocation`
+-- Table structure for table `tblchecklist_allocation`
 --
 
 CREATE TABLE `tblchecklist_allocation` (
@@ -1215,7 +1223,7 @@ CREATE TABLE `tblchecklist_allocation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblclients`
+-- Table structure for table `tblclients`
 --
 
 CREATE TABLE `tblclients` (
@@ -1259,18 +1267,19 @@ CREATE TABLE `tblclients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblclients`
+-- Dumping data for table `tblclients`
 --
 
 INSERT INTO `tblclients` (`userid`, `company`, `is_preffered`, `vat`, `phonenumber`, `country`, `city`, `zip`, `state`, `address`, `website`, `datecreated`, `active`, `leadid`, `billing_street`, `billing_city`, `billing_state`, `billing_zip`, `billing_country`, `shipping_street`, `shipping_city`, `shipping_state`, `shipping_zip`, `shipping_country`, `longitude`, `latitude`, `default_language`, `default_currency`, `show_primary_contact`, `is_supplier`, `stripe_id`, `registration_confirmed`, `addedfrom`, `loy_point`, `civilstate`, `datebirth`, `occupation`) VALUES
 (1, 'Erick Santos', 0, '', '5569992638182', 0, '', '', '', '', 'M', '2021-12-19 20:32:43', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 1, 0, 0, NULL, 1, 1, '0', NULL, NULL, NULL),
-(2, 'Carla Patricia Galva', 0, '', '77056957', 0, '', '', '', '', '', '2022-03-08 09:45:48', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 0, 0, 0, NULL, 1, 1, '0', NULL, NULL, NULL),
-(3, 'Dora Franco', 0, '1234569', '78559424', 27, '', '', '', '', '', '2022-03-29 08:48:17', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 0, 0, 0, NULL, 1, 2, '0', NULL, NULL, NULL);
+(2, 'Carla Patricia Galva', 0, '', '77056957', 0, '', '', '', 'Barrio Nueva Via', '', '2022-03-08 09:45:48', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 0, 0, 0, NULL, 1, 1, '0', NULL, NULL, NULL),
+(3, 'Dora Franco', 0, '1234569', '78559424', 27, '', '', '', '', '', '2022-03-29 08:48:17', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 0, 0, 0, NULL, 1, 2, '0', NULL, NULL, NULL),
+(6, 'Nisa Delgado', 0, '', '', 27, '', '', '', '', '', '2023-03-07 14:59:53', 1, NULL, '', '', '', '', 0, '', '', '', '', 0, NULL, NULL, '', 0, 0, 0, NULL, 1, 2, '0', 'Soltero', '01/10/1993', 'Desarrollador web');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblconsents`
+-- Table structure for table `tblconsents`
 --
 
 CREATE TABLE `tblconsents` (
@@ -1289,7 +1298,7 @@ CREATE TABLE `tblconsents` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblconsent_purposes`
+-- Table structure for table `tblconsent_purposes`
 --
 
 CREATE TABLE `tblconsent_purposes` (
@@ -1303,7 +1312,7 @@ CREATE TABLE `tblconsent_purposes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblconsultas`
+-- Table structure for table `tblconsultas`
 --
 
 CREATE TABLE `tblconsultas` (
@@ -1322,16 +1331,17 @@ CREATE TABLE `tblconsultas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `tblconsultas`
+-- Dumping data for table `tblconsultas`
 --
 
 INSERT INTO `tblconsultas` (`id`, `id_client`, `id_staff`, `fecha`, `anamnesis`, `comentarios`, `monto`, `fotos`, `edad`, `foto_perfil`, `estado`, `tipo`) VALUES
-(22, 1, 1, '2023-03-06 22:25:58', '{\"obesidad\":\"Si\",\"hta\":\"Si\",\"diabetes\":\"Si\",\"iam\":\"Si\",\"acv\":\"Si\",\"cancer\":\"Si\",\"Alguno de sus hijos peso mas de 4kg al nacer?\":\"No\",\"Ha tenido algun aborto, muerte, fetal, neonatal?\":\"Si\",\"hta_personal\":\"Si\",\"obesidad_personal\":\"Si\",\"diabetes_personal\":\"Si\",\"fuma\":\"Si\",\"fuma_frecuencia\":\" dasd\",\"bebidas alcoholicas\":\"Si\",\"bebidas_frecuencia\":\" asd\",\"Fondo de ojo anual\":\"Si\",\"ECG anual\":\"Si\",\"Educaciu00f3n en diabetes\":\"Si\",\"Antecedentes quirurgicos\":\"dasd\",\"motivo\":\"hkjh\",\"pa\":\"jhk\",\"pulso\":\"jhkj\",\"peso\":\"jl\",\"talla\":\"jlk\",\"imc\":\"jl\",\"pcintura\":\"k\",\"Historial de enfermedad actual\":\"lkl\",\"Examen fisico\":\"jlk\",\"Diagnostico presuntivo\":\"jk\",\"Laboratorios, estudios o examenes solicitados\":\"jk\",\"Tratamiento\":\"jk\",\"aclaraciones\":\"jl\"}', NULL, '123', '\"\"', '12', '', NULL, 'diabetes');
+(22, 1, 1, '2023-03-06 22:25:58', '{\"obesidad\":\"Si\",\"hta\":\"Si\",\"diabetes\":\"Si\",\"iam\":\"Si\",\"acv\":\"Si\",\"cancer\":\"Si\",\"Alguno de sus hijos peso mas de 4kg al nacer?\":\"No\",\"Ha tenido algun aborto, muerte, fetal, neonatal?\":\"Si\",\"hta_personal\":\"Si\",\"obesidad_personal\":\"Si\",\"diabetes_personal\":\"Si\",\"fuma\":\"Si\",\"fuma_frecuencia\":\" dasd\",\"bebidas alcoholicas\":\"Si\",\"bebidas_frecuencia\":\" asd\",\"Fondo de ojo anual\":\"Si\",\"ECG anual\":\"Si\",\"Educaciu00f3n en diabetes\":\"Si\",\"Antecedentes quirurgicos\":\"dasd\",\"motivo\":\"hkjh\",\"pa\":\"jhk\",\"pulso\":\"jhkj\",\"peso\":\"jl\",\"talla\":\"jlk\",\"imc\":\"jl\",\"pcintura\":\"k\",\"Historial de enfermedad actual\":\"lkl\",\"Examen fisico\":\"jlk\",\"Diagnostico presuntivo\":\"jk\",\"Laboratorios, estudios o examenes solicitados\":\"jk\",\"Tratamiento\":\"jk\",\"aclaraciones\":\"jl\"}', NULL, '123', '\"\"', '12', '', NULL, 'diabetes'),
+(24, 6, 1, '2023-03-07 19:59:09', '{\"procedencia\":\"Consulta 1\",\"diagnostico\":\"Diagnostico de prueba\"}', NULL, '100', '', '29', '', NULL, 'neurologia');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcontacts`
+-- Table structure for table `tblcontacts`
 --
 
 CREATE TABLE `tblcontacts` (
@@ -1366,7 +1376,7 @@ CREATE TABLE `tblcontacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblcontacts`
+-- Dumping data for table `tblcontacts`
 --
 
 INSERT INTO `tblcontacts` (`id`, `userid`, `is_primary`, `firstname`, `lastname`, `email`, `phonenumber`, `title`, `datecreated`, `password`, `new_pass_key`, `new_pass_key_requested`, `email_verified_at`, `email_verification_key`, `email_verification_sent_at`, `last_ip`, `last_login`, `last_password_change`, `active`, `profile_image`, `direction`, `invoice_emails`, `estimate_emails`, `credit_note_emails`, `contract_emails`, `task_emails`, `project_emails`, `ticket_emails`) VALUES
@@ -1376,7 +1386,7 @@ INSERT INTO `tblcontacts` (`id`, `userid`, `is_primary`, `firstname`, `lastname`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcontact_permissions`
+-- Table structure for table `tblcontact_permissions`
 --
 
 CREATE TABLE `tblcontact_permissions` (
@@ -1386,7 +1396,7 @@ CREATE TABLE `tblcontact_permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblcontact_permissions`
+-- Dumping data for table `tblcontact_permissions`
 --
 
 INSERT INTO `tblcontact_permissions` (`id`, `permission_id`, `userid`) VALUES
@@ -1406,7 +1416,7 @@ INSERT INTO `tblcontact_permissions` (`id`, `permission_id`, `userid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcontracts`
+-- Table structure for table `tblcontracts`
 --
 
 CREATE TABLE `tblcontracts` (
@@ -1438,7 +1448,7 @@ CREATE TABLE `tblcontracts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblcontracts`
+-- Dumping data for table `tblcontracts`
 --
 
 INSERT INTO `tblcontracts` (`id`, `content`, `description`, `subject`, `client`, `datestart`, `dateend`, `contract_type`, `project_id`, `addedfrom`, `dateadded`, `isexpirynotified`, `contract_value`, `trash`, `not_visible_to_client`, `hash`, `signed`, `signature`, `marked_as_signed`, `acceptance_firstname`, `acceptance_lastname`, `acceptance_email`, `acceptance_date`, `acceptance_ip`, `short_link`) VALUES
@@ -1448,7 +1458,7 @@ INSERT INTO `tblcontracts` (`id`, `content`, `description`, `subject`, `client`,
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcontracts_types`
+-- Table structure for table `tblcontracts_types`
 --
 
 CREATE TABLE `tblcontracts_types` (
@@ -1457,7 +1467,7 @@ CREATE TABLE `tblcontracts_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblcontracts_types`
+-- Dumping data for table `tblcontracts_types`
 --
 
 INSERT INTO `tblcontracts_types` (`id`, `name`) VALUES
@@ -1466,7 +1476,7 @@ INSERT INTO `tblcontracts_types` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcontract_comments`
+-- Table structure for table `tblcontract_comments`
 --
 
 CREATE TABLE `tblcontract_comments` (
@@ -1480,7 +1490,7 @@ CREATE TABLE `tblcontract_comments` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcontract_renewals`
+-- Table structure for table `tblcontract_renewals`
 --
 
 CREATE TABLE `tblcontract_renewals` (
@@ -1501,7 +1511,7 @@ CREATE TABLE `tblcontract_renewals` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcountries`
+-- Table structure for table `tblcountries`
 --
 
 CREATE TABLE `tblcountries` (
@@ -1517,7 +1527,7 @@ CREATE TABLE `tblcountries` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblcountries`
+-- Dumping data for table `tblcountries`
 --
 
 INSERT INTO `tblcountries` (`country_id`, `iso2`, `short_name`, `long_name`, `iso3`, `numcode`, `un_member`, `calling_code`, `cctld`) VALUES
@@ -1775,7 +1785,7 @@ INSERT INTO `tblcountries` (`country_id`, `iso2`, `short_name`, `long_name`, `is
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcreditnotes`
+-- Table structure for table `tblcreditnotes`
 --
 
 CREATE TABLE `tblcreditnotes` (
@@ -1820,7 +1830,7 @@ CREATE TABLE `tblcreditnotes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcreditnote_refunds`
+-- Table structure for table `tblcreditnote_refunds`
 --
 
 CREATE TABLE `tblcreditnote_refunds` (
@@ -1837,7 +1847,7 @@ CREATE TABLE `tblcreditnote_refunds` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcredits`
+-- Table structure for table `tblcredits`
 --
 
 CREATE TABLE `tblcredits` (
@@ -1853,7 +1863,7 @@ CREATE TABLE `tblcredits` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcurrencies`
+-- Table structure for table `tblcurrencies`
 --
 
 CREATE TABLE `tblcurrencies` (
@@ -1867,7 +1877,7 @@ CREATE TABLE `tblcurrencies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblcurrencies`
+-- Dumping data for table `tblcurrencies`
 --
 
 INSERT INTO `tblcurrencies` (`id`, `symbol`, `name`, `decimal_separator`, `thousand_separator`, `placement`, `isdefault`) VALUES
@@ -1877,7 +1887,7 @@ INSERT INTO `tblcurrencies` (`id`, `symbol`, `name`, `decimal_separator`, `thous
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcustomers_groups`
+-- Table structure for table `tblcustomers_groups`
 --
 
 CREATE TABLE `tblcustomers_groups` (
@@ -1886,7 +1896,7 @@ CREATE TABLE `tblcustomers_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblcustomers_groups`
+-- Dumping data for table `tblcustomers_groups`
 --
 
 INSERT INTO `tblcustomers_groups` (`id`, `name`) VALUES
@@ -1895,7 +1905,7 @@ INSERT INTO `tblcustomers_groups` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcustomer_admins`
+-- Table structure for table `tblcustomer_admins`
 --
 
 CREATE TABLE `tblcustomer_admins` (
@@ -1907,7 +1917,7 @@ CREATE TABLE `tblcustomer_admins` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcustomer_groups`
+-- Table structure for table `tblcustomer_groups`
 --
 
 CREATE TABLE `tblcustomer_groups` (
@@ -1917,7 +1927,7 @@ CREATE TABLE `tblcustomer_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblcustomer_groups`
+-- Dumping data for table `tblcustomer_groups`
 --
 
 INSERT INTO `tblcustomer_groups` (`id`, `groupid`, `customer_id`) VALUES
@@ -1927,7 +1937,7 @@ INSERT INTO `tblcustomer_groups` (`id`, `groupid`, `customer_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcustomfields`
+-- Table structure for table `tblcustomfields`
 --
 
 CREATE TABLE `tblcustomfields` (
@@ -1954,7 +1964,7 @@ CREATE TABLE `tblcustomfields` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcustomfieldsvalues`
+-- Table structure for table `tblcustomfieldsvalues`
 --
 
 CREATE TABLE `tblcustomfieldsvalues` (
@@ -1968,7 +1978,7 @@ CREATE TABLE `tblcustomfieldsvalues` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblcustom_templates`
+-- Table structure for table `tblcustom_templates`
 --
 
 CREATE TABLE `tblcustom_templates` (
@@ -1981,7 +1991,7 @@ CREATE TABLE `tblcustom_templates` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbldepartments`
+-- Table structure for table `tbldepartments`
 --
 
 CREATE TABLE `tbldepartments` (
@@ -2004,7 +2014,7 @@ CREATE TABLE `tbldepartments` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbldismissed_announcements`
+-- Table structure for table `tbldismissed_announcements`
 --
 
 CREATE TABLE `tbldismissed_announcements` (
@@ -2017,7 +2027,7 @@ CREATE TABLE `tbldismissed_announcements` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblemaillists`
+-- Table structure for table `tblemaillists`
 --
 
 CREATE TABLE `tblemaillists` (
@@ -2030,7 +2040,7 @@ CREATE TABLE `tblemaillists` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblemailtemplates`
+-- Table structure for table `tblemailtemplates`
 --
 
 CREATE TABLE `tblemailtemplates` (
@@ -2049,7 +2059,7 @@ CREATE TABLE `tblemailtemplates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblemailtemplates`
+-- Dumping data for table `tblemailtemplates`
 --
 
 INSERT INTO `tblemailtemplates` (`emailtemplateid`, `type`, `slug`, `language`, `name`, `subject`, `message`, `fromname`, `fromemail`, `plaintext`, `active`, `order`) VALUES
@@ -4515,7 +4525,7 @@ INSERT INTO `tblemailtemplates` (`emailtemplateid`, `type`, `slug`, `language`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblenfermedades`
+-- Table structure for table `tblenfermedades`
 --
 
 CREATE TABLE `tblenfermedades` (
@@ -4525,7 +4535,7 @@ CREATE TABLE `tblenfermedades` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `tblenfermedades`
+-- Dumping data for table `tblenfermedades`
 --
 
 INSERT INTO `tblenfermedades` (`id`, `codigo`, `descripcion`) VALUES
@@ -16975,7 +16985,7 @@ INSERT INTO `tblenfermedades` (`id`, `codigo`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblestimates`
+-- Table structure for table `tblestimates`
 --
 
 CREATE TABLE `tblestimates` (
@@ -17036,7 +17046,7 @@ CREATE TABLE `tblestimates` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblestimate_requests`
+-- Table structure for table `tblestimate_requests`
 --
 
 CREATE TABLE `tblestimate_requests` (
@@ -17055,7 +17065,7 @@ CREATE TABLE `tblestimate_requests` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblestimate_request_forms`
+-- Table structure for table `tblestimate_request_forms`
 --
 
 CREATE TABLE `tblestimate_request_forms` (
@@ -17081,7 +17091,7 @@ CREATE TABLE `tblestimate_request_forms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblestimate_request_forms`
+-- Dumping data for table `tblestimate_request_forms`
 --
 
 INSERT INTO `tblestimate_request_forms` (`id`, `form_key`, `type`, `name`, `form_data`, `recaptcha`, `status`, `submit_btn_name`, `submit_btn_bg_color`, `submit_btn_text_color`, `success_submit_msg`, `submit_action`, `submit_redirect_url`, `language`, `dateadded`, `notify_type`, `notify_ids`, `responsible`, `notify_request_submitted`) VALUES
@@ -17090,7 +17100,7 @@ INSERT INTO `tblestimate_request_forms` (`id`, `form_key`, `type`, `name`, `form
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblestimate_request_status`
+-- Table structure for table `tblestimate_request_status`
 --
 
 CREATE TABLE `tblestimate_request_status` (
@@ -17102,7 +17112,7 @@ CREATE TABLE `tblestimate_request_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblestimate_request_status`
+-- Dumping data for table `tblestimate_request_status`
 --
 
 INSERT INTO `tblestimate_request_status` (`id`, `name`, `statusorder`, `color`, `flag`) VALUES
@@ -17115,7 +17125,7 @@ INSERT INTO `tblestimate_request_status` (`id`, `name`, `statusorder`, `color`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblevents`
+-- Table structure for table `tblevents`
 --
 
 CREATE TABLE `tblevents` (
@@ -17133,7 +17143,7 @@ CREATE TABLE `tblevents` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblevents`
+-- Dumping data for table `tblevents`
 --
 
 INSERT INTO `tblevents` (`eventid`, `title`, `description`, `userid`, `start`, `end`, `public`, `color`, `isstartnotified`, `reminder_before`, `reminder_before_type`) VALUES
@@ -17149,7 +17159,7 @@ INSERT INTO `tblevents` (`eventid`, `title`, `description`, `userid`, `start`, `
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblexpenses`
+-- Table structure for table `tblexpenses`
 --
 
 CREATE TABLE `tblexpenses` (
@@ -17185,7 +17195,7 @@ CREATE TABLE `tblexpenses` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblexpenses_categories`
+-- Table structure for table `tblexpenses_categories`
 --
 
 CREATE TABLE `tblexpenses_categories` (
@@ -17195,7 +17205,7 @@ CREATE TABLE `tblexpenses_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblexpenses_categories`
+-- Dumping data for table `tblexpenses_categories`
 --
 
 INSERT INTO `tblexpenses_categories` (`id`, `name`, `description`) VALUES
@@ -17204,7 +17214,7 @@ INSERT INTO `tblexpenses_categories` (`id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblfeedback`
+-- Table structure for table `tblfeedback`
 --
 
 CREATE TABLE `tblfeedback` (
@@ -17223,7 +17233,7 @@ CREATE TABLE `tblfeedback` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblfiles`
+-- Table structure for table `tblfiles`
 --
 
 CREATE TABLE `tblfiles` (
@@ -17244,7 +17254,7 @@ CREATE TABLE `tblfiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblfiles`
+-- Dumping data for table `tblfiles`
 --
 
 INSERT INTO `tblfiles` (`id`, `rel_id`, `rel_type`, `file_name`, `filetype`, `visible_to_customer`, `attachment_key`, `external`, `external_link`, `thumbnail_link`, `staffid`, `contact_id`, `task_comment_id`, `dateadded`) VALUES
@@ -17254,7 +17264,7 @@ INSERT INTO `tblfiles` (`id`, `rel_id`, `rel_type`, `file_name`, `filetype`, `vi
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblform_questions`
+-- Table structure for table `tblform_questions`
 --
 
 CREATE TABLE `tblform_questions` (
@@ -17269,7 +17279,7 @@ CREATE TABLE `tblform_questions` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblform_question_box`
+-- Table structure for table `tblform_question_box`
 --
 
 CREATE TABLE `tblform_question_box` (
@@ -17281,7 +17291,7 @@ CREATE TABLE `tblform_question_box` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblform_question_box_description`
+-- Table structure for table `tblform_question_box_description`
 --
 
 CREATE TABLE `tblform_question_box_description` (
@@ -17294,7 +17304,7 @@ CREATE TABLE `tblform_question_box_description` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblform_results`
+-- Table structure for table `tblform_results`
 --
 
 CREATE TABLE `tblform_results` (
@@ -17311,7 +17321,7 @@ CREATE TABLE `tblform_results` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblfs_downloads`
+-- Table structure for table `tblfs_downloads`
 --
 
 CREATE TABLE `tblfs_downloads` (
@@ -17326,7 +17336,7 @@ CREATE TABLE `tblfs_downloads` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblfs_file_overview`
+-- Table structure for table `tblfs_file_overview`
 --
 
 CREATE TABLE `tblfs_file_overview` (
@@ -17346,7 +17356,7 @@ CREATE TABLE `tblfs_file_overview` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblfs_genenal_ip_share`
+-- Table structure for table `tblfs_genenal_ip_share`
 --
 
 CREATE TABLE `tblfs_genenal_ip_share` (
@@ -17360,7 +17370,7 @@ CREATE TABLE `tblfs_genenal_ip_share` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblfs_setting_configuration`
+-- Table structure for table `tblfs_setting_configuration`
 --
 
 CREATE TABLE `tblfs_setting_configuration` (
@@ -17383,7 +17393,7 @@ CREATE TABLE `tblfs_setting_configuration` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblfs_setting_configuration_relationship`
+-- Table structure for table `tblfs_setting_configuration_relationship`
 --
 
 CREATE TABLE `tblfs_setting_configuration_relationship` (
@@ -17396,7 +17406,7 @@ CREATE TABLE `tblfs_setting_configuration_relationship` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblfs_sharings`
+-- Table structure for table `tblfs_sharings`
 --
 
 CREATE TABLE `tblfs_sharings` (
@@ -17436,7 +17446,7 @@ CREATE TABLE `tblfs_sharings` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblfs_sharing_relationship`
+-- Table structure for table `tblfs_sharing_relationship`
 --
 
 CREATE TABLE `tblfs_sharing_relationship` (
@@ -17449,7 +17459,7 @@ CREATE TABLE `tblfs_sharing_relationship` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblgdpr_requests`
+-- Table structure for table `tblgdpr_requests`
 --
 
 CREATE TABLE `tblgdpr_requests` (
@@ -17467,7 +17477,7 @@ CREATE TABLE `tblgdpr_requests` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblgoals`
+-- Table structure for table `tblgoals`
 --
 
 CREATE TABLE `tblgoals` (
@@ -17488,7 +17498,7 @@ CREATE TABLE `tblgoals` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblgroup_checklist`
+-- Table structure for table `tblgroup_checklist`
 --
 
 CREATE TABLE `tblgroup_checklist` (
@@ -17500,7 +17510,7 @@ CREATE TABLE `tblgroup_checklist` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblgroup_checklist_allocation`
+-- Table structure for table `tblgroup_checklist_allocation`
 --
 
 CREATE TABLE `tblgroup_checklist_allocation` (
@@ -17513,7 +17523,7 @@ CREATE TABLE `tblgroup_checklist_allocation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_allocation_asset`
+-- Table structure for table `tblhr_allocation_asset`
 --
 
 CREATE TABLE `tblhr_allocation_asset` (
@@ -17527,7 +17537,7 @@ CREATE TABLE `tblhr_allocation_asset` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_allowance_type`
+-- Table structure for table `tblhr_allowance_type`
 --
 
 CREATE TABLE `tblhr_allowance_type` (
@@ -17540,7 +17550,7 @@ CREATE TABLE `tblhr_allowance_type` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_checklist_allocation`
+-- Table structure for table `tblhr_checklist_allocation`
 --
 
 CREATE TABLE `tblhr_checklist_allocation` (
@@ -17553,7 +17563,7 @@ CREATE TABLE `tblhr_checklist_allocation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_dependent_person`
+-- Table structure for table `tblhr_dependent_person`
 --
 
 CREATE TABLE `tblhr_dependent_person` (
@@ -17573,7 +17583,7 @@ CREATE TABLE `tblhr_dependent_person` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_education`
+-- Table structure for table `tblhr_education`
 --
 
 CREATE TABLE `tblhr_education` (
@@ -17594,7 +17604,7 @@ CREATE TABLE `tblhr_education` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_group_checklist_allocation`
+-- Table structure for table `tblhr_group_checklist_allocation`
 --
 
 CREATE TABLE `tblhr_group_checklist_allocation` (
@@ -17607,7 +17617,7 @@ CREATE TABLE `tblhr_group_checklist_allocation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_job_p`
+-- Table structure for table `tblhr_job_p`
 --
 
 CREATE TABLE `tblhr_job_p` (
@@ -17619,7 +17629,7 @@ CREATE TABLE `tblhr_job_p` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_job_position`
+-- Table structure for table `tblhr_job_position`
 --
 
 CREATE TABLE `tblhr_job_position` (
@@ -17634,7 +17644,7 @@ CREATE TABLE `tblhr_job_position` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_jp_interview_training`
+-- Table structure for table `tblhr_jp_interview_training`
 --
 
 CREATE TABLE `tblhr_jp_interview_training` (
@@ -17655,7 +17665,7 @@ CREATE TABLE `tblhr_jp_interview_training` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_jp_salary_scale`
+-- Table structure for table `tblhr_jp_salary_scale`
 --
 
 CREATE TABLE `tblhr_jp_salary_scale` (
@@ -17669,7 +17679,7 @@ CREATE TABLE `tblhr_jp_salary_scale` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_knowedge_base_article_feedback`
+-- Table structure for table `tblhr_knowedge_base_article_feedback`
 --
 
 CREATE TABLE `tblhr_knowedge_base_article_feedback` (
@@ -17683,7 +17693,7 @@ CREATE TABLE `tblhr_knowedge_base_article_feedback` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_knowledge_base`
+-- Table structure for table `tblhr_knowledge_base`
 --
 
 CREATE TABLE `tblhr_knowledge_base` (
@@ -17706,7 +17716,7 @@ CREATE TABLE `tblhr_knowledge_base` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_knowledge_base_groups`
+-- Table structure for table `tblhr_knowledge_base_groups`
 --
 
 CREATE TABLE `tblhr_knowledge_base_groups` (
@@ -17722,7 +17732,7 @@ CREATE TABLE `tblhr_knowledge_base_groups` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_list_staff_quitting_work`
+-- Table structure for table `tblhr_list_staff_quitting_work`
 --
 
 CREATE TABLE `tblhr_list_staff_quitting_work` (
@@ -17739,7 +17749,7 @@ CREATE TABLE `tblhr_list_staff_quitting_work` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_position_training`
+-- Table structure for table `tblhr_position_training`
 --
 
 CREATE TABLE `tblhr_position_training` (
@@ -17763,7 +17773,7 @@ CREATE TABLE `tblhr_position_training` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_position_training_question_form`
+-- Table structure for table `tblhr_position_training_question_form`
 --
 
 CREATE TABLE `tblhr_position_training_question_form` (
@@ -17779,7 +17789,7 @@ CREATE TABLE `tblhr_position_training_question_form` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_procedure_retire`
+-- Table structure for table `tblhr_procedure_retire`
 --
 
 CREATE TABLE `tblhr_procedure_retire` (
@@ -17794,7 +17804,7 @@ CREATE TABLE `tblhr_procedure_retire` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_procedure_retire_manage`
+-- Table structure for table `tblhr_procedure_retire_manage`
 --
 
 CREATE TABLE `tblhr_procedure_retire_manage` (
@@ -17807,7 +17817,7 @@ CREATE TABLE `tblhr_procedure_retire_manage` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_procedure_retire_of_staff`
+-- Table structure for table `tblhr_procedure_retire_of_staff`
 --
 
 CREATE TABLE `tblhr_procedure_retire_of_staff` (
@@ -17821,7 +17831,7 @@ CREATE TABLE `tblhr_procedure_retire_of_staff` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_procedure_retire_of_staff_by_id`
+-- Table structure for table `tblhr_procedure_retire_of_staff_by_id`
 --
 
 CREATE TABLE `tblhr_procedure_retire_of_staff_by_id` (
@@ -17833,7 +17843,7 @@ CREATE TABLE `tblhr_procedure_retire_of_staff_by_id` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_profile_option`
+-- Table structure for table `tblhr_profile_option`
 --
 
 CREATE TABLE `tblhr_profile_option` (
@@ -17844,7 +17854,7 @@ CREATE TABLE `tblhr_profile_option` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblhr_profile_option`
+-- Dumping data for table `tblhr_profile_option`
 --
 
 INSERT INTO `tblhr_profile_option` (`option_id`, `option_name`, `option_val`, `auto`) VALUES
@@ -17858,7 +17868,7 @@ INSERT INTO `tblhr_profile_option` (`option_id`, `option_name`, `option_val`, `a
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_p_t_form_question_box`
+-- Table structure for table `tblhr_p_t_form_question_box`
 --
 
 CREATE TABLE `tblhr_p_t_form_question_box` (
@@ -17870,7 +17880,7 @@ CREATE TABLE `tblhr_p_t_form_question_box` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_p_t_form_question_box_description`
+-- Table structure for table `tblhr_p_t_form_question_box_description`
 --
 
 CREATE TABLE `tblhr_p_t_form_question_box_description` (
@@ -17884,7 +17894,7 @@ CREATE TABLE `tblhr_p_t_form_question_box_description` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_p_t_form_results`
+-- Table structure for table `tblhr_p_t_form_results`
 --
 
 CREATE TABLE `tblhr_p_t_form_results` (
@@ -17901,7 +17911,7 @@ CREATE TABLE `tblhr_p_t_form_results` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_p_t_surveyresultsets`
+-- Table structure for table `tblhr_p_t_surveyresultsets`
 --
 
 CREATE TABLE `tblhr_p_t_surveyresultsets` (
@@ -17916,7 +17926,7 @@ CREATE TABLE `tblhr_p_t_surveyresultsets` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_rec_transfer_records`
+-- Table structure for table `tblhr_rec_transfer_records`
 --
 
 CREATE TABLE `tblhr_rec_transfer_records` (
@@ -17933,7 +17943,7 @@ CREATE TABLE `tblhr_rec_transfer_records` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_salary_form`
+-- Table structure for table `tblhr_salary_form`
 --
 
 CREATE TABLE `tblhr_salary_form` (
@@ -17946,7 +17956,7 @@ CREATE TABLE `tblhr_salary_form` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_staff_contract`
+-- Table structure for table `tblhr_staff_contract`
 --
 
 CREATE TABLE `tblhr_staff_contract` (
@@ -17965,7 +17975,7 @@ CREATE TABLE `tblhr_staff_contract` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_staff_contract_detail`
+-- Table structure for table `tblhr_staff_contract_detail`
 --
 
 CREATE TABLE `tblhr_staff_contract_detail` (
@@ -17981,7 +17991,7 @@ CREATE TABLE `tblhr_staff_contract_detail` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_staff_contract_type`
+-- Table structure for table `tblhr_staff_contract_type`
 --
 
 CREATE TABLE `tblhr_staff_contract_type` (
@@ -17996,7 +18006,7 @@ CREATE TABLE `tblhr_staff_contract_type` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_training_allocation`
+-- Table structure for table `tblhr_training_allocation`
 --
 
 CREATE TABLE `tblhr_training_allocation` (
@@ -18012,7 +18022,7 @@ CREATE TABLE `tblhr_training_allocation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_type_of_trainings`
+-- Table structure for table `tblhr_type_of_trainings`
 --
 
 CREATE TABLE `tblhr_type_of_trainings` (
@@ -18021,7 +18031,7 @@ CREATE TABLE `tblhr_type_of_trainings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblhr_type_of_trainings`
+-- Dumping data for table `tblhr_type_of_trainings`
 --
 
 INSERT INTO `tblhr_type_of_trainings` (`id`, `name`) VALUES
@@ -18030,7 +18040,7 @@ INSERT INTO `tblhr_type_of_trainings` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_views_tracking`
+-- Table structure for table `tblhr_views_tracking`
 --
 
 CREATE TABLE `tblhr_views_tracking` (
@@ -18044,7 +18054,7 @@ CREATE TABLE `tblhr_views_tracking` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblhr_workplace`
+-- Table structure for table `tblhr_workplace`
 --
 
 CREATE TABLE `tblhr_workplace` (
@@ -18059,7 +18069,7 @@ CREATE TABLE `tblhr_workplace` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblinvoicepaymentrecords`
+-- Table structure for table `tblinvoicepaymentrecords`
 --
 
 CREATE TABLE `tblinvoicepaymentrecords` (
@@ -18075,7 +18085,7 @@ CREATE TABLE `tblinvoicepaymentrecords` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblinvoicepaymentrecords`
+-- Dumping data for table `tblinvoicepaymentrecords`
 --
 
 INSERT INTO `tblinvoicepaymentrecords` (`id`, `invoiceid`, `amount`, `paymentmode`, `paymentmethod`, `date`, `daterecorded`, `note`, `transactionid`) VALUES
@@ -18086,7 +18096,7 @@ INSERT INTO `tblinvoicepaymentrecords` (`id`, `invoiceid`, `amount`, `paymentmod
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblinvoices`
+-- Table structure for table `tblinvoices`
 --
 
 CREATE TABLE `tblinvoices` (
@@ -18147,7 +18157,7 @@ CREATE TABLE `tblinvoices` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblinvoices`
+-- Dumping data for table `tblinvoices`
 --
 
 INSERT INTO `tblinvoices` (`id`, `sent`, `datesend`, `clientid`, `deleted_customer_name`, `number`, `prefix`, `number_format`, `datecreated`, `date`, `duedate`, `currency`, `subtotal`, `total_tax`, `total`, `adjustment`, `addedfrom`, `hash`, `status`, `clientnote`, `adminnote`, `last_overdue_reminder`, `last_due_reminder`, `cancel_overdue_reminders`, `allowed_payment_modes`, `token`, `discount_percent`, `discount_total`, `discount_type`, `recurring`, `recurring_type`, `custom_recurring`, `cycles`, `total_cycles`, `is_recurring_from`, `last_recurring_date`, `terms`, `sale_agent`, `billing_street`, `billing_city`, `billing_state`, `billing_zip`, `billing_country`, `shipping_street`, `shipping_city`, `shipping_state`, `shipping_zip`, `shipping_country`, `include_shipping`, `show_shipping_on_invoice`, `show_quantity_as`, `project_id`, `subscription_id`, `short_link`) VALUES
@@ -18159,7 +18169,7 @@ INSERT INTO `tblinvoices` (`id`, `sent`, `datesend`, `clientid`, `deleted_custom
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblitemable`
+-- Table structure for table `tblitemable`
 --
 
 CREATE TABLE `tblitemable` (
@@ -18175,7 +18185,7 @@ CREATE TABLE `tblitemable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblitemable`
+-- Dumping data for table `tblitemable`
 --
 
 INSERT INTO `tblitemable` (`id`, `rel_id`, `rel_type`, `description`, `long_description`, `qty`, `rate`, `unit`, `item_order`) VALUES
@@ -18232,7 +18242,7 @@ INSERT INTO `tblitemable` (`id`, `rel_id`, `rel_type`, `description`, `long_desc
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblitems`
+-- Table structure for table `tblitems`
 --
 
 CREATE TABLE `tblitems` (
@@ -18255,7 +18265,7 @@ CREATE TABLE `tblitems` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblitems`
+-- Dumping data for table `tblitems`
 --
 
 INSERT INTO `tblitems` (`id`, `userid`, `description`, `long_description`, `rate`, `tax`, `tax2`, `unit`, `group_id`, `commodity_code`, `commodity_barcode`, `unit_id`, `sku_code`, `sku_name`, `purchase_price`, `treatment`) VALUES
@@ -18268,7 +18278,7 @@ INSERT INTO `tblitems` (`id`, `userid`, `description`, `long_description`, `rate
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblitems_groups`
+-- Table structure for table `tblitems_groups`
 --
 
 CREATE TABLE `tblitems_groups` (
@@ -18283,7 +18293,7 @@ CREATE TABLE `tblitems_groups` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblitem_tax`
+-- Table structure for table `tblitem_tax`
 --
 
 CREATE TABLE `tblitem_tax` (
@@ -18298,7 +18308,7 @@ CREATE TABLE `tblitem_tax` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbljob_industry`
+-- Table structure for table `tbljob_industry`
 --
 
 CREATE TABLE `tbljob_industry` (
@@ -18310,7 +18320,7 @@ CREATE TABLE `tbljob_industry` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblknowedge_base_article_feedback`
+-- Table structure for table `tblknowedge_base_article_feedback`
 --
 
 CREATE TABLE `tblknowedge_base_article_feedback` (
@@ -18324,7 +18334,7 @@ CREATE TABLE `tblknowedge_base_article_feedback` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblknowledge_base`
+-- Table structure for table `tblknowledge_base`
 --
 
 CREATE TABLE `tblknowledge_base` (
@@ -18347,7 +18357,7 @@ CREATE TABLE `tblknowledge_base` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblknowledge_base_groups`
+-- Table structure for table `tblknowledge_base_groups`
 --
 
 CREATE TABLE `tblknowledge_base_groups` (
@@ -18363,7 +18373,7 @@ CREATE TABLE `tblknowledge_base_groups` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblleads`
+-- Table structure for table `tblleads`
 --
 
 CREATE TABLE `tblleads` (
@@ -18408,7 +18418,7 @@ CREATE TABLE `tblleads` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblleads_email_integration`
+-- Table structure for table `tblleads_email_integration`
 --
 
 CREATE TABLE `tblleads_email_integration` (
@@ -18435,7 +18445,7 @@ CREATE TABLE `tblleads_email_integration` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblleads_email_integration`
+-- Dumping data for table `tblleads_email_integration`
 --
 
 INSERT INTO `tblleads_email_integration` (`id`, `active`, `email`, `imap_server`, `password`, `check_every`, `responsible`, `lead_source`, `lead_status`, `encryption`, `folder`, `last_run`, `notify_lead_imported`, `notify_lead_contact_more_times`, `notify_type`, `notify_ids`, `mark_public`, `only_loop_on_unseen_emails`, `delete_after_import`, `create_task_if_customer`) VALUES
@@ -18444,7 +18454,7 @@ INSERT INTO `tblleads_email_integration` (`id`, `active`, `email`, `imap_server`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblleads_sources`
+-- Table structure for table `tblleads_sources`
 --
 
 CREATE TABLE `tblleads_sources` (
@@ -18453,7 +18463,7 @@ CREATE TABLE `tblleads_sources` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblleads_sources`
+-- Dumping data for table `tblleads_sources`
 --
 
 INSERT INTO `tblleads_sources` (`id`, `name`) VALUES
@@ -18463,7 +18473,7 @@ INSERT INTO `tblleads_sources` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblleads_status`
+-- Table structure for table `tblleads_status`
 --
 
 CREATE TABLE `tblleads_status` (
@@ -18475,7 +18485,7 @@ CREATE TABLE `tblleads_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblleads_status`
+-- Dumping data for table `tblleads_status`
 --
 
 INSERT INTO `tblleads_status` (`id`, `name`, `statusorder`, `color`, `isdefault`) VALUES
@@ -18484,7 +18494,7 @@ INSERT INTO `tblleads_status` (`id`, `name`, `statusorder`, `color`, `isdefault`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbllead_activity_log`
+-- Table structure for table `tbllead_activity_log`
 --
 
 CREATE TABLE `tbllead_activity_log` (
@@ -18501,7 +18511,7 @@ CREATE TABLE `tbllead_activity_log` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbllead_integration_emails`
+-- Table structure for table `tbllead_integration_emails`
 --
 
 CREATE TABLE `tbllead_integration_emails` (
@@ -18516,7 +18526,7 @@ CREATE TABLE `tbllead_integration_emails` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbllead_manager_activity_log`
+-- Table structure for table `tbllead_manager_activity_log`
 --
 
 CREATE TABLE `tbllead_manager_activity_log` (
@@ -18535,7 +18545,7 @@ CREATE TABLE `tbllead_manager_activity_log` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbllead_manager_meeting_remark`
+-- Table structure for table `tbllead_manager_meeting_remark`
 --
 
 CREATE TABLE `tbllead_manager_meeting_remark` (
@@ -18550,7 +18560,7 @@ CREATE TABLE `tbllead_manager_meeting_remark` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbllead_manager_missed_calls`
+-- Table structure for table `tbllead_manager_missed_calls`
 --
 
 CREATE TABLE `tbllead_manager_missed_calls` (
@@ -18564,7 +18574,7 @@ CREATE TABLE `tbllead_manager_missed_calls` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbllead_manager_zoom_meeting`
+-- Table structure for table `tbllead_manager_zoom_meeting`
 --
 
 CREATE TABLE `tbllead_manager_zoom_meeting` (
@@ -18594,7 +18604,7 @@ CREATE TABLE `tbllead_manager_zoom_meeting` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbllistemails`
+-- Table structure for table `tbllistemails`
 --
 
 CREATE TABLE `tbllistemails` (
@@ -18607,7 +18617,7 @@ CREATE TABLE `tbllistemails` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblloy_card`
+-- Table structure for table `tblloy_card`
 --
 
 CREATE TABLE `tblloy_card` (
@@ -18628,7 +18638,7 @@ CREATE TABLE `tblloy_card` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblloy_mbs_program`
+-- Table structure for table `tblloy_mbs_program`
 --
 
 CREATE TABLE `tblloy_mbs_program` (
@@ -18653,7 +18663,7 @@ CREATE TABLE `tblloy_mbs_program` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblloy_mbs_rule`
+-- Table structure for table `tblloy_mbs_rule`
 --
 
 CREATE TABLE `tblloy_mbs_rule` (
@@ -18672,7 +18682,7 @@ CREATE TABLE `tblloy_mbs_rule` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblloy_program_detail`
+-- Table structure for table `tblloy_program_detail`
 --
 
 CREATE TABLE `tblloy_program_detail` (
@@ -18686,7 +18696,7 @@ CREATE TABLE `tblloy_program_detail` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblloy_redeem_log`
+-- Table structure for table `tblloy_redeem_log`
 --
 
 CREATE TABLE `tblloy_redeem_log` (
@@ -18704,7 +18714,7 @@ CREATE TABLE `tblloy_redeem_log` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblloy_redemp_detail`
+-- Table structure for table `tblloy_redemp_detail`
 --
 
 CREATE TABLE `tblloy_redemp_detail` (
@@ -18720,7 +18730,7 @@ CREATE TABLE `tblloy_redemp_detail` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblloy_rule`
+-- Table structure for table `tblloy_rule`
 --
 
 CREATE TABLE `tblloy_rule` (
@@ -18748,7 +18758,7 @@ CREATE TABLE `tblloy_rule` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblloy_rule_detail`
+-- Table structure for table `tblloy_rule_detail`
 --
 
 CREATE TABLE `tblloy_rule_detail` (
@@ -18762,7 +18772,7 @@ CREATE TABLE `tblloy_rule_detail` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblloy_transation`
+-- Table structure for table `tblloy_transation`
 --
 
 CREATE TABLE `tblloy_transation` (
@@ -18780,7 +18790,7 @@ CREATE TABLE `tblloy_transation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblmaillistscustomfields`
+-- Table structure for table `tblmaillistscustomfields`
 --
 
 CREATE TABLE `tblmaillistscustomfields` (
@@ -18793,7 +18803,7 @@ CREATE TABLE `tblmaillistscustomfields` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblmaillistscustomfieldvalues`
+-- Table structure for table `tblmaillistscustomfieldvalues`
 --
 
 CREATE TABLE `tblmaillistscustomfieldvalues` (
@@ -18807,7 +18817,7 @@ CREATE TABLE `tblmaillistscustomfieldvalues` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblmail_queue`
+-- Table structure for table `tblmail_queue`
 --
 
 CREATE TABLE `tblmail_queue` (
@@ -18827,7 +18837,7 @@ CREATE TABLE `tblmail_queue` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblmigrations`
+-- Table structure for table `tblmigrations`
 --
 
 CREATE TABLE `tblmigrations` (
@@ -18835,7 +18845,7 @@ CREATE TABLE `tblmigrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblmigrations`
+-- Dumping data for table `tblmigrations`
 --
 
 INSERT INTO `tblmigrations` (`version`) VALUES
@@ -18844,7 +18854,7 @@ INSERT INTO `tblmigrations` (`version`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblmilestones`
+-- Table structure for table `tblmilestones`
 --
 
 CREATE TABLE `tblmilestones` (
@@ -18864,7 +18874,7 @@ CREATE TABLE `tblmilestones` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblmodules`
+-- Table structure for table `tblmodules`
 --
 
 CREATE TABLE `tblmodules` (
@@ -18875,7 +18885,7 @@ CREATE TABLE `tblmodules` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblmodules`
+-- Dumping data for table `tblmodules`
 --
 
 INSERT INTO `tblmodules` (`id`, `module_name`, `installed_version`, `active`) VALUES
@@ -18906,7 +18916,7 @@ INSERT INTO `tblmodules` (`id`, `module_name`, `installed_version`, `active`) VA
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblnewsfeed_comment_likes`
+-- Table structure for table `tblnewsfeed_comment_likes`
 --
 
 CREATE TABLE `tblnewsfeed_comment_likes` (
@@ -18920,7 +18930,7 @@ CREATE TABLE `tblnewsfeed_comment_likes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblnewsfeed_posts`
+-- Table structure for table `tblnewsfeed_posts`
 --
 
 CREATE TABLE `tblnewsfeed_posts` (
@@ -18936,7 +18946,7 @@ CREATE TABLE `tblnewsfeed_posts` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblnewsfeed_post_comments`
+-- Table structure for table `tblnewsfeed_post_comments`
 --
 
 CREATE TABLE `tblnewsfeed_post_comments` (
@@ -18950,7 +18960,7 @@ CREATE TABLE `tblnewsfeed_post_comments` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblnewsfeed_post_likes`
+-- Table structure for table `tblnewsfeed_post_likes`
 --
 
 CREATE TABLE `tblnewsfeed_post_likes` (
@@ -18963,7 +18973,7 @@ CREATE TABLE `tblnewsfeed_post_likes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblnotes`
+-- Table structure for table `tblnotes`
 --
 
 CREATE TABLE `tblnotes` (
@@ -18977,7 +18987,7 @@ CREATE TABLE `tblnotes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblnotes`
+-- Dumping data for table `tblnotes`
 --
 
 INSERT INTO `tblnotes` (`id`, `rel_id`, `rel_type`, `description`, `date_contacted`, `addedfrom`, `dateadded`) VALUES
@@ -18989,7 +18999,7 @@ INSERT INTO `tblnotes` (`id`, `rel_id`, `rel_type`, `description`, `date_contact
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblnotifications`
+-- Table structure for table `tblnotifications`
 --
 
 CREATE TABLE `tblnotifications` (
@@ -19008,7 +19018,7 @@ CREATE TABLE `tblnotifications` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblnotifications`
+-- Dumping data for table `tblnotifications`
 --
 
 INSERT INTO `tblnotifications` (`id`, `isread`, `isread_inline`, `date`, `description`, `fromuserid`, `fromclientid`, `from_fullname`, `touserid`, `fromcompany`, `link`, `additional_data`) VALUES
@@ -19021,7 +19031,7 @@ INSERT INTO `tblnotifications` (`id`, `isread`, `isread_inline`, `date`, `descri
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbloptions`
+-- Table structure for table `tbloptions`
 --
 
 CREATE TABLE `tbloptions` (
@@ -19032,7 +19042,7 @@ CREATE TABLE `tbloptions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tbloptions`
+-- Dumping data for table `tbloptions`
 --
 
 INSERT INTO `tbloptions` (`id`, `name`, `value`, `autoload`) VALUES
@@ -19584,7 +19594,7 @@ INSERT INTO `tbloptions` (`id`, `name`, `value`, `autoload`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblorder_items`
+-- Table structure for table `tblorder_items`
 --
 
 CREATE TABLE `tblorder_items` (
@@ -19598,7 +19608,7 @@ CREATE TABLE `tblorder_items` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblorder_master`
+-- Table structure for table `tblorder_master`
 --
 
 CREATE TABLE `tblorder_master` (
@@ -19615,7 +19625,7 @@ CREATE TABLE `tblorder_master` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblparts`
+-- Table structure for table `tblparts`
 --
 
 CREATE TABLE `tblparts` (
@@ -19628,7 +19638,7 @@ CREATE TABLE `tblparts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `tblparts`
+-- Dumping data for table `tblparts`
 --
 
 INSERT INTO `tblparts` (`id`, `id_client`, `id_item`, `id_sale`, `quantity`, `realized`) VALUES
@@ -19641,7 +19651,7 @@ INSERT INTO `tblparts` (`id`, `id_client`, `id_item`, `id_sale`, `quantity`, `re
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpayment_modes`
+-- Table structure for table `tblpayment_modes`
 --
 
 CREATE TABLE `tblpayment_modes` (
@@ -19656,7 +19666,7 @@ CREATE TABLE `tblpayment_modes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblpayment_modes`
+-- Dumping data for table `tblpayment_modes`
 --
 
 INSERT INTO `tblpayment_modes` (`id`, `name`, `description`, `show_on_pdf`, `invoices_only`, `expenses_only`, `selected_by_default`, `active`) VALUES
@@ -19668,7 +19678,7 @@ INSERT INTO `tblpayment_modes` (`id`, `name`, `description`, `show_on_pdf`, `inv
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpinned_projects`
+-- Table structure for table `tblpinned_projects`
 --
 
 CREATE TABLE `tblpinned_projects` (
@@ -19680,7 +19690,7 @@ CREATE TABLE `tblpinned_projects` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblposition_training_question_form`
+-- Table structure for table `tblposition_training_question_form`
 --
 
 CREATE TABLE `tblposition_training_question_form` (
@@ -19696,7 +19706,7 @@ CREATE TABLE `tblposition_training_question_form` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblproduct_categories`
+-- Table structure for table `tblproduct_categories`
 --
 
 CREATE TABLE `tblproduct_categories` (
@@ -19708,7 +19718,7 @@ CREATE TABLE `tblproduct_categories` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblproduct_master`
+-- Table structure for table `tblproduct_master`
 --
 
 CREATE TABLE `tblproduct_master` (
@@ -19729,7 +19739,7 @@ CREATE TABLE `tblproduct_master` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblprojectdiscussioncomments`
+-- Table structure for table `tblprojectdiscussioncomments`
 --
 
 CREATE TABLE `tblprojectdiscussioncomments` (
@@ -19750,7 +19760,7 @@ CREATE TABLE `tblprojectdiscussioncomments` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblprojectdiscussions`
+-- Table structure for table `tblprojectdiscussions`
 --
 
 CREATE TABLE `tblprojectdiscussions` (
@@ -19768,7 +19778,7 @@ CREATE TABLE `tblprojectdiscussions` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblprojects`
+-- Table structure for table `tblprojects`
 --
 
 CREATE TABLE `tblprojects` (
@@ -19793,7 +19803,7 @@ CREATE TABLE `tblprojects` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblprojects`
+-- Dumping data for table `tblprojects`
 --
 
 INSERT INTO `tblprojects` (`id`, `name`, `description`, `status`, `clientid`, `billing_type`, `start_date`, `deadline`, `project_created`, `date_finished`, `progress`, `progress_from_tasks`, `project_cost`, `project_rate_per_hour`, `estimated_hours`, `addedfrom`, `contact_notification`, `notify_contacts`) VALUES
@@ -19802,7 +19812,7 @@ INSERT INTO `tblprojects` (`id`, `name`, `description`, `status`, `clientid`, `b
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblproject_activity`
+-- Table structure for table `tblproject_activity`
 --
 
 CREATE TABLE `tblproject_activity` (
@@ -19818,7 +19828,7 @@ CREATE TABLE `tblproject_activity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblproject_activity`
+-- Dumping data for table `tblproject_activity`
 --
 
 INSERT INTO `tblproject_activity` (`id`, `project_id`, `staff_id`, `contact_id`, `fullname`, `visible_to_customer`, `description_key`, `additional_data`, `dateadded`) VALUES
@@ -19830,7 +19840,7 @@ INSERT INTO `tblproject_activity` (`id`, `project_id`, `staff_id`, `contact_id`,
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblproject_files`
+-- Table structure for table `tblproject_files`
 --
 
 CREATE TABLE `tblproject_files` (
@@ -19854,7 +19864,7 @@ CREATE TABLE `tblproject_files` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblproject_members`
+-- Table structure for table `tblproject_members`
 --
 
 CREATE TABLE `tblproject_members` (
@@ -19864,7 +19874,7 @@ CREATE TABLE `tblproject_members` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblproject_members`
+-- Dumping data for table `tblproject_members`
 --
 
 INSERT INTO `tblproject_members` (`id`, `project_id`, `staff_id`) VALUES
@@ -19873,7 +19883,7 @@ INSERT INTO `tblproject_members` (`id`, `project_id`, `staff_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblproject_notes`
+-- Table structure for table `tblproject_notes`
 --
 
 CREATE TABLE `tblproject_notes` (
@@ -19886,7 +19896,7 @@ CREATE TABLE `tblproject_notes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblproject_settings`
+-- Table structure for table `tblproject_settings`
 --
 
 CREATE TABLE `tblproject_settings` (
@@ -19897,7 +19907,7 @@ CREATE TABLE `tblproject_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblproject_settings`
+-- Dumping data for table `tblproject_settings`
 --
 
 INSERT INTO `tblproject_settings` (`id`, `project_id`, `name`, `value`) VALUES
@@ -19924,7 +19934,7 @@ INSERT INTO `tblproject_settings` (`id`, `project_id`, `name`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblproposals`
+-- Table structure for table `tblproposals`
 --
 
 CREATE TABLE `tblproposals` (
@@ -19975,7 +19985,7 @@ CREATE TABLE `tblproposals` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblproposal_comments`
+-- Table structure for table `tblproposal_comments`
 --
 
 CREATE TABLE `tblproposal_comments` (
@@ -19989,7 +19999,7 @@ CREATE TABLE `tblproposal_comments` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpurchase_option`
+-- Table structure for table `tblpurchase_option`
 --
 
 CREATE TABLE `tblpurchase_option` (
@@ -20000,7 +20010,7 @@ CREATE TABLE `tblpurchase_option` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblpurchase_option`
+-- Dumping data for table `tblpurchase_option`
 --
 
 INSERT INTO `tblpurchase_option` (`option_id`, `option_name`, `option_val`, `auto`) VALUES
@@ -20009,7 +20019,7 @@ INSERT INTO `tblpurchase_option` (`option_id`, `option_name`, `option_val`, `aut
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_approval_details`
+-- Table structure for table `tblpur_approval_details`
 --
 
 CREATE TABLE `tblpur_approval_details` (
@@ -20033,7 +20043,7 @@ CREATE TABLE `tblpur_approval_details` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_approval_setting`
+-- Table structure for table `tblpur_approval_setting`
 --
 
 CREATE TABLE `tblpur_approval_setting` (
@@ -20046,7 +20056,7 @@ CREATE TABLE `tblpur_approval_setting` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_contacts`
+-- Table structure for table `tblpur_contacts`
 --
 
 CREATE TABLE `tblpur_contacts` (
@@ -20083,7 +20093,7 @@ CREATE TABLE `tblpur_contacts` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_contracts`
+-- Table structure for table `tblpur_contracts`
 --
 
 CREATE TABLE `tblpur_contracts` (
@@ -20109,7 +20119,7 @@ CREATE TABLE `tblpur_contracts` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_estimates`
+-- Table structure for table `tblpur_estimates`
 --
 
 CREATE TABLE `tblpur_estimates` (
@@ -20169,7 +20179,7 @@ CREATE TABLE `tblpur_estimates` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_estimate_detail`
+-- Table structure for table `tblpur_estimate_detail`
 --
 
 CREATE TABLE `tblpur_estimate_detail` (
@@ -20190,7 +20200,7 @@ CREATE TABLE `tblpur_estimate_detail` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_orders`
+-- Table structure for table `tblpur_orders`
 --
 
 CREATE TABLE `tblpur_orders` (
@@ -20221,7 +20231,7 @@ CREATE TABLE `tblpur_orders` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_order_detail`
+-- Table structure for table `tblpur_order_detail`
 --
 
 CREATE TABLE `tblpur_order_detail` (
@@ -20242,7 +20252,7 @@ CREATE TABLE `tblpur_order_detail` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_order_payment`
+-- Table structure for table `tblpur_order_payment`
 --
 
 CREATE TABLE `tblpur_order_payment` (
@@ -20259,7 +20269,7 @@ CREATE TABLE `tblpur_order_payment` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_request`
+-- Table structure for table `tblpur_request`
 --
 
 CREATE TABLE `tblpur_request` (
@@ -20277,7 +20287,7 @@ CREATE TABLE `tblpur_request` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_request_detail`
+-- Table structure for table `tblpur_request_detail`
 --
 
 CREATE TABLE `tblpur_request_detail` (
@@ -20294,7 +20304,7 @@ CREATE TABLE `tblpur_request_detail` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_unit`
+-- Table structure for table `tblpur_unit`
 --
 
 CREATE TABLE `tblpur_unit` (
@@ -20305,7 +20315,7 @@ CREATE TABLE `tblpur_unit` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_vendor`
+-- Table structure for table `tblpur_vendor`
 --
 
 CREATE TABLE `tblpur_vendor` (
@@ -20345,7 +20355,7 @@ CREATE TABLE `tblpur_vendor` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblpur_vendor_admin`
+-- Table structure for table `tblpur_vendor_admin`
 --
 
 CREATE TABLE `tblpur_vendor_admin` (
@@ -20357,7 +20367,7 @@ CREATE TABLE `tblpur_vendor_admin` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblp_t_form_question_box_description`
+-- Table structure for table `tblp_t_form_question_box_description`
 --
 
 CREATE TABLE `tblp_t_form_question_box_description` (
@@ -20371,7 +20381,28 @@ CREATE TABLE `tblp_t_form_question_box_description` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrecords_meta`
+-- Table structure for table `tblrecipes`
+--
+
+CREATE TABLE `tblrecipes` (
+  `id` int(11) NOT NULL,
+  `id_client` int(11) DEFAULT NULL,
+  `id_professional` int(11) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  `description` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tblrecipes`
+--
+
+INSERT INTO `tblrecipes` (`id`, `id_client`, `id_professional`, `date`, `description`) VALUES
+(3, 2, 1, '2023-03-07 23:47:42', 'Recipe de prueba');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblrecords_meta`
 --
 
 CREATE TABLE `tblrecords_meta` (
@@ -20381,7 +20412,7 @@ CREATE TABLE `tblrecords_meta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblrecords_meta`
+-- Dumping data for table `tblrecords_meta`
 --
 
 INSERT INTO `tblrecords_meta` (`id`, `name`, `meta`) VALUES
@@ -20407,7 +20438,7 @@ INSERT INTO `tblrecords_meta` (`id`, `name`, `meta`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_campaign`
+-- Table structure for table `tblrec_campaign`
 --
 
 CREATE TABLE `tblrec_campaign` (
@@ -20446,7 +20477,7 @@ CREATE TABLE `tblrec_campaign` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_campaign_form_web`
+-- Table structure for table `tblrec_campaign_form_web`
 --
 
 CREATE TABLE `tblrec_campaign_form_web` (
@@ -20478,7 +20509,7 @@ CREATE TABLE `tblrec_campaign_form_web` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_candidate`
+-- Table structure for table `tblrec_candidate`
 --
 
 CREATE TABLE `tblrec_candidate` (
@@ -20521,7 +20552,7 @@ CREATE TABLE `tblrec_candidate` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_cd_evaluation`
+-- Table structure for table `tblrec_cd_evaluation`
 --
 
 CREATE TABLE `tblrec_cd_evaluation` (
@@ -20539,7 +20570,7 @@ CREATE TABLE `tblrec_cd_evaluation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_company`
+-- Table structure for table `tblrec_company`
 --
 
 CREATE TABLE `tblrec_company` (
@@ -20553,7 +20584,7 @@ CREATE TABLE `tblrec_company` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_criteria`
+-- Table structure for table `tblrec_criteria`
 --
 
 CREATE TABLE `tblrec_criteria` (
@@ -20574,7 +20605,7 @@ CREATE TABLE `tblrec_criteria` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_evaluation_form`
+-- Table structure for table `tblrec_evaluation_form`
 --
 
 CREATE TABLE `tblrec_evaluation_form` (
@@ -20588,7 +20619,7 @@ CREATE TABLE `tblrec_evaluation_form` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_interview`
+-- Table structure for table `tblrec_interview`
 --
 
 CREATE TABLE `tblrec_interview` (
@@ -20609,7 +20640,7 @@ CREATE TABLE `tblrec_interview` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_job_position`
+-- Table structure for table `tblrec_job_position`
 --
 
 CREATE TABLE `tblrec_job_position` (
@@ -20624,7 +20655,7 @@ CREATE TABLE `tblrec_job_position` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_list_criteria`
+-- Table structure for table `tblrec_list_criteria`
 --
 
 CREATE TABLE `tblrec_list_criteria` (
@@ -20638,7 +20669,7 @@ CREATE TABLE `tblrec_list_criteria` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_proposal`
+-- Table structure for table `tblrec_proposal`
 --
 
 CREATE TABLE `tblrec_proposal` (
@@ -20671,7 +20702,7 @@ CREATE TABLE `tblrec_proposal` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_set_transfer_record`
+-- Table structure for table `tblrec_set_transfer_record`
 --
 
 CREATE TABLE `tblrec_set_transfer_record` (
@@ -20688,7 +20719,7 @@ CREATE TABLE `tblrec_set_transfer_record` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_skill`
+-- Table structure for table `tblrec_skill`
 --
 
 CREATE TABLE `tblrec_skill` (
@@ -20699,7 +20730,7 @@ CREATE TABLE `tblrec_skill` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrec_transfer_records`
+-- Table structure for table `tblrec_transfer_records`
 --
 
 CREATE TABLE `tblrec_transfer_records` (
@@ -20717,7 +20748,7 @@ CREATE TABLE `tblrec_transfer_records` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblrelated_items`
+-- Table structure for table `tblrelated_items`
 --
 
 CREATE TABLE `tblrelated_items` (
@@ -20730,7 +20761,7 @@ CREATE TABLE `tblrelated_items` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblreminders`
+-- Table structure for table `tblreminders`
 --
 
 CREATE TABLE `tblreminders` (
@@ -20746,7 +20777,7 @@ CREATE TABLE `tblreminders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblreminders`
+-- Dumping data for table `tblreminders`
 --
 
 INSERT INTO `tblreminders` (`id`, `description`, `date`, `isnotified`, `rel_id`, `staff`, `rel_type`, `notify_by_email`, `creator`) VALUES
@@ -20755,7 +20786,7 @@ INSERT INTO `tblreminders` (`id`, `description`, `date`, `isnotified`, `rel_id`,
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblroles`
+-- Table structure for table `tblroles`
 --
 
 CREATE TABLE `tblroles` (
@@ -20765,7 +20796,7 @@ CREATE TABLE `tblroles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblroles`
+-- Dumping data for table `tblroles`
 --
 
 INSERT INTO `tblroles` (`roleid`, `name`, `permissions`) VALUES
@@ -20775,7 +20806,7 @@ INSERT INTO `tblroles` (`roleid`, `name`, `permissions`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsales_activity`
+-- Table structure for table `tblsales_activity`
 --
 
 CREATE TABLE `tblsales_activity` (
@@ -20790,7 +20821,7 @@ CREATE TABLE `tblsales_activity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblsales_activity`
+-- Dumping data for table `tblsales_activity`
 --
 
 INSERT INTO `tblsales_activity` (`id`, `rel_type`, `rel_id`, `description`, `additional_data`, `staffid`, `full_name`, `date`) VALUES
@@ -20832,7 +20863,7 @@ INSERT INTO `tblsales_activity` (`id`, `rel_type`, `rel_id`, `description`, `add
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblscheduled_emails`
+-- Table structure for table `tblscheduled_emails`
 --
 
 CREATE TABLE `tblscheduled_emails` (
@@ -20849,7 +20880,7 @@ CREATE TABLE `tblscheduled_emails` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblservices`
+-- Table structure for table `tblservices`
 --
 
 CREATE TABLE `tblservices` (
@@ -20860,7 +20891,7 @@ CREATE TABLE `tblservices` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsessions`
+-- Table structure for table `tblsessions`
 --
 
 CREATE TABLE `tblsessions` (
@@ -20871,24 +20902,45 @@ CREATE TABLE `tblsessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblsessions`
+-- Dumping data for table `tblsessions`
 --
 
 INSERT INTO `tblsessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('11e95d706f15ee2cb53270703b366a9760ab0186', '167.94.138.118', 1678185028, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383138353032383b),
-('14b7700cc3d065bcee468361f2a974b3ecd7fc4d', '38.25.162.237', 1678207562, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230373536323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('37f986fee44bd2a77f06e4135c66d6a80d7517dd', '38.25.162.237', 1678206602, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230363630323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('435e7280ffa052752bb6c04b79b43d0c232fdd6b', '167.94.138.118', 1678185028, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383138353032383b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
-('ba9315f6172f98107259ce69cf0f66aec92cd4b1', '38.25.162.237', 1678207226, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230373232363b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('bf3d99b3055bdd87e736fb257ad5b9bee6333180', '167.248.133.191', 1678191730, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383139313732393b),
-('cb4663a8f8f065859807097a6a5ce8e04b2ed0ca', '38.25.162.237', 1678206909, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230363930393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
-('d1502bdd92db9ed31181d41df7f428c3c460ea33', '167.248.133.191', 1678191729, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383139313732363b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b),
-('e180af2202560a307ec3197cc3434f32bf36dacd', '38.25.162.237', 1678207840, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383230373536323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a32393a2268747470733a2f2f63656e6564692e693966696e616e63652e636f6d2f223b);
+('204ot5jbe779qe0oavdb40208ltrsl9a', '206.1.210.100', 1678246270, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234363237303b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('2p3mprt1r9gdrab5ifqelt4lnme3njbk', '38.25.162.237', 1678221932, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383232313933323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('38i6ar8sfj0j0ra00hkc116gqvbfkolu', '206.1.245.214', 1678234862, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383233343836323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('3orbukpb44kp3oovjkbc42dobc00f8uo', '206.1.210.100', 1678250836, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383235303833363b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('4gt3aclj37ot8pghip7mufb91i29vhq3', '206.1.210.100', 1678245310, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234353331303b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('4qr5dv3h18kifqqh8i9dqiohdq64mh90', '206.1.210.100', 1678250198, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383235303139383b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('60qac6iod4i35djb4d7ud0qhtfq1bjpk', '206.1.210.100', 1678249055, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234393035353b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('7tjmvknmmp5f7f7kk2s9pc9u4jb67jrl', '206.1.210.100', 1678237804, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383233373830343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('8k38i1b1rkho8l38h20ru5is1tpp841d', '206.1.245.214', 1678233525, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383233333532353b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('9uica4q76frvlirrfosb1curnih3gmur', '206.1.210.100', 1678249359, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234393335393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('b56lgdl0i5eaa8h379ikh289dcct89h7', '206.1.210.100', 1678247219, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234373231393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('b8ot0eqbahprfek9hiogmuj9hg7i3qf6', '206.1.210.100', 1678239872, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383233393837323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('ckf1a2bfr49rbbs8ojp3n8jfkv6fs778', '206.1.210.100', 1678251204, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383235313135373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('dibocc32fa18er6tbkgvqhvt1vd8oq7g', '206.1.210.100', 1678246598, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234363539383b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('fj3pvd71pmf02i150vnt1n6407tqfpfk', '206.1.210.100', 1678235494, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383233353439343b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('fukms8v03gtp1hovtnpgg46mfafuv8r1', '206.1.210.100', 1678249729, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234393732393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('gki3tsg756ork6soljcrumvdviaju10f', '206.1.210.100', 1678251157, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383235313135373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('i71ll0vnln9ot1n1n845pbn18i94hc98', '38.25.162.237', 1678222175, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383232313933323b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('ltpr2dgtqc2d5ig6cjcg85755d9u8l45', '206.1.210.100', 1678251068, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383235313036373b7265645f75726c7c733a35323a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f61646d696e2f726563697065732f7072696e742f33223b),
+('o51h73jn4urob0aj3md1dmob6dmek04o', '206.1.210.100', 1678235165, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383233353136353b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('ofotouaofe7ss5umkifh03163psjr8kj', '206.1.210.100', 1678236189, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383233363138393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('p3cd6bh8rl10t0ns364pubrlin0kdapa', '206.1.245.214', 1678234271, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383233343237313b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('p75jlrguh1pqcmcg1j16hjtol1dvqbmi', '206.1.210.100', 1678245839, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234353833393b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('ptb96e0q5nsf3vipa10f23icon47f7kh', '206.1.210.100', 1678250515, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383235303531353b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('q6sevneg0sktv709h2jgkfjkasrvekqe', '186.121.195.169', 1678276887, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383237363838373b69735f6d6f62696c657c623a313b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('r7u7103gvpanh5kpj5128p2uh45llm2d', '206.1.210.100', 1678247601, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234373630313b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('sikupujqulrdjbma8g4n0n8e6tqd1cqr', '206.1.210.100', 1678248738, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234383733383b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('sm0ur42itr7l2gdsdm9qt554kn26841s', '38.25.162.237', 1678276699, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383237363639363b7265645f75726c7c733a33313a2268747470733a2f2f63656e6564692e6e69736164656c6761646f2e636f6d2f223b),
+('tfqa1o8hifb650qkof31qnek2bv5fb6j', '206.1.210.100', 1678235795, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383233353739353b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b),
+('us7egvtdkc101kjksgn6cbt65m8ctkbq', '206.1.210.100', 1678246917, 0x5f5f63695f6c6173745f726567656e65726174657c693a313637383234363931373b73746166665f757365725f69647c733a313a2232223b73746166665f6c6f676765645f696e7c623a313b73657475702d6d656e752d6f70656e7c733a303a22223b);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsetting_asset_allocation`
+-- Table structure for table `tblsetting_asset_allocation`
 --
 
 CREATE TABLE `tblsetting_asset_allocation` (
@@ -20900,7 +20952,7 @@ CREATE TABLE `tblsetting_asset_allocation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsetting_training`
+-- Table structure for table `tblsetting_training`
 --
 
 CREATE TABLE `tblsetting_training` (
@@ -20912,7 +20964,7 @@ CREATE TABLE `tblsetting_training` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsetting_transfer_records`
+-- Table structure for table `tblsetting_transfer_records`
 --
 
 CREATE TABLE `tblsetting_transfer_records` (
@@ -20924,7 +20976,7 @@ CREATE TABLE `tblsetting_transfer_records` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblshared_customer_files`
+-- Table structure for table `tblshared_customer_files`
 --
 
 CREATE TABLE `tblshared_customer_files` (
@@ -20933,7 +20985,7 @@ CREATE TABLE `tblshared_customer_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblshared_customer_files`
+-- Dumping data for table `tblshared_customer_files`
 --
 
 INSERT INTO `tblshared_customer_files` (`file_id`, `contact_id`) VALUES
@@ -20942,7 +20994,7 @@ INSERT INTO `tblshared_customer_files` (`file_id`, `contact_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsi_lead_filter`
+-- Table structure for table `tblsi_lead_filter`
 --
 
 CREATE TABLE `tblsi_lead_filter` (
@@ -20955,7 +21007,7 @@ CREATE TABLE `tblsi_lead_filter` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsi_task_filter`
+-- Table structure for table `tblsi_task_filter`
 --
 
 CREATE TABLE `tblsi_task_filter` (
@@ -20968,7 +21020,7 @@ CREATE TABLE `tblsi_task_filter` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblspam_filters`
+-- Table structure for table `tblspam_filters`
 --
 
 CREATE TABLE `tblspam_filters` (
@@ -20981,7 +21033,7 @@ CREATE TABLE `tblspam_filters` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblstaff`
+-- Table structure for table `tblstaff`
 --
 
 CREATE TABLE `tblstaff` (
@@ -21043,17 +21095,17 @@ CREATE TABLE `tblstaff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblstaff`
+-- Dumping data for table `tblstaff`
 --
 
 INSERT INTO `tblstaff` (`staffid`, `email`, `firstname`, `lastname`, `facebook`, `linkedin`, `phonenumber`, `skype`, `password`, `datecreated`, `profile_image`, `last_ip`, `last_login`, `last_activity`, `last_password_change`, `new_pass_key`, `new_pass_key_requested`, `admin`, `role`, `active`, `default_language`, `direction`, `media_path_slug`, `is_not_staff`, `hourly_rate`, `two_factor_auth_enabled`, `two_factor_auth_code`, `two_factor_auth_code_requested`, `email_signature`, `birthday`, `birthplace`, `sex`, `marital_status`, `nation`, `religion`, `identification`, `days_for_identity`, `home_town`, `resident`, `current_address`, `literacy`, `orther_infor`, `job_position`, `workplace`, `place_of_issue`, `account_number`, `name_account`, `issue_bank`, `records_received`, `Personal_tax_code`, `google_auth_secret`, `team_manage`, `staff_identifi`, `status_work`, `date_update`) VALUES
 (1, 'CONTACTO@CRIATIVEDIGITAL.COM', 'Dr. Erick', 'Santos', '', '', '', '', '$2a$08$hlT5cDSiLHr5FOyWCCyDeecAcHBclJ29CvfFHudodKSM9bADa1eS.', '2021-12-16 03:23:51', 'FAv2.png', '190.129.40.105', '2022-05-04 10:52:48', '2022-05-04 11:24:49', NULL, NULL, NULL, 1, 0, 1, 'spanish', '', NULL, 0, '0.00', 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
-(2, 'admin@admin.com', 'Admin', 'Admin', '', '', '', '', '$2a$08$Lk0jYNH8NkwF1BYAuIFSn.j7eGEYuJFPtuZbxT1cMWwWQZjqLaPyG', '2021-12-16 14:27:13', 'SITE - SOBRE MIM - MISSÃO (780X780).png', '38.25.162.237', '2023-03-07 12:25:02', '2023-03-07 12:50:40', '2022-02-10 11:39:44', NULL, NULL, 0, 1, 1, 'spanish', '', 'admin-admin', 0, '0.00', 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL);
+(2, 'admin@admin.com', 'Admin', 'Admin', '', '', '', '', '$2a$08$Lk0jYNH8NkwF1BYAuIFSn.j7eGEYuJFPtuZbxT1cMWwWQZjqLaPyG', '2021-12-16 14:27:13', 'SITE - SOBRE MIM - MISSÃO (780X780).png', '206.1.245.214', '2023-03-07 19:53:49', '2023-03-08 00:53:24', '2022-02-10 11:39:44', NULL, NULL, 0, 1, 1, 'spanish', '', 'admin-admin', 0, '0.00', 0, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblstaff_departments`
+-- Table structure for table `tblstaff_departments`
 --
 
 CREATE TABLE `tblstaff_departments` (
@@ -21065,7 +21117,7 @@ CREATE TABLE `tblstaff_departments` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblstaff_permissions`
+-- Table structure for table `tblstaff_permissions`
 --
 
 CREATE TABLE `tblstaff_permissions` (
@@ -21075,7 +21127,7 @@ CREATE TABLE `tblstaff_permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblstaff_permissions`
+-- Dumping data for table `tblstaff_permissions`
 --
 
 INSERT INTO `tblstaff_permissions` (`staff_id`, `feature`, `capability`) VALUES
@@ -21154,7 +21206,7 @@ INSERT INTO `tblstaff_permissions` (`staff_id`, `feature`, `capability`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsubscriptions`
+-- Table structure for table `tblsubscriptions`
 --
 
 CREATE TABLE `tblsubscriptions` (
@@ -21187,7 +21239,7 @@ CREATE TABLE `tblsubscriptions` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsurveyresultsets`
+-- Table structure for table `tblsurveyresultsets`
 --
 
 CREATE TABLE `tblsurveyresultsets` (
@@ -21201,7 +21253,7 @@ CREATE TABLE `tblsurveyresultsets` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsurveys`
+-- Table structure for table `tblsurveys`
 --
 
 CREATE TABLE `tblsurveys` (
@@ -21223,7 +21275,7 @@ CREATE TABLE `tblsurveys` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsurveysemailsendcron`
+-- Table structure for table `tblsurveysemailsendcron`
 --
 
 CREATE TABLE `tblsurveysemailsendcron` (
@@ -21238,7 +21290,7 @@ CREATE TABLE `tblsurveysemailsendcron` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblsurveysendlog`
+-- Table structure for table `tblsurveysendlog`
 --
 
 CREATE TABLE `tblsurveysendlog` (
@@ -21253,7 +21305,7 @@ CREATE TABLE `tblsurveysendlog` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltaggables`
+-- Table structure for table `tbltaggables`
 --
 
 CREATE TABLE `tbltaggables` (
@@ -21266,7 +21318,7 @@ CREATE TABLE `tbltaggables` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltags`
+-- Table structure for table `tbltags`
 --
 
 CREATE TABLE `tbltags` (
@@ -21277,7 +21329,7 @@ CREATE TABLE `tbltags` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltasks`
+-- Table structure for table `tbltasks`
 --
 
 CREATE TABLE `tbltasks` (
@@ -21315,7 +21367,7 @@ CREATE TABLE `tbltasks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tbltasks`
+-- Dumping data for table `tbltasks`
 --
 
 INSERT INTO `tbltasks` (`id`, `name`, `description`, `priority`, `dateadded`, `startdate`, `duedate`, `datefinished`, `addedfrom`, `is_added_from_contact`, `status`, `recurring_type`, `repeat_every`, `recurring`, `is_recurring_from`, `cycles`, `total_cycles`, `custom_recurring`, `last_recurring_date`, `rel_id`, `rel_type`, `is_public`, `billable`, `billed`, `invoice_id`, `hourly_rate`, `milestone`, `kanban_order`, `milestone_order`, `visible_to_client`, `deadline_notified`) VALUES
@@ -21325,7 +21377,7 @@ INSERT INTO `tbltasks` (`id`, `name`, `description`, `priority`, `dateadded`, `s
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltaskstimers`
+-- Table structure for table `tbltaskstimers`
 --
 
 CREATE TABLE `tbltaskstimers` (
@@ -21341,7 +21393,7 @@ CREATE TABLE `tbltaskstimers` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltasks_checklist_templates`
+-- Table structure for table `tbltasks_checklist_templates`
 --
 
 CREATE TABLE `tbltasks_checklist_templates` (
@@ -21352,7 +21404,7 @@ CREATE TABLE `tbltasks_checklist_templates` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltask_assigned`
+-- Table structure for table `tbltask_assigned`
 --
 
 CREATE TABLE `tbltask_assigned` (
@@ -21364,7 +21416,7 @@ CREATE TABLE `tbltask_assigned` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tbltask_assigned`
+-- Dumping data for table `tbltask_assigned`
 --
 
 INSERT INTO `tbltask_assigned` (`id`, `staffid`, `taskid`, `assigned_from`, `is_assigned_from_contact`) VALUES
@@ -21374,7 +21426,7 @@ INSERT INTO `tbltask_assigned` (`id`, `staffid`, `taskid`, `assigned_from`, `is_
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltask_checklist_items`
+-- Table structure for table `tbltask_checklist_items`
 --
 
 CREATE TABLE `tbltask_checklist_items` (
@@ -21392,7 +21444,7 @@ CREATE TABLE `tbltask_checklist_items` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltask_comments`
+-- Table structure for table `tbltask_comments`
 --
 
 CREATE TABLE `tbltask_comments` (
@@ -21408,7 +21460,7 @@ CREATE TABLE `tbltask_comments` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltask_followers`
+-- Table structure for table `tbltask_followers`
 --
 
 CREATE TABLE `tbltask_followers` (
@@ -21420,7 +21472,7 @@ CREATE TABLE `tbltask_followers` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltaxes`
+-- Table structure for table `tbltaxes`
 --
 
 CREATE TABLE `tbltaxes` (
@@ -21432,7 +21484,7 @@ CREATE TABLE `tbltaxes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltemplates`
+-- Table structure for table `tbltemplates`
 --
 
 CREATE TABLE `tbltemplates` (
@@ -21446,7 +21498,7 @@ CREATE TABLE `tbltemplates` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltickets`
+-- Table structure for table `tbltickets`
 --
 
 CREATE TABLE `tbltickets` (
@@ -21478,7 +21530,7 @@ CREATE TABLE `tbltickets` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltickets_pipe_log`
+-- Table structure for table `tbltickets_pipe_log`
 --
 
 CREATE TABLE `tbltickets_pipe_log` (
@@ -21495,7 +21547,7 @@ CREATE TABLE `tbltickets_pipe_log` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltickets_predefined_replies`
+-- Table structure for table `tbltickets_predefined_replies`
 --
 
 CREATE TABLE `tbltickets_predefined_replies` (
@@ -21507,7 +21559,7 @@ CREATE TABLE `tbltickets_predefined_replies` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltickets_priorities`
+-- Table structure for table `tbltickets_priorities`
 --
 
 CREATE TABLE `tbltickets_priorities` (
@@ -21516,7 +21568,7 @@ CREATE TABLE `tbltickets_priorities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tbltickets_priorities`
+-- Dumping data for table `tbltickets_priorities`
 --
 
 INSERT INTO `tbltickets_priorities` (`priorityid`, `name`) VALUES
@@ -21527,7 +21579,7 @@ INSERT INTO `tbltickets_priorities` (`priorityid`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltickets_status`
+-- Table structure for table `tbltickets_status`
 --
 
 CREATE TABLE `tbltickets_status` (
@@ -21539,7 +21591,7 @@ CREATE TABLE `tbltickets_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tbltickets_status`
+-- Dumping data for table `tbltickets_status`
 --
 
 INSERT INTO `tbltickets_status` (`ticketstatusid`, `name`, `isdefault`, `statuscolor`, `statusorder`) VALUES
@@ -21552,7 +21604,7 @@ INSERT INTO `tbltickets_status` (`ticketstatusid`, `name`, `isdefault`, `statusc
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblticket_attachments`
+-- Table structure for table `tblticket_attachments`
 --
 
 CREATE TABLE `tblticket_attachments` (
@@ -21567,7 +21619,7 @@ CREATE TABLE `tblticket_attachments` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblticket_replies`
+-- Table structure for table `tblticket_replies`
 --
 
 CREATE TABLE `tblticket_replies` (
@@ -21586,7 +21638,7 @@ CREATE TABLE `tblticket_replies` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltodos`
+-- Table structure for table `tbltodos`
 --
 
 CREATE TABLE `tbltodos` (
@@ -21600,7 +21652,7 @@ CREATE TABLE `tbltodos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tbltodos`
+-- Dumping data for table `tbltodos`
 --
 
 INSERT INTO `tbltodos` (`todoid`, `description`, `staffid`, `dateadded`, `finished`, `datefinished`, `item_order`) VALUES
@@ -21609,7 +21661,7 @@ INSERT INTO `tbltodos` (`todoid`, `description`, `staffid`, `dateadded`, `finish
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltracked_mails`
+-- Table structure for table `tbltracked_mails`
 --
 
 CREATE TABLE `tbltracked_mails` (
@@ -21627,7 +21679,7 @@ CREATE TABLE `tbltracked_mails` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltraining_allocation`
+-- Table structure for table `tbltraining_allocation`
 --
 
 CREATE TABLE `tbltraining_allocation` (
@@ -21642,7 +21694,7 @@ CREATE TABLE `tbltraining_allocation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltransfer_records_reception`
+-- Table structure for table `tbltransfer_records_reception`
 --
 
 CREATE TABLE `tbltransfer_records_reception` (
@@ -21655,7 +21707,7 @@ CREATE TABLE `tbltransfer_records_reception` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbltwocheckout_log`
+-- Table structure for table `tbltwocheckout_log`
 --
 
 CREATE TABLE `tbltwocheckout_log` (
@@ -21669,7 +21721,7 @@ CREATE TABLE `tbltwocheckout_log` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbluser_auto_login`
+-- Table structure for table `tbluser_auto_login`
 --
 
 CREATE TABLE `tbluser_auto_login` (
@@ -21682,7 +21734,7 @@ CREATE TABLE `tbluser_auto_login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tbluser_auto_login`
+-- Dumping data for table `tbluser_auto_login`
 --
 
 INSERT INTO `tbluser_auto_login` (`key_id`, `user_id`, `user_agent`, `last_ip`, `last_login`, `staff`) VALUES
@@ -21694,7 +21746,7 @@ INSERT INTO `tbluser_auto_login` (`key_id`, `user_id`, `user_agent`, `last_ip`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbluser_meta`
+-- Table structure for table `tbluser_meta`
 --
 
 CREATE TABLE `tbluser_meta` (
@@ -21707,7 +21759,7 @@ CREATE TABLE `tbluser_meta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tbluser_meta`
+-- Dumping data for table `tbluser_meta`
 --
 
 INSERT INTO `tbluser_meta` (`umeta_id`, `staff_id`, `client_id`, `contact_id`, `meta_key`, `meta_value`) VALUES
@@ -21718,7 +21770,7 @@ INSERT INTO `tbluser_meta` (`umeta_id`, `staff_id`, `client_id`, `contact_id`, `
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblvault`
+-- Table structure for table `tblvault`
 --
 
 CREATE TABLE `tblvault` (
@@ -21741,7 +21793,7 @@ CREATE TABLE `tblvault` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblviews_tracking`
+-- Table structure for table `tblviews_tracking`
 --
 
 CREATE TABLE `tblviews_tracking` (
@@ -21755,7 +21807,7 @@ CREATE TABLE `tblviews_tracking` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblware_unit_type`
+-- Table structure for table `tblware_unit_type`
 --
 
 CREATE TABLE `tblware_unit_type` (
@@ -21771,7 +21823,7 @@ CREATE TABLE `tblware_unit_type` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblweb_to_lead`
+-- Table structure for table `tblweb_to_lead`
 --
 
 CREATE TABLE `tblweb_to_lead` (
@@ -21805,7 +21857,7 @@ CREATE TABLE `tblweb_to_lead` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblweb_to_recruitment`
+-- Table structure for table `tblweb_to_recruitment`
 --
 
 CREATE TABLE `tblweb_to_recruitment` (
@@ -21871,302 +21923,302 @@ CREATE TABLE `tblweb_to_recruitment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tblweb_to_recruitment`
+-- Dumping data for table `tblweb_to_recruitment`
 --
 
 INSERT INTO `tblweb_to_recruitment` (`id`, `campaign_code`, `campaign_name`, `cp_proposal`, `cp_position`, `cp_department`, `cp_amount_recruiment`, `cp_form_work`, `cp_workplace`, `cp_salary_from`, `cp_salary_to`, `cp_from_date`, `cp_to_date`, `cp_reason_recruitment`, `cp_job_description`, `cp_manager`, `cp_follower`, `cp_ages_from`, `cp_ages_to`, `cp_gender`, `cp_height`, `cp_weight`, `cp_literacy`, `cp_experience`, `cp_add_from`, `cp_date_add`, `cp_status`, `nation`, `nationality`, `religion`, `marital_status`, `birthplace`, `home_town`, `resident`, `current_accommodation`, `cp_desired_salary`, `specialized`, `training_form`, `training_places`, `lead_source`, `lead_status`, `notify_ids_staff`, `notify_ids_roles`, `form_key`, `notify_lead_imported`, `notify_type`, `notify_ids`, `responsible`, `name`, `form_data`, `recaptcha`, `submit_btn_name`, `success_submit_msg`, `language`, `allow_duplicate`, `mark_public`, `track_duplicate_field`, `track_duplicate_field_and`, `create_task_on_duplicate`) VALUES
 (1, '', '', '', 0, 0, 1, '', '', '0', '0', '0000-00-00', '0000-00-00', '', '', '', '', 15, 60, '', 1, 40, '', '', 0, '0000-00-00', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '132c185362fb4a47f5521b8b8a8d9a0a', 0, '', '', 0, 'recruitment_form', '[{\"label\":\"Croatia\",\"value\":\"55\"},{\"label\":\"Cuba\",\"value\":\"56\"},{\"label\":\"Curacao\",\"value\":\"57\"},{\"label\":\"Cyprus\",\"value\":\"58\"},{\"label\":\"Czech Republic\",\"value\":\"59\"},{\"label\":\"Democratic Republic of the Congo\",\"value\":\"60\"},{\"label\":\"Denmark\",\"value\":\"61\"},{\"label\":\"Djibouti\",\"value\":\"62\"},{\"label\":\"Dominica\",\"value\":\"63\"},{\"label\":\"Dominican Republic\",\"value\":\"64\"},{\"label\":\"Ecuador\",\"value\":\"65\"},{\"label\":\"Egypt\",\"value\":\"66\"},{\"label\":\"El Salvador\",\"value\":\"67\"},{\"label\":\"Equatorial Guinea\",\"value\":\"68\"},{\"label\":\"Eritrea\",\"value\":\"69\"},{\"label\":\"Estonia\",\"value\":\"70\"},{\"label\":\"Ethiopia\",\"value\":\"71\"},{\"label\":\"Falkland Islands (Malvinas)\",\"value\":\"72\"},{\"label\":\"Faroe Islands\",\"value\":\"73\"},{\"label\":\"Fiji\",\"value\":\"74\"},{\"label\":\"Finland\",\"value\":\"75\"},{\"label\":\"France\",\"value\":\"76\"},{\"label\":\"French Guiana\",\"value\":\"77\"},{\"label\":\"French Polynesia\",\"value\":\"78\"},{\"label\":\"French Southern Territories\",\"value\":\"79\"},{\"label\":\"Gabon\",\"value\":\"80\"},{\"label\":\"Gambia\",\"value\":\"81\"},{\"label\":\"Georgia\",\"value\":\"82\"},{\"label\":\"Germany\",\"value\":\"83\"},{\"label\":\"Ghana\",\"value\":\"84\"},{\"label\":\"Gibraltar\",\"value\":\"85\"},{\"label\":\"Greece\",\"value\":\"86\"},{\"label\":\"Greenland\",\"value\":\"87\"},{\"label\":\"Grenada\",\"value\":\"88\"},{\"label\":\"Guadaloupe\",\"value\":\"89\"},{\"label\":\"Guam\",\"value\":\"90\"},{\"label\":\"Guatemala\",\"value\":\"91\"},{\"label\":\"Guernsey\",\"value\":\"92\"},{\"label\":\"Guinea\",\"value\":\"93\"},{\"label\":\"Guinea-Bissau\",\"value\":\"94\"},{\"label\":\"Guyana\",\"value\":\"95\"},{\"label\":\"Haiti\",\"value\":\"96\"},{\"label\":\"Heard Island and McDonald Islands\",\"value\":\"97\"},{\"label\":\"Honduras\",\"value\":\"98\"},{\"label\":\"Hong Kong\",\"value\":\"99\"},{\"label\":\"Hungary\",\"value\":\"100\"},{\"label\":\"Iceland\",\"value\":\"101\"},{\"label\":\"India\",\"value\":\"102\"},{\"label\":\"Indonesia\",\"value\":\"103\"},{\"label\":\"Iran\",\"value\":\"104\"},{\"label\":\"Iraq\",\"value\":\"105\"},{\"label\":\"Ireland\",\"value\":\"106\"},{\"label\":\"Isle of Man\",\"value\":\"107\"},{\"label\":\"Israel\",\"value\":\"108\"},{\"label\":\"Italy\",\"value\":\"109\"},{\"label\":\"Jamaica\",\"value\":\"110\"},{\"label\":\"Japan\",\"value\":\"111\"},{\"label\":\"Jersey\",\"value\":\"112\"},{\"label\":\"Jordan\",\"value\":\"113\"},{\"label\":\"Kazakhstan\",\"value\":\"114\"},{\"label\":\"Kenya\",\"value\":\"115\"},{\"label\":\"Kiribati\",\"value\":\"116\"},{\"label\":\"Kosovo\",\"value\":\"117\"},{\"label\":\"Kuwait\",\"value\":\"118\"},{\"label\":\"Kyrgyzstan\",\"value\":\"119\"},{\"label\":\"Laos\",\"value\":\"120\"},{\"label\":\"Latvia\",\"value\":\"121\"},{\"label\":\"Lebanon\",\"value\":\"122\"},{\"label\":\"Lesotho\",\"value\":\"123\"},{\"label\":\"Liberia\",\"value\":\"124\"},{\"label\":\"Libya\",\"value\":\"125\"},{\"label\":\"Liechtenstein\",\"value\":\"126\"},{\"label\":\"Lithuania\",\"value\":\"127\"},{\"label\":\"Luxembourg\",\"value\":\"128\"},{\"label\":\"Macao\",\"value\":\"129\"},{\"label\":\"North Macedonia\",\"value\":\"130\"},{\"label\":\"Madagascar\",\"value\":\"131\"},{\"label\":\"Malawi\",\"value\":\"132\"},{\"label\":\"Malaysia\",\"value\":\"133\"},{\"label\":\"Maldives\",\"value\":\"134\"},{\"label\":\"Mali\",\"value\":\"135\"},{\"label\":\"Malta\",\"value\":\"136\"},{\"label\":\"Marshall Islands\",\"value\":\"137\"},{\"label\":\"Martinique\",\"value\":\"138\"},{\"label\":\"Mauritania\",\"value\":\"139\"},{\"label\":\"Mauritius\",\"value\":\"140\"},{\"label\":\"Mayotte\",\"value\":\"141\"},{\"label\":\"Mexico\",\"value\":\"142\"},{\"label\":\"Micronesia\",\"value\":\"143\"},{\"label\":\"Moldava\",\"value\":\"144\"},{\"label\":\"Monaco\",\"value\":\"145\"},{\"label\":\"Mongolia\",\"value\":\"146\"},{\"label\":\"Montenegro\",\"value\":\"147\"},{\"label\":\"Montserrat\",\"value\":\"148\"},{\"label\":\"Morocco\",\"value\":\"149\"},{\"label\":\"Mozambique\",\"value\":\"150\"},{\"label\":\"Myanmar (Burma)\",\"value\":\"151\"},{\"label\":\"Namibia\",\"value\":\"152\"},{\"label\":\"Nauru\",\"value\":\"153\"},{\"label\":\"Nepal\",\"value\":\"154\"},{\"label\":\"Netherlands\",\"value\":\"155\"},{\"label\":\"New Caledonia\",\"value\":\"156\"},{\"label\":\"New Zealand\",\"value\":\"157\"},{\"label\":\"Nicaragua\",\"value\":\"158\"},{\"label\":\"Niger\",\"value\":\"159\"},{\"label\":\"Nigeria\",\"value\":\"160\"},{\"label\":\"Niue\",\"value\":\"161\"},{\"label\":\"Norfolk Island\",\"value\":\"162\"},{\"label\":\"North Korea\",\"value\":\"163\"},{\"label\":\"Northern Mariana Islands\",\"value\":\"164\"},{\"label\":\"Norway\",\"value\":\"165\"},{\"label\":\"Oman\",\"value\":\"166\"},{\"label\":\"Pakistan\",\"value\":\"167\"},{\"label\":\"Palau\",\"value\":\"168\"},{\"label\":\"Palestine\",\"value\":\"169\"},{\"label\":\"Panama\",\"value\":\"170\"},{\"label\":\"Papua New Guinea\",\"value\":\"171\"},{\"label\":\"Paraguay\",\"value\":\"172\"},{\"label\":\"Peru\",\"value\":\"173\"},{\"label\":\"Phillipines\",\"value\":\"174\"},{\"label\":\"Pitcairn\",\"value\":\"175\"},{\"label\":\"Poland\",\"value\":\"176\"},{\"label\":\"Portugal\",\"value\":\"177\"},{\"label\":\"Puerto Rico\",\"value\":\"178\"},{\"label\":\"Qatar\",\"value\":\"179\"},{\"label\":\"Reunion\",\"value\":\"180\"},{\"label\":\"Romania\",\"value\":\"181\"},{\"label\":\"Russia\",\"value\":\"182\"},{\"label\":\"Rwanda\",\"value\":\"183\"},{\"label\":\"Saint Barthelemy\",\"value\":\"184\"},{\"label\":\"Saint Helena\",\"value\":\"185\"},{\"label\":\"Saint Kitts and Nevis\",\"value\":\"186\"},{\"label\":\"Saint Lucia\",\"value\":\"187\"},{\"label\":\"Saint Martin\",\"value\":\"188\"},{\"label\":\"Saint Pierre and Miquelon\",\"value\":\"189\"},{\"label\":\"Saint Vincent and the Grenadines\",\"value\":\"190\"},{\"label\":\"Samoa\",\"value\":\"191\"},{\"label\":\"San Marino\",\"value\":\"192\"},{\"label\":\"Sao Tome and Principe\",\"value\":\"193\"},{\"label\":\"Saudi Arabia\",\"value\":\"194\"},{\"label\":\"Senegal\",\"value\":\"195\"},{\"label\":\"Serbia\",\"value\":\"196\"},{\"label\":\"Seychelles\",\"value\":\"197\"},{\"label\":\"Sierra Leone\",\"value\":\"198\"},{\"label\":\"Singapore\",\"value\":\"199\"},{\"label\":\"Sint Maarten\",\"value\":\"200\"},{\"label\":\"Slovakia\",\"value\":\"201\"},{\"label\":\"Slovenia\",\"value\":\"202\"},{\"label\":\"Solomon Islands\",\"value\":\"203\"},{\"label\":\"Somalia\",\"value\":\"204\"},{\"label\":\"South Africa\",\"value\":\"205\"},{\"label\":\"South Georgia and the South Sandwich Islands\",\"value\":\"206\"},{\"label\":\"South Korea\",\"value\":\"207\"},{\"label\":\"South Sudan\",\"value\":\"208\"},{\"label\":\"Spain\",\"value\":\"209\"},{\"label\":\"Sri Lanka\",\"value\":\"210\"},{\"label\":\"Sudan\",\"value\":\"211\"},{\"label\":\"Suriname\",\"value\":\"212\"},{\"label\":\"Svalbard and Jan Mayen\",\"value\":\"213\"},{\"label\":\"Swaziland\",\"value\":\"214\"},{\"label\":\"Sweden\",\"value\":\"215\"},{\"label\":\"Switzerland\",\"value\":\"216\"},{\"label\":\"Syria\",\"value\":\"217\"},{\"label\":\"Taiwan\",\"value\":\"218\"},{\"label\":\"Tajikistan\",\"value\":\"219\"},{\"label\":\"Tanzania\",\"value\":\"220\"},{\"label\":\"Thailand\",\"value\":\"221\"},{\"label\":\"Timor-Leste (East Timor)\",\"value\":\"222\"},{\"label\":\"Togo\",\"value\":\"223\"},{\"label\":\"Tokelau\",\"value\":\"224\"},{\"label\":\"Tonga\",\"value\":\"225\"},{\"label\":\"Trinidad and Tobago\",\"value\":\"226\"},{\"label\":\"Tunisia\",\"value\":\"227\"},{\"label\":\"Turkey\",\"value\":\"228\"},{\"label\":\"Turkmenistan\",\"value\":\"229\"},{\"label\":\"Turks and Caicos Islands\",\"value\":\"230\"},{\"label\":\"Tuvalu\",\"value\":\"231\"},{\"label\":\"Uganda\",\"value\":\"232\"},{\"label\":\"Ukraine\",\"value\":\"233\"},{\"label\":\"United Arab Emirates\",\"value\":\"234\"},{\"label\":\"United Kingdom\",\"value\":\"235\"},{\"label\":\"United States\",\"value\":\"236\"},{\"label\":\"United States Minor Outlying Islands\",\"value\":\"237\"},{\"label\":\"Uruguay\",\"value\":\"238\"},{\"label\":\"Uzbekistan\",\"value\":\"239\"},{\"label\":\"Vanuatu\",\"value\":\"240\"},{\"label\":\"Vatican City\",\"value\":\"241\"},{\"label\":\"Venezuela\",\"value\":\"242\"},{\"label\":\"Vietnam\",\"value\":\"243\",\"selected\":true},{\"label\":\"Virgin Islands, British\",\"value\":\"244\"},{\"label\":\"Virgin Islands, US\",\"value\":\"245\"},{\"label\":\"Wallis and Futuna\",\"value\":\"246\"},{\"label\":\"Western Sahara\",\"value\":\"247\"},{\"label\":\"Yemen\",\"value\":\"248\"},{\"label\":\"Zambia\",\"value\":\"249\"},{\"label\":\"Zimbabwe\",\"value\":\"250\"}]},{\"type\":\"text\",\"label\":\"_national\",\"className\":\"form-control\",\"name\":\"nation\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"_religion\",\"className\":\"form-control\",\"name\":\"religion\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"_phone\",\"className\":\"form-control\",\"name\":\"phonenumber\",\"subtype\":\"text\"},{\"type\":\"select\",\"label\":\"_diploma\",\"className\":\"form-control\",\"name\":\"diploma\",\"values\":[{\"label\":\"\",\"value\":\"\"},{\"label\":\"master_s_degree\",\"value\":\"0\"},{\"label\":\"Ph_D\",\"value\":\"1\"},{\"label\":\"bachelor\",\"value\":\"2\"},{\"label\":\"university\",\"value\":\"3\"},{\"label\":\"vocational_colleges\",\"value\":\"4\"},{\"label\":\"vocational\",\"value\":\"5\"},{\"label\":\"high_school\",\"value\":\"6\"}]},{\"type\":\"text\",\"label\":\"training_places\",\"className\":\"form-control\",\"name\":\"training_places\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"specialized\",\"className\":\"form-control\",\"name\":\"specialized\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"forms_of_training\",\"className\":\"form-control\",\"name\":\"training_form\",\"subtype\":\"text\"},{\"type\":\"text\",\"label\":\"issue_date_identification_card\",\"className\":\"form-control fc-datepicker\",\"name\":\"days_for_identity\",\"subtype\":\"text\"}]', 0, 'sent', 'sent_successfully', '', 0, 0, '', '', 0);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `tblaccount_planning`
+-- Indexes for table `tblaccount_planning`
 --
 ALTER TABLE `tblaccount_planning`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblaccount_planning_current_service`
+-- Indexes for table `tblaccount_planning_current_service`
 --
 ALTER TABLE `tblaccount_planning_current_service`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblaccount_planning_financial`
+-- Indexes for table `tblaccount_planning_financial`
 --
 ALTER TABLE `tblaccount_planning_financial`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblaccount_planning_items`
+-- Indexes for table `tblaccount_planning_items`
 --
 ALTER TABLE `tblaccount_planning_items`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblaccount_planning_marketing_activities`
+-- Indexes for table `tblaccount_planning_marketing_activities`
 --
 ALTER TABLE `tblaccount_planning_marketing_activities`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblaccount_planning_objective`
+-- Indexes for table `tblaccount_planning_objective`
 --
 ALTER TABLE `tblaccount_planning_objective`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblaccount_planning_service_ability_offering`
+-- Indexes for table `tblaccount_planning_service_ability_offering`
 --
 ALTER TABLE `tblaccount_planning_service_ability_offering`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblaccount_planning_task`
+-- Indexes for table `tblaccount_planning_task`
 --
 ALTER TABLE `tblaccount_planning_task`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblaccount_planning_team`
+-- Indexes for table `tblaccount_planning_team`
 --
 ALTER TABLE `tblaccount_planning_team`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_accounts`
+-- Indexes for table `tblacc_accounts`
 --
 ALTER TABLE `tblacc_accounts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_account_history`
+-- Indexes for table `tblacc_account_history`
 --
 ALTER TABLE `tblacc_account_history`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_account_type_details`
+-- Indexes for table `tblacc_account_type_details`
 --
 ALTER TABLE `tblacc_account_type_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_banking_rules`
+-- Indexes for table `tblacc_banking_rules`
 --
 ALTER TABLE `tblacc_banking_rules`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_banking_rule_details`
+-- Indexes for table `tblacc_banking_rule_details`
 --
 ALTER TABLE `tblacc_banking_rule_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_expense_category_mappings`
+-- Indexes for table `tblacc_expense_category_mappings`
 --
 ALTER TABLE `tblacc_expense_category_mappings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_item_automatics`
+-- Indexes for table `tblacc_item_automatics`
 --
 ALTER TABLE `tblacc_item_automatics`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_journal_entries`
+-- Indexes for table `tblacc_journal_entries`
 --
 ALTER TABLE `tblacc_journal_entries`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_payment_mode_mappings`
+-- Indexes for table `tblacc_payment_mode_mappings`
 --
 ALTER TABLE `tblacc_payment_mode_mappings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_reconciles`
+-- Indexes for table `tblacc_reconciles`
 --
 ALTER TABLE `tblacc_reconciles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_tax_mappings`
+-- Indexes for table `tblacc_tax_mappings`
 --
 ALTER TABLE `tblacc_tax_mappings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_transaction_bankings`
+-- Indexes for table `tblacc_transaction_bankings`
 --
 ALTER TABLE `tblacc_transaction_bankings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblacc_transfers`
+-- Indexes for table `tblacc_transfers`
 --
 ALTER TABLE `tblacc_transfers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblactivity_log`
+-- Indexes for table `tblactivity_log`
 --
 ALTER TABLE `tblactivity_log`
   ADD PRIMARY KEY (`id`),
   ADD KEY `staffid` (`staffid`);
 
 --
--- Indices de la tabla `tblannouncements`
+-- Indexes for table `tblannouncements`
 --
 ALTER TABLE `tblannouncements`
   ADD PRIMARY KEY (`announcementid`);
 
 --
--- Indices de la tabla `tblappointly_appointments`
+-- Indexes for table `tblappointly_appointments`
 --
 ALTER TABLE `tblappointly_appointments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblappointly_appointment_types`
+-- Indexes for table `tblappointly_appointment_types`
 --
 ALTER TABLE `tblappointly_appointment_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblappointly_callbacks`
+-- Indexes for table `tblappointly_callbacks`
 --
 ALTER TABLE `tblappointly_callbacks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblappointly_callbacks_assignees`
+-- Indexes for table `tblappointly_callbacks_assignees`
 --
 ALTER TABLE `tblappointly_callbacks_assignees`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblappointly_google`
+-- Indexes for table `tblappointly_google`
 --
 ALTER TABLE `tblappointly_google`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblbonus_discipline`
+-- Indexes for table `tblbonus_discipline`
 --
 ALTER TABLE `tblbonus_discipline`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblbonus_discipline_detail`
+-- Indexes for table `tblbonus_discipline_detail`
 --
 ALTER TABLE `tblbonus_discipline_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcd_care`
+-- Indexes for table `tblcd_care`
 --
 ALTER TABLE `tblcd_care`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcd_family_infor`
+-- Indexes for table `tblcd_family_infor`
 --
 ALTER TABLE `tblcd_family_infor`
   ADD PRIMARY KEY (`fi_id`);
 
 --
--- Indices de la tabla `tblcd_interview`
+-- Indexes for table `tblcd_interview`
 --
 ALTER TABLE `tblcd_interview`
   ADD PRIMARY KEY (`in_id`);
 
 --
--- Indices de la tabla `tblcd_literacy`
+-- Indexes for table `tblcd_literacy`
 --
 ALTER TABLE `tblcd_literacy`
   ADD PRIMARY KEY (`li_id`);
 
 --
--- Indices de la tabla `tblcd_skill`
+-- Indexes for table `tblcd_skill`
 --
 ALTER TABLE `tblcd_skill`
   ADD PRIMARY KEY (`id`,`candidate`);
 
 --
--- Indices de la tabla `tblcd_work_experience`
+-- Indexes for table `tblcd_work_experience`
 --
 ALTER TABLE `tblcd_work_experience`
   ADD PRIMARY KEY (`we_id`);
 
 --
--- Indices de la tabla `tblchatclientmessages`
+-- Indexes for table `tblchatclientmessages`
 --
 ALTER TABLE `tblchatclientmessages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblchatgroupmembers`
+-- Indexes for table `tblchatgroupmembers`
 --
 ALTER TABLE `tblchatgroupmembers`
   ADD PRIMARY KEY (`id`),
   ADD KEY `group_id` (`group_id`);
 
 --
--- Indices de la tabla `tblchatgroupmessages`
+-- Indexes for table `tblchatgroupmessages`
 --
 ALTER TABLE `tblchatgroupmessages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblchatgroups`
+-- Indexes for table `tblchatgroups`
 --
 ALTER TABLE `tblchatgroups`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblchatgroupsharedfiles`
+-- Indexes for table `tblchatgroupsharedfiles`
 --
 ALTER TABLE `tblchatgroupsharedfiles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblchatmessages`
+-- Indexes for table `tblchatmessages`
 --
 ALTER TABLE `tblchatmessages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblchatsettings`
+-- Indexes for table `tblchatsettings`
 --
 ALTER TABLE `tblchatsettings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblchatsharedfiles`
+-- Indexes for table `tblchatsharedfiles`
 --
 ALTER TABLE `tblchatsharedfiles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblchecklist`
+-- Indexes for table `tblchecklist`
 --
 ALTER TABLE `tblchecklist`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblchecklist_allocation`
+-- Indexes for table `tblchecklist_allocation`
 --
 ALTER TABLE `tblchecklist_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblclients`
+-- Indexes for table `tblclients`
 --
 ALTER TABLE `tblclients`
   ADD PRIMARY KEY (`userid`),
@@ -22176,7 +22228,7 @@ ALTER TABLE `tblclients`
   ADD KEY `active` (`active`);
 
 --
--- Indices de la tabla `tblconsents`
+-- Indexes for table `tblconsents`
 --
 ALTER TABLE `tblconsents`
   ADD PRIMARY KEY (`id`),
@@ -22185,19 +22237,19 @@ ALTER TABLE `tblconsents`
   ADD KEY `lead_id` (`lead_id`);
 
 --
--- Indices de la tabla `tblconsent_purposes`
+-- Indexes for table `tblconsent_purposes`
 --
 ALTER TABLE `tblconsent_purposes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblconsultas`
+-- Indexes for table `tblconsultas`
 --
 ALTER TABLE `tblconsultas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcontacts`
+-- Indexes for table `tblcontacts`
 --
 ALTER TABLE `tblcontacts`
   ADD PRIMARY KEY (`id`),
@@ -22208,13 +22260,13 @@ ALTER TABLE `tblcontacts`
   ADD KEY `is_primary` (`is_primary`);
 
 --
--- Indices de la tabla `tblcontact_permissions`
+-- Indexes for table `tblcontact_permissions`
 --
 ALTER TABLE `tblcontact_permissions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcontracts`
+-- Indexes for table `tblcontracts`
 --
 ALTER TABLE `tblcontracts`
   ADD PRIMARY KEY (`id`),
@@ -22222,31 +22274,31 @@ ALTER TABLE `tblcontracts`
   ADD KEY `contract_type` (`contract_type`);
 
 --
--- Indices de la tabla `tblcontracts_types`
+-- Indexes for table `tblcontracts_types`
 --
 ALTER TABLE `tblcontracts_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcontract_comments`
+-- Indexes for table `tblcontract_comments`
 --
 ALTER TABLE `tblcontract_comments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcontract_renewals`
+-- Indexes for table `tblcontract_renewals`
 --
 ALTER TABLE `tblcontract_renewals`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcountries`
+-- Indexes for table `tblcountries`
 --
 ALTER TABLE `tblcountries`
   ADD PRIMARY KEY (`country_id`);
 
 --
--- Indices de la tabla `tblcreditnotes`
+-- Indexes for table `tblcreditnotes`
 --
 ALTER TABLE `tblcreditnotes`
   ADD PRIMARY KEY (`id`),
@@ -22255,39 +22307,39 @@ ALTER TABLE `tblcreditnotes`
   ADD KEY `project_id` (`project_id`);
 
 --
--- Indices de la tabla `tblcreditnote_refunds`
+-- Indexes for table `tblcreditnote_refunds`
 --
 ALTER TABLE `tblcreditnote_refunds`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcredits`
+-- Indexes for table `tblcredits`
 --
 ALTER TABLE `tblcredits`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcurrencies`
+-- Indexes for table `tblcurrencies`
 --
 ALTER TABLE `tblcurrencies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcustomers_groups`
+-- Indexes for table `tblcustomers_groups`
 --
 ALTER TABLE `tblcustomers_groups`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indices de la tabla `tblcustomer_admins`
+-- Indexes for table `tblcustomer_admins`
 --
 ALTER TABLE `tblcustomer_admins`
   ADD KEY `customer_id` (`customer_id`),
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indices de la tabla `tblcustomer_groups`
+-- Indexes for table `tblcustomer_groups`
 --
 ALTER TABLE `tblcustomer_groups`
   ADD PRIMARY KEY (`id`),
@@ -22295,13 +22347,13 @@ ALTER TABLE `tblcustomer_groups`
   ADD KEY `customer_id` (`customer_id`);
 
 --
--- Indices de la tabla `tblcustomfields`
+-- Indexes for table `tblcustomfields`
 --
 ALTER TABLE `tblcustomfields`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblcustomfieldsvalues`
+-- Indexes for table `tblcustomfieldsvalues`
 --
 ALTER TABLE `tblcustomfieldsvalues`
   ADD PRIMARY KEY (`id`),
@@ -22310,20 +22362,20 @@ ALTER TABLE `tblcustomfieldsvalues`
   ADD KEY `fieldid` (`fieldid`);
 
 --
--- Indices de la tabla `tblcustom_templates`
+-- Indexes for table `tblcustom_templates`
 --
 ALTER TABLE `tblcustom_templates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbldepartments`
+-- Indexes for table `tbldepartments`
 --
 ALTER TABLE `tbldepartments`
   ADD PRIMARY KEY (`departmentid`),
   ADD KEY `name` (`name`);
 
 --
--- Indices de la tabla `tbldismissed_announcements`
+-- Indexes for table `tbldismissed_announcements`
 --
 ALTER TABLE `tbldismissed_announcements`
   ADD PRIMARY KEY (`dismissedannouncementid`),
@@ -22332,25 +22384,25 @@ ALTER TABLE `tbldismissed_announcements`
   ADD KEY `userid` (`userid`);
 
 --
--- Indices de la tabla `tblemaillists`
+-- Indexes for table `tblemaillists`
 --
 ALTER TABLE `tblemaillists`
   ADD PRIMARY KEY (`listid`);
 
 --
--- Indices de la tabla `tblemailtemplates`
+-- Indexes for table `tblemailtemplates`
 --
 ALTER TABLE `tblemailtemplates`
   ADD PRIMARY KEY (`emailtemplateid`);
 
 --
--- Indices de la tabla `tblenfermedades`
+-- Indexes for table `tblenfermedades`
 --
 ALTER TABLE `tblenfermedades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblestimates`
+-- Indexes for table `tblestimates`
 --
 ALTER TABLE `tblestimates`
   ADD PRIMARY KEY (`id`),
@@ -22361,31 +22413,31 @@ ALTER TABLE `tblestimates`
   ADD KEY `status` (`status`);
 
 --
--- Indices de la tabla `tblestimate_requests`
+-- Indexes for table `tblestimate_requests`
 --
 ALTER TABLE `tblestimate_requests`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblestimate_request_forms`
+-- Indexes for table `tblestimate_request_forms`
 --
 ALTER TABLE `tblestimate_request_forms`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblestimate_request_status`
+-- Indexes for table `tblestimate_request_status`
 --
 ALTER TABLE `tblestimate_request_status`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblevents`
+-- Indexes for table `tblevents`
 --
 ALTER TABLE `tblevents`
   ADD PRIMARY KEY (`eventid`);
 
 --
--- Indices de la tabla `tblexpenses`
+-- Indexes for table `tblexpenses`
 --
 ALTER TABLE `tblexpenses`
   ADD PRIMARY KEY (`id`),
@@ -22395,19 +22447,19 @@ ALTER TABLE `tblexpenses`
   ADD KEY `currency` (`currency`);
 
 --
--- Indices de la tabla `tblexpenses_categories`
+-- Indexes for table `tblexpenses_categories`
 --
 ALTER TABLE `tblexpenses_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblfeedback`
+-- Indexes for table `tblfeedback`
 --
 ALTER TABLE `tblfeedback`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblfiles`
+-- Indexes for table `tblfiles`
 --
 ALTER TABLE `tblfiles`
   ADD PRIMARY KEY (`id`),
@@ -22415,302 +22467,302 @@ ALTER TABLE `tblfiles`
   ADD KEY `rel_type` (`rel_type`);
 
 --
--- Indices de la tabla `tblform_questions`
+-- Indexes for table `tblform_questions`
 --
 ALTER TABLE `tblform_questions`
   ADD PRIMARY KEY (`questionid`);
 
 --
--- Indices de la tabla `tblform_question_box`
+-- Indexes for table `tblform_question_box`
 --
 ALTER TABLE `tblform_question_box`
   ADD PRIMARY KEY (`boxid`);
 
 --
--- Indices de la tabla `tblform_question_box_description`
+-- Indexes for table `tblform_question_box_description`
 --
 ALTER TABLE `tblform_question_box_description`
   ADD PRIMARY KEY (`questionboxdescriptionid`);
 
 --
--- Indices de la tabla `tblform_results`
+-- Indexes for table `tblform_results`
 --
 ALTER TABLE `tblform_results`
   ADD PRIMARY KEY (`resultid`);
 
 --
--- Indices de la tabla `tblfs_downloads`
+-- Indexes for table `tblfs_downloads`
 --
 ALTER TABLE `tblfs_downloads`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblfs_file_overview`
+-- Indexes for table `tblfs_file_overview`
 --
 ALTER TABLE `tblfs_file_overview`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblfs_genenal_ip_share`
+-- Indexes for table `tblfs_genenal_ip_share`
 --
 ALTER TABLE `tblfs_genenal_ip_share`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblfs_setting_configuration`
+-- Indexes for table `tblfs_setting_configuration`
 --
 ALTER TABLE `tblfs_setting_configuration`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblfs_setting_configuration_relationship`
+-- Indexes for table `tblfs_setting_configuration_relationship`
 --
 ALTER TABLE `tblfs_setting_configuration_relationship`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblfs_sharings`
+-- Indexes for table `tblfs_sharings`
 --
 ALTER TABLE `tblfs_sharings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblfs_sharing_relationship`
+-- Indexes for table `tblfs_sharing_relationship`
 --
 ALTER TABLE `tblfs_sharing_relationship`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblgdpr_requests`
+-- Indexes for table `tblgdpr_requests`
 --
 ALTER TABLE `tblgdpr_requests`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblgoals`
+-- Indexes for table `tblgoals`
 --
 ALTER TABLE `tblgoals`
   ADD PRIMARY KEY (`id`),
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indices de la tabla `tblgroup_checklist`
+-- Indexes for table `tblgroup_checklist`
 --
 ALTER TABLE `tblgroup_checklist`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblgroup_checklist_allocation`
+-- Indexes for table `tblgroup_checklist_allocation`
 --
 ALTER TABLE `tblgroup_checklist_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_allocation_asset`
+-- Indexes for table `tblhr_allocation_asset`
 --
 ALTER TABLE `tblhr_allocation_asset`
   ADD PRIMARY KEY (`allocation_id`);
 
 --
--- Indices de la tabla `tblhr_allowance_type`
+-- Indexes for table `tblhr_allowance_type`
 --
 ALTER TABLE `tblhr_allowance_type`
   ADD PRIMARY KEY (`type_id`);
 
 --
--- Indices de la tabla `tblhr_checklist_allocation`
+-- Indexes for table `tblhr_checklist_allocation`
 --
 ALTER TABLE `tblhr_checklist_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_dependent_person`
+-- Indexes for table `tblhr_dependent_person`
 --
 ALTER TABLE `tblhr_dependent_person`
   ADD PRIMARY KEY (`id`,`dependent_iden`);
 
 --
--- Indices de la tabla `tblhr_education`
+-- Indexes for table `tblhr_education`
 --
 ALTER TABLE `tblhr_education`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_group_checklist_allocation`
+-- Indexes for table `tblhr_group_checklist_allocation`
 --
 ALTER TABLE `tblhr_group_checklist_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_job_p`
+-- Indexes for table `tblhr_job_p`
 --
 ALTER TABLE `tblhr_job_p`
   ADD PRIMARY KEY (`job_id`);
 
 --
--- Indices de la tabla `tblhr_job_position`
+-- Indexes for table `tblhr_job_position`
 --
 ALTER TABLE `tblhr_job_position`
   ADD PRIMARY KEY (`position_id`);
 
 --
--- Indices de la tabla `tblhr_jp_interview_training`
+-- Indexes for table `tblhr_jp_interview_training`
 --
 ALTER TABLE `tblhr_jp_interview_training`
   ADD PRIMARY KEY (`training_process_id`);
 
 --
--- Indices de la tabla `tblhr_jp_salary_scale`
+-- Indexes for table `tblhr_jp_salary_scale`
 --
 ALTER TABLE `tblhr_jp_salary_scale`
   ADD PRIMARY KEY (`salary_scale_id`);
 
 --
--- Indices de la tabla `tblhr_knowedge_base_article_feedback`
+-- Indexes for table `tblhr_knowedge_base_article_feedback`
 --
 ALTER TABLE `tblhr_knowedge_base_article_feedback`
   ADD PRIMARY KEY (`articleanswerid`);
 
 --
--- Indices de la tabla `tblhr_knowledge_base`
+-- Indexes for table `tblhr_knowledge_base`
 --
 ALTER TABLE `tblhr_knowledge_base`
   ADD PRIMARY KEY (`articleid`);
 
 --
--- Indices de la tabla `tblhr_knowledge_base_groups`
+-- Indexes for table `tblhr_knowledge_base_groups`
 --
 ALTER TABLE `tblhr_knowledge_base_groups`
   ADD PRIMARY KEY (`groupid`);
 
 --
--- Indices de la tabla `tblhr_list_staff_quitting_work`
+-- Indexes for table `tblhr_list_staff_quitting_work`
 --
 ALTER TABLE `tblhr_list_staff_quitting_work`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_position_training`
+-- Indexes for table `tblhr_position_training`
 --
 ALTER TABLE `tblhr_position_training`
   ADD PRIMARY KEY (`training_id`);
 
 --
--- Indices de la tabla `tblhr_position_training_question_form`
+-- Indexes for table `tblhr_position_training_question_form`
 --
 ALTER TABLE `tblhr_position_training_question_form`
   ADD PRIMARY KEY (`questionid`);
 
 --
--- Indices de la tabla `tblhr_procedure_retire`
+-- Indexes for table `tblhr_procedure_retire`
 --
 ALTER TABLE `tblhr_procedure_retire`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_procedure_retire_manage`
+-- Indexes for table `tblhr_procedure_retire_manage`
 --
 ALTER TABLE `tblhr_procedure_retire_manage`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_procedure_retire_of_staff`
+-- Indexes for table `tblhr_procedure_retire_of_staff`
 --
 ALTER TABLE `tblhr_procedure_retire_of_staff`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_procedure_retire_of_staff_by_id`
+-- Indexes for table `tblhr_procedure_retire_of_staff_by_id`
 --
 ALTER TABLE `tblhr_procedure_retire_of_staff_by_id`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_profile_option`
+-- Indexes for table `tblhr_profile_option`
 --
 ALTER TABLE `tblhr_profile_option`
   ADD PRIMARY KEY (`option_id`);
 
 --
--- Indices de la tabla `tblhr_p_t_form_question_box`
+-- Indexes for table `tblhr_p_t_form_question_box`
 --
 ALTER TABLE `tblhr_p_t_form_question_box`
   ADD PRIMARY KEY (`boxid`);
 
 --
--- Indices de la tabla `tblhr_p_t_form_question_box_description`
+-- Indexes for table `tblhr_p_t_form_question_box_description`
 --
 ALTER TABLE `tblhr_p_t_form_question_box_description`
   ADD PRIMARY KEY (`questionboxdescriptionid`);
 
 --
--- Indices de la tabla `tblhr_p_t_form_results`
+-- Indexes for table `tblhr_p_t_form_results`
 --
 ALTER TABLE `tblhr_p_t_form_results`
   ADD PRIMARY KEY (`resultid`);
 
 --
--- Indices de la tabla `tblhr_p_t_surveyresultsets`
+-- Indexes for table `tblhr_p_t_surveyresultsets`
 --
 ALTER TABLE `tblhr_p_t_surveyresultsets`
   ADD PRIMARY KEY (`resultsetid`);
 
 --
--- Indices de la tabla `tblhr_rec_transfer_records`
+-- Indexes for table `tblhr_rec_transfer_records`
 --
 ALTER TABLE `tblhr_rec_transfer_records`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_salary_form`
+-- Indexes for table `tblhr_salary_form`
 --
 ALTER TABLE `tblhr_salary_form`
   ADD PRIMARY KEY (`form_id`);
 
 --
--- Indices de la tabla `tblhr_staff_contract`
+-- Indexes for table `tblhr_staff_contract`
 --
 ALTER TABLE `tblhr_staff_contract`
   ADD PRIMARY KEY (`id_contract`);
 
 --
--- Indices de la tabla `tblhr_staff_contract_detail`
+-- Indexes for table `tblhr_staff_contract_detail`
 --
 ALTER TABLE `tblhr_staff_contract_detail`
   ADD PRIMARY KEY (`contract_detail_id`);
 
 --
--- Indices de la tabla `tblhr_staff_contract_type`
+-- Indexes for table `tblhr_staff_contract_type`
 --
 ALTER TABLE `tblhr_staff_contract_type`
   ADD PRIMARY KEY (`id_contracttype`);
 
 --
--- Indices de la tabla `tblhr_training_allocation`
+-- Indexes for table `tblhr_training_allocation`
 --
 ALTER TABLE `tblhr_training_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_type_of_trainings`
+-- Indexes for table `tblhr_type_of_trainings`
 --
 ALTER TABLE `tblhr_type_of_trainings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_views_tracking`
+-- Indexes for table `tblhr_views_tracking`
 --
 ALTER TABLE `tblhr_views_tracking`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblhr_workplace`
+-- Indexes for table `tblhr_workplace`
 --
 ALTER TABLE `tblhr_workplace`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblinvoicepaymentrecords`
+-- Indexes for table `tblinvoicepaymentrecords`
 --
 ALTER TABLE `tblinvoicepaymentrecords`
   ADD PRIMARY KEY (`id`),
@@ -22718,7 +22770,7 @@ ALTER TABLE `tblinvoicepaymentrecords`
   ADD KEY `paymentmethod` (`paymentmethod`);
 
 --
--- Indices de la tabla `tblinvoices`
+-- Indexes for table `tblinvoices`
 --
 ALTER TABLE `tblinvoices`
   ADD PRIMARY KEY (`id`),
@@ -22730,7 +22782,7 @@ ALTER TABLE `tblinvoices`
   ADD KEY `status` (`status`);
 
 --
--- Indices de la tabla `tblitemable`
+-- Indexes for table `tblitemable`
 --
 ALTER TABLE `tblitemable`
   ADD PRIMARY KEY (`id`),
@@ -22740,7 +22792,7 @@ ALTER TABLE `tblitemable`
   ADD KEY `rate` (`rate`);
 
 --
--- Indices de la tabla `tblitems`
+-- Indexes for table `tblitems`
 --
 ALTER TABLE `tblitems`
   ADD PRIMARY KEY (`id`),
@@ -22749,13 +22801,13 @@ ALTER TABLE `tblitems`
   ADD KEY `group_id` (`group_id`);
 
 --
--- Indices de la tabla `tblitems_groups`
+-- Indexes for table `tblitems_groups`
 --
 ALTER TABLE `tblitems_groups`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblitem_tax`
+-- Indexes for table `tblitem_tax`
 --
 ALTER TABLE `tblitem_tax`
   ADD PRIMARY KEY (`id`),
@@ -22763,31 +22815,31 @@ ALTER TABLE `tblitem_tax`
   ADD KEY `rel_id` (`rel_id`);
 
 --
--- Indices de la tabla `tbljob_industry`
+-- Indexes for table `tbljob_industry`
 --
 ALTER TABLE `tbljob_industry`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblknowedge_base_article_feedback`
+-- Indexes for table `tblknowedge_base_article_feedback`
 --
 ALTER TABLE `tblknowedge_base_article_feedback`
   ADD PRIMARY KEY (`articleanswerid`);
 
 --
--- Indices de la tabla `tblknowledge_base`
+-- Indexes for table `tblknowledge_base`
 --
 ALTER TABLE `tblknowledge_base`
   ADD PRIMARY KEY (`articleid`);
 
 --
--- Indices de la tabla `tblknowledge_base_groups`
+-- Indexes for table `tblknowledge_base_groups`
 --
 ALTER TABLE `tblknowledge_base_groups`
   ADD PRIMARY KEY (`groupid`);
 
 --
--- Indices de la tabla `tblleads`
+-- Indexes for table `tblleads`
 --
 ALTER TABLE `tblleads`
   ADD PRIMARY KEY (`id`),
@@ -22803,129 +22855,129 @@ ALTER TABLE `tblleads`
   ADD KEY `from_form_id` (`from_form_id`);
 
 --
--- Indices de la tabla `tblleads_email_integration`
+-- Indexes for table `tblleads_email_integration`
 --
 ALTER TABLE `tblleads_email_integration`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblleads_sources`
+-- Indexes for table `tblleads_sources`
 --
 ALTER TABLE `tblleads_sources`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indices de la tabla `tblleads_status`
+-- Indexes for table `tblleads_status`
 --
 ALTER TABLE `tblleads_status`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indices de la tabla `tbllead_activity_log`
+-- Indexes for table `tbllead_activity_log`
 --
 ALTER TABLE `tbllead_activity_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbllead_integration_emails`
+-- Indexes for table `tbllead_integration_emails`
 --
 ALTER TABLE `tbllead_integration_emails`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbllead_manager_activity_log`
+-- Indexes for table `tbllead_manager_activity_log`
 --
 ALTER TABLE `tbllead_manager_activity_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbllead_manager_meeting_remark`
+-- Indexes for table `tbllead_manager_meeting_remark`
 --
 ALTER TABLE `tbllead_manager_meeting_remark`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbllead_manager_missed_calls`
+-- Indexes for table `tbllead_manager_missed_calls`
 --
 ALTER TABLE `tbllead_manager_missed_calls`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbllead_manager_zoom_meeting`
+-- Indexes for table `tbllead_manager_zoom_meeting`
 --
 ALTER TABLE `tbllead_manager_zoom_meeting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbllistemails`
+-- Indexes for table `tbllistemails`
 --
 ALTER TABLE `tbllistemails`
   ADD PRIMARY KEY (`emailid`);
 
 --
--- Indices de la tabla `tblloy_card`
+-- Indexes for table `tblloy_card`
 --
 ALTER TABLE `tblloy_card`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblloy_mbs_program`
+-- Indexes for table `tblloy_mbs_program`
 --
 ALTER TABLE `tblloy_mbs_program`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblloy_mbs_rule`
+-- Indexes for table `tblloy_mbs_rule`
 --
 ALTER TABLE `tblloy_mbs_rule`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblloy_program_detail`
+-- Indexes for table `tblloy_program_detail`
 --
 ALTER TABLE `tblloy_program_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblloy_redeem_log`
+-- Indexes for table `tblloy_redeem_log`
 --
 ALTER TABLE `tblloy_redeem_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblloy_redemp_detail`
+-- Indexes for table `tblloy_redemp_detail`
 --
 ALTER TABLE `tblloy_redemp_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblloy_rule`
+-- Indexes for table `tblloy_rule`
 --
 ALTER TABLE `tblloy_rule`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblloy_rule_detail`
+-- Indexes for table `tblloy_rule_detail`
 --
 ALTER TABLE `tblloy_rule_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblloy_transation`
+-- Indexes for table `tblloy_transation`
 --
 ALTER TABLE `tblloy_transation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblmaillistscustomfields`
+-- Indexes for table `tblmaillistscustomfields`
 --
 ALTER TABLE `tblmaillistscustomfields`
   ADD PRIMARY KEY (`customfieldid`);
 
 --
--- Indices de la tabla `tblmaillistscustomfieldvalues`
+-- Indexes for table `tblmaillistscustomfieldvalues`
 --
 ALTER TABLE `tblmaillistscustomfieldvalues`
   ADD PRIMARY KEY (`customfieldvalueid`),
@@ -22933,49 +22985,49 @@ ALTER TABLE `tblmaillistscustomfieldvalues`
   ADD KEY `customfieldid` (`customfieldid`);
 
 --
--- Indices de la tabla `tblmail_queue`
+-- Indexes for table `tblmail_queue`
 --
 ALTER TABLE `tblmail_queue`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblmilestones`
+-- Indexes for table `tblmilestones`
 --
 ALTER TABLE `tblmilestones`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblmodules`
+-- Indexes for table `tblmodules`
 --
 ALTER TABLE `tblmodules`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblnewsfeed_comment_likes`
+-- Indexes for table `tblnewsfeed_comment_likes`
 --
 ALTER TABLE `tblnewsfeed_comment_likes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblnewsfeed_posts`
+-- Indexes for table `tblnewsfeed_posts`
 --
 ALTER TABLE `tblnewsfeed_posts`
   ADD PRIMARY KEY (`postid`);
 
 --
--- Indices de la tabla `tblnewsfeed_post_comments`
+-- Indexes for table `tblnewsfeed_post_comments`
 --
 ALTER TABLE `tblnewsfeed_post_comments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblnewsfeed_post_likes`
+-- Indexes for table `tblnewsfeed_post_likes`
 --
 ALTER TABLE `tblnewsfeed_post_likes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblnotes`
+-- Indexes for table `tblnotes`
 --
 ALTER TABLE `tblnotes`
   ADD PRIMARY KEY (`id`),
@@ -22983,20 +23035,20 @@ ALTER TABLE `tblnotes`
   ADD KEY `rel_type` (`rel_type`);
 
 --
--- Indices de la tabla `tblnotifications`
+-- Indexes for table `tblnotifications`
 --
 ALTER TABLE `tblnotifications`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbloptions`
+-- Indexes for table `tbloptions`
 --
 ALTER TABLE `tbloptions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indices de la tabla `tblorder_items`
+-- Indexes for table `tblorder_items`
 --
 ALTER TABLE `tblorder_items`
   ADD PRIMARY KEY (`id`),
@@ -23004,7 +23056,7 @@ ALTER TABLE `tblorder_items`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indices de la tabla `tblorder_master`
+-- Indexes for table `tblorder_master`
 --
 ALTER TABLE `tblorder_master`
   ADD PRIMARY KEY (`id`),
@@ -23012,57 +23064,57 @@ ALTER TABLE `tblorder_master`
   ADD KEY `clientid` (`clientid`);
 
 --
--- Indices de la tabla `tblparts`
+-- Indexes for table `tblparts`
 --
 ALTER TABLE `tblparts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpayment_modes`
+-- Indexes for table `tblpayment_modes`
 --
 ALTER TABLE `tblpayment_modes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpinned_projects`
+-- Indexes for table `tblpinned_projects`
 --
 ALTER TABLE `tblpinned_projects`
   ADD PRIMARY KEY (`id`),
   ADD KEY `project_id` (`project_id`);
 
 --
--- Indices de la tabla `tblposition_training_question_form`
+-- Indexes for table `tblposition_training_question_form`
 --
 ALTER TABLE `tblposition_training_question_form`
   ADD PRIMARY KEY (`questionid`);
 
 --
--- Indices de la tabla `tblproduct_categories`
+-- Indexes for table `tblproduct_categories`
 --
 ALTER TABLE `tblproduct_categories`
   ADD PRIMARY KEY (`p_category_id`);
 
 --
--- Indices de la tabla `tblproduct_master`
+-- Indexes for table `tblproduct_master`
 --
 ALTER TABLE `tblproduct_master`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_category_id` (`product_category_id`);
 
 --
--- Indices de la tabla `tblprojectdiscussioncomments`
+-- Indexes for table `tblprojectdiscussioncomments`
 --
 ALTER TABLE `tblprojectdiscussioncomments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblprojectdiscussions`
+-- Indexes for table `tblprojectdiscussions`
 --
 ALTER TABLE `tblprojectdiscussions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblprojects`
+-- Indexes for table `tblprojects`
 --
 ALTER TABLE `tblprojects`
   ADD PRIMARY KEY (`id`),
@@ -23070,19 +23122,19 @@ ALTER TABLE `tblprojects`
   ADD KEY `name` (`name`);
 
 --
--- Indices de la tabla `tblproject_activity`
+-- Indexes for table `tblproject_activity`
 --
 ALTER TABLE `tblproject_activity`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblproject_files`
+-- Indexes for table `tblproject_files`
 --
 ALTER TABLE `tblproject_files`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblproject_members`
+-- Indexes for table `tblproject_members`
 --
 ALTER TABLE `tblproject_members`
   ADD PRIMARY KEY (`id`),
@@ -23090,219 +23142,225 @@ ALTER TABLE `tblproject_members`
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indices de la tabla `tblproject_notes`
+-- Indexes for table `tblproject_notes`
 --
 ALTER TABLE `tblproject_notes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblproject_settings`
+-- Indexes for table `tblproject_settings`
 --
 ALTER TABLE `tblproject_settings`
   ADD PRIMARY KEY (`id`),
   ADD KEY `project_id` (`project_id`);
 
 --
--- Indices de la tabla `tblproposals`
+-- Indexes for table `tblproposals`
 --
 ALTER TABLE `tblproposals`
   ADD PRIMARY KEY (`id`),
   ADD KEY `status` (`status`);
 
 --
--- Indices de la tabla `tblproposal_comments`
+-- Indexes for table `tblproposal_comments`
 --
 ALTER TABLE `tblproposal_comments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpurchase_option`
+-- Indexes for table `tblpurchase_option`
 --
 ALTER TABLE `tblpurchase_option`
   ADD PRIMARY KEY (`option_id`);
 
 --
--- Indices de la tabla `tblpur_approval_details`
+-- Indexes for table `tblpur_approval_details`
 --
 ALTER TABLE `tblpur_approval_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_approval_setting`
+-- Indexes for table `tblpur_approval_setting`
 --
 ALTER TABLE `tblpur_approval_setting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_contacts`
+-- Indexes for table `tblpur_contacts`
 --
 ALTER TABLE `tblpur_contacts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_contracts`
+-- Indexes for table `tblpur_contracts`
 --
 ALTER TABLE `tblpur_contracts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_estimates`
+-- Indexes for table `tblpur_estimates`
 --
 ALTER TABLE `tblpur_estimates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_estimate_detail`
+-- Indexes for table `tblpur_estimate_detail`
 --
 ALTER TABLE `tblpur_estimate_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_orders`
+-- Indexes for table `tblpur_orders`
 --
 ALTER TABLE `tblpur_orders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_order_detail`
+-- Indexes for table `tblpur_order_detail`
 --
 ALTER TABLE `tblpur_order_detail`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_order_payment`
+-- Indexes for table `tblpur_order_payment`
 --
 ALTER TABLE `tblpur_order_payment`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_request`
+-- Indexes for table `tblpur_request`
 --
 ALTER TABLE `tblpur_request`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblpur_request_detail`
+-- Indexes for table `tblpur_request_detail`
 --
 ALTER TABLE `tblpur_request_detail`
   ADD PRIMARY KEY (`prd_id`);
 
 --
--- Indices de la tabla `tblpur_unit`
+-- Indexes for table `tblpur_unit`
 --
 ALTER TABLE `tblpur_unit`
   ADD PRIMARY KEY (`unit_id`);
 
 --
--- Indices de la tabla `tblpur_vendor`
+-- Indexes for table `tblpur_vendor`
 --
 ALTER TABLE `tblpur_vendor`
   ADD PRIMARY KEY (`userid`);
 
 --
--- Indices de la tabla `tblp_t_form_question_box_description`
+-- Indexes for table `tblp_t_form_question_box_description`
 --
 ALTER TABLE `tblp_t_form_question_box_description`
   ADD PRIMARY KEY (`questionboxdescriptionid`);
 
 --
--- Indices de la tabla `tblrecords_meta`
+-- Indexes for table `tblrecipes`
+--
+ALTER TABLE `tblrecipes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tblrecords_meta`
 --
 ALTER TABLE `tblrecords_meta`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblrec_campaign`
+-- Indexes for table `tblrec_campaign`
 --
 ALTER TABLE `tblrec_campaign`
   ADD PRIMARY KEY (`cp_id`);
 
 --
--- Indices de la tabla `tblrec_campaign_form_web`
+-- Indexes for table `tblrec_campaign_form_web`
 --
 ALTER TABLE `tblrec_campaign_form_web`
   ADD PRIMARY KEY (`id`,`rec_campaign_id`);
 
 --
--- Indices de la tabla `tblrec_candidate`
+-- Indexes for table `tblrec_candidate`
 --
 ALTER TABLE `tblrec_candidate`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblrec_cd_evaluation`
+-- Indexes for table `tblrec_cd_evaluation`
 --
 ALTER TABLE `tblrec_cd_evaluation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblrec_company`
+-- Indexes for table `tblrec_company`
 --
 ALTER TABLE `tblrec_company`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblrec_criteria`
+-- Indexes for table `tblrec_criteria`
 --
 ALTER TABLE `tblrec_criteria`
   ADD PRIMARY KEY (`criteria_id`);
 
 --
--- Indices de la tabla `tblrec_evaluation_form`
+-- Indexes for table `tblrec_evaluation_form`
 --
 ALTER TABLE `tblrec_evaluation_form`
   ADD PRIMARY KEY (`form_id`);
 
 --
--- Indices de la tabla `tblrec_interview`
+-- Indexes for table `tblrec_interview`
 --
 ALTER TABLE `tblrec_interview`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblrec_job_position`
+-- Indexes for table `tblrec_job_position`
 --
 ALTER TABLE `tblrec_job_position`
   ADD PRIMARY KEY (`position_id`);
 
 --
--- Indices de la tabla `tblrec_list_criteria`
+-- Indexes for table `tblrec_list_criteria`
 --
 ALTER TABLE `tblrec_list_criteria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblrec_proposal`
+-- Indexes for table `tblrec_proposal`
 --
 ALTER TABLE `tblrec_proposal`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblrec_set_transfer_record`
+-- Indexes for table `tblrec_set_transfer_record`
 --
 ALTER TABLE `tblrec_set_transfer_record`
   ADD PRIMARY KEY (`set_id`);
 
 --
--- Indices de la tabla `tblrec_skill`
+-- Indexes for table `tblrec_skill`
 --
 ALTER TABLE `tblrec_skill`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblrec_transfer_records`
+-- Indexes for table `tblrec_transfer_records`
 --
 ALTER TABLE `tblrec_transfer_records`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblrelated_items`
+-- Indexes for table `tblrelated_items`
 --
 ALTER TABLE `tblrelated_items`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblreminders`
+-- Indexes for table `tblreminders`
 --
 ALTER TABLE `tblreminders`
   ADD PRIMARY KEY (`id`),
@@ -23311,76 +23369,76 @@ ALTER TABLE `tblreminders`
   ADD KEY `staff` (`staff`);
 
 --
--- Indices de la tabla `tblroles`
+-- Indexes for table `tblroles`
 --
 ALTER TABLE `tblroles`
   ADD PRIMARY KEY (`roleid`);
 
 --
--- Indices de la tabla `tblsales_activity`
+-- Indexes for table `tblsales_activity`
 --
 ALTER TABLE `tblsales_activity`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblscheduled_emails`
+-- Indexes for table `tblscheduled_emails`
 --
 ALTER TABLE `tblscheduled_emails`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblservices`
+-- Indexes for table `tblservices`
 --
 ALTER TABLE `tblservices`
   ADD PRIMARY KEY (`serviceid`);
 
 --
--- Indices de la tabla `tblsessions`
+-- Indexes for table `tblsessions`
 --
 ALTER TABLE `tblsessions`
   ADD PRIMARY KEY (`id`),
   ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
--- Indices de la tabla `tblsetting_asset_allocation`
+-- Indexes for table `tblsetting_asset_allocation`
 --
 ALTER TABLE `tblsetting_asset_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblsetting_training`
+-- Indexes for table `tblsetting_training`
 --
 ALTER TABLE `tblsetting_training`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblsetting_transfer_records`
+-- Indexes for table `tblsetting_transfer_records`
 --
 ALTER TABLE `tblsetting_transfer_records`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblsi_lead_filter`
+-- Indexes for table `tblsi_lead_filter`
 --
 ALTER TABLE `tblsi_lead_filter`
   ADD PRIMARY KEY (`id`),
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indices de la tabla `tblsi_task_filter`
+-- Indexes for table `tblsi_task_filter`
 --
 ALTER TABLE `tblsi_task_filter`
   ADD PRIMARY KEY (`id`),
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indices de la tabla `tblspam_filters`
+-- Indexes for table `tblspam_filters`
 --
 ALTER TABLE `tblspam_filters`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblstaff`
+-- Indexes for table `tblstaff`
 --
 ALTER TABLE `tblstaff`
   ADD PRIMARY KEY (`staffid`),
@@ -23388,13 +23446,13 @@ ALTER TABLE `tblstaff`
   ADD KEY `lastname` (`lastname`);
 
 --
--- Indices de la tabla `tblstaff_departments`
+-- Indexes for table `tblstaff_departments`
 --
 ALTER TABLE `tblstaff_departments`
   ADD PRIMARY KEY (`staffdepartmentid`);
 
 --
--- Indices de la tabla `tblsubscriptions`
+-- Indexes for table `tblsubscriptions`
 --
 ALTER TABLE `tblsubscriptions`
   ADD PRIMARY KEY (`id`),
@@ -23403,31 +23461,31 @@ ALTER TABLE `tblsubscriptions`
   ADD KEY `tax_id` (`tax_id`);
 
 --
--- Indices de la tabla `tblsurveyresultsets`
+-- Indexes for table `tblsurveyresultsets`
 --
 ALTER TABLE `tblsurveyresultsets`
   ADD PRIMARY KEY (`resultsetid`);
 
 --
--- Indices de la tabla `tblsurveys`
+-- Indexes for table `tblsurveys`
 --
 ALTER TABLE `tblsurveys`
   ADD PRIMARY KEY (`surveyid`);
 
 --
--- Indices de la tabla `tblsurveysemailsendcron`
+-- Indexes for table `tblsurveysemailsendcron`
 --
 ALTER TABLE `tblsurveysemailsendcron`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblsurveysendlog`
+-- Indexes for table `tblsurveysendlog`
 --
 ALTER TABLE `tblsurveysendlog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltaggables`
+-- Indexes for table `tbltaggables`
 --
 ALTER TABLE `tbltaggables`
   ADD KEY `rel_id` (`rel_id`),
@@ -23435,14 +23493,14 @@ ALTER TABLE `tbltaggables`
   ADD KEY `tag_id` (`tag_id`);
 
 --
--- Indices de la tabla `tbltags`
+-- Indexes for table `tbltags`
 --
 ALTER TABLE `tbltags`
   ADD PRIMARY KEY (`id`),
   ADD KEY `name` (`name`);
 
 --
--- Indices de la tabla `tbltasks`
+-- Indexes for table `tbltasks`
 --
 ALTER TABLE `tbltasks`
   ADD PRIMARY KEY (`id`),
@@ -23453,7 +23511,7 @@ ALTER TABLE `tbltasks`
   ADD KEY `status` (`status`);
 
 --
--- Indices de la tabla `tbltaskstimers`
+-- Indexes for table `tbltaskstimers`
 --
 ALTER TABLE `tbltaskstimers`
   ADD PRIMARY KEY (`id`),
@@ -23461,13 +23519,13 @@ ALTER TABLE `tbltaskstimers`
   ADD KEY `staff_id` (`staff_id`);
 
 --
--- Indices de la tabla `tbltasks_checklist_templates`
+-- Indexes for table `tbltasks_checklist_templates`
 --
 ALTER TABLE `tbltasks_checklist_templates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltask_assigned`
+-- Indexes for table `tbltask_assigned`
 --
 ALTER TABLE `tbltask_assigned`
   ADD PRIMARY KEY (`id`),
@@ -23475,14 +23533,14 @@ ALTER TABLE `tbltask_assigned`
   ADD KEY `staffid` (`staffid`);
 
 --
--- Indices de la tabla `tbltask_checklist_items`
+-- Indexes for table `tbltask_checklist_items`
 --
 ALTER TABLE `tbltask_checklist_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `taskid` (`taskid`);
 
 --
--- Indices de la tabla `tbltask_comments`
+-- Indexes for table `tbltask_comments`
 --
 ALTER TABLE `tbltask_comments`
   ADD PRIMARY KEY (`id`),
@@ -23490,25 +23548,25 @@ ALTER TABLE `tbltask_comments`
   ADD KEY `taskid` (`taskid`);
 
 --
--- Indices de la tabla `tbltask_followers`
+-- Indexes for table `tbltask_followers`
 --
 ALTER TABLE `tbltask_followers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltaxes`
+-- Indexes for table `tbltaxes`
 --
 ALTER TABLE `tbltaxes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltemplates`
+-- Indexes for table `tbltemplates`
 --
 ALTER TABLE `tbltemplates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltickets`
+-- Indexes for table `tbltickets`
 --
 ALTER TABLE `tbltickets`
   ADD PRIMARY KEY (`ticketid`),
@@ -23521,1732 +23579,1738 @@ ALTER TABLE `tbltickets`
   ADD KEY `contactid` (`contactid`);
 
 --
--- Indices de la tabla `tbltickets_pipe_log`
+-- Indexes for table `tbltickets_pipe_log`
 --
 ALTER TABLE `tbltickets_pipe_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltickets_predefined_replies`
+-- Indexes for table `tbltickets_predefined_replies`
 --
 ALTER TABLE `tbltickets_predefined_replies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltickets_priorities`
+-- Indexes for table `tbltickets_priorities`
 --
 ALTER TABLE `tbltickets_priorities`
   ADD PRIMARY KEY (`priorityid`);
 
 --
--- Indices de la tabla `tbltickets_status`
+-- Indexes for table `tbltickets_status`
 --
 ALTER TABLE `tbltickets_status`
   ADD PRIMARY KEY (`ticketstatusid`);
 
 --
--- Indices de la tabla `tblticket_attachments`
+-- Indexes for table `tblticket_attachments`
 --
 ALTER TABLE `tblticket_attachments`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblticket_replies`
+-- Indexes for table `tblticket_replies`
 --
 ALTER TABLE `tblticket_replies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltodos`
+-- Indexes for table `tbltodos`
 --
 ALTER TABLE `tbltodos`
   ADD PRIMARY KEY (`todoid`);
 
 --
--- Indices de la tabla `tbltracked_mails`
+-- Indexes for table `tbltracked_mails`
 --
 ALTER TABLE `tbltracked_mails`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltraining_allocation`
+-- Indexes for table `tbltraining_allocation`
 --
 ALTER TABLE `tbltraining_allocation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltransfer_records_reception`
+-- Indexes for table `tbltransfer_records_reception`
 --
 ALTER TABLE `tbltransfer_records_reception`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tbltwocheckout_log`
+-- Indexes for table `tbltwocheckout_log`
 --
 ALTER TABLE `tbltwocheckout_log`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_id` (`invoice_id`);
 
 --
--- Indices de la tabla `tbluser_meta`
+-- Indexes for table `tbluser_meta`
 --
 ALTER TABLE `tbluser_meta`
   ADD PRIMARY KEY (`umeta_id`);
 
 --
--- Indices de la tabla `tblvault`
+-- Indexes for table `tblvault`
 --
 ALTER TABLE `tblvault`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblviews_tracking`
+-- Indexes for table `tblviews_tracking`
 --
 ALTER TABLE `tblviews_tracking`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblware_unit_type`
+-- Indexes for table `tblware_unit_type`
 --
 ALTER TABLE `tblware_unit_type`
   ADD PRIMARY KEY (`unit_type_id`);
 
 --
--- Indices de la tabla `tblweb_to_lead`
+-- Indexes for table `tblweb_to_lead`
 --
 ALTER TABLE `tblweb_to_lead`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `tblweb_to_recruitment`
+-- Indexes for table `tblweb_to_recruitment`
 --
 ALTER TABLE `tblweb_to_recruitment`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `tblaccount_planning`
+-- AUTO_INCREMENT for table `tblaccount_planning`
 --
 ALTER TABLE `tblaccount_planning`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblaccount_planning_current_service`
+-- AUTO_INCREMENT for table `tblaccount_planning_current_service`
 --
 ALTER TABLE `tblaccount_planning_current_service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblaccount_planning_financial`
+-- AUTO_INCREMENT for table `tblaccount_planning_financial`
 --
 ALTER TABLE `tblaccount_planning_financial`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblaccount_planning_items`
+-- AUTO_INCREMENT for table `tblaccount_planning_items`
 --
 ALTER TABLE `tblaccount_planning_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblaccount_planning_marketing_activities`
+-- AUTO_INCREMENT for table `tblaccount_planning_marketing_activities`
 --
 ALTER TABLE `tblaccount_planning_marketing_activities`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblaccount_planning_objective`
+-- AUTO_INCREMENT for table `tblaccount_planning_objective`
 --
 ALTER TABLE `tblaccount_planning_objective`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblaccount_planning_service_ability_offering`
+-- AUTO_INCREMENT for table `tblaccount_planning_service_ability_offering`
 --
 ALTER TABLE `tblaccount_planning_service_ability_offering`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblaccount_planning_task`
+-- AUTO_INCREMENT for table `tblaccount_planning_task`
 --
 ALTER TABLE `tblaccount_planning_task`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblaccount_planning_team`
+-- AUTO_INCREMENT for table `tblaccount_planning_team`
 --
 ALTER TABLE `tblaccount_planning_team`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_accounts`
+-- AUTO_INCREMENT for table `tblacc_accounts`
 --
 ALTER TABLE `tblacc_accounts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_account_history`
+-- AUTO_INCREMENT for table `tblacc_account_history`
 --
 ALTER TABLE `tblacc_account_history`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_account_type_details`
+-- AUTO_INCREMENT for table `tblacc_account_type_details`
 --
 ALTER TABLE `tblacc_account_type_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_banking_rules`
+-- AUTO_INCREMENT for table `tblacc_banking_rules`
 --
 ALTER TABLE `tblacc_banking_rules`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_banking_rule_details`
+-- AUTO_INCREMENT for table `tblacc_banking_rule_details`
 --
 ALTER TABLE `tblacc_banking_rule_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_expense_category_mappings`
+-- AUTO_INCREMENT for table `tblacc_expense_category_mappings`
 --
 ALTER TABLE `tblacc_expense_category_mappings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_item_automatics`
+-- AUTO_INCREMENT for table `tblacc_item_automatics`
 --
 ALTER TABLE `tblacc_item_automatics`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_journal_entries`
+-- AUTO_INCREMENT for table `tblacc_journal_entries`
 --
 ALTER TABLE `tblacc_journal_entries`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_payment_mode_mappings`
+-- AUTO_INCREMENT for table `tblacc_payment_mode_mappings`
 --
 ALTER TABLE `tblacc_payment_mode_mappings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_reconciles`
+-- AUTO_INCREMENT for table `tblacc_reconciles`
 --
 ALTER TABLE `tblacc_reconciles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_tax_mappings`
+-- AUTO_INCREMENT for table `tblacc_tax_mappings`
 --
 ALTER TABLE `tblacc_tax_mappings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_transaction_bankings`
+-- AUTO_INCREMENT for table `tblacc_transaction_bankings`
 --
 ALTER TABLE `tblacc_transaction_bankings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblacc_transfers`
+-- AUTO_INCREMENT for table `tblacc_transfers`
 --
 ALTER TABLE `tblacc_transfers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblactivity_log`
+-- AUTO_INCREMENT for table `tblactivity_log`
 --
 ALTER TABLE `tblactivity_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=245;
 
 --
--- AUTO_INCREMENT de la tabla `tblannouncements`
+-- AUTO_INCREMENT for table `tblannouncements`
 --
 ALTER TABLE `tblannouncements`
   MODIFY `announcementid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblappointly_appointments`
+-- AUTO_INCREMENT for table `tblappointly_appointments`
 --
 ALTER TABLE `tblappointly_appointments`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblappointly_appointment_types`
+-- AUTO_INCREMENT for table `tblappointly_appointment_types`
 --
 ALTER TABLE `tblappointly_appointment_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblappointly_callbacks`
+-- AUTO_INCREMENT for table `tblappointly_callbacks`
 --
 ALTER TABLE `tblappointly_callbacks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblappointly_callbacks_assignees`
+-- AUTO_INCREMENT for table `tblappointly_callbacks_assignees`
 --
 ALTER TABLE `tblappointly_callbacks_assignees`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblappointly_google`
+-- AUTO_INCREMENT for table `tblappointly_google`
 --
 ALTER TABLE `tblappointly_google`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblbonus_discipline`
+-- AUTO_INCREMENT for table `tblbonus_discipline`
 --
 ALTER TABLE `tblbonus_discipline`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblbonus_discipline_detail`
+-- AUTO_INCREMENT for table `tblbonus_discipline_detail`
 --
 ALTER TABLE `tblbonus_discipline_detail`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcd_care`
+-- AUTO_INCREMENT for table `tblcd_care`
 --
 ALTER TABLE `tblcd_care`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcd_family_infor`
+-- AUTO_INCREMENT for table `tblcd_family_infor`
 --
 ALTER TABLE `tblcd_family_infor`
   MODIFY `fi_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcd_interview`
+-- AUTO_INCREMENT for table `tblcd_interview`
 --
 ALTER TABLE `tblcd_interview`
   MODIFY `in_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcd_literacy`
+-- AUTO_INCREMENT for table `tblcd_literacy`
 --
 ALTER TABLE `tblcd_literacy`
   MODIFY `li_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcd_skill`
+-- AUTO_INCREMENT for table `tblcd_skill`
 --
 ALTER TABLE `tblcd_skill`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcd_work_experience`
+-- AUTO_INCREMENT for table `tblcd_work_experience`
 --
 ALTER TABLE `tblcd_work_experience`
   MODIFY `we_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchatclientmessages`
+-- AUTO_INCREMENT for table `tblchatclientmessages`
 --
 ALTER TABLE `tblchatclientmessages`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchatgroupmembers`
+-- AUTO_INCREMENT for table `tblchatgroupmembers`
 --
 ALTER TABLE `tblchatgroupmembers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchatgroupmessages`
+-- AUTO_INCREMENT for table `tblchatgroupmessages`
 --
 ALTER TABLE `tblchatgroupmessages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchatgroups`
+-- AUTO_INCREMENT for table `tblchatgroups`
 --
 ALTER TABLE `tblchatgroups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchatgroupsharedfiles`
+-- AUTO_INCREMENT for table `tblchatgroupsharedfiles`
 --
 ALTER TABLE `tblchatgroupsharedfiles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchatmessages`
+-- AUTO_INCREMENT for table `tblchatmessages`
 --
 ALTER TABLE `tblchatmessages`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchatsettings`
+-- AUTO_INCREMENT for table `tblchatsettings`
 --
 ALTER TABLE `tblchatsettings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchatsharedfiles`
+-- AUTO_INCREMENT for table `tblchatsharedfiles`
 --
 ALTER TABLE `tblchatsharedfiles`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchecklist`
+-- AUTO_INCREMENT for table `tblchecklist`
 --
 ALTER TABLE `tblchecklist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblchecklist_allocation`
+-- AUTO_INCREMENT for table `tblchecklist_allocation`
 --
 ALTER TABLE `tblchecklist_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblclients`
+-- AUTO_INCREMENT for table `tblclients`
 --
 ALTER TABLE `tblclients`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `tblconsents`
+-- AUTO_INCREMENT for table `tblconsents`
 --
 ALTER TABLE `tblconsents`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblconsent_purposes`
+-- AUTO_INCREMENT for table `tblconsent_purposes`
 --
 ALTER TABLE `tblconsent_purposes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblconsultas`
+-- AUTO_INCREMENT for table `tblconsultas`
 --
 ALTER TABLE `tblconsultas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT de la tabla `tblcontacts`
+-- AUTO_INCREMENT for table `tblcontacts`
 --
 ALTER TABLE `tblcontacts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblcontact_permissions`
+-- AUTO_INCREMENT for table `tblcontact_permissions`
 --
 ALTER TABLE `tblcontact_permissions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT de la tabla `tblcontracts`
+-- AUTO_INCREMENT for table `tblcontracts`
 --
 ALTER TABLE `tblcontracts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblcontracts_types`
+-- AUTO_INCREMENT for table `tblcontracts_types`
 --
 ALTER TABLE `tblcontracts_types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblcontract_comments`
+-- AUTO_INCREMENT for table `tblcontract_comments`
 --
 ALTER TABLE `tblcontract_comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcontract_renewals`
+-- AUTO_INCREMENT for table `tblcontract_renewals`
 --
 ALTER TABLE `tblcontract_renewals`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcountries`
+-- AUTO_INCREMENT for table `tblcountries`
 --
 ALTER TABLE `tblcountries`
   MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=251;
 
 --
--- AUTO_INCREMENT de la tabla `tblcreditnotes`
+-- AUTO_INCREMENT for table `tblcreditnotes`
 --
 ALTER TABLE `tblcreditnotes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcreditnote_refunds`
+-- AUTO_INCREMENT for table `tblcreditnote_refunds`
 --
 ALTER TABLE `tblcreditnote_refunds`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcredits`
+-- AUTO_INCREMENT for table `tblcredits`
 --
 ALTER TABLE `tblcredits`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcurrencies`
+-- AUTO_INCREMENT for table `tblcurrencies`
 --
 ALTER TABLE `tblcurrencies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblcustomers_groups`
+-- AUTO_INCREMENT for table `tblcustomers_groups`
 --
 ALTER TABLE `tblcustomers_groups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblcustomer_groups`
+-- AUTO_INCREMENT for table `tblcustomer_groups`
 --
 ALTER TABLE `tblcustomer_groups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblcustomfields`
+-- AUTO_INCREMENT for table `tblcustomfields`
 --
 ALTER TABLE `tblcustomfields`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcustomfieldsvalues`
+-- AUTO_INCREMENT for table `tblcustomfieldsvalues`
 --
 ALTER TABLE `tblcustomfieldsvalues`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblcustom_templates`
+-- AUTO_INCREMENT for table `tblcustom_templates`
 --
 ALTER TABLE `tblcustom_templates`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbldepartments`
+-- AUTO_INCREMENT for table `tbldepartments`
 --
 ALTER TABLE `tbldepartments`
   MODIFY `departmentid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbldismissed_announcements`
+-- AUTO_INCREMENT for table `tbldismissed_announcements`
 --
 ALTER TABLE `tbldismissed_announcements`
   MODIFY `dismissedannouncementid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblemaillists`
+-- AUTO_INCREMENT for table `tblemaillists`
 --
 ALTER TABLE `tblemaillists`
   MODIFY `listid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblemailtemplates`
+-- AUTO_INCREMENT for table `tblemailtemplates`
 --
 ALTER TABLE `tblemailtemplates`
   MODIFY `emailtemplateid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2449;
 
 --
--- AUTO_INCREMENT de la tabla `tblenfermedades`
+-- AUTO_INCREMENT for table `tblenfermedades`
 --
 ALTER TABLE `tblenfermedades`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12424;
 
 --
--- AUTO_INCREMENT de la tabla `tblestimates`
+-- AUTO_INCREMENT for table `tblestimates`
 --
 ALTER TABLE `tblestimates`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblestimate_requests`
+-- AUTO_INCREMENT for table `tblestimate_requests`
 --
 ALTER TABLE `tblestimate_requests`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblestimate_request_forms`
+-- AUTO_INCREMENT for table `tblestimate_request_forms`
 --
 ALTER TABLE `tblestimate_request_forms`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblestimate_request_status`
+-- AUTO_INCREMENT for table `tblestimate_request_status`
 --
 ALTER TABLE `tblestimate_request_status`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `tblevents`
+-- AUTO_INCREMENT for table `tblevents`
 --
 ALTER TABLE `tblevents`
   MODIFY `eventid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de la tabla `tblexpenses`
+-- AUTO_INCREMENT for table `tblexpenses`
 --
 ALTER TABLE `tblexpenses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblexpenses_categories`
+-- AUTO_INCREMENT for table `tblexpenses_categories`
 --
 ALTER TABLE `tblexpenses_categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblfeedback`
+-- AUTO_INCREMENT for table `tblfeedback`
 --
 ALTER TABLE `tblfeedback`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblfiles`
+-- AUTO_INCREMENT for table `tblfiles`
 --
 ALTER TABLE `tblfiles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblform_questions`
+-- AUTO_INCREMENT for table `tblform_questions`
 --
 ALTER TABLE `tblform_questions`
   MODIFY `questionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblform_question_box`
+-- AUTO_INCREMENT for table `tblform_question_box`
 --
 ALTER TABLE `tblform_question_box`
   MODIFY `boxid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblform_question_box_description`
+-- AUTO_INCREMENT for table `tblform_question_box_description`
 --
 ALTER TABLE `tblform_question_box_description`
   MODIFY `questionboxdescriptionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblform_results`
+-- AUTO_INCREMENT for table `tblform_results`
 --
 ALTER TABLE `tblform_results`
   MODIFY `resultid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblfs_downloads`
+-- AUTO_INCREMENT for table `tblfs_downloads`
 --
 ALTER TABLE `tblfs_downloads`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblfs_file_overview`
+-- AUTO_INCREMENT for table `tblfs_file_overview`
 --
 ALTER TABLE `tblfs_file_overview`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblfs_genenal_ip_share`
+-- AUTO_INCREMENT for table `tblfs_genenal_ip_share`
 --
 ALTER TABLE `tblfs_genenal_ip_share`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblfs_setting_configuration`
+-- AUTO_INCREMENT for table `tblfs_setting_configuration`
 --
 ALTER TABLE `tblfs_setting_configuration`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblfs_setting_configuration_relationship`
+-- AUTO_INCREMENT for table `tblfs_setting_configuration_relationship`
 --
 ALTER TABLE `tblfs_setting_configuration_relationship`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblfs_sharings`
+-- AUTO_INCREMENT for table `tblfs_sharings`
 --
 ALTER TABLE `tblfs_sharings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblfs_sharing_relationship`
+-- AUTO_INCREMENT for table `tblfs_sharing_relationship`
 --
 ALTER TABLE `tblfs_sharing_relationship`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblgdpr_requests`
+-- AUTO_INCREMENT for table `tblgdpr_requests`
 --
 ALTER TABLE `tblgdpr_requests`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblgoals`
+-- AUTO_INCREMENT for table `tblgoals`
 --
 ALTER TABLE `tblgoals`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblgroup_checklist`
+-- AUTO_INCREMENT for table `tblgroup_checklist`
 --
 ALTER TABLE `tblgroup_checklist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblgroup_checklist_allocation`
+-- AUTO_INCREMENT for table `tblgroup_checklist_allocation`
 --
 ALTER TABLE `tblgroup_checklist_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_allocation_asset`
+-- AUTO_INCREMENT for table `tblhr_allocation_asset`
 --
 ALTER TABLE `tblhr_allocation_asset`
   MODIFY `allocation_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_allowance_type`
+-- AUTO_INCREMENT for table `tblhr_allowance_type`
 --
 ALTER TABLE `tblhr_allowance_type`
   MODIFY `type_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_checklist_allocation`
+-- AUTO_INCREMENT for table `tblhr_checklist_allocation`
 --
 ALTER TABLE `tblhr_checklist_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_dependent_person`
+-- AUTO_INCREMENT for table `tblhr_dependent_person`
 --
 ALTER TABLE `tblhr_dependent_person`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_education`
+-- AUTO_INCREMENT for table `tblhr_education`
 --
 ALTER TABLE `tblhr_education`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_group_checklist_allocation`
+-- AUTO_INCREMENT for table `tblhr_group_checklist_allocation`
 --
 ALTER TABLE `tblhr_group_checklist_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_job_p`
+-- AUTO_INCREMENT for table `tblhr_job_p`
 --
 ALTER TABLE `tblhr_job_p`
   MODIFY `job_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_job_position`
+-- AUTO_INCREMENT for table `tblhr_job_position`
 --
 ALTER TABLE `tblhr_job_position`
   MODIFY `position_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_jp_interview_training`
+-- AUTO_INCREMENT for table `tblhr_jp_interview_training`
 --
 ALTER TABLE `tblhr_jp_interview_training`
   MODIFY `training_process_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_jp_salary_scale`
+-- AUTO_INCREMENT for table `tblhr_jp_salary_scale`
 --
 ALTER TABLE `tblhr_jp_salary_scale`
   MODIFY `salary_scale_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_knowedge_base_article_feedback`
+-- AUTO_INCREMENT for table `tblhr_knowedge_base_article_feedback`
 --
 ALTER TABLE `tblhr_knowedge_base_article_feedback`
   MODIFY `articleanswerid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_knowledge_base`
+-- AUTO_INCREMENT for table `tblhr_knowledge_base`
 --
 ALTER TABLE `tblhr_knowledge_base`
   MODIFY `articleid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_knowledge_base_groups`
+-- AUTO_INCREMENT for table `tblhr_knowledge_base_groups`
 --
 ALTER TABLE `tblhr_knowledge_base_groups`
   MODIFY `groupid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_list_staff_quitting_work`
+-- AUTO_INCREMENT for table `tblhr_list_staff_quitting_work`
 --
 ALTER TABLE `tblhr_list_staff_quitting_work`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_position_training`
+-- AUTO_INCREMENT for table `tblhr_position_training`
 --
 ALTER TABLE `tblhr_position_training`
   MODIFY `training_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_position_training_question_form`
+-- AUTO_INCREMENT for table `tblhr_position_training_question_form`
 --
 ALTER TABLE `tblhr_position_training_question_form`
   MODIFY `questionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_procedure_retire`
+-- AUTO_INCREMENT for table `tblhr_procedure_retire`
 --
 ALTER TABLE `tblhr_procedure_retire`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_procedure_retire_manage`
+-- AUTO_INCREMENT for table `tblhr_procedure_retire_manage`
 --
 ALTER TABLE `tblhr_procedure_retire_manage`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_procedure_retire_of_staff`
+-- AUTO_INCREMENT for table `tblhr_procedure_retire_of_staff`
 --
 ALTER TABLE `tblhr_procedure_retire_of_staff`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_procedure_retire_of_staff_by_id`
+-- AUTO_INCREMENT for table `tblhr_procedure_retire_of_staff_by_id`
 --
 ALTER TABLE `tblhr_procedure_retire_of_staff_by_id`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_profile_option`
+-- AUTO_INCREMENT for table `tblhr_profile_option`
 --
 ALTER TABLE `tblhr_profile_option`
   MODIFY `option_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_p_t_form_question_box`
+-- AUTO_INCREMENT for table `tblhr_p_t_form_question_box`
 --
 ALTER TABLE `tblhr_p_t_form_question_box`
   MODIFY `boxid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_p_t_form_question_box_description`
+-- AUTO_INCREMENT for table `tblhr_p_t_form_question_box_description`
 --
 ALTER TABLE `tblhr_p_t_form_question_box_description`
   MODIFY `questionboxdescriptionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_p_t_form_results`
+-- AUTO_INCREMENT for table `tblhr_p_t_form_results`
 --
 ALTER TABLE `tblhr_p_t_form_results`
   MODIFY `resultid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_p_t_surveyresultsets`
+-- AUTO_INCREMENT for table `tblhr_p_t_surveyresultsets`
 --
 ALTER TABLE `tblhr_p_t_surveyresultsets`
   MODIFY `resultsetid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_rec_transfer_records`
+-- AUTO_INCREMENT for table `tblhr_rec_transfer_records`
 --
 ALTER TABLE `tblhr_rec_transfer_records`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_salary_form`
+-- AUTO_INCREMENT for table `tblhr_salary_form`
 --
 ALTER TABLE `tblhr_salary_form`
   MODIFY `form_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_staff_contract`
+-- AUTO_INCREMENT for table `tblhr_staff_contract`
 --
 ALTER TABLE `tblhr_staff_contract`
   MODIFY `id_contract` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_staff_contract_detail`
+-- AUTO_INCREMENT for table `tblhr_staff_contract_detail`
 --
 ALTER TABLE `tblhr_staff_contract_detail`
   MODIFY `contract_detail_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_staff_contract_type`
+-- AUTO_INCREMENT for table `tblhr_staff_contract_type`
 --
 ALTER TABLE `tblhr_staff_contract_type`
   MODIFY `id_contracttype` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_training_allocation`
+-- AUTO_INCREMENT for table `tblhr_training_allocation`
 --
 ALTER TABLE `tblhr_training_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_type_of_trainings`
+-- AUTO_INCREMENT for table `tblhr_type_of_trainings`
 --
 ALTER TABLE `tblhr_type_of_trainings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_views_tracking`
+-- AUTO_INCREMENT for table `tblhr_views_tracking`
 --
 ALTER TABLE `tblhr_views_tracking`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblhr_workplace`
+-- AUTO_INCREMENT for table `tblhr_workplace`
 --
 ALTER TABLE `tblhr_workplace`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblinvoicepaymentrecords`
+-- AUTO_INCREMENT for table `tblinvoicepaymentrecords`
 --
 ALTER TABLE `tblinvoicepaymentrecords`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `tblinvoices`
+-- AUTO_INCREMENT for table `tblinvoices`
 --
 ALTER TABLE `tblinvoices`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
--- AUTO_INCREMENT de la tabla `tblitemable`
+-- AUTO_INCREMENT for table `tblitemable`
 --
 ALTER TABLE `tblitemable`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
--- AUTO_INCREMENT de la tabla `tblitems`
+-- AUTO_INCREMENT for table `tblitems`
 --
 ALTER TABLE `tblitems`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `tblitems_groups`
+-- AUTO_INCREMENT for table `tblitems_groups`
 --
 ALTER TABLE `tblitems_groups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblitem_tax`
+-- AUTO_INCREMENT for table `tblitem_tax`
 --
 ALTER TABLE `tblitem_tax`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbljob_industry`
+-- AUTO_INCREMENT for table `tbljob_industry`
 --
 ALTER TABLE `tbljob_industry`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblknowedge_base_article_feedback`
+-- AUTO_INCREMENT for table `tblknowedge_base_article_feedback`
 --
 ALTER TABLE `tblknowedge_base_article_feedback`
   MODIFY `articleanswerid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblknowledge_base`
+-- AUTO_INCREMENT for table `tblknowledge_base`
 --
 ALTER TABLE `tblknowledge_base`
   MODIFY `articleid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblknowledge_base_groups`
+-- AUTO_INCREMENT for table `tblknowledge_base_groups`
 --
 ALTER TABLE `tblknowledge_base_groups`
   MODIFY `groupid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblleads`
+-- AUTO_INCREMENT for table `tblleads`
 --
 ALTER TABLE `tblleads`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblleads_email_integration`
+-- AUTO_INCREMENT for table `tblleads_email_integration`
 --
 ALTER TABLE `tblleads_email_integration`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'the ID always must be 1', AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblleads_sources`
+-- AUTO_INCREMENT for table `tblleads_sources`
 --
 ALTER TABLE `tblleads_sources`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblleads_status`
+-- AUTO_INCREMENT for table `tblleads_status`
 --
 ALTER TABLE `tblleads_status`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tbllead_activity_log`
+-- AUTO_INCREMENT for table `tbllead_activity_log`
 --
 ALTER TABLE `tbllead_activity_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbllead_integration_emails`
+-- AUTO_INCREMENT for table `tbllead_integration_emails`
 --
 ALTER TABLE `tbllead_integration_emails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbllead_manager_activity_log`
+-- AUTO_INCREMENT for table `tbllead_manager_activity_log`
 --
 ALTER TABLE `tbllead_manager_activity_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbllead_manager_meeting_remark`
+-- AUTO_INCREMENT for table `tbllead_manager_meeting_remark`
 --
 ALTER TABLE `tbllead_manager_meeting_remark`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbllead_manager_missed_calls`
+-- AUTO_INCREMENT for table `tbllead_manager_missed_calls`
 --
 ALTER TABLE `tbllead_manager_missed_calls`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbllead_manager_zoom_meeting`
+-- AUTO_INCREMENT for table `tbllead_manager_zoom_meeting`
 --
 ALTER TABLE `tbllead_manager_zoom_meeting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbllistemails`
+-- AUTO_INCREMENT for table `tbllistemails`
 --
 ALTER TABLE `tbllistemails`
   MODIFY `emailid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblloy_card`
+-- AUTO_INCREMENT for table `tblloy_card`
 --
 ALTER TABLE `tblloy_card`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblloy_mbs_program`
+-- AUTO_INCREMENT for table `tblloy_mbs_program`
 --
 ALTER TABLE `tblloy_mbs_program`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblloy_mbs_rule`
+-- AUTO_INCREMENT for table `tblloy_mbs_rule`
 --
 ALTER TABLE `tblloy_mbs_rule`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblloy_program_detail`
+-- AUTO_INCREMENT for table `tblloy_program_detail`
 --
 ALTER TABLE `tblloy_program_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblloy_redeem_log`
+-- AUTO_INCREMENT for table `tblloy_redeem_log`
 --
 ALTER TABLE `tblloy_redeem_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblloy_redemp_detail`
+-- AUTO_INCREMENT for table `tblloy_redemp_detail`
 --
 ALTER TABLE `tblloy_redemp_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblloy_rule`
+-- AUTO_INCREMENT for table `tblloy_rule`
 --
 ALTER TABLE `tblloy_rule`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblloy_rule_detail`
+-- AUTO_INCREMENT for table `tblloy_rule_detail`
 --
 ALTER TABLE `tblloy_rule_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblloy_transation`
+-- AUTO_INCREMENT for table `tblloy_transation`
 --
 ALTER TABLE `tblloy_transation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblmaillistscustomfields`
+-- AUTO_INCREMENT for table `tblmaillistscustomfields`
 --
 ALTER TABLE `tblmaillistscustomfields`
   MODIFY `customfieldid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblmaillistscustomfieldvalues`
+-- AUTO_INCREMENT for table `tblmaillistscustomfieldvalues`
 --
 ALTER TABLE `tblmaillistscustomfieldvalues`
   MODIFY `customfieldvalueid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblmail_queue`
+-- AUTO_INCREMENT for table `tblmail_queue`
 --
 ALTER TABLE `tblmail_queue`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblmilestones`
+-- AUTO_INCREMENT for table `tblmilestones`
 --
 ALTER TABLE `tblmilestones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblmodules`
+-- AUTO_INCREMENT for table `tblmodules`
 --
 ALTER TABLE `tblmodules`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT de la tabla `tblnewsfeed_comment_likes`
+-- AUTO_INCREMENT for table `tblnewsfeed_comment_likes`
 --
 ALTER TABLE `tblnewsfeed_comment_likes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblnewsfeed_posts`
+-- AUTO_INCREMENT for table `tblnewsfeed_posts`
 --
 ALTER TABLE `tblnewsfeed_posts`
   MODIFY `postid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblnewsfeed_post_comments`
+-- AUTO_INCREMENT for table `tblnewsfeed_post_comments`
 --
 ALTER TABLE `tblnewsfeed_post_comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblnewsfeed_post_likes`
+-- AUTO_INCREMENT for table `tblnewsfeed_post_likes`
 --
 ALTER TABLE `tblnewsfeed_post_likes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblnotes`
+-- AUTO_INCREMENT for table `tblnotes`
 --
 ALTER TABLE `tblnotes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `tblnotifications`
+-- AUTO_INCREMENT for table `tblnotifications`
 --
 ALTER TABLE `tblnotifications`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `tbloptions`
+-- AUTO_INCREMENT for table `tbloptions`
 --
 ALTER TABLE `tbloptions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=544;
 
 --
--- AUTO_INCREMENT de la tabla `tblorder_items`
+-- AUTO_INCREMENT for table `tblorder_items`
 --
 ALTER TABLE `tblorder_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblorder_master`
+-- AUTO_INCREMENT for table `tblorder_master`
 --
 ALTER TABLE `tblorder_master`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblparts`
+-- AUTO_INCREMENT for table `tblparts`
 --
 ALTER TABLE `tblparts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT de la tabla `tblpayment_modes`
+-- AUTO_INCREMENT for table `tblpayment_modes`
 --
 ALTER TABLE `tblpayment_modes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `tblpinned_projects`
+-- AUTO_INCREMENT for table `tblpinned_projects`
 --
 ALTER TABLE `tblpinned_projects`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblposition_training_question_form`
+-- AUTO_INCREMENT for table `tblposition_training_question_form`
 --
 ALTER TABLE `tblposition_training_question_form`
   MODIFY `questionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblproduct_categories`
+-- AUTO_INCREMENT for table `tblproduct_categories`
 --
 ALTER TABLE `tblproduct_categories`
   MODIFY `p_category_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblproduct_master`
+-- AUTO_INCREMENT for table `tblproduct_master`
 --
 ALTER TABLE `tblproduct_master`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblprojectdiscussioncomments`
+-- AUTO_INCREMENT for table `tblprojectdiscussioncomments`
 --
 ALTER TABLE `tblprojectdiscussioncomments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblprojectdiscussions`
+-- AUTO_INCREMENT for table `tblprojectdiscussions`
 --
 ALTER TABLE `tblprojectdiscussions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblprojects`
+-- AUTO_INCREMENT for table `tblprojects`
 --
 ALTER TABLE `tblprojects`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblproject_activity`
+-- AUTO_INCREMENT for table `tblproject_activity`
 --
 ALTER TABLE `tblproject_activity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `tblproject_files`
+-- AUTO_INCREMENT for table `tblproject_files`
 --
 ALTER TABLE `tblproject_files`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblproject_members`
+-- AUTO_INCREMENT for table `tblproject_members`
 --
 ALTER TABLE `tblproject_members`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblproject_notes`
+-- AUTO_INCREMENT for table `tblproject_notes`
 --
 ALTER TABLE `tblproject_notes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblproject_settings`
+-- AUTO_INCREMENT for table `tblproject_settings`
 --
 ALTER TABLE `tblproject_settings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT de la tabla `tblproposals`
+-- AUTO_INCREMENT for table `tblproposals`
 --
 ALTER TABLE `tblproposals`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblproposal_comments`
+-- AUTO_INCREMENT for table `tblproposal_comments`
 --
 ALTER TABLE `tblproposal_comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpurchase_option`
+-- AUTO_INCREMENT for table `tblpurchase_option`
 --
 ALTER TABLE `tblpurchase_option`
   MODIFY `option_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_approval_details`
+-- AUTO_INCREMENT for table `tblpur_approval_details`
 --
 ALTER TABLE `tblpur_approval_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_approval_setting`
+-- AUTO_INCREMENT for table `tblpur_approval_setting`
 --
 ALTER TABLE `tblpur_approval_setting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_contacts`
+-- AUTO_INCREMENT for table `tblpur_contacts`
 --
 ALTER TABLE `tblpur_contacts`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_contracts`
+-- AUTO_INCREMENT for table `tblpur_contracts`
 --
 ALTER TABLE `tblpur_contracts`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_estimates`
+-- AUTO_INCREMENT for table `tblpur_estimates`
 --
 ALTER TABLE `tblpur_estimates`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_estimate_detail`
+-- AUTO_INCREMENT for table `tblpur_estimate_detail`
 --
 ALTER TABLE `tblpur_estimate_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_orders`
+-- AUTO_INCREMENT for table `tblpur_orders`
 --
 ALTER TABLE `tblpur_orders`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_order_detail`
+-- AUTO_INCREMENT for table `tblpur_order_detail`
 --
 ALTER TABLE `tblpur_order_detail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_order_payment`
+-- AUTO_INCREMENT for table `tblpur_order_payment`
 --
 ALTER TABLE `tblpur_order_payment`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_request`
+-- AUTO_INCREMENT for table `tblpur_request`
 --
 ALTER TABLE `tblpur_request`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_request_detail`
+-- AUTO_INCREMENT for table `tblpur_request_detail`
 --
 ALTER TABLE `tblpur_request_detail`
   MODIFY `prd_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_unit`
+-- AUTO_INCREMENT for table `tblpur_unit`
 --
 ALTER TABLE `tblpur_unit`
   MODIFY `unit_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblpur_vendor`
+-- AUTO_INCREMENT for table `tblpur_vendor`
 --
 ALTER TABLE `tblpur_vendor`
   MODIFY `userid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblp_t_form_question_box_description`
+-- AUTO_INCREMENT for table `tblp_t_form_question_box_description`
 --
 ALTER TABLE `tblp_t_form_question_box_description`
   MODIFY `questionboxdescriptionid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrecords_meta`
+-- AUTO_INCREMENT for table `tblrecipes`
+--
+ALTER TABLE `tblrecipes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tblrecords_meta`
 --
 ALTER TABLE `tblrecords_meta`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_campaign`
+-- AUTO_INCREMENT for table `tblrec_campaign`
 --
 ALTER TABLE `tblrec_campaign`
   MODIFY `cp_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_campaign_form_web`
+-- AUTO_INCREMENT for table `tblrec_campaign_form_web`
 --
 ALTER TABLE `tblrec_campaign_form_web`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_candidate`
+-- AUTO_INCREMENT for table `tblrec_candidate`
 --
 ALTER TABLE `tblrec_candidate`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_cd_evaluation`
+-- AUTO_INCREMENT for table `tblrec_cd_evaluation`
 --
 ALTER TABLE `tblrec_cd_evaluation`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_company`
+-- AUTO_INCREMENT for table `tblrec_company`
 --
 ALTER TABLE `tblrec_company`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_criteria`
+-- AUTO_INCREMENT for table `tblrec_criteria`
 --
 ALTER TABLE `tblrec_criteria`
   MODIFY `criteria_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_evaluation_form`
+-- AUTO_INCREMENT for table `tblrec_evaluation_form`
 --
 ALTER TABLE `tblrec_evaluation_form`
   MODIFY `form_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_interview`
+-- AUTO_INCREMENT for table `tblrec_interview`
 --
 ALTER TABLE `tblrec_interview`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_job_position`
+-- AUTO_INCREMENT for table `tblrec_job_position`
 --
 ALTER TABLE `tblrec_job_position`
   MODIFY `position_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_list_criteria`
+-- AUTO_INCREMENT for table `tblrec_list_criteria`
 --
 ALTER TABLE `tblrec_list_criteria`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_proposal`
+-- AUTO_INCREMENT for table `tblrec_proposal`
 --
 ALTER TABLE `tblrec_proposal`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_set_transfer_record`
+-- AUTO_INCREMENT for table `tblrec_set_transfer_record`
 --
 ALTER TABLE `tblrec_set_transfer_record`
   MODIFY `set_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_skill`
+-- AUTO_INCREMENT for table `tblrec_skill`
 --
 ALTER TABLE `tblrec_skill`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrec_transfer_records`
+-- AUTO_INCREMENT for table `tblrec_transfer_records`
 --
 ALTER TABLE `tblrec_transfer_records`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblrelated_items`
+-- AUTO_INCREMENT for table `tblrelated_items`
 --
 ALTER TABLE `tblrelated_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblreminders`
+-- AUTO_INCREMENT for table `tblreminders`
 --
 ALTER TABLE `tblreminders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tblroles`
+-- AUTO_INCREMENT for table `tblroles`
 --
 ALTER TABLE `tblroles`
   MODIFY `roleid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblsales_activity`
+-- AUTO_INCREMENT for table `tblsales_activity`
 --
 ALTER TABLE `tblsales_activity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT de la tabla `tblscheduled_emails`
+-- AUTO_INCREMENT for table `tblscheduled_emails`
 --
 ALTER TABLE `tblscheduled_emails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblservices`
+-- AUTO_INCREMENT for table `tblservices`
 --
 ALTER TABLE `tblservices`
   MODIFY `serviceid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsetting_asset_allocation`
+-- AUTO_INCREMENT for table `tblsetting_asset_allocation`
 --
 ALTER TABLE `tblsetting_asset_allocation`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsetting_training`
+-- AUTO_INCREMENT for table `tblsetting_training`
 --
 ALTER TABLE `tblsetting_training`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsetting_transfer_records`
+-- AUTO_INCREMENT for table `tblsetting_transfer_records`
 --
 ALTER TABLE `tblsetting_transfer_records`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsi_lead_filter`
+-- AUTO_INCREMENT for table `tblsi_lead_filter`
 --
 ALTER TABLE `tblsi_lead_filter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsi_task_filter`
+-- AUTO_INCREMENT for table `tblsi_task_filter`
 --
 ALTER TABLE `tblsi_task_filter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblspam_filters`
+-- AUTO_INCREMENT for table `tblspam_filters`
 --
 ALTER TABLE `tblspam_filters`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblstaff`
+-- AUTO_INCREMENT for table `tblstaff`
 --
 ALTER TABLE `tblstaff`
   MODIFY `staffid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tblstaff_departments`
+-- AUTO_INCREMENT for table `tblstaff_departments`
 --
 ALTER TABLE `tblstaff_departments`
   MODIFY `staffdepartmentid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsubscriptions`
+-- AUTO_INCREMENT for table `tblsubscriptions`
 --
 ALTER TABLE `tblsubscriptions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsurveyresultsets`
+-- AUTO_INCREMENT for table `tblsurveyresultsets`
 --
 ALTER TABLE `tblsurveyresultsets`
   MODIFY `resultsetid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsurveys`
+-- AUTO_INCREMENT for table `tblsurveys`
 --
 ALTER TABLE `tblsurveys`
   MODIFY `surveyid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsurveysemailsendcron`
+-- AUTO_INCREMENT for table `tblsurveysemailsendcron`
 --
 ALTER TABLE `tblsurveysemailsendcron`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblsurveysendlog`
+-- AUTO_INCREMENT for table `tblsurveysendlog`
 --
 ALTER TABLE `tblsurveysendlog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltags`
+-- AUTO_INCREMENT for table `tbltags`
 --
 ALTER TABLE `tbltags`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltasks`
+-- AUTO_INCREMENT for table `tbltasks`
 --
 ALTER TABLE `tbltasks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tbltaskstimers`
+-- AUTO_INCREMENT for table `tbltaskstimers`
 --
 ALTER TABLE `tbltaskstimers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltasks_checklist_templates`
+-- AUTO_INCREMENT for table `tbltasks_checklist_templates`
 --
 ALTER TABLE `tbltasks_checklist_templates`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltask_assigned`
+-- AUTO_INCREMENT for table `tbltask_assigned`
 --
 ALTER TABLE `tbltask_assigned`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tbltask_checklist_items`
+-- AUTO_INCREMENT for table `tbltask_checklist_items`
 --
 ALTER TABLE `tbltask_checklist_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltask_comments`
+-- AUTO_INCREMENT for table `tbltask_comments`
 --
 ALTER TABLE `tbltask_comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltask_followers`
+-- AUTO_INCREMENT for table `tbltask_followers`
 --
 ALTER TABLE `tbltask_followers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltaxes`
+-- AUTO_INCREMENT for table `tbltaxes`
 --
 ALTER TABLE `tbltaxes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltemplates`
+-- AUTO_INCREMENT for table `tbltemplates`
 --
 ALTER TABLE `tbltemplates`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltickets`
+-- AUTO_INCREMENT for table `tbltickets`
 --
 ALTER TABLE `tbltickets`
   MODIFY `ticketid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltickets_pipe_log`
+-- AUTO_INCREMENT for table `tbltickets_pipe_log`
 --
 ALTER TABLE `tbltickets_pipe_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltickets_predefined_replies`
+-- AUTO_INCREMENT for table `tbltickets_predefined_replies`
 --
 ALTER TABLE `tbltickets_predefined_replies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltickets_priorities`
+-- AUTO_INCREMENT for table `tbltickets_priorities`
 --
 ALTER TABLE `tbltickets_priorities`
   MODIFY `priorityid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `tbltickets_status`
+-- AUTO_INCREMENT for table `tbltickets_status`
 --
 ALTER TABLE `tbltickets_status`
   MODIFY `ticketstatusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `tblticket_attachments`
+-- AUTO_INCREMENT for table `tblticket_attachments`
 --
 ALTER TABLE `tblticket_attachments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblticket_replies`
+-- AUTO_INCREMENT for table `tblticket_replies`
 --
 ALTER TABLE `tblticket_replies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltodos`
+-- AUTO_INCREMENT for table `tbltodos`
 --
 ALTER TABLE `tbltodos`
   MODIFY `todoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `tbltracked_mails`
+-- AUTO_INCREMENT for table `tbltracked_mails`
 --
 ALTER TABLE `tbltracked_mails`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltraining_allocation`
+-- AUTO_INCREMENT for table `tbltraining_allocation`
 --
 ALTER TABLE `tbltraining_allocation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltransfer_records_reception`
+-- AUTO_INCREMENT for table `tbltransfer_records_reception`
 --
 ALTER TABLE `tbltransfer_records_reception`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbltwocheckout_log`
+-- AUTO_INCREMENT for table `tbltwocheckout_log`
 --
 ALTER TABLE `tbltwocheckout_log`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tbluser_meta`
+-- AUTO_INCREMENT for table `tbluser_meta`
 --
 ALTER TABLE `tbluser_meta`
   MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `tblvault`
+-- AUTO_INCREMENT for table `tblvault`
 --
 ALTER TABLE `tblvault`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblviews_tracking`
+-- AUTO_INCREMENT for table `tblviews_tracking`
 --
 ALTER TABLE `tblviews_tracking`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblware_unit_type`
+-- AUTO_INCREMENT for table `tblware_unit_type`
 --
 ALTER TABLE `tblware_unit_type`
   MODIFY `unit_type_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblweb_to_lead`
+-- AUTO_INCREMENT for table `tblweb_to_lead`
 --
 ALTER TABLE `tblweb_to_lead`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tblweb_to_recruitment`
+-- AUTO_INCREMENT for table `tblweb_to_recruitment`
 --
 ALTER TABLE `tblweb_to_recruitment`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `tblchatgroupmembers`
+-- Constraints for table `tblchatgroupmembers`
 --
 ALTER TABLE `tblchatgroupmembers`
   ADD CONSTRAINT `tblchatgroupmembers_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `tblchatgroups` (`id`);
 
 --
--- Filtros para la tabla `tblproduct_master`
+-- Constraints for table `tblproduct_master`
 --
 ALTER TABLE `tblproduct_master`
   ADD CONSTRAINT `tblproduct_master_ibfk_1` FOREIGN KEY (`product_category_id`) REFERENCES `tblproduct_categories` (`p_category_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `tbltwocheckout_log`
+-- Constraints for table `tbltwocheckout_log`
 --
 ALTER TABLE `tbltwocheckout_log`
   ADD CONSTRAINT `tbltwocheckout_log_ibfk_1` FOREIGN KEY (`invoice_id`) REFERENCES `tblinvoices` (`id`) ON DELETE CASCADE;

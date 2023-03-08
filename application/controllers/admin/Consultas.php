@@ -106,6 +106,10 @@ class Consultas extends AdminController
 
         $data['anamnesis'] = json_decode($data['consulta']->anamnesis, true);
 
+        $userid = $data['consulta']->id_client;
+
+        $data['client'] = $this->db->query("SELECT *, STR_TO_DATE(tblclients.datebirth, '%d/%m/%Y') AS datebirth FROM tblclients WHERE userid = '{$userid}'")->row();
+
         $this->load->view('admin/consultas/ver', $data);
     }
 
@@ -128,11 +132,11 @@ class Consultas extends AdminController
 
         $sql = "
             SELECT
-                tblclients.datebirth,
+                STR_TO_DATE(tblclients.datebirth, '%d/%m/%Y') AS datebirth,
                 tblclients.civilstate,
                 tblclients.address,
                 tblclients.occupation,
-                TIMESTAMPDIFF(YEAR,tblclients.datebirth,CURDATE()) AS edad
+                TIMESTAMPDIFF(YEAR, STR_TO_DATE(tblclients.datebirth, '%d/%m/%Y'), CURDATE()) AS edad
             FROM
                 tblclients
             WHERE
@@ -262,6 +266,10 @@ class Consultas extends AdminController
 
         $query = $this->db->query("SELECT * FROM tblconsultas WHERE id = $id");
         $data['consulta'] = $query->row();
+
+        $userid = $data['consulta']->id_client;
+
+        $data['client'] = $this->db->query("SELECT *, STR_TO_DATE(tblclients.datebirth, '%d/%m/%Y') AS datebirth FROM tblclients WHERE userid = '{$userid}'")->row();
 
         $id_client = $data['consulta']->id_client;
 

@@ -320,7 +320,7 @@
                <div class="col-md-4">
                   <div class="form-group">
                      <label for="datebirth">Fecha de nacimiento</label>
-                     <input type="date" class="form-control" name="datebirth">
+                     <input type="date" class="form-control" value="<?php echo $client->datebirth ?>" name="datebirth">
                   </div>
                </div>
 
@@ -336,10 +336,10 @@
                      <label for="civilstate">Estado civil</label>
                      <select name="civilstate" id="civilstate" class="form-control">
                         <option value=""></option>
-                        <option value="Soltero">Soltero</option>
-                        <option value="Casado">Casado</option>
-                        <option value="Divorciado">Divorciado</option>
-                        <option value="Viudo">Viudo</option>
+                        <option <?php echo $client->civilstate == 'Soltero' ? 'selected' : '' ?> value="Soltero">Soltero</option>
+                        <option <?php echo $client->civilstate == 'Casado' ? 'selected' : '' ?> value="Casado">Casado</option>
+                        <option <?php echo $client->civilstate == 'Divorciado' ? 'selected' : '' ?> value="Divorciado">Divorciado</option>
+                        <option <?php echo $client->civilstate == 'Viudo' ? 'selected' : '' ?> value="Viudo">Viudo</option>
                      </select>
                   </div>
                </div>
@@ -347,14 +347,14 @@
                <div class="col-md-6">
                   <div class="form-group">
                      <label for="address">Dirección</label>
-                     <input type="text" class="form-control" name="address">
+                     <input type="text" class="form-control" name="address" value="<?php echo $client->address; ?>">
                   </div>
                </div>
 
                <div class="col-md-6">
                   <div class="form-group">
                      <label for="occupation">Ocupación</label>
-                     <input type="text" class="form-control" name="occupation">
+                     <input type="text" class="form-control" name="occupation" value="<?php echo $client->occupation; ?>">
                   </div>
                </div>
 

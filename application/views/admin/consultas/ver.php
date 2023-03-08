@@ -315,7 +315,55 @@
 
             <?php if ($consulta->tipo == 'neurologia'): ?>
 
-               <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
+               <div class="row"></div>
+
+               <div class="col-md-4">
+                  <div class="form-group">
+                     <label for="datebirth">Fecha de nacimiento</label>
+                     <input readonly type="date" class="form-control" name="datebirth" value="<?php echo $client->datebirth ?>">
+                  </div>
+               </div>
+
+               <div class="col-md-4">
+                  <div class="form-group">
+                     <label for="procedencia">Procedencia</label>
+                     <input type="text" readonly class="form-control" name="procedencia" value="<?php echo $anamnesis['procedencia'] ?>">
+                  </div>
+               </div>
+
+               <div class="col-md-4">
+                  <div class="form-group">
+                     <label for="civilstate">Estado civil</label>
+                     <select readonly name="civilstate" id="civilstate" class="form-control">
+                        <option value=""></option>
+                        <option <?php echo $client->civilstate == 'Soltero' ? 'selected' : '' ?> value="Soltero">Soltero</option>
+                        <option <?php echo $client->civilstate == 'Casado' ? 'selected' : '' ?> value="Casado">Casado</option>
+                        <option <?php echo $client->civilstate == 'Divorciado' ? 'selected' : '' ?> value="Divorciado">Divorciado</option>
+                        <option <?php echo $client->civilstate == 'Viudo' ? 'selected' : '' ?> value="Viudo">Viudo</option>
+                     </select>
+                  </div>
+               </div>
+
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="address">Dirección</label>
+                     <input readonly type="text" class="form-control" name="address" value="<?php echo $client->address; ?>">
+                  </div>
+               </div>
+
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="occupation">Ocupación</label>
+                     <input readonly type="text" class="form-control" name="occupation" value="<?php echo $client->occupation; ?>">
+                  </div>
+               </div>
+
+               <div class="col-md-12">
+                  <div class="form-group">
+                     <label for="diagnostico">Diagnóstico</label>
+                     <textarea readonly name="diagnostico" class="form-control"><?php echo $anamnesis['diagnostico'] ?></textarea>
+                  </div>
+               </div>
 
                <input type="hidden" name="tipo" value="neurologia" value="<?php echo $consulta->tipo ?>">
 

@@ -406,9 +406,11 @@
 
                $('.user_photo').attr('src', response.foto);
 
+               console.log(response);
+
                $('[name=datebirth]').val(response.datebirth);
                $('[name=edad]').val(response.edad);
-               $('[name=civilstate]').val(response.civilstate);
+               $('[name=civilstate]').val(response.civilstate).change();
                $('[name=address]').val(response.address);
                $('[name=occupation]').val(response.occupation);
             },
