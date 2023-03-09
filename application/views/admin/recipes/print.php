@@ -62,6 +62,8 @@
                 }
             });
         }
+
+        window.print();
     </script>
     <script>
         function custom_fields_hyperlink(){

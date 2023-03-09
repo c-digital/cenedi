@@ -1,357 +1,642 @@
-<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RECIPE</title>
+    <link rel="shortcut icon" id="favicon" href="https://cenedi.nisadelgado.com/uploads/company/cenedi.jpg">
+<link rel="apple-touch-icon”" id="favicon-apple-touch-icon" href="https://cenedi.nisadelgado.com/uploads/company/cenedi.jpg">
+<link rel="stylesheet" type="text/css" id="reset-css" href="https://cenedi.nisadelgado.com/assets/css/reset.min.css?v=1678249651">
+<link rel="stylesheet" type="text/css" id="bootstrap-css" href="https://cenedi.nisadelgado.com/assets/plugins/bootstrap/css/bootstrap.min.css?v=2.9.3">
+<link rel="stylesheet" type="text/css" id="roboto-css" href="https://cenedi.nisadelgado.com/assets/plugins/roboto/roboto.css?v=2.9.3">
+<link rel="stylesheet" type="text/css" id="datatables-css" href="https://cenedi.nisadelgado.com/assets/plugins/datatables/datatables.min.css?v=2.9.3">
+<link rel="stylesheet" type="text/css" id="fontawesome-css" href="https://cenedi.nisadelgado.com/assets/plugins/font-awesome/css/font-awesome.min.css?v=2.9.3">
+<link rel="stylesheet" type="text/css" id="datetimepicker-css" href="https://cenedi.nisadelgado.com/assets/plugins/datetimepicker/jquery.datetimepicker.min.css?v=2.9.3">
+<link rel="stylesheet" type="text/css" id="bootstrap-select-css" href="https://cenedi.nisadelgado.com/assets/plugins/bootstrap-select/css/bootstrap-select.min.css?v=2.9.3">
+<link rel="stylesheet" type="text/css" id="lightbox-css" href="https://cenedi.nisadelgado.com/assets/plugins/lightbox/css/lightbox.min.css?v=2.9.3">
+<link rel="stylesheet" type="text/css" id="colorpicker-css" href="https://cenedi.nisadelgado.com/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css?v=2.9.3">
+<link rel="stylesheet" type="text/css" id="bootstrap-overrides-css" href="https://cenedi.nisadelgado.com/assets/css/bs-overides.min.css?v=1678249651">
+<link rel="stylesheet" type="text/css" id="theme-css" href="https://cenedi.nisadelgado.com/assets/themes/perfex/css/style.min.css?v=1678249651">
+    <script src="https://cenedi.nisadelgado.com/assets/plugins/jquery/jquery.min.js"></script>
+        <script>
+        if (typeof(jQuery) === 'undefined' && !window.deferAfterjQueryLoaded) {
+            window.deferAfterjQueryLoaded = [];
+            Object.defineProperty(window, "$", {
+                set: function(value) {
+                    window.setTimeout(function() {
+                        $.each(window.deferAfterjQueryLoaded, function(index, fn) {
+                            fn();
+                        });
+                    }, 0);
+                    Object.defineProperty(window, "$", {
+                        value: value
+                    });
+                },
+                configurable: true
+            });
+        }
 
-<div style="margin: 30px" id="wrapper" class="customer_profile">
-   <div class="content">
-      <div class="row" style="background: white;">
-         <?php echo form_open('/admin/consultas/modificar', ['enctype' => 'multipart/form-data', 'method' => 'POST']); ?>
-            <div class="col-md-11">
-               <h3>Consulta</h3>
+        var csrfData = {"formatted":{"csrf_token_name":"0ff81bf35839e080dbbf2bd42e26320c"},"token_name":"csrf_token_name","hash":"0ff81bf35839e080dbbf2bd42e26320c"};
+
+        if (typeof(jQuery) == 'undefined') {
+            window.deferAfterjQueryLoaded.push(function() {
+                csrf_jquery_ajax_setup();
+            });
+            window.addEventListener('load', function() {
+                csrf_jquery_ajax_setup();
+            }, true);
+        } else {
+            csrf_jquery_ajax_setup();
+        }
+
+        function csrf_jquery_ajax_setup() {
+            $.ajaxSetup({
+                data: csrfData.formatted
+            });
+
+            $(document).ajaxError(function(event, request, settings) {
+                if (request.status === 419) {
+                    alert_float('warning', 'Page expired, refresh the page make an action.')
+                }
+            });
+        }
+    </script>
+    <script>
+        function custom_fields_hyperlink(){
+         var cf_hyperlink = $('body').find('.cf-hyperlink');
+         if(cf_hyperlink.length){
+           $.each(cf_hyperlink,function(){
+            var cfh_wrapper = $(this);
+            if(!cfh_wrapper.hasClass('cfh-initialized')) {
+
+                var cfh_field_to = cfh_wrapper.attr('data-fieldto');
+                var cfh_field_id = cfh_wrapper.attr('data-field-id');
+                var textEl = $('body').find('#custom_fields_'+cfh_field_to+'_'+cfh_field_id+'_popover');
+                var hiddenField = $("#custom_fields\\\["+cfh_field_to+"\\\]\\\["+cfh_field_id+"\\\]");
+                var cfh_value = cfh_wrapper.attr('data-value');
+                hiddenField.val(cfh_value);
+
+                if($(hiddenField.val()).html() != ''){
+                    textEl.html($(hiddenField.val()).html());
+                }
+                var cfh_field_name = cfh_wrapper.attr('data-field-name');
+
+                textEl.popover({
+                    html: true,
+                    trigger: "manual",
+                    placement: "top",
+                    title:cfh_field_name,
+                    content:function(){
+                        return $(cfh_popover_templates[cfh_field_id]).html();
+                    }
+                }).on("click", function(e){
+                    var $popup = $(this);
+                    $popup.popover("toggle");
+                    var titleField = $("#custom_fields_"+cfh_field_to+"_"+cfh_field_id+"_title");
+                    var urlField = $("#custom_fields_"+cfh_field_to+"_"+cfh_field_id+"_link");
+                    var ttl = $(hiddenField.val()).html();
+                    var cfUrl = $(hiddenField.val()).attr("href");
+                    if(cfUrl){
+                        $('#cf_hyperlink_open_'+cfh_field_id).attr('href',(cfUrl.indexOf('://') === -1 ? 'http://' + cfUrl : cfUrl));
+                    }
+                    titleField.val(ttl);
+                    urlField.val(cfUrl);
+                    $("#custom_fields_"+cfh_field_to+"_"+cfh_field_id+"_btn-save").click(function(){
+                        hiddenField.val((urlField.val() != '' ? '<a href="'+urlField.val()+'" target="_blank">' + titleField.val() + '</a>' : ''));
+                        textEl.html(titleField.val() == "" ? "Click aquí para agregar link" : titleField.val());
+                        $popup.popover("toggle");
+                    });
+                    $("#custom_fields_"+cfh_field_to+"_"+cfh_field_id+"_btn-cancel").click(function(){
+                        if(urlField.val() == ''){
+                            hiddenField.val('');
+                        }
+                        $popup.popover("toggle");
+                    });
+                });
+                cfh_wrapper.addClass('cfh-initialized')
+            }
+        });
+       }
+     }
+ </script>
+     <script>
+                var admin_url = 'https://cenedi.nisadelgado.com/admin/';
+        
+        var site_url = 'https://cenedi.nisadelgado.com/',
+        app = {},
+        cfh_popover_templates  = {};
+
+        app.isRTL = 'false';
+        app.is_mobile = '';
+        app.months_json = '["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]';
+
+        app.browser = "chrome";
+        app.max_php_ini_upload_size_bytes = "2097152";
+        app.locale = "es";
+
+        app.options = {
+            calendar_events_limit: "6",
+            calendar_first_day: "1",
+            tables_pagination_limit: "25",
+            enable_google_picker: "1",
+            google_client_id: "https://calendar.google.com/calendar/ical/sistema@criativedigital.com/public/basic.ics",
+            google_api: "",
+            default_view_calendar: "dayGridMonth",
+            timezone: "America/La_Paz",
+            allowed_files: ".png,.jpg,.pdf,.doc,.docx,.xls,.xlsx,.zip,.rar,.txt",
+            date_format: "d/m/Y",
+            time_format: "24",
+        };
+
+        app.lang = {
+            file_exceeds_maxfile_size_in_form: "El archivo subido excede la directiva mAX_FILE_SIZE que se especificó en el formulario HTML" + ' (2 MB)',
+            file_exceeds_max_filesize: "El archivo subido excede la directiva peso máximo permitido (upload_max_filesize)" + ' (2 MB)',
+            validation_extension_not_allowed: "Esta extesión de archivo no es válida",
+            sign_document_validation: "Por favor firme el documento.",
+            dt_length_menu_all: "Todo",
+            drop_files_here_to_upload: "Dejar caer archivo aqui para cargar",
+            browser_not_support_drag_and_drop: "Tu navegador no soporte la opción de dejar caer archivo para cargar.",
+            confirm_action_prompt: "Estás seguro de querer realizar ésta acción?",
+            datatables: {"emptyTable":"No se encontraron entradas","info":"Mostrando desde _START_ hasta _END_ de _TOTAL_ entradas","infoEmpty":"Mostrando 0 al 0 de 0 entradas","infoFiltered":"(Filtrado de _MAX_ total de entradas)","lengthMenu":"_MENU_","loadingRecords":"Cargando\u2026","processing":"<div class=\"dt-loader\"><\/div>","search":"<div class=\"input-group\"><span class=\"input-group-addon\"><span class=\"fa fa-search\"><\/span><\/span>","searchPlaceholder":"Buscar:","zeroRecords":"No se encontraron coincidencias","paginate":{"first":"Primero","last":"\u00daltimo","next":"Siguiente","previous":"Anterior"},"aria":{"sortAscending":"Activar para ordenar la columna ascendente","sortDescending":"Activar para ordenar la columna descendente"}},
+            discussions_lang: {"discussion_add_comment":"Agregar comentario","discussion_newest":"El m\u00e1s reciente","discussion_oldest":"El m\u00e1s antiguo","discussion_attachments":"Archivos adjuntos","discussion_send":"Enviar","discussion_reply":"Respuesta","discussion_edit":"Editar","discussion_edited":"Modificar","discussion_you":"T\u00fa","discussion_save":"Guardar","discussion_delete":"Borrar","discussion_view_all_replies":"Ense\u00f1ar todas las respuestas","discussion_hide_replies":"Ocultar respuestas","discussion_no_comments":"Ning\u00fan comentario","discussion_no_attachments":"Ning\u00fan archivo adjunto","discussion_attachments_drop":"Arrastrar y soltar para cargar el archivo"},
+        };
+        window.addEventListener('load',function(){
+            custom_fields_hyperlink();
+        });
+    </script>
+        <script>
+        /**
+         * @deprecated 2.3.2
+         * Do not use any of these below as will be removed in future updates.
+         */
+        var isRTL = 'false';
+
+        var calendar_events_limit = "6";
+        var maximum_allowed_ticket_attachments = "4";
+
+        var max_php_ini_upload_size_bytes  = "2097152";
+
+        var file_exceeds_maxfile_size_in_form = "El archivo subido excede la directiva mAX_FILE_SIZE que se especificó en el formulario HTML" + ' (2 MB)';
+        var file_exceeds_max_filesize = "El archivo subido excede la directiva peso máximo permitido (upload_max_filesize)" + ' (2 MB)';
+
+        var validation_extension_not_allowed = "Esta extesión de archivo no es válida";
+        var sign_document_validation = "Por favor firme el documento.";
+        var dt_length_menu_all = "Todo";
+
+        var drop_files_here_to_upload = "Dejar caer archivo aqui para cargar";
+        var browser_not_support_drag_and_drop = "Tu navegador no soporte la opción de dejar caer archivo para cargar.";
+        var remove_file = "Eliminar archivo";
+        var tables_pagination_limit = "25";
+        var enable_google_picker = "1";
+        var google_client_id = "https://calendar.google.com/calendar/ical/sistema@criativedigital.com/public/basic.ics";
+        var google_api = "";
+        var acceptable_mimes = "image/png, image/jpeg, application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/x-zip, application/x-rar, text/plain";
+        var date_format = "d/m/Y";
+        var time_format = "24";
+        var default_view_calendar = "dayGridMonth";
+        var dt_lang = {"emptyTable":"No se encontraron entradas","info":"Mostrando desde _START_ hasta _END_ de _TOTAL_ entradas","infoEmpty":"Mostrando 0 al 0 de 0 entradas","infoFiltered":"(Filtrado de _MAX_ total de entradas)","lengthMenu":"_MENU_","loadingRecords":"Cargando\u2026","processing":"<div class=\"dt-loader\"><\/div>","search":"<div class=\"input-group\"><span class=\"input-group-addon\"><span class=\"fa fa-search\"><\/span><\/span>","searchPlaceholder":"Buscar:","zeroRecords":"No se encontraron coincidencias","paginate":{"first":"Primero","last":"\u00daltimo","next":"Siguiente","previous":"Anterior"},"aria":{"sortAscending":"Activar para ordenar la columna ascendente","sortDescending":"Activar para ordenar la columna descendente"}};
+        var discussions_lang = {"discussion_add_comment":"Agregar comentario","discussion_newest":"El m\u00e1s reciente","discussion_oldest":"El m\u00e1s antiguo","discussion_attachments":"Archivos adjuntos","discussion_send":"Enviar","discussion_reply":"Respuesta","discussion_edit":"Editar","discussion_edited":"Modificar","discussion_you":"T\u00fa","discussion_save":"Guardar","discussion_delete":"Borrar","discussion_view_all_replies":"Ense\u00f1ar todas las respuestas","discussion_hide_replies":"Ocultar respuestas","discussion_no_comments":"Ning\u00fan comentario","discussion_no_attachments":"Ning\u00fan archivo adjunto","discussion_attachments_drop":"Arrastrar y soltar para cargar el archivo"};
+        var confirm_action_prompt = "Estás seguro de querer realizar ésta acción?";
+        var cf_translate_input_link_tip = "Click aquí para agregar link";
+
+        var locale = 'es';
+        var timezone = "America/La_Paz";
+        var allowed_files = ".png,.jpg,.pdf,.doc,.docx,.xls,.xlsx,.zip,.rar,.txt";
+        var calendar_first_day = '1';
+        var months_json = '["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]';
+    </script>
+        <meta name="robots" content="noindex">
+
+        <style>
+            @media print {
+                .img-responsive {
+                    width: 500px;
+                    margin-bottom: -500px;
+                }
+            }
+        </style>
+</head>
+<body id="viewinvoice" class="customers chrome viewinvoice" >
+    <div id="wrapper">
+   <div id="content">
+      <div class="container">
+         <div class="row">
+                     </div>
+      </div>
+            <div class="container">
+                  <div class="row">
+                        <div class="mtop15 preview-top-wrapper">
+   <div class="row">
+      <div class="col-md-3">
+         <div class="mbot30">
+            <div class="invoice-html-logo">
+               <a href="https://cenedi.nisadelgado.com/" class="logo img-responsive">
+        <img src="https://cenedi.nisadelgado.com/uploads/company/cenedi.jpg" class="img-responsive" alt="Cenedi Neurologia &amp; Diabetes">
+        </a>            </div>
+         </div>
+      </div>
+
+      <div class="col-md-6"></div>
+
+      <div class="col-md-3" style="text-align: right">
+          <h1>CONSULTA</h1>
+      </div>
+      <div class="clearfix"></div>
+   </div>
+   <div class="top" data-sticky data-sticky-class="preview-sticky-header">
+      <div class="container preview-sticky-container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="pull-left">
+                  <h3 class="bold no-mtop invoice-html-number no-mbot">
+                     <span class="sticky-visible hide">
+                        CONSULTA                     </span>
+                  </h3>
+                  <h4 class="invoice-html-status mtop7">
+               </div>
+               <div class="visible-xs">
+                  <div class="clearfix"></div>
+               </div>
+               <a href="#" class="btn btn-success pull-right mleft5 mtop5 action-button invoice-html-pay-now-top hide sticky-hidden
+                  ">
+                  Pague ahora               </a>
+               <form action="https://cenedi.nisadelgado.com/invoice/52/0d406dabd154952f2ebbb99375feb2c3" method="post" accept-charset="utf-8">
+<input type="hidden" name="csrf_token_name" value="0ff81bf35839e080dbbf2bd42e26320c" />                                                    
+               
+               </form>                              <div class="clearfix"></div>
             </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="clearfix"></div>
+<div class="panel_s mtop20">
+   <div class="panel-body">
+      <div class="col-md-10 col-md-offset-1">
+         <div class="row mtop20">
+            <div class="col-md-6 col-sm-6 transaction-html-info-col-left">
+               
 
-            <div class="col-md-1">
-               <a href="/admin/consultas" title="Volver a atras">
-                  <i class="pull-right fa fa-times"></i>
-               </a>
+               
+
+               <table>
+                   <tr>
+                       <td width="50%">
+                           <h4 class="bold invoice-html-number">Paciente</h4>
+                           <?php echo 'Nombre: ' . $paciente->company; ?><br>
+                           <?php echo 'Teléfono: ' . $paciente->phonenumber; ?><br>
+                           <?php echo 'Dirección: ' . $paciente->address; ?><br>
+                       </td>
+
+                       <td>
+                            <h4 class="bold invoice-html-number">Doctor</h4>
+
+                           <?php echo 'Nombre: ' . $doctor->firstname . ' ' . $doctor->lastname; ?><br>
+                           <?php echo 'Teléfono: ' . $doctor->phonenumber; ?><br>
+                           <?php echo 'Email: ' . $doctor->email; ?><br>
+                       </td>
+                   </tr>
+               </table>
+
             </div>
-
-            <div class="col-md-2">
-               <img style="width: 210px; height: 210px" class="img-responsive img-circle user_photo" style="cursor: pointer" src="<?php echo ($foto_perfil) ? '/uploads/consultas/' . $foto_perfil : '/assets/images/user-placeholder.jpg' ?>" alt="">
-
-               <input type="file" style="display: none;" name="foto_perfil" id="user">
-            </div>
-
-            <div class="col-md-8">
-               <label for="id_cliente">Paciente</label>
-               <select name="id_client" class="form-control">
-                  <option value=""></option>
-                  <?php foreach ($clientes as $cliente): ?>
-                     <option <?php echo ($cliente->userid == $consulta->id_client) ? 'selected' : ''; ?> value="<?php echo $cliente->userid; ?>"><?php echo $cliente->company; ?></option>
-                  <?php endforeach; ?>
-               </select>
-            </div>
-
-            <div class="col-md-2">
-               <label for="edad">Edad</label>
-               <input type="text" class="form-control" name="edad" value="<?php echo $consulta->edad; ?>">
-            </div>
-
-            <div class="col-md-8" style="margin-top: 20px">
-               <label for="id_cliente">Profesional</label>
-               <select name="id_staff" class="form-control">
-                  <option value=""></option>
-                  <?php foreach ($profesionales as $profesional): ?>
-                     <option <?php echo ($profesional->staffid == $consulta->id_staff) ? 'selected' : ''; ?> value="<?php echo $profesional->staffid; ?>"><?php echo $profesional->firstname; ?></option>
-                  <?php endforeach; ?>
-               </select>
-            </div>
-
-            <div class="col-md-2" style="margin-top: 20px">
-               <label for="monto">Monto a cobrar</label>
-               <input type="text" class="form-control" name="monto" value="<?php echo $consulta->monto; ?>">
-            </div>
-
+         </div>
+         <div class="row">
             <?php if ($consulta->tipo == 'diabetes'): ?>
-
-               <div class="col-md-12" style="border-top: 0.5px solid silver">
-                  <h4>Antecedenes familiares</h4>
-               </div>
-
-               <div class="col-md-2">
-                  <label for="obesidad">Obesidad</label><br>
-
-                  <input type="radio" name="obesidad" value="Si" <?php echo $anamnesis['obesidad'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="obesidad" value="No" <?php echo $anamnesis['obesidad'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="col-md-2">
-                  <label for="hta">HTA</label><br>
-
-                  <input type="radio" name="hta" value="Si" <?php echo $anamnesis['hta'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="hta" value="No" <?php echo $anamnesis['hta'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="col-md-2">
-                  <label for="diabetes">Diabetes</label><br>
-
-                  <input type="radio" name="diabetes" value="Si" <?php echo $anamnesis['diabetes'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="diabetes" value="No" <?php echo $anamnesis['diabetes'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="col-md-2">
-                  <label for="iam">IAM</label><br>
-
-                  <input type="radio" name="iam" value="Si" <?php echo $anamnesis['iam'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="iam" value="No" <?php echo $anamnesis['iam'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="col-md-2">
-                  <label for="acv">ACV</label><br>
-
-                  <input type="radio" name="acv" value="Si" <?php echo $anamnesis['acv'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="acv" value="No" <?php echo $anamnesis['acv'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="col-md-2">
-                  <label for="cancer">Cancer</label><br>
-
-                  <input type="radio" name="cancer" value="Si" <?php echo $anamnesis['cancer'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="cancer" value="No" <?php echo $anamnesis['cancer'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="col-md-12" style="margin-top: 20px">
-                  <label for="aclaraciones">Aclaraciones</label>
-                  <textarea name="aclaraciones" class="form-control"><?php echo $anamnesis['aclaraciones']; ?></textarea>
-               </div>
-
-               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <h4>Antecedenes gineco obstetricos</h4>
-               </div>
-
-               <div class="col-md-6">
-                  <label for="Alguno de sus hijos peso mas de 4kg al nacer?">Alguno de sus hijos peso mas de 4kg al nacer?</label><br>
-
-                  <input type="radio" name="Alguno de sus hijos peso mas de 4kg al nacer?" value="Si" <?php echo $anamnesis['Alguno de sus hijos peso mas de 4kg al nacer?'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="Alguno de sus hijos peso mas de 4kg al nacer?" value="No" <?php echo $anamnesis['Alguno de sus hijos peso mas de 4kg al nacer?'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="col-md-6">
-                  <label for="Ha tenido algun aborto, muerte, fetal, neonatal?">Ha enido algun aborto, muerte, fetal, neonatal?</label><br>
-
-                  <input type="radio" name="Ha tenido algun aborto, muerte, fetal, neonatal?" value="Si" <?php echo $anamnesis['Ha tenido algun aborto, muerte, fetal, neonatal?'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="Ha enido algun aborto, muerte, fetal, neonatal?" value="No" <?php echo $anamnesis['Ha tenido algun aborto, muerte, fetal, neonatal?'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <h4>Antecedenes personales</h4>
-               </div>
-
-               <div class="col-md-2">HTA</div>
-               <div class="col-md-2">
-                  <input type="radio" name="hta_personal" value="Si" <?php echo $anamnesis['hta_personal'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="hta_personal" value="No" <?php echo $anamnesis['hta_personal'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-2">Obesidad</div>
-               <div class="col-md-2">
-                  <input type="radio" name="obesidad_personal" value="Si" <?php echo $anamnesis['obesidad_personal'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="obesidad_personal" value="No" <?php echo $anamnesis['obesidad_personal'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-2">Diabetes</div>
-               <div class="col-md-2">
-                  <input type="radio" name="diabetes_personal" value="Si" <?php echo $anamnesis['diabetes_personal'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="diabetes_personal" value="No" <?php echo $anamnesis['diabetes_personal'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-2">Fuma</div>
-               <div class="col-md-2">
-                  <input type="radio" name="fuma" value="Si" <?php echo $anamnesis['fuma'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="fuma" value="No" <?php echo $anamnesis['fuma'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-               <div class="col-md-2">
-                  <input type="text" class="form-control form-control-sm" name="fuma_frencuencia" placeholder="Frecuencia:" value="<?php echo $anamnesis['fuma_frecuencia'] ?>">
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-2">Bebidas alcoholicas</div>
-               <div class="col-md-2">
-                  <input type="radio" name="bebidas alcoholicas" value="Si" <?php echo $anamnesis['bebidas alcoholicas'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="bebidas alcoholicas" value="No" <?php echo $anamnesis['bebidas alcoholicas'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-               <div class="col-md-2">
-                  <input type="text" class="form-control form-control-sm" name="bebidas_frencuencia" placeholder="Frecuencia:" value="<?php echo $anamnesis['bebidas_frecuencia'] ?>">
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-2">Fondo de ojo anual</div>
-               <div class="col-md-2">
-                  <input type="radio" name="Fondo de ojo anual" value="Si" <?php echo $anamnesis['Fondo de ojo anual'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="Fondo de ojo anual" value="No" <?php echo $anamnesis['Fondo de ojo anual'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-2">ECG anual</div>
-               <div class="col-md-2">
-                  <input type="radio" name="ECG anual" value="Si" <?php echo $anamnesis['ECG anual'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="ECG anual" value="No" <?php echo $anamnesis['ECG anual'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-2">Educacion en diabetes</div>
-               <div class="col-md-2">
-                  <input type="radio" name="Educacion en diabetes" value="Si" <?php echo $anamnesis['Educaciu00f3n en diabetes'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="Educacion en diabetes" value="No" <?php echo $anamnesis['Educaciu00f3n en diabetes'] == 'No' ? 'checked' : '' ?>> No
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-2">Antecedentes quirurgicos</div>
-               <div class="col-md-2">
-                  <input type="text" name="Antecedentes quirurgicos" class="form-control form-control-sm" value="<?php echo $anamnesis['Antecedentes quirurgicos'] ?>">
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <label for="motivo" style="margin-top: 10px">Motivo de la consulta</label>
-                  <textarea name="motivo" class="form-control"><?php echo $anamnesis['motivo'] ?></textarea>
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <h4>Signos vitales y medidas antropometricas</h4>
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-2">
-                  <label for="pa">PA</label>
-                  <input type="text" class="form-control" name="pa" value="<?php echo $anamnesis['pa']; ?>">
-               </div>
-
-               <div class="col-md-2">
-                  <label for="pulso">Pulso</label>
-                  <input type="text" class="form-control" name="pulso" value="<?php echo $anamnesis['pulso']; ?>">
-               </div>
-
-               <div class="col-md-2">
-                  <label for="peso">Peso</label>
-                  <input type="text" class="form-control" name="peso" value="<?php echo $anamnesis['peso']; ?>">
-               </div>
-
-               <div class="col-md-2">
-                  <label for="talla">Talla</label>
-                  <input type="text" class="form-control" name="talla" value="<?php echo $anamnesis['talla']; ?>">
-               </div>
-
-               <div class="col-md-2">
-                  <label for="imc">IMC</label>
-                  <input type="text" class="form-control" name="imc" value="<?php echo $anamnesis['imc']; ?>">
-               </div>
-
-               <div class="col-md-2">
-                  <label for="pcintura">P/cintura</label>
-                  <input type="text" class="form-control" name="pcintura" value="<?php echo $anamnesis['pcintura']; ?>">
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <label for="Historial de enfermedad actual" style="margin-top: 10px">Historial de enfermedad actual</label>
-                  <textarea name="Historial de enfermedad actual" class="form-control"><?php echo $anamnesis['Historial de enfermedad actual']; ?></textarea>
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <label for="Examen fisico" style="margin-top: 10px">Examen fisico</label>
-                  <textarea name="Examen fisico" class="form-control"><?php echo $anamnesis['Examen fisico']; ?></textarea>
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <label for="Diagnostico presuntivo" style="margin-top: 10px">Diagnostico presuntivo</label>
-                  <textarea name="Diagnostico presuntivo" class="form-control"><?php echo $anamnesis['Diagnostico presuntivo']; ?></textarea>
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <label for="Laboratorios, estudios o examenes solicitados" style="margin-top: 10px">Laboratorios, estudios o examenes solicitados</label>
-                  <textarea name="Laboratorios, estudios o examenes solicitados" class="form-control"><?php echo $anamnesis['Laboratorios, estudios o examenes solicitados']; ?></textarea>
-               </div>
-
-               <div class="row"></div>
-
-               <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
-                  <label for="Tratamiento" style="margin-top: 10px">Tratamiento</label>
-                  <textarea name="Tratamiento" class="form-control"><?php echo $anamnesis['Tratamiento']; ?></textarea>
-               </div>
-
-               <div class="col-md-12" style="margin-top: 30px; margin-bottom: 30px; border-top: 0.5px solid silver">
-                  <h4>Firma y sella del medico</h4>
-               </div>
-
-               <div class="col-md-3">Elaborado:</div>
-
-               <div class="col-md-3">
-                  ________________________________<br>
-                  Lic.Alberto Terrazas C.<br>
-                  Coordinador Administrativo<br>
-                  Unidades de Servicio - F.C.S.H.
-               </div>
-
-               <div class="col-md-3">Aprobado:</div>
-
-               <div class="col-md-3">
-                  ________________________________<br>
-                  Dr. Reinerio Vargas B.<br>
-                  Decano<br>
-                  F.C.S.U. - U.A.G.R.M
-               </div>
-
-               <input type="hidden" name="tipo" value="diabetes" value="<?php echo $consulta->tipo ?>">
-
+            <div class="col-md-12">
+               <div class="table-responsive">
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th colspan="6" align="center">Antecedentes familiares</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Obesidad: <?php echo $anamnesis['obesidad']; ?></td>
+                            <td>HTA: <?php echo $anamnesis['hta']; ?></td>
+                            <td>Diabetes: <?php echo $anamnesis['diabetes']; ?></td>
+                            <td>IAM: <?php echo $anamnesis['iam']; ?></td>
+                            <td>ACV: <?php echo $anamnesis['acv']; ?></td>
+                            <td>Cancer: <?php echo $anamnesis['cancer']; ?></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="6">Aclaraciones: <?php echo $anamnesis['aclaraciones']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th colspan="2" align="center">Antecedentes gineco obstetricos</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Alguno de sus hijos peso mas de 4kg al nacer? <?php echo $anamnesis['Alguno de sus hijos peso mas de 4kg al nacer?']; ?></td>
+                            <td>Ha tenido algun aborto, muerte, fetal, neonatal? <?php echo $anamnesis['Ha tenido algun aborto, muerte, fetal, neonatal?']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th colspan="2" align="center">Antecedentes personales</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>HTA: <?php echo $anamnesis['hta']; ?></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Obesidad: <?php echo $anamnesis['obesidad']; ?></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Diabetes: <?php echo $anamnesis['diabetes']; ?></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Fuma: <?php echo $anamnesis['fuma']; ?></td>
+                            <td>Frencuencia: <?php echo $anamnesis['fuma_frecuencia']; ?></td>
+                        </tr>
+
+                        <tr>
+                            <td>Bebidas alcoholicas: <?php echo $anamnesis['bebidas alcoholicas']; ?></td>
+                            <td>Frencuencia: <?php echo $anamnesis['bebidas_frecuencia']; ?></td>
+                        </tr>
+
+                        <tr>
+                            <td>Fondo de ojo anual: <?php echo $anamnesis['Fondo de ojo anual']; ?></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>ECG anual: <?php echo $anamnesis['ECG anual']; ?></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Educacion en diabetes: <?php echo $anamnesis['Educacion en diabetes'] ?? null; ?></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>Antecedentes quirurgicos:</td>
+                            <td><?php echo $anamnesis['Antecedentes quirurgicos']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th align="center">Motivo de la consulta</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><?php echo $anamnesis['motivo']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th colspan="6" align="center">Signos vitales y medidas antropometricas</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>PA: <?php echo $anamnesis['pa']; ?></td>
+                            <td>Pulso: <?php echo $anamnesis['pulso']; ?></td>
+                            <td>Peso: <?php echo $anamnesis['peso']; ?></td>
+                            <td>Talla: <?php echo $anamnesis['talla']; ?></td>
+                            <td>IMC: <?php echo $anamnesis['imc']; ?></td>
+                            <td>P/cintura: <?php echo $anamnesis['pcintura']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th align="center">Historial de enfermedad actual</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><?php echo $anamnesis['Historial de enfermedad actual']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th align="center">Examen fisico</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><?php echo $anamnesis['Examen fisico']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th align="center">Diagnostico presuntivo</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><?php echo $anamnesis['Diagnostico presuntivo']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th align="center">Laboratorios, estudios o examenes solicitados</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><?php echo $anamnesis['Laboratorios, estudios o examenes solicitados']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th align="center">Tratamiento</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><?php echo $anamnesis['Tratamiento']; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th colspan="2" align="center">Firma y sello del medico</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                Elaborado:<br><br><br>
+                                ________________________________<br>
+                                Lic.Alberto Terrazas C.<br>
+                                Coordinador Administrativo<br>
+                                Unidades de Servicio - F.C.S.H.<br>
+                            </td>
+
+                            <td>
+                                Aprobado:<br><br><br>
+                                ________________________________<br>
+                                Dr. Reinerio Vargas B.<br>
+                                Decano<br>
+                                F.C.S.U. - U.A.G.R.M<br>
+                            </td>       
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
             <?php endif; ?>
-
-
-
 
             <?php if ($consulta->tipo == 'neurologia'): ?>
+            <div class="col-md-12">
+               <div class="table-responsive">
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th colspan="3" align="center">Info general</th>
+                        </tr>
+                    </thead>
 
-               <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
+                    <tbody>
+                        <tr>
+                            <td>Fecha nacimiento: <?php echo $paciente->datebirth; ?></td>
+                            <td>Procedencia: <?php echo $anamnesis['procedencia']; ?></td>
+                            <td>Estado civil: <?php echo $paciente->civilstate; ?></td>
+                        </tr>
 
-               <input type="hidden" name="tipo" value="neurologia" value="<?php echo $consulta->tipo ?>">
+                        <tr>
+                            <td>Dirección: <?php echo $paciente->datebirth; ?></td>
+                            <td>Ocupación: <?php echo $paciente->occupation; ?></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
 
+                <table class="table items items-preview invoice-items-preview" data-type="invoice">
+                    <thead>
+                        <tr>
+                            <th align="center">Diagnóstico</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Fecha nacimiento: <?php echo $paciente->datebirth; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            </div>
             <?php endif; ?>
-
-            <input type="hidden" name="id" value="<?php echo $consulta->id; ?>">
-         <?php echo form_close(); ?>
+            <div class="col-md-6 col-md-offset-6">
+               
+            </div>
+                                                            <div class="col-md-12">
+               
+            </div>
       </div>
    </div>
 </div>
 
-
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-   $(document).ready(function () {
-      $('#user').change(function () {
-         input = this;
-         if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (event) {
-               $('.user_photo').attr('src', event.target.result);
-            }
-            reader.readAsDataURL(input.files[0]);
-         }
-      });
+   $(function() {
 
-      $('.img-circle').click(function () {
-         $('[name=foto_perfil]').click();
-      });
+        window.print();
 
-      var element = document.getElementById('wrapper');
-      html2pdf(element);
+      new Sticky('[data-sticky]');
+      var $payNowTop = $('.pay-now-top');
+      if ($payNowTop.length && !$('#pay_now').isInViewport()) {
+         $payNowTop.removeClass('hide');
+         $('.pay-now-top').on('click', function(e) {
+            e.preventDefault();
+            $('html,body').animate({
+                  scrollTop: $("#online_payment_form").offset().top
+               },
+               'slow');
+         });
+      }
+
+      $('#online_payment_form').appFormValidator();
+
+      var online_payments = $('.online-payment-radio');
+      if (online_payments.length == 1) {
+         online_payments.find('input').prop('checked', true);
+     }
    });
 </script>
-
+         </div>
+      </div>
+   </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <span class="copyright-footer">2023 Derechos de autor de Cenedi Neurologia & Diabetes</span>
+                                            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" id="bootstrap-js" src="https://cenedi.nisadelgado.com/assets/plugins/bootstrap/js/bootstrap.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="datatables-js" src="https://cenedi.nisadelgado.com/assets/plugins/datatables/datatables.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="jquery-validation-js" src="https://cenedi.nisadelgado.com/assets/plugins/jquery-validation/jquery.validate.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="jquery-validation-lang-js" src="https://cenedi.nisadelgado.com/assets/plugins/jquery-validation/localization/messages_es.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="bootstrap-select-js" src="https://cenedi.nisadelgado.com/assets/builds/bootstrap-select.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="bootstrap-select-lang-js" src="https://cenedi.nisadelgado.com/assets/plugins/bootstrap-select/js/i18n/defaults-es_ES.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="datetimepicker-js" src="https://cenedi.nisadelgado.com/assets/plugins/datetimepicker/jquery.datetimepicker.full.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="chart-js" src="https://cenedi.nisadelgado.com/assets/plugins/Chart.js/Chart.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="colorpicker-js" src="https://cenedi.nisadelgado.com/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="lightbox-js" src="https://cenedi.nisadelgado.com/assets/plugins/lightbox/js/lightbox.min.js?v=2.9.3"></script>
+<script type="text/javascript" id="common-js" src="https://cenedi.nisadelgado.com/assets/builds/common.js?v=2.9.3"></script>
+<script type="text/javascript" id="theme-global-js" src="https://cenedi.nisadelgado.com/assets/themes/perfex/js/global.min.js?v=1678249651"></script>
+<script type="text/javascript" id="sticky-js" src="https://cenedi.nisadelgado.com/assets/plugins/sticky/sticky.js?v=2.9.3"></script>
 </body>
 </html>

@@ -61,21 +61,13 @@ class Consultas extends AdminController
         $data['consulta'] = $query->row();
 
         $id_client = $data['consulta']->id_client;
+        $id_staff = $data['consulta']->id_staff;
 
-        $query = $this->db->query("SELECT * FROM tblconsultas WHERE id_client = $id_client AND tblconsultas.foto_perfil IS NOT NULL");
-        $query = $query->row();
-        $data['foto_perfil'] = isset($query->foto_perfil) ? $query->foto_perfil : '';
+        $query = $this->db->query("SELECT * FROM tblclients WHERE userid = $id_client");
+        $data['paciente'] = $query->row();
 
-        $query = $this->db->query("SELECT * FROM tblclients");
-        $data['clientes'] = $query->result();
-
-        $query = $this->db->query("SELECT * FROM tblstaff");
-        $data['profesionales'] = $query->result();
-
-        $data['anamnesis'] = json_decode($data['consulta']->anamnesis);
-
-        $query = $this->db->query("SELECT * FROM tblenfermedades");
-        $data['enfermedades'] = $query->result();
+        $query = $this->db->query("SELECT * FROM tblstaff WHERE staffid = $id_staff");
+        $data['doctor'] = $query->row();
 
         $data['anamnesis'] = json_decode($data['consulta']->anamnesis, true);
 
@@ -248,7 +240,7 @@ class Consultas extends AdminController
 
         $this->session->set_flashdata('success', 'Consulta almacenada satisfactoriamente');
 
-        redirect('/admin/consultas/imprimir?tipo=diabetes');
+        redirect('/admin/consultas');
     }
 
     public function editar($id)
@@ -379,7 +371,7 @@ class Consultas extends AdminController
 
         $this->session->set_flashdata('success', 'Consulta modificada satisfactoriamente');
 
-        redirect('/admin/consultas/editar/' . $id);
+        redirect('/admin/consultas');
     }
 
     public function eliminar($id)

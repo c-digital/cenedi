@@ -141,8 +141,8 @@
                                           </a>
                                        <?php endif; ?>
 
-                                       <a class="btn btn-default btn-xs" href="/admin/consultas/ver/<?php echo $consulta->id; ?>">
-                                          <i class="fa fa-eye"></i> Ver
+                                       <a class="btn btn-default btn-xs" target="_blank" href="/admin/consultas/imprimir/<?php echo $consulta->id; ?>">
+                                          <i class="fa fa-print"></i> Imprimir
                                        </a>
 
                                        <a class="btn btn-default btn-xs" href="/admin/consultas/editar/<?php echo $consulta->id; ?>?tipo=<?php echo $consulta->tipo; ?>">
