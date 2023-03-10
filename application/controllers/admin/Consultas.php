@@ -220,6 +220,9 @@ class Consultas extends AdminController
                 'Laboratorios, estudios o examenes solicitados' => $_POST['Laboratorios,_estudios_o_examenes_solicitados'],
                 'Tratamiento' => $_POST['Tratamiento'],
                 'aclaraciones' => $_POST['aclaraciones'],
+
+                'hta_tiempo' => $_POST['hta_tiempo'],
+                'diabetes_tiempo' => $_POST['diabetes_tiempo'],
             ]);
         }
 
@@ -227,6 +230,8 @@ class Consultas extends AdminController
             $anamnesis = json_encode([
                 'procedencia' => $_POST['procedencia'],
                 'diagnostico' => $_POST['diagnostico'],
+                'Laboratorios, estudios o examenes solicitados' => $_POST['Laboratorios,_estudios_o_examenes_solicitados'],
+                'Tratamiento' => $_POST['Tratamiento'],
             ]);
         }
 
@@ -344,6 +349,9 @@ class Consultas extends AdminController
                 'Laboratorios, estudios o examenes solicitados' => $_POST['Laboratorios,_estudios_o_examenes_solicitados'],
                 'Tratamiento' => $_POST['Tratamiento'],
                 'aclaraciones' => $_POST['aclaraciones'],
+
+                'hta_tiempo' => $_POST['hta_tiempo'],
+                'diabetes_tiempo' => $_POST['diabetes_tiempo'],
             ]);
         }
 
@@ -351,6 +359,8 @@ class Consultas extends AdminController
             $anamnesis = json_encode([
                 'procedencia' => $_POST['procedencia'],
                 'diagnostico' => $_POST['diagnostico'],
+                'Laboratorios, estudios o examenes solicitados' => $_POST['Laboratorios,_estudios_o_examenes_solicitados'],
+                'Tratamiento' => $_POST['Tratamiento'],
             ]);
         }
 

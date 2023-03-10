@@ -117,10 +117,10 @@
                </div>
 
                <div class="col-md-6">
-                  <label for="Ha enido algun aborto, muerte, fetal, neonatal?">Ha enido algun aborto, muerte, fetal, neonatal?</label><br>
+                  <label for="Ha tenido algun aborto, muerte, fetal, neonatal?">Ha tenido algun aborto, muerte, fetal, neonatal?</label><br>
 
-                  <input type="radio" name="Ha enido algun aborto, muerte, fetal, neonatal?" value="Si" <?php echo $anamnesis['Ha enido algun aborto, muerte, fetal, neonatal?'] == 'Si' ? 'checked' : '' ?>> Si
-                  <input style="margin-left: 10px" type="radio" name="Ha enido algun aborto, muerte, fetal, neonatal?" value="No" <?php echo $anamnesis['Ha enido algun aborto, muerte, fetal, neonatal?'] == 'No' ? 'checked' : '' ?>> No
+                  <input type="radio" name="Ha tenido algun aborto, muerte, fetal, neonatal?" value="Si" <?php echo $anamnesis['Ha tenido algun aborto, muerte, fetal, neonatal?'] == 'Si' ? 'checked' : '' ?>> Si
+                  <input style="margin-left: 10px" type="radio" name="Ha tenido algun aborto, muerte, fetal, neonatal?" value="No" <?php echo $anamnesis['Ha tenido algun aborto, muerte, fetal, neonatal?'] == 'No' ? 'checked' : '' ?>> No
                </div>
 
                <div class="col-md-12" style="margin-top: 30px; border-top: 0.5px solid silver">
@@ -131,6 +131,9 @@
                <div class="col-md-2">
                   <input type="radio" name="hta_personal" value="Si" <?php echo $anamnesis['hta_personal'] == 'Si' ? 'checked' : '' ?>> Si
                   <input style="margin-left: 10px" type="radio" name="hta_personal" value="No" <?php echo $anamnesis['hta_personal'] == 'No' ? 'checked' : '' ?>> No
+               </div>
+               <div class="col-md-2">
+                  <input type="text" class="form-control form-control-sm" name="hta_tiempo" placeholder="Tiempo con enfermedad:">
                </div>
 
                <div class="row"></div>
@@ -147,6 +150,9 @@
                <div class="col-md-2">
                   <input type="radio" name="diabetes_personal" value="Si" <?php echo $anamnesis['diabetes_personal'] == 'Si' ? 'checked' : '' ?>> Si
                   <input style="margin-left: 10px" type="radio" name="diabetes_personal" value="No" <?php echo $anamnesis['diabetes_personal'] == 'No' ? 'checked' : '' ?>> No
+               </div>
+               <div class="col-md-2">
+                  <input type="text" class="form-control form-control-sm" name="diabetes_tiempo" placeholder="Tiempo con enfermedad:">
                </div>
 
                <div class="row"></div>
@@ -282,27 +288,7 @@
                   <textarea name="Tratamiento" class="form-control"><?php echo $anamnesis['Tratamiento']; ?></textarea>
                </div>
 
-               <div class="col-md-12" style="margin-top: 30px; margin-bottom: 30px; border-top: 0.5px solid silver">
-                  <h4>Firma y sella del medico</h4>
-               </div>
-
-               <div class="col-md-3">Elaborado:</div>
-
-               <div class="col-md-3">
-                  ________________________________<br>
-                  Lic.Alberto Terrazas C.<br>
-                  Coordinador Administrativo<br>
-                  Unidades de Servicio - F.C.S.H.
-               </div>
-
-               <div class="col-md-3">Aprobado:</div>
-
-               <div class="col-md-3">
-                  ________________________________<br>
-                  Dr. Reinerio Vargas B.<br>
-                  Decano<br>
-                  F.C.S.U. - U.A.G.R.M
-               </div>
+               
 
                <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
 
@@ -365,6 +351,16 @@
                   </div>
                </div>
 
+               <div class="col-md-12">
+                  <label for="Tratamiento" style="margin-top: 10px">Tratamiento</label>
+                  <textarea name="Tratamiento" class="form-control"><?php echo $anamnesis['Tratamiento'] ?? null; ?></textarea>
+               </div>
+
+               <div class="col-md-12">
+                  <label for="Laboratorios, estudios o examenes solicitados" style="margin-top: 10px">Laboratorios, estudios o examenes solicitados</label>
+                  <textarea name="Laboratorios, estudios o examenes solicitados" class="form-control"><?php echo $anamnesis['Laboratorios, estudios o examenes solicitados'] ?? null; ?></textarea>
+               </div>
+
                <input type="submit" style="margin: 30px" class="btn btn-primary" value="Registrar">
 
                <input type="hidden" name="tipo" value="neurologia" value="<?php echo $consulta->tipo ?>">
@@ -385,6 +381,15 @@
 
 <script>
    $(document).ready(function () {
+
+      <?php if ($anamnesis['hta_tiempo'] == 'No'): ?>
+         $('[name=hta_tiempo]').hide();
+      <?php endif; ?>
+
+      <?php if ($anamnesis['diabetes_tiempo'] == 'No'): ?>
+         $('[name=diabetes_tiempo]').hide();
+      <?php endif; ?>
+
       $('#user').change(function () {
          input = this;
          if (input.files && input.files[0]) {
@@ -398,6 +403,30 @@
 
       $('.img-circle').click(function () {
          $('[name=foto_perfil]').click();
+      });
+
+      $('[name=hta_personal]').click(function () {
+         response = $('[name=hta_personal]:checked').val();
+
+         if (response == 'Si') {
+            $('[name=hta_tiempo]').show();
+         }
+
+         if (response == 'No') {
+            $('[name=hta_tiempo]').hide();
+         }
+      });
+
+      $('[name=diabetes_personal]').click(function () {
+         response = $('[name=diabetes_personal]:checked').val();
+
+         if (response == 'Si') {
+            $('[name=diabetes_tiempo]').show();
+         }
+
+         if (response == 'No') {
+            $('[name=diabetes_tiempo]').hide();
+         }
       });
    });
 </script>
